@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=cyrillic');
+
+@import "variable.scss";
+
+@import "node_modules/bootstrap/scss/vendor/_rfs.scss";
+@import "node_modules/bootstrap/scss/mixins/_hover.scss";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints.scss";
+
+@import "node_modules/bootstrap/scss/mixins/_grid-framework.scss";
+@import "node_modules/bootstrap/scss/mixins/_grid.scss";
+@import "node_modules/bootstrap/scss/_grid.scss";
+
+@import "reboot.scss";
+
+
+html {
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a,a:hover,a:focus{
+    outline: none;
+    transition: .3s;
+}
+
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 11;
+    padding-top: 80px;
+    &__email{
+        font-weight: 700;
+        margin-left: 40px;
+    }
+    &__logo{
+        width: 75px;
+        max-width: 100%;
+        &__path{
+            fill: #fff;
+        }
+    }
+    &__nav{
+        width: 70px;
+        padding: 20px;
+        border-radius: 50%;
+        background: rgba(242, 242, 242, 0.1);
+        box-shadow: 0px 3px 6px 0px rgba(34, 0, 112, 0.004);
+        transition: .5s;
+        cursor: pointer;
+        &__path{
+            fill: #fff;
+        }
+        &:hover{
+            background: rgba(242, 242, 242, 0.2);
+        }
+    }
+    .nav{
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-height: 100vh;
+
+        display: inline-block;
+
+        color: $black;
+        background: #f2f2f2;
+        padding: 30px 40px;
+
+        .header__navbar{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            &__link{
+                font-weight: 500;
+                color: $black;
+                &:hover{
+                    color: $violet;
+                    text-decoration: none;
+                }
+            }
+            &__item{
+                padding: 10px 0;
+            }
+        }
+    }
+}
+
+.content{
+    position: relative;
+    &_title{
+        background: linear-gradient(45deg, #2b248a 0%, #361cbc 100%);
+        min-height: 100vh;
+    }
+}
