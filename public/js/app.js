@@ -70,5 +70,69 @@
 "use strict";
 
 
+var _jquery = __webpack_require__(1);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _jquery2.default)(document).ready(function () {
+    (0, _jquery2.default)('.scroll-pane').niceScroll({
+        autohidemode: false,
+        cursorcolor: "white",
+        cursorwidth: "4px",
+        background: "rgba(255,255,255,0.1)",
+        cursorborder: "1px solid aquamarine",
+        cursorborderradius: 2
+    });
+
+    (0, _jquery2.default)("#header__nav").on("click", function () {
+        (0, _jquery2.default)(this).toggleClass("active");
+        (0, _jquery2.default)(".header .nav").toggleClass("active");
+    });
+    (0, _jquery2.default)(document).mouseup(function (e) {
+        // событие клика по веб-документу
+        var navbar = (0, _jquery2.default)(".header .nav.active"); // тут указываем ID элемента
+        if (!navbar.is(e.target) && navbar.has(e.target).length === 0) {
+            navbar.removeClass("active");
+            (0, _jquery2.default)("#header__nav.active").removeClass("active");
+        }
+    });
+
+    (0, _jquery2.default)(".toggle-tabs .toggle-tabs__item .toggle-tabs__item__title").on("click", function () {
+        var item = (0, _jquery2.default)(this).parent();
+        (0, _jquery2.default)(this).toggleClass("active");
+        item.find(".toggle-tabs__item__content").slideToggle();
+    });
+
+    if ((0, _jquery2.default)(window).scrollTop() > 150) {
+        // $('.header').addClass("scroll");
+        // $('.header .header__email').hide();            
+        // $('.header .header__logo').hide();            
+    } else if ((0, _jquery2.default)(window).scrollTop() < 60) {
+        // $('.header').removeClass("scroll");
+        // $('.header .header__email').show();            
+        // $('.header .header__logo').show();  
+    }
+
+    (0, _jquery2.default)(window).scroll(function () {
+        if ((0, _jquery2.default)(this).scrollTop() > 150) {
+            (0, _jquery2.default)('.header').addClass("scroll");
+            // $('.header .header__email').fadeOut();            
+            // $('.header .header__logo').fadeOut();            
+        } else if ((0, _jquery2.default)(this).scrollTop() < 60) {
+            (0, _jquery2.default)('.header').removeClass("scroll");
+            // $('.header .header__email').fadeIn();            
+            // $('.header .header__logo').fadeIn();  
+        }
+    });
+});
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+module.exports = jQuery;
+
 /***/ })
 /******/ ]);

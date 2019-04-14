@@ -1,0 +1,18 @@
+.blog{
+    .heading{
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+    &__item{
+        &__title{
+            color: #fff;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        &__offer{
+            font-size: 14px;
+            color: $lightgrey;
+        }
+    }
+}

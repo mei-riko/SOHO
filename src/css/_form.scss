@@ -1,0 +1,20 @@
+.form{
+    .input-text{
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 300;
+        text-align: center;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 30px;
+        padding: 20px 40px;
+        
+        width: 100%;
+        color: #232323;
+        background: #fff;
+
+        &:hover, &:focus{
+            outline: none;
+        }
+    }
+}

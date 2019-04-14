@@ -1,0 +1,45 @@
+.toggle-tabs{
+    &__item{
+        position: relative;
+        padding-left: 40px;
+        padding-bottom: 20px;
+        &__title{
+            font-weight: 700;
+            color: $grey;
+            margin-bottom: 10px;
+
+            transition: .3s;
+            cursor: pointer;
+            &:before{
+                content: '';
+                display: block;
+
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+
+                background: $darkblue url("../images/arrow-down.svg") no-repeat 6px 6px/8px;
+
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                transition: .3s;
+            }
+            &:hover{
+                color:$darkblue;
+            }
+            &.active{
+                &:before{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        &__content{
+            display: none;
+            color: #858585;
+            width: 400px;
+            max-width: 100%;
+        }
+    }
+}

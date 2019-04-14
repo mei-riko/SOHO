@@ -1,0 +1,37 @@
+.footer{
+    padding: 40px 0;
+    background: #242424;
+    color: $lightgrey;
+    &__logo{
+        width: 160px;
+        &__path{
+            fill: #fff;
+        }
+    }
+    &__email{
+        font-weight: 700;
+        color: #fff;
+    }
+    &__navbar{
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        display: flex;
+        justify-content: flex-end;
+        padding: 0;
+        margin: 0;
+
+        list-style: none;
+
+        &__item{
+            padding: 0 10px;
+            &.last{
+                padding-right: 0;
+            }
+        }
+        &__link{
+            color: $lightgrey;
+        }
+    }
+}

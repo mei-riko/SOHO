@@ -1,0 +1,20 @@
+.portfolio{
+    margin-top: 80px;
+    text-align: right;
+    .row{
+        flex-wrap: nowrap;
+    }
+    &__title{
+        display: inline-block;
+        margin-left: auto;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: right;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    &__image{
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+}
