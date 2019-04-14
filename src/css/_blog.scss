@@ -1,18 +1,58 @@
 .blog{
-    .heading{
-        font-size: 28px;
-        margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+    background: #1b1b1b;
+
+    padding: 200px 0 100px;
+
+    &__elements{
+        position: absolute;
+        &.elements_01{
+            width: 800px;
+            height: 800px;
+            left: -200px;
+            top: 140px;
+        }
+        &.elements_02{
+            width: 500px;
+            height: 500px;
+            right: 140px;
+            top: 40px;
+        }
+        
     }
-    &__item{
+    .heading{
+        font-size: 48px;
+        margin-bottom: 50px;
+        color: #fff;
+    }
+    .blog__item{
+        margin-bottom: 40px;
+
+        background-size: cover;
+        background-position: center;
+
+        width: 100%;
+        padding-top: 150px;
+
+        &:hover{
+            text-decoration: none;
+        }
         &__title{
-            color: #fff;
-            font-size: 22px;
+            font-size: 14px;
             font-weight: 600;
-            margin-bottom: 20px;
+            text-transform: uppercase;
+            padding: 10px 20px 5px;
+            color: #fff;
+            background: rgba(39, 39, 39, 0.5);
+
+            height: 50px;
         }
         &__offer{
-            font-size: 14px;
-            color: $lightgrey;
+            font-size: 12px;
+            color: #fff;
+            background: rgba(39, 39, 39, 0.5);
+            padding: 0 20px 10px;
         }
     }
 }

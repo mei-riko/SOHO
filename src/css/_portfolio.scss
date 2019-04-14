@@ -4,6 +4,9 @@
     .row{
         flex-wrap: nowrap;
     }
+    &__item{
+        margin-bottom: 40px;
+    }
     &__title{
         display: inline-block;
         margin-left: auto;
@@ -15,6 +18,9 @@
     }
     &__image{
         max-width: 100%;
-        margin-bottom: 40px;
     }
+}
+
+.nicescroll-rails{
+    cursor: pointer;
 }

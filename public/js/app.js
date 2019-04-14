@@ -90,6 +90,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         (0, _jquery2.default)(this).toggleClass("active");
         (0, _jquery2.default)(".header .nav").toggleClass("active");
     });
+    (0, _jquery2.default)("#navbarClose").on("click", function () {
+        (0, _jquery2.default)("#header__nav").removeClass("active");
+        (0, _jquery2.default)(".header .nav").removeClass("active");
+    });
     (0, _jquery2.default)(document).mouseup(function (e) {
         // событие клика по веб-документу
         var navbar = (0, _jquery2.default)(".header .nav.active"); // тут указываем ID элемента

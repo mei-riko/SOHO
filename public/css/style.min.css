@@ -126,6 +126,10 @@
   fill: #fff;
 }
 
+.header__logo.header__logo_inside {
+  width: 200px;
+}
+
 .header__nav {
   position: fixed;
   top: 80px;
@@ -194,6 +198,17 @@
   padding: 10px 0;
 }
 
+.header .nav .nav__close {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.header .nav .nav__close:hover {
+  color: #341eb1;
+}
+
 .footer {
   padding: 40px 0;
   background: #242424;
@@ -240,21 +255,64 @@
   color: #858585;
 }
 
+.blog {
+  position: relative;
+  overflow: hidden;
+  background: #1b1b1b;
+  padding: 200px 0 100px;
+}
+
+.blog__elements {
+  position: absolute;
+}
+
+.blog__elements.elements_01 {
+  width: 800px;
+  height: 800px;
+  left: -200px;
+  top: 140px;
+}
+
+.blog__elements.elements_02 {
+  width: 500px;
+  height: 500px;
+  right: 140px;
+  top: 40px;
+}
+
 .blog .heading {
-  font-size: 28px;
-  margin-bottom: 40px;
-}
-
-.blog__item__title {
+  font-size: 48px;
+  margin-bottom: 50px;
   color: #fff;
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 20px;
 }
 
-.blog__item__offer {
+.blog .blog__item {
+  margin-bottom: 40px;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding-top: 150px;
+}
+
+.blog .blog__item:hover {
+  text-decoration: none;
+}
+
+.blog .blog__item__title {
   font-size: 14px;
-  color: #858585;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 20px 5px;
+  color: #fff;
+  background: rgba(39, 39, 39, 0.5);
+  height: 50px;
+}
+
+.blog .blog__item__offer {
+  font-size: 12px;
+  color: #fff;
+  background: rgba(39, 39, 39, 0.5);
+  padding: 0 20px 10px;
 }
 
 .portfolio {
@@ -265,6 +323,10 @@
 .portfolio .row {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+}
+
+.portfolio__item {
+  margin-bottom: 40px;
 }
 
 .portfolio__title {
@@ -279,7 +341,10 @@
 
 .portfolio__image {
   max-width: 100%;
-  margin-bottom: 40px;
+}
+
+.nicescroll-rails {
+  cursor: pointer;
 }
 
 .flex-row {
@@ -2469,21 +2534,22 @@ a:hover, a:focus {
 
 .content__btn__link {
   display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   text-align: center;
+  text-transform: uppercase;
   border-radius: 30px;
-  padding: 14px 40px 16px;
+  padding: 15px 30px 16px;
   margin-right: 15px;
   margin-bottom: 15px;
-  color: #fff;
-  background: -webkit-linear-gradient(135deg, #322b8f 0%, #3f24a6 62%, #4c1cbc 100%);
-  background: -o-linear-gradient(135deg, #322b8f 0%, #3f24a6 62%, #4c1cbc 100%);
-  background: linear-gradient(-45deg, #322b8f 0%, #3f24a6 62%, #4c1cbc 100%);
+  color: #525154;
+  background: -webkit-linear-gradient(135deg, #d4d4d4 0%, #d0cbe3 62%, #d5c3ff 100%);
+  background: -o-linear-gradient(135deg, #d4d4d4 0%, #d0cbe3 62%, #d5c3ff 100%);
+  background: linear-gradient(-45deg, #d4d4d4 0%, #d0cbe3 62%, #d5c3ff 100%);
 }
 
 .content__btn__link:hover {
-  color: #52dfee;
+  color: #341eb1;
   text-decoration: none;
 }
 
@@ -2586,6 +2652,11 @@ a:hover, a:focus {
   z-index: 1;
 }
 
+.content_contact.inside {
+  margin-top: 0;
+  padding: 100px 0;
+}
+
 .content_contact .heading {
   font-size: 46px;
   line-height: 52px;
@@ -2618,8 +2689,64 @@ a:hover, a:focus {
   background: #272727;
 }
 
-.content.blog {
+.content_blog {
   background: #272727;
   color: #fff;
   padding: 80px 0;
+}
+
+.content_blog .heading {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.content_blog .blog__item__title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.content_blog .blog__item__offer {
+  font-size: 14px;
+  color: #858585;
+}
+
+@media (max-width: 576px) {
+  .header__nav {
+    right: 20px;
+  }
+  .content_title .heading {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .content_title .btn {
+    margin-left: 0px;
+  }
+  .content_section .heading {
+    font-size: 34px;
+    line-height: 40px;
+  }
+  .content_portfolio .heading {
+    font-size: 34px;
+    line-height: 40px;
+  }
+  .content_portfolio__elements {
+    width: 260px;
+    height: 260px;
+  }
+  .content_portfolio .portfolio {
+    margin-left: 0;
+  }
+  .content_contact .form .input-text {
+    float: none;
+    width: 100%;
+  }
+  .content_contact .form .btn {
+    margin-top: 40px;
+    margin-left: 0;
+  }
+  .content.blog .blog__item + .blog__item {
+    margin-top: 40px;
+  }
 }

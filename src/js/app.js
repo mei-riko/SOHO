@@ -14,6 +14,10 @@ $(document).ready(() => {
         $(this).toggleClass("active");
         $(".header .nav").toggleClass("active");
     });
+    $("#navbarClose").on("click", function(){
+        $("#header__nav").removeClass("active");
+        $(".header .nav").removeClass("active");
+    });
     $(document).mouseup(function (e){ // событие клика по веб-документу
 		var navbar = $(".header .nav.active"); // тут указываем ID элемента
 		if (!navbar.is(e.target) && navbar.has(e.target).length === 0) {

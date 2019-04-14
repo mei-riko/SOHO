@@ -19,6 +19,9 @@
         &__path{
             fill: #fff;
         }
+        &.header__logo_inside{
+            width: 200px;
+        }
     }
     &__nav{
         position: fixed;
@@ -76,9 +79,15 @@
                 padding: 10px 0;
             }
         }
-    }
+        .nav__close{
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-top: 40px;
+            cursor: pointer;
 
-    &.scroll{
-        // width: 100px;
+            &:hover{
+                color: $darkblue;
+            }
+        }
     }
 }
