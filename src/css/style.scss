@@ -38,15 +38,48 @@ a{
         outline: none;
     }
 }
+
+.p-relative{position: relative;}
+
 .text-right{text-align: right;}
 .text-center{text-align: center;}
 .text-left{text-align: left;}
 
+.text-darkblue{color:$darkblue;}
+.text-red{color:$red;}
+
+.text-uppercase{text-transform: uppercase; }
+.text-bold{font-weight: 700;}
 
 .content{
     position: relative;
+    padding: 100px 0;
     .heading{
+        font-size: 54px;
+        line-height: 60px;
         font-weight: 700;
+        margin-bottom: 0;
+        &_small{
+            font-size: 32px;
+            line-height: 40px;
+        }
+        &_medium{
+            font-size: 42px;
+            line-height: 50px;
+        }
+        & + .subheading{
+            margin-top: 40px;
+        }
+        & + .offer{
+            margin-top: 40px;
+        }
+        & + .toggle-tabs{
+            margin-top: 50px;
+        }
+    }
+    .subheading{
+        font-weight: 700;
+        text-transform: uppercase;
         & + .offer{
             margin-top: 40px;
         }
@@ -55,16 +88,20 @@ a{
         font-size: 16px;
         line-height: 26px;
         color: $grey;
+        margin-bottom: 40px;
+        &.last{
+            margin-bottom: 0;
+        }
     }
     &__btn{
-        margin: 60px 0 50px;
+        margin: 40px 0;
         &__link{
             display: inline-block;
             font-size: 14px;
             font-weight: 700;
             text-align: center;
             text-transform: uppercase;
-            border-radius: 30px;
+            border-radius: 5px;
             padding: 15px 30px 16px; 
 
             margin-right: 15px;
@@ -79,10 +116,49 @@ a{
             }
         }
     }
-    /* INDEX PAGE BLOCK */
+    .element{
+        &_point{
+            position: absolute;
+            left: -140px;
+            bottom: -40px;
+            width: 500px;
+            height: 500px;
+            z-index: -1;
+            background: url("../images/points.png") no-repeat right center / cover;
+        }
+        &_01{
+            position: absolute;
+            bottom: 0;
+            right: -100px;
+
+            width: 1200px;
+        }
+        &_02{
+            position: absolute;
+            top: 0;
+            left: -30px;
+
+            width: 600px;
+        }
+        &_03{
+            position: absolute;
+            width: 550px;
+            height: 550px;
+            top: calc(50% - 275px);
+            right: calc((100% - 1380px)/2);
+        }
+    }
+    .margin-top{
+        margin-top: 50px;
+    }
+    .margin-bottom{
+        margin-bottom: 50px;
+    }
+    /* HEADING BLOCK */
     &_title{
         background: linear-gradient(45deg, #2b248a 0%, #361cbc 100%);
         padding: 260px 0 120px;
+        min-height: 100vh;
         &__svg{
             position: absolute;
             left: 0;
@@ -102,79 +178,29 @@ a{
             height: 750px;
         }
         .heading{
-            padding-left: 40px;
             color: #fff;
             font-size: 64px;
             line-height: 72px;
             margin-bottom: 100px;
         }
-        .btn{
-            margin-left: 40px;
+        .offer{
+            color: $white;
+            font-size: 18px;
+            line-height: 26px;
         }
     }
-    &_section{
-        padding: 100px 0;
-        .heading{
-            font-size: 54px;
-            line-height: 60px;
-            color:$grey;
-            .heading-color{
-                color:$darkblue;
-            }
-        }
-        .toggle-tabs{
-            margin-top: 60px;
-        }
-    }
-    &_portfolio{
-        z-index: 2;
-        padding: 100px 0 300px;
-        background: #222222 url("../images/bg_portfolio.svg") no-repeat center bottom/ cover;
-        &__elements{
-            position: absolute;
-            top: 160px;
-            left: 0px;
-            width: 460px;
-            height: 460px;
-        }
-        .heading{
-            font-size: 64px;
-            line-height: 72px;
-            color: #fff;
-            &__link{
-                color: #fff;
-            }
-        }
-        &__link{
-            text-transform: uppercase;
-            padding-top: 42px;
-        }
-        .portfolio{
-            margin-left: 100px;
-            overflow-x: scroll;
-        }
-    }
+    /* CONTACT BLOCK */
     &_contact{
         background: #222222;
-        padding: 340px 0 100px;
-        margin-top: -300px;
         z-index: 1;
-        &.inside{
-            margin-top: 0;
-            padding: 100px 0;
-        }
         .heading{
             font-size: 46px;
             line-height: 52px;
-            color:#fff;
-        }
-        .offer{
-            font-size: 14px;
-            line-height: 22px;
-            margin-top: 50px;
+            color:$white;
         }
         .form{
-            margin-top: 70px;
+            margin-top: 80px;
+            margin-bottom: 0;
             &_inline{
                 .input-text{
                     float: left;
@@ -192,27 +218,233 @@ a{
             }
         }
     }
-    &_blog{
+    /* PREVIEW LAST BLOG POST */
+    &.blog{
         background: #272727;
         color: #fff;
-        padding: 80px 0;
         .heading{
             font-size: 28px;
+            line-height: 34px;
             margin-bottom: 40px;
         }
+        .link{
+            color: $yellow;
+            &:hover{
+                color: lighten($color: $yellow, $amount: 15%);
+            }
+        }
         .blog__item{
+            padding-top: 0;
+            margin-bottom: 0;
             &__title{
                 color: #fff;
                 font-size: 22px;
                 font-weight: 600;
                 margin-bottom: 20px;
+
+                text-transform: none;
+                padding: 0;
+                height: auto;
             }
             &__offer{
                 font-size: 14px;
                 color: $lightgrey;
+
+                padding: 0;
+            }
+        }
+    }
+    /* PRICE BLOCK */
+    &_price{
+        background: #272727;
+        color: $white;
+        .offer{
+            color: darken($color: $white, $amount: 50%);
+            width: 650px;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .content_price__container + .content_price__container{
+            margin-top: 100px;
+        }
+    }
+}
+/* FOR INSIDE PAGE */
+.index{
+    .header{
+        &__email{
+            color: $yellow;
+        }
+        &__nav{
+            background: $darkblue;
+        }
+    }
+    .content{
+        &_title{
+            .btn{
+                border: 4px solid $white;
+                &:hover{
+                    border-color: darken($white, 25%);
+                }
+            }
+        }
+    }
+}
+.dev{
+    .header{
+        &__email{
+            color: $red;
+        }
+        &__nav{
+            background: $red;
+        }
+    }
+    .content{
+        &_title{
+            background: linear-gradient(-135deg, #fdc830 0%, #fed61d 100%);
+            .heading{
+                margin-bottom: 50px;
+            }
+            .offer{
+                margin-bottom: 100px;
+            }
+            &__svg{
+                top: -30px;
+            }
+            &__elements{
+                bottom: -100px;
+            }
+        }
+        &_background{
+            background: url("../images/bg_dev.png") no-repeat left bottom / 680px;
+        }
+        &_color{
+            overflow: hidden;
+            padding: 150px 0;
+            background: linear-gradient(90deg, #fdc830 0%, #fed61d 100%);
+            // min-height: 100vh;
+            .subheading{
+                color: #a47a00;
+            }
+            .offer{
+                color: $black;
+            }
+        }
+    }
+    .price{
+        &_large{
+            .price__header{
+                background: linear-gradient(-135deg, #fdc830 0%, #fed61d 100%);
             }
         }
     }
 }
 
+/* STYLE ITEM*/
+.item{
+    margin-bottom: 40px;
+    &__header{
+        font-size: 32px;
+        font-weight: 700;
+
+        white-space: nowrap;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        color: #d3d3d4;
+    }
+    &__offer{
+        font-size: 16px;
+        color: $grey;
+
+        width: 240px;
+        max-width: 100%;
+    }
+}
+
+/* PRICE BLOCK */
+.price{
+    position: relative;
+    text-align: center;
+    background: #3d3d3d;
+    border-radius: 30px;
+
+    width: 330px;
+    max-width: 100%;
+    margin: 50px auto 0;
+
+    .price__header{
+        display: inline-block;
+        padding: 12px 40px;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-radius: 15px;
+        background-image: linear-gradient( -45deg, rgb(50,43,143) 0%, rgb(63,36,166) 62%, rgb(76,28,188) 100%);          
+        transform: translateY(-50%);
+    }    
+    .price__content{
+        font-size: 14px;
+        line-height: 22px;
+        color: darken($color: $white, $amount: 30%);
+        padding: 0 30px;
+        p{
+            margin-bottom: 10px;
+        }
+    }
+    .price__time{
+        font-size: 22px;
+        color: $white;
+        font-weight: bold;
+        margin: 20px 0;
+        padding: 0 30px;
+    }
+    .price__info{
+        font-size: 12px;
+        color: darken($color: $white, $amount: 40%);
+    }
+    .price__footer{
+        color: #b2afaf;
+        background: #515151;
+        border-radius: 0 0 30px 30px;
+        padding: 10px 30px;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    &_large{
+        width: 400px;
+        .price__header{
+            font-size: 20px;
+        }
+        .price__content{
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .price__time{
+            font-size: 26px;
+        }
+    }
+}
+.price-line{
+    color: darken($color: $white, $amount: 30%);
+    background: rgba(255,255,255,.1);
+    font-size: 14px;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &.even{
+        background: rgba(255,255,255,.05);
+    }
+    .price-line__title{
+        padding-right: 30px;
+    }
+    .price-line__value{
+        color: darken($color: $white, $amount: 15%);
+        font-size: 18px;
+        white-space: nowrap;
+    }
+}
 @import "media.scss";

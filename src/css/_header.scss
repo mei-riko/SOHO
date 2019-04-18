@@ -1,18 +1,24 @@
 .header{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
+    position: relative;
     z-index: 11;
-    overflow: hidden;
 
-    padding-top: 80px;
     &__email{
+        position: absolute;
+        top: 0;
+        left: 20px;
+
+        padding-top: 80px;
         font-weight: 700;
-        margin-left: 40px;
+
         transition: .3s;
     }
     &__logo{
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        padding-top: 80px;
+        
         width: 60px;
         max-width: 100%;
         transition: .3s;
@@ -32,7 +38,6 @@
 
         padding: 20px;
         border-radius: 50%;
-        background: rgb(79, 41, 185);
         box-shadow: 0px 3px 6px 0px rgba(34, 0, 112, 0.1);
 
         transition: .5s;

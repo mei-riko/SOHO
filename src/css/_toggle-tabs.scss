@@ -3,6 +3,9 @@
         position: relative;
         padding-left: 40px;
         padding-bottom: 20px;
+        &.last{
+            padding-bottom: 0;
+        }
         &__title{
             font-weight: 700;
             color: $grey;

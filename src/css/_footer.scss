@@ -10,7 +10,10 @@
     }
     &__email{
         font-weight: 700;
-        color: #fff;
+        color: $white;
+        &:hover{
+            color: darken($white, 15%);
+        }
     }
     &__navbar{
         font-size: 14px;
@@ -32,6 +35,9 @@
         }
         &__link{
             color: $lightgrey;
+            &:hover{
+                color: $white;
+            }
         }
     }
 }

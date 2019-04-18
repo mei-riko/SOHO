@@ -1,10 +1,35 @@
 .portfolio{
-    margin-top: 80px;
-    text-align: right;
-    .row{
-        flex-wrap: nowrap;
+    position: relative;
+    z-index: 2;
+    padding: 100px 0 300px;
+    background: #222222 url("../images/bg_portfolio.svg") no-repeat center bottom/ cover;
+    &__elements{
+        position: absolute;
+        top: 160px;
+        left: 0px;
+        width: 460px;
+        height: 460px;
+    }
+    .heading{
+        font-size: 64px;
+        line-height: 72px;
+        color: #fff;
+        &__link{
+            color: #fff;
+        }
+    }
+    &__row{
+        margin-top: 80px;
+        margin-left: 100px;
+        text-align: right;
+
+        overflow-x: scroll;
+        .row{
+            flex-wrap: nowrap;
+        }
     }
     &__item{
+        height: 300px;
         margin-bottom: 40px;
     }
     &__title{
@@ -15,9 +40,25 @@
         text-align: right;
         font-weight: 600;
         margin-bottom: 20px;
+        &:hover{
+            color: $yellow;
+        }
     }
     &__image{
         max-width: 100%;
+    }
+    &__link{
+        padding-top: 42px;
+        text-transform: uppercase;
+        color: $yellow;
+        &:hover{
+            color: lighten($yellow, 15%);
+        }
+    }
+
+    & + .content{
+        padding-top: 340px;
+        margin-top: -340px;
     }
 }
 

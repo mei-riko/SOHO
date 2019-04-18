@@ -1,11 +1,16 @@
 $blue:                      #52dfee;
+$yellow:                    #fdc830;
+$red:                       #d70000;
 $violet:                    #30219f;
-$darkblue:                  #341eb1;
-$black:                     #343434;
+$darkblue:                  #1C097A;
+
+$white:                     #ffffff;
+$black:                     #0e0101;
+
 $grey:                      #525154;
 $lightgrey:                 #858585;
 
-$link-color:                #52dfee !default;
+$link-color:                #1C097A !default;
 $link-decoration:           none !default;
 $link-hover-color:          darken($link-color, 15%) !default;
 $link-hover-decoration:     underline !default;
