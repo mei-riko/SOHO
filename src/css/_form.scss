@@ -16,5 +16,36 @@
         &:hover, &:focus{
             outline: none;
         }
+
+        &:focus{
+            &::placeholder{
+                opacity: 0;
+            }
+        }
+    }
+
+    .input-inline{
+        background: inherit;
+        border: none;
+        border-bottom: 1px solid #fff;
+        width: 100%;
+        display: block;
+
+        resize: none;
+        padding: 20px;
+        
+        &:hover, &:focus{
+            outline: none;
+        }
+
+        &:focus{
+            &::placeholder{
+                opacity: 0;
+            }
+        }
+
+        & + .btn{
+            margin-top: 30px;
+        }
     }
 }

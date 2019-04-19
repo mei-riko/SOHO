@@ -2,7 +2,7 @@ html(lang="ru", dir="ltr")
     include chunks/head.pug
     body.index
         script(src="./js/jquery.min.js")
-        script(src="./js/jquery.nicescroll.min.js")
+        script(src="./js/jquery.jsscrollpane.min.js")
         script(src="./js/app.min.js")
         include chunks/header.pug
         .content.content_title
@@ -40,7 +40,7 @@ html(lang="ru", dir="ltr")
                 .row
                     .col-xl-6.offset-xl-1.align-items-center
                         h1.heading Разработка. Реклама. Продвижение. Интернет-маркетинг.
-                        a.btn.btn_primary(href="#") Обсудим проект?
+                        a.btn.btn_primary(href="#") Обсудим проект?     
         .content
             .container.p-relative
                 .element.element_point
@@ -57,10 +57,10 @@ html(lang="ru", dir="ltr")
                             a.content__btn__link(href="#") Разработка сайта
                             a.content__btn__link(href="#") Маркетинг продаж
                             a.content__btn__link(href="#") Создание контента
-                    .col-xl-5.offset-xl-3
+                    .col-xl-5.offset-xl-4
                         p.offer Сроки для нас — не пустой звук. Мы четко выстраиваем работу, чтобы ваш бизнес начал приносить прибыль как можно скорее. Вы всегда будете в курсе процесса и сможете понимать на каком этапе реализация проекта.
-                    .col-xl-6.offset-xl-3
-                        h3.heading У вас будут 
+                    .col-xl-6.offset-xl-4
+                        h3.heading.heading_medium У вас будут 
                             span.text-darkblue преимущества
                         .toggle-tabs
                             .toggle-tabs__item
@@ -97,25 +97,46 @@ html(lang="ru", dir="ltr")
                         h4.heading Реализованные 
                             a.heading__link(href="#") проекты
                     .col-xl-3.offset-xl-1
-                        a.portfolio__link(href="#") все проекты здесь >  
-                .portfolio__row.scroll-pane.horizontal-only
-                    .row  
-                        .col-10.col-sm-5.col-lg-3.portfolio__item
+                        a.portfolio__link(href="#") все проекты здесь > 
+                .scroll-pane
+                    .portfolio__row
+                        .portfolio__item
                             a.portfolio__title(href="#") #Логотип
                             a(href="#")
                                 img.portfolio__image(src="./images/01.png")
-                        .col-10.col-sm-5.col-lg-3.portfolio__item
+                        .portfolio__item
                             a.portfolio__title(href="#") #Веб-разработка
                             a(href="#")
                                 img.portfolio__image(src="./images/02.png")
-                        .col-10.col-sm-5.col-lg-3.portfolio__item
+                        .portfolio__item
                             a.portfolio__title(href="#") #Реклама
                             a(href="#")
                                 img.portfolio__image(src="./images/03.png")
-                        .col-10.col-sm-5.col-lg-3.portfolio__item
+                        .portfolio__item
                             a.portfolio__title(href="#") #Реклама
                             a(href="#")
                                 img.portfolio__image(src="./images/03.png")
+                        .portfolio__item
+                            a.portfolio__title(href="#") #Реклама
+                            a(href="#")
+                                img.portfolio__image(src="./images/03.png")
+                    //- .row.portfolio__row
+                    //-     .col-10.col-sm-5.col-lg-3.portfolio__item
+                    //-         a.portfolio__title(href="#") #Логотип
+                    //-         a(href="#")
+                    //-             img.portfolio__image(src="./images/01.png")
+                    //-     .col-10.col-sm-5.col-lg-3.portfolio__item
+                    //-         a.portfolio__title(href="#") #Веб-разработка
+                    //-         a(href="#")
+                    //-             img.portfolio__image(src="./images/02.png")
+                    //-     .col-10.col-sm-5.col-lg-3.portfolio__item
+                    //-         a.portfolio__title(href="#") #Реклама
+                    //-         a(href="#")
+                    //-             img.portfolio__image(src="./images/03.png")
+                    //-     .col-10.col-sm-5.col-lg-3.portfolio__item
+                    //-         a.portfolio__title(href="#") #Реклама
+                    //-         a(href="#")
+                    //-             img.portfolio__image(src="./images/03.png")
         .content.content_contact
             .container
                 .row.align-items-end
@@ -125,7 +146,7 @@ html(lang="ru", dir="ltr")
                             input.input-text(type="tel" placeholder="Ваш контактный телефон" value="")
                             button.btn.btn_primary(type="submit") Обсудим проект
                     .col-xl-3
-                        .offer Многие компании, предлагая свои услуги, говорят о том, какие они классные. Мы в первую очередь думаем о вас и вашем комфорте от сотрудничества с SOHO. Поэтому мы расскажем о том, что вы получите, обратившись к нам.
+                        .offer.last Многие компании, предлагая свои услуги, говорят о том, какие они классные. Мы в первую очередь думаем о вас и вашем комфорте от сотрудничества с SOHO. Поэтому мы расскажем о том, что вы получите, обратившись к нам.
         .content.blog
             .container
                 .heading Самое актуальное в нашем 

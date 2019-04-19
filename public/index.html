@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>SOHO студия</title>
+    <link href="./css/jquery.jscrollpane.css" rel="stylesheet"/>
     <link href="./css/style.min.css" rel="stylesheet"/>
   </head>
   <body class="index">
     <script src="./js/jquery.min.js"></script>
-    <script src="./js/jquery.nicescroll.min.js"></script>
+    <script src="./js/jquery.jsscrollpane.min.js"></script>
     <script src="./js/app.min.js"></script>
     <header class="header">
       <div class="container">
@@ -101,7 +102,7 @@
       <div class="container">
         <div class="row">
           <div class="col-xl-6 offset-xl-1 align-items-center">
-            <h1 class="heading">Разработка. Реклама. Продвижение. Интернет-маркетинг.</h1><a class="btn btn_primary" href="#">Обсудим проект?</a>
+            <h1 class="heading">Разработка. Реклама. Продвижение. Интернет-маркетинг.</h1><a class="btn btn_primary" href="#">Обсудим проект?     </a>
           </div>
         </div>
       </div>
@@ -115,11 +116,11 @@
             <p class="offer">Занимаемся любимым делом более 5 лет, поэтому не просто делаем и продвигаем сайты. Мы&nbsp;заинтересованы в&nbsp;вашем росте. Поверьте, мы болеем за&nbsp;ваш проект так&nbsp;же, как&nbsp;и&nbsp;вы, поэтому тщательно прорабатываем все детали, чтобы сайт нравился не&nbsp;только вам, но и&nbsp;потребителю. Обращаясь&nbsp;к&nbsp;нам, вы&nbsp;получаете соратников, которые знают короткий путь к&nbsp;сердцам ваших покупателей. </p>
             <div class="content__btn"><a class="content__btn__link" href="#">Веб-дизайн</a><a class="content__btn__link" href="#">SEO-продвижение</a><a class="content__btn__link" href="#">Контекстная реклама</a><a class="content__btn__link" href="#">Разработка сайта</a><a class="content__btn__link" href="#">Маркетинг продаж</a><a class="content__btn__link" href="#">Создание контента</a></div>
           </div>
-          <div class="col-xl-5 offset-xl-3">
+          <div class="col-xl-5 offset-xl-4">
             <p class="offer">Сроки для нас — не пустой звук. Мы четко выстраиваем работу, чтобы ваш бизнес начал приносить прибыль как можно скорее. Вы всегда будете в курсе процесса и сможете понимать на каком этапе реализация проекта.</p>
           </div>
-          <div class="col-xl-6 offset-xl-3">
-            <h3 class="heading">У вас будут <span class="text-darkblue">преимущества</span></h3>
+          <div class="col-xl-6 offset-xl-4">
+            <h3 class="heading heading_medium">У вас будут <span class="text-darkblue">преимущества</span></h3>
             <div class="toggle-tabs">
               <div class="toggle-tabs__item">
                 <div class="toggle-tabs__item__title">Бизнес на любом устройстве </div>
@@ -170,14 +171,15 @@
           <div class="col-xl-5">
             <h4 class="heading">Реализованные <a class="heading__link" href="#">проекты</a></h4>
           </div>
-          <div class="col-xl-3 offset-xl-1"><a class="portfolio__link" href="#">все проекты здесь >  </a></div>
+          <div class="col-xl-3 offset-xl-1"><a class="portfolio__link" href="#">все проекты здесь > </a></div>
         </div>
-        <div class="portfolio__row scroll-pane horizontal-only">
-          <div class="row"> 
-            <div class="col-10 col-sm-5 col-lg-3 portfolio__item"><a class="portfolio__title" href="#">#Логотип</a><a href="#"><img class="portfolio__image" src="./images/01.png"/></a></div>
-            <div class="col-10 col-sm-5 col-lg-3 portfolio__item"><a class="portfolio__title" href="#">#Веб-разработка</a><a href="#"><img class="portfolio__image" src="./images/02.png"/></a></div>
-            <div class="col-10 col-sm-5 col-lg-3 portfolio__item"><a class="portfolio__title" href="#">#Реклама</a><a href="#"><img class="portfolio__image" src="./images/03.png"/></a></div>
-            <div class="col-10 col-sm-5 col-lg-3 portfolio__item"><a class="portfolio__title" href="#">#Реклама</a><a href="#"><img class="portfolio__image" src="./images/03.png"/></a></div>
+        <div class="scroll-pane">
+          <div class="portfolio__row">
+            <div class="portfolio__item"><a class="portfolio__title" href="#">#Логотип</a><a href="#"><img class="portfolio__image" src="./images/01.png"/></a></div>
+            <div class="portfolio__item"><a class="portfolio__title" href="#">#Веб-разработка</a><a href="#"><img class="portfolio__image" src="./images/02.png"/></a></div>
+            <div class="portfolio__item"><a class="portfolio__title" href="#">#Реклама</a><a href="#"><img class="portfolio__image" src="./images/03.png"/></a></div>
+            <div class="portfolio__item"><a class="portfolio__title" href="#">#Реклама</a><a href="#"><img class="portfolio__image" src="./images/03.png"/></a></div>
+            <div class="portfolio__item"><a class="portfolio__title" href="#">#Реклама</a><a href="#"><img class="portfolio__image" src="./images/03.png"/></a></div>
           </div>
         </div>
       </div>
@@ -193,7 +195,7 @@
             </form>
           </div>
           <div class="col-xl-3">
-            <div class="offer">Многие компании, предлагая свои услуги, говорят о том, какие они классные. Мы в первую очередь думаем о вас и вашем комфорте от сотрудничества с SOHO. Поэтому мы расскажем о том, что вы получите, обратившись к нам.</div>
+            <div class="offer last">Многие компании, предлагая свои услуги, говорят о том, какие они классные. Мы в первую очередь думаем о вас и вашем комфорте от сотрудничества с SOHO. Поэтому мы расскажем о том, что вы получите, обратившись к нам.</div>
           </div>
         </div>
       </div>

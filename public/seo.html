@@ -1,0 +1,386 @@
+
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>SOHO студия</title>
+    <link href="./css/jquery.jscrollpane.css" rel="stylesheet"/>
+    <link href="./css/style.min.css" rel="stylesheet"/>
+  </head>
+  <body class="seo">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/app.min.js"></script>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-3 col-xl-1">
+            <svg class="header__logo" viewBox="0 0 80 320" preserveAspectRatio="xMidYMin meet" x="0px" y="0px">
+              <g>
+                <path class="header__logo__path" d="M73.8,119.8c0-19.6-15.9-35.4-35.4-35.4S3,100.3,3,119.8s15.8,35.4,35.4,35.4l0,0C57.9,155.2,73.8,139.4,73.8,119.8zM28.5,119.8c0-5.4,4.4-9.8,9.8-9.8s9.8,4.4,9.8,9.8c0,5.4-4.4,9.8-9.8,9.8C32.9,129.7,28.5,125.3,28.5,119.8L28.5,119.8L28.5,119.8z"></path>
+                <path class="header__logo__path" d="M73.8,268.3c0-19.6-15.9-35.5-35.4-35.5C18.8,232.8,3,248.7,3,268.3c0,19.5,15.8,35.4,35.4,35.4l0,0C57.9,303.7,73.8,287.8,73.8,268.3z M28.5,268.3c0-5.4,4.4-9.8,9.8-9.8s9.8,4.4,9.8,9.8s-4.4,9.8-9.8,9.8l0,0C32.9,278.1,28.5,273.7,28.5,268.3L28.5,268.3L28.5,268.3z"></path>
+                <g>
+                  <rect class="header__logo__path" x="40.3" y="165.8" width="33.5" height="56.7"></rect>
+                  <rect class="header__logo__path" x="3" y="165.8" width="32.5" height="56.7"></rect>
+                </g>
+                <path class="header__logo__path" d="M69,131.4"></path>
+                <g>
+                  <path class="header__logo__path" d="M70.8,22.2c0.6,1.9-0.5,3.5-1.8,5.1c-6.3,7.7-12.4,15.3-18.7,23C46,55.6,41.7,60.9,37.2,66c-4,4.5-8.9,7.5-15.2,7.5c-7.5,0.2-14.5-3.7-18.4-10.1c-2.5-4-3.7-8.7-3.6-13.5C0,49,0.3,48,0.9,47.3c6.4-8.9,12.9-17.8,19.5-26.5c4.4-6,9.5-11.4,15.4-16C41,0.6,47.8-1,54.4,0.6c5.3,1.2,9.9,4.6,12.7,9.3C69.5,13.4,70.8,17.7,70.8,22.2z"></path>
+                  <path class="header__logo__path" d="M0.2,38.4l0-37.6h30L0.2,38.4z"></path>
+                  <path class="header__logo__path" d="M70.9,68.9H42.4l28.5-34.7V68.9z"></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="col-7 col-xl-2"><a class="header__email" href="mailto:work@websoho.ru">work@websoho.ru</a></div>
+        </div>
+      </div>
+      <svg class="header__nav" id="header__nav" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+        <g>
+          <path class="header__nav__path" d="M6.979,271.181c30.288,25.979,64.616,55.426,131.017,55.426c66.403-0.001,100.733-29.447,131.022-55.426c28.644-24.568,53.382-45.787,104.98-45.787c51.599,0,76.337,21.219,104.98,45.787c8.385,7.191,21.011,6.225,28.202-2.159c7.191-8.385,6.225-21.011-2.16-28.202c-30.289-25.979-64.619-55.426-131.022-55.426S273.265,214.84,242.976,240.82c-28.644,24.568-53.382,45.787-104.98,45.787c-51.597,0-76.332-21.218-104.974-45.787c-8.384-7.191-21.01-6.226-28.202,2.159C-2.372,251.363-1.405,263.99,6.979,271.181z"></path>
+          <path class="header__nav__path" d="M6.979,161.787c30.287,25.98,64.615,55.426,131.017,55.426c66.403,0,100.733-29.446,131.022-55.426C297.662,137.219,322.399,116,373.998,116c51.597,0,76.335,21.218,104.98,45.787c8.385,7.193,21.01,6.224,28.201-2.161c7.192-8.384,6.223-21.012-2.161-28.202C474.729,105.444,440.399,76,373.998,76c-66.403,0-100.733,29.446-131.022,55.426c-28.644,24.568-53.382,45.787-104.98,45.787c-51.596,0-76.332-21.218-104.974-45.787c-8.384-7.192-21.011-6.226-28.202,2.159C-2.372,141.969-1.405,154.596,6.979,161.787z"></path>
+          <path class="header__nav__path" d="M505.02,350.213c-30.289-25.979-64.619-55.426-131.022-55.426s-100.733,29.446-131.022,55.426C214.332,374.781,189.594,396,137.996,396c-51.594,0-76.331-21.218-104.973-45.785l-0.002-0.002c-8.384-7.189-21.009-6.223-28.201,2.16c-7.191,8.384-6.224,21.011,2.16,28.202C37.268,406.555,71.597,436,137.996,436c66.403,0,100.733-29.446,131.022-55.426c28.644-24.568,53.382-45.787,104.98-45.787c51.599,0,76.337,21.219,104.98,45.787c8.385,7.191,21.011,6.225,28.202-2.159C514.371,370.03,513.405,357.404,505.02,350.213z"></path>
+        </g>
+      </svg>
+      <div class="nav">
+        <ul class="header__navbar">
+          <li class="header__navbar__item"><a class="header__navbar__link" href="#">Верстка и разработка</a></li>
+          <li class="header__navbar__item"><a class="header__navbar__link" href="#">Реклама</a></li>
+          <li class="header__navbar__item"><a class="header__navbar__link" href="#">Продвижение</a></li>
+          <li class="header__navbar__item"><a class="header__navbar__link" href="#">Портфолио</a></li>
+          <li class="header__navbar__item"><a class="header__navbar__link" href="#">Блог</a></li>
+          <li class="header__navbar__item"><a class="header__navbar__link" href="#">Дизайн</a></li>
+        </ul><a class="nav__close" id="navbarClose">Закрыть меню</a>
+      </div>
+    </header>
+    <div class="content content_title">
+      <svg class="content_title__svg" viewBox="0 0 1920 520" preserveAspectRatio="xMidYMax slice">
+        <defs>
+          <filter id="shadow_03" filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%">
+            <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="5"></feGaussianBlur>
+            <feOffset dx="2" dy="6" in="blur" result="offsetBlurredAlpha"></feOffset>
+            <feComponentTransfer>
+              <feFuncA type="linear" slope="0.2"></feFuncA>
+            </feComponentTransfer>
+            <feMerge>
+              <feMergeNode></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+          </filter>
+          <linearGradient id="PSgrad_0" x1="0%" x2="50%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#809b0c" stop-opacity="1"></stop>
+            <stop offset="100%" stop-color="#7f9a0d" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <path fill="url(#PSgrad_0)" filter="url(#shadow_03)" d="M1952.000,0.000 L0.000,0.000 C0.000,0.000 0.000,0.000 0.000,62.261 C48.455,87.927 227.239,217.781 370.380,209.418 C543.886,199.297 539.967,119.636 732.975,108.649 C895.861,99.358 895.062,345.632 945.000,414.000 C1039.188,542.961 1243.446,475.024 1406.000,401.000 C1458.954,376.881 1673.736,238.965 1716.000,215.000 C1805.329,164.347 1952.000,205.000 1952.000,205.000 L1952.000,0.000 Z"></path>
+      </svg>
+      <div class="content_title__elements">
+        <svg class="elements" viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet">
+          <defs>
+            <filter id="shadow" filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%">
+              <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="3"></feGaussianBlur>
+              <feOffset dx="5" dy="5" in="blur" result="offsetBlurredAlpha"></feOffset>
+              <feComponentTransfer>
+                <feFuncA type="linear" slope="0.2"></feFuncA>
+              </feComponentTransfer>
+              <feMerge>
+                <feMergeNode></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+              </feMerge>
+            </filter>
+            <linearGradient id="gradient" data-name="gradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#a1be00"></stop>
+              <stop offset="1" stop-color="#809b0c"></stop>
+            </linearGradient>
+          </defs>
+          <g fill-rule="nonzero">
+            <path style="fill: url(#gradient); filter: url(#shadow);" d="M10,90c0-44.2,35.8-80,80-80s80,35.8,80,80 M10,90c0,44.2,35.8,80,80,80s80-35.8,80-80 M111.3,90c0,11.7-9.5,21.3-21.3,21.3S68.7,101.7,68.7,90 M111.3,90c0-11.7-9.5-21.3-21.3-21.3S68.7,78.3,68.7,90"></path>
+          </g>
+        </svg>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-5 offset-xl-1 align-items-center">
+            <h1 class="heading">SEO-продвижение для&nbsp;бесплатного&nbsp;трафика</h1>
+            <div class="offer last">Обеспечим поток посетителей на ваш сайт из Яндекс и Google</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content p-relative">
+      <svg class="element element_04" viewBox="0 0 800 330" preserveAspectRatio="xMinYMin meet">
+        <path fill-rule="evenodd" fill="rgb(240, 245, 208)" d="M767.980,286.272 C741.775,314.661 704.215,328.856 655.299,328.856 C606.383,328.856 568.822,314.661 542.617,286.272 C516.412,257.884 503.310,217.122 503.310,163.982 C503.310,110.845 516.446,70.265 542.726,42.238 C569.003,14.214 606.673,0.201 655.736,0.201 C704.795,0.201 742.321,14.323 768.308,42.565 C794.295,70.811 807.288,111.429 807.288,164.419 C807.288,217.266 794.186,257.884 767.980,286.272 ZM655.736,56.541 C628.800,56.541 608.491,65.604 594.809,83.729 C581.123,101.854 574.282,128.752 574.282,164.419 C574.282,200.089 581.051,226.949 594.590,244.999 C608.130,263.053 628.364,272.078 655.299,272.078 C709.309,272.078 736.316,236.193 736.316,164.419 C736.316,92.502 709.456,56.541 655.736,56.541 ZM267.054,5.223 L450.926,5.223 L450.926,60.691 L334.750,60.691 L334.750,130.789 L442.846,130.789 L442.846,186.256 L334.750,186.256 L334.750,268.584 L450.926,268.584 L450.926,324.488 L267.054,324.488 L267.054,5.223 ZM87.768,117.796 C93.808,121.945 108.111,129.407 130.679,140.179 C160.521,154.449 180.977,168.752 192.042,183.090 C203.105,197.431 208.639,215.010 208.639,235.828 C208.639,264.653 198.266,287.364 177.521,303.961 C156.775,320.557 127.912,328.856 90.935,328.856 C56.868,328.856 26.732,322.451 0.527,309.639 L0.527,246.746 C22.071,256.355 40.306,263.125 55.230,267.055 C70.151,270.986 83.800,272.951 96.176,272.951 C111.025,272.951 122.415,270.113 130.351,264.435 C138.285,258.757 142.253,250.315 142.253,239.103 C142.253,232.845 140.506,227.277 137.012,222.398 C133.518,217.522 128.386,212.827 121.616,208.312 C114.847,203.802 101.052,196.595 80.234,186.693 C60.724,177.521 46.093,168.715 36.341,160.270 C26.586,151.828 18.796,142.001 12.975,130.789 C7.150,119.580 4.240,106.478 4.240,91.482 C4.240,63.239 13.811,41.037 32.956,24.877 C52.098,8.717 78.559,0.637 112.335,0.637 C128.932,0.637 144.764,2.603 159.832,6.533 C174.900,10.464 190.657,15.999 207.110,23.130 L185.273,75.758 C168.240,68.770 154.154,63.895 143.017,61.127 C131.880,58.364 120.924,56.978 110.152,56.978 C97.339,56.978 87.512,59.964 80.671,65.932 C73.826,71.903 70.407,79.689 70.407,89.298 C70.407,95.269 71.789,100.472 74.557,104.912 C77.320,109.354 81.725,113.647 87.768,117.796 Z">           .container</path>
+      </svg>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-5 col-lg-5 col-comment p-relative">
+            <h2 class="heading heading_small">Что такое SEO?</h2>
+            <p class="offer">Если простым языком, SEO – это один из самых популярных способов рассказать поисковым системам (Яндекс и Google) о том, что вы существуете, чем вы занимаетесь и что вы – надежная компания, которую любят пользователи интернета.</p><img class="element element_comment" src="./images/comment/seo_comment_1.png"/>
+          </div>
+          <div class="col-xl-5 col-lg-5">
+            <h3 class="heading heading_small">Зачем нужно SEO?</h3>
+            <p class="offer">Более 10 миллиардов запросов каждодневно вводится в поисковые системы для получения информации, услуг или покупки товаров. Более 2 триллионов сайтов в интернете. Использование поисковой оптимизации выведет ваш сайт на первые страницы Яндекса и Google по нужным ключевым словам (это те же запросы, которые вводят люди в поисковую строчку, например «купить диван спб»).</p>
+            <p class="offer">Почему нужно быть на первых страницах выдачи? Вспомните, как часто вы заходите дальше 2 или 3 страницы в поиске? Рискнем предположить – крайне редко!</p>
+          </div>
+          <div class="col-xl-10 margin-top">
+            <h3 class="heading">Есть сайт, но он не приносит прибыль?</h3>
+          </div>
+          <div class="col-xl-4 offset-xl-1 margin-top">
+            <p class="offer">Вам необходимо провести комплексный аудит сайта, который покажет слабые стороны и недоработки, нуждающиеся в исправлении. Это позволит разработать рекомендации по оптимизации и улучшению, направленные на увеличение количества заявок и видимости в поисковых системах.</p><a class="btn btn_primary" href="#">Нужен аудит</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content content_color">
+      <svg class="element element_03" viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet">
+        <g style="fill: url(#gradient); filter: url(#shadow);" fill-rule="nonzero">
+          <rect x="12" y="9.5" width="71" height="160"></rect>
+          <rect x="97" y="9.5" width="71" height="160"> </rect>
+        </g>
+      </svg>
+      <div class="container p-relative">
+        <div class="row">
+          <div class="col-xl-10">
+            <div class="heading heading_medium first">Каких целей достигают с помощью SEO?</div>
+          </div>
+        </div>
+        <div class="row margin-bottom">
+          <div class="col-xl-3 offset-xl-3">
+            <div class="item item_with-icon">
+              <svg class="item__icon" viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet">
+                <g>
+                  <path class="active-path" d="M150.383,18.301c-7.13-3.928-15.308-6.187-24.033-6.187c-15.394,0-29.18,7.015-38.283,18.015    c-9.146-11-22.919-18.015-38.334-18.015c-8.704,0-16.867,2.259-24.013,6.187C10.388,26.792,0,43.117,0,61.878    C0,67.249,0.874,72.4,2.457,77.219c8.537,38.374,85.61,86.771,85.61,86.771s77.022-48.396,85.571-86.771    c1.583-4.819,2.466-9.977,2.466-15.341C176.104,43.124,165.716,26.804,150.383,18.301z" data-original="#000000" data-old_color="#FCFAFA" fill="#FCFBFB"></path>
+                </g>
+              </svg>
+              <div class="item__title">Рост заявок </div>
+              <div class="item__offer">и продаж с сайта</div>
+            </div>
+          </div>
+          <div class="col-xl-3">
+            <div class="item item_with-icon">
+              <svg class="item__icon" viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet">
+                <g>
+                  <path class="active-path" d="M150.383,18.301c-7.13-3.928-15.308-6.187-24.033-6.187c-15.394,0-29.18,7.015-38.283,18.015    c-9.146-11-22.919-18.015-38.334-18.015c-8.704,0-16.867,2.259-24.013,6.187C10.388,26.792,0,43.117,0,61.878    C0,67.249,0.874,72.4,2.457,77.219c8.537,38.374,85.61,86.771,85.61,86.771s77.022-48.396,85.571-86.771    c1.583-4.819,2.466-9.977,2.466-15.341C176.104,43.124,165.716,26.804,150.383,18.301z" data-original="#000000" data-old_color="#FCFAFA" fill="#FCFBFB"></path>
+                </g>
+              </svg>
+              <div class="item__title">Повышение узнаваемости </div>
+              <div class="item__offer">вашей компании</div>
+            </div>
+          </div>
+          <div class="col-xl-3 offset-xl-3">
+            <div class="item item_with-icon">
+              <svg class="item__icon" viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet">
+                <g>
+                  <path class="active-path" d="M150.383,18.301c-7.13-3.928-15.308-6.187-24.033-6.187c-15.394,0-29.18,7.015-38.283,18.015    c-9.146-11-22.919-18.015-38.334-18.015c-8.704,0-16.867,2.259-24.013,6.187C10.388,26.792,0,43.117,0,61.878    C0,67.249,0.874,72.4,2.457,77.219c8.537,38.374,85.61,86.771,85.61,86.771s77.022-48.396,85.571-86.771    c1.583-4.819,2.466-9.977,2.466-15.341C176.104,43.124,165.716,26.804,150.383,18.301z" data-original="#000000" data-old_color="#FCFAFA" fill="#FCFBFB"></path>
+                </g>
+              </svg>
+              <div class="item__title">Увеличение </div>
+              <div class="item__offer">посещаемости сайта</div>
+            </div>
+          </div>
+          <div class="col-xl-3">
+            <div class="item item_with-icon">
+              <svg class="item__icon" viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet">
+                <g>
+                  <path class="active-path" d="M150.383,18.301c-7.13-3.928-15.308-6.187-24.033-6.187c-15.394,0-29.18,7.015-38.283,18.015    c-9.146-11-22.919-18.015-38.334-18.015c-8.704,0-16.867,2.259-24.013,6.187C10.388,26.792,0,43.117,0,61.878    C0,67.249,0.874,72.4,2.457,77.219c8.537,38.374,85.61,86.771,85.61,86.771s77.022-48.396,85.571-86.771    c1.583-4.819,2.466-9.977,2.466-15.341C176.104,43.124,165.716,26.804,150.383,18.301z" data-original="#000000" data-old_color="#FCFAFA" fill="#FCFBFB"></path>
+                </g>
+              </svg>
+              <div class="item__title">Повышение доверия </div>
+              <div class="item__offer">к компании</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-6 offset-xl-3">
+            <div class="heading heading_medium">Когда ждать результат?</div>
+            <div class="subheading">Системы управления сайтом (MODX, Wordpress и т.д.)</div>
+            <p class="offer">
+              Результат верстки — это статичные web-страницы, чтобы редактировать их самостоятельно нужно иметь&nbsp;базовые знания в&nbsp;HTML-разметке. А CMS обеспечивают удобный пользовательский интерфейс и&nbsp;возможность 
+              менять тексты, добавлять новые страницы по готовым шаблонам и многое другое без&nbsp;страха что-то сломать.
+            </p>
+            <p class="offer last">Мы поможем выбрать подходящую вашему проекту систему, расскажем про плюсы и минусы каждого варианта и не станем задавать непонятных вопросов, а только отвечать на них.</p>
+          </div>
+        </div>
+        <div class="row align-items-center margin-top margin-bottom">
+          <div class="col-xl-3 offset-xl-3">     
+            <div class="item item_info text-center">
+              <div class="item__title">сайту 1-3 месяца</div>
+              <div class="item__offer margin-auto">первые заявки уже через 1-3 месяца стабильный результат через 3-6 месяцев               </div>
+            </div>
+          </div>
+          <div class="col-xl-1">
+            <svg class="elements" viewBox="0 0 125 80" preserveAspectRatio="xMidYMin meet">
+              <g style="fill: url(#gradient); filter: url(#shadow);">
+                <path d="M101.950,14.113 C99.460,13.495 97.010,13.186 94.602,13.186 C91.737,13.186 89.539,13.853 88.010,15.187 C86.479,16.523 85.715,18.264 85.715,20.412 C85.715,21.747 86.024,22.911 86.643,23.903 C87.261,24.897 88.246,25.856 89.597,26.784 C90.947,27.712 94.145,29.380 99.191,31.789 C105.864,34.980 110.438,38.178 112.912,41.384 C115.386,44.590 116.623,48.521 116.623,53.176 C116.623,59.621 114.304,64.699 109.665,68.410 C105.026,72.121 98.573,73.977 90.305,73.977 C82.688,73.977 75.949,72.545 70.090,69.680 L70.090,55.617 C74.907,57.766 78.984,59.279 82.321,60.158 C85.658,61.037 88.709,61.477 91.477,61.477 C94.797,61.477 97.344,60.842 99.118,59.572 C100.892,58.303 101.779,56.415 101.779,53.908 C101.779,52.509 101.389,51.264 100.607,50.173 C99.826,49.083 98.679,48.033 97.165,47.023 C95.651,46.015 92.567,44.404 87.912,42.189 C83.550,40.139 80.278,38.170 78.098,36.281 C75.916,34.394 74.175,32.196 72.873,29.689 C71.571,27.183 70.920,24.254 70.920,20.900 C70.920,14.586 73.060,9.621 77.341,6.008 C81.621,2.395 87.538,0.588 95.090,0.588 C98.801,0.588 102.341,1.027 105.710,1.906 C109.079,2.785 112.602,4.023 116.281,5.617 L111.398,17.385 C107.590,15.822 104.440,14.732 101.950,14.113 ZM24.719,73.000 L0.500,1.613 L15.783,1.613 L29.211,44.094 C29.959,46.601 30.732,49.522 31.530,52.858 C32.328,56.195 32.824,58.515 33.020,59.816 C33.377,56.822 34.598,51.581 36.682,44.094 L50.207,1.613 L65.490,1.613 L41.223,73.000 L24.719,73.000 Z"></path>
+              </g>
+            </svg>
+          </div>
+          <div class="col-xl-3">
+            <div class="item item_info text-center">
+              <div class="item__title">сайту более 2 лет</div>
+              <div class="item__offer margin-auto">первые заявки уже через 1-3 месяца стабильный результат через 3-6 месяцев</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-6 offset-xl-3"><a class="btn btn_primary" href="#">хочу seo-продвижение</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="content content_project project">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-10">
+            <h4 class="heading heading_medium margin-bottom">Проект по SEO-продвижению</h4>
+            <div class="offer">Один из последних проектов SOHO</div>
+          </div>
+          <div class="col-xl-5">
+            <div class="project__task margin-bottom">
+              <div class="project__task__item">Задача</div>
+              <div class="project__task__content"> 
+                <p class="offer">Сайт существовал уже несколько лет, но в поиске его практически не было ни по одному ключевому запросу. Клиентам хотелось увеличить базу клиентов и узнаваемость. По времени было дано 6 месяцев.</p>
+              </div>
+            </div>
+            <div class="project__task margin-bottom">
+              <div class="project__task__item">Проблема</div>
+              <div class="project__task__content"> 
+                <p class="offer">Был проведен комплексный аудит и выявлено, что SEO никогда не проводилось, а <span class="text-bold">посетители, которые заходили на сайт в 8 из 10 случаев быстро уходили.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-5">
+            <div class="project__task margin-bottom">
+              <div class="project__task__item">Решение</div>
+              <div class="project__task__content">
+                <p class="offer">Начали с технической оптимизации сайта, потому что без нее дальнейшие действия не имели смысла. </p>
+                <p class="offer">Провели маркетинговый анализ на основе которого выявили причину, почему люди уходили ничего не заказав. По согласованию с заказчиком были разработаны новые информационные блоки страницы (это входит в стоимость продвижения). </p>
+                <p class="offer">Переделали структуру страниц и оформление информации. Доработали форму на странице услуг. Стали регулярно наполнять сайт качественным и интересным контентом.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row margin-bottom align-items-end">
+          <div class="col-xl-10">
+            <p class="heading heading_small margin-bottom">Достигнутый эффект</p>
+          </div>
+          <div class="col-xl-5"> 
+            <p class="offer">За первые два месяца сайт выведен в ТОП-10 по всем 20 согласованным ключам в Яндекс (плюс еще около 100 дополнительных). Далее все усилия делались на появлении результатов в Google, а также проработке ключевых запросов, которые дают больше всего заказов. </p>
+            <p class="offer last">Через 5 месяцев SOHO выполнила все поставленные задачи и привела на сайт исключительно заинтересованную аудиторию (что сильно отразилось на количестве заявок)</p>
+          </div>
+          <div class="col-xl-4 offset-xl-1">
+            <div class="offer project__stats text-bold text-uppercase" style="background-image:url('../images/result_seo.png');">увеличилось количество переходов на сайт</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-6"><img class="img-fluid" src="../images/default.png"/></div>
+          <div class="col-xl-4">
+            <p class="offer text-bold text-uppercase">Что это значит?</p>
+            <p class="offer">При увеличении посещаемости на 2537%, количество людей, которое уходило сразу, увеличилось на 0,78%. Мы привели на сайт только тех людей, кто интересовался данными услугами. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content content_price">
+      <div class="container content_price__container">
+        <div class="row">
+          <div class="col-xl-6 offset-xl-2 text-center margin-bottom">
+            <div class="heading heading_small">Тарифы на продвижение</div>
+            <div class="offer">В зависимости от размера вашего сайта, его состояния и скорости получения необходимого результата, были разработаны 3 основных тарифа</div>
+          </div>
+        </div>
+        <div class="row align-items-center justify-content-center">
+          <div class="col-xl-3 col-lg-5">
+            <div class="price">
+              <div class="price__header">упрощенный</div>
+              <div class="price__content">
+                <p class="text-uppercase text-bold">средне-конкурентная тематика</p>
+                <p>вы ставите задачу — мы формируем пакет услуг подходящий под ваши цели. В конце месяца предоставляем отчет о работе и результатах</p>
+              </div>
+              <div class="price__footer">стоимость 25к в месяц</div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-5">
+            <div class="price price_large">
+              <div class="price__header">Стандарт</div>
+              <div class="price__content">
+                <p class="text-uppercase text-bold">конкурентная тематика</p>
+                <p>займемся технической оптимизацией, улучшением информации на сайте и внешнего вида - предложение сформируем исходя из ваших целей</p>
+              </div>
+              <div class="price__footer">стоимость 45к в месяц</div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-5">
+            <div class="price">
+              <div class="price__header">ускоренный</div>
+              <div class="price__content">
+                <p class="text-uppercase text-bold">высоко-конкурентная тематика</p>
+                <p>прорвемся через все трудности повышенной конкуренции предложим оптимальный план продвижение сайта: тариф включает все что можно и нельзя</p>
+              </div>
+              <div class="price__footer">стоимость 65к в месяц</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container content_price__container">
+        <div class="row">
+          <div class="col-xl-6 offset-xl-2 text-center">
+            <div class="heading heading_small">Что входит в тариф?</div>
+            <div class="offer">Большинство предлагают стандартный набор услуг в зависимости от тарифа - это в корне неверный подход! Как можно предлагать один и тот же набор услуг для абсолютно разных сайтов?</div>
+            <div class="subheading">оказываем только те услуги, которые действительно нужны для достижения цели! </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content content_contact">
+      <div class="container">
+        <div class="row align-items-end">
+          <div class="col-xl-6">
+            <h4 class="heading">Хотите, чтобы клиенты находили вас через Яндекс и Google?</h4>
+            <form class="form form_inline" action="">
+              <input class="input-text" type="tel" placeholder="Ваш контактный телефон" value=""/>
+              <button class="btn btn_primary" type="submit">Конечно хочу</button>
+            </form>
+          </div>
+          <div class="col-xl-3">
+            <div class="offer last">Многие компании, предлагая свои услуги, говорят о том, какие они классные. Мы в первую очередь думаем о вас и вашем комфорте от сотрудничества с SOHO. Поэтому мы расскажем о том, что вы получите, обратившись к нам.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="col">
+            <svg class="footer__logo" viewBox="0 0 320 80" preserveAspectRatio="xMidYMin meet" x="0px" y="0px">
+              <g>
+                <path class="footer__logo__path" d="M121.6,1.6C102,1.6,86.2,17.5,86.2,37s15.9,35.4,35.4,35.4S157,56.6,157,37v0C157,17.5,141.2,1.6,121.6,1.6z M121.6,46.9   c-5.4,0-9.8-4.4-9.8-9.8s4.4-9.8,9.8-9.8c5.4,0,9.8,4.4,9.8,9.8C131.4,42.5,127,46.9,121.6,46.9C121.6,46.9,121.6,46.9,121.6,46.9   L121.6,46.9z"></path>
+                <path class="footer__logo__path" d="M270.1,1.6c-19.6,0-35.4,15.9-35.4,35.4c0,19.6,15.9,35.4,35.4,35.4c19.6,0,35.4-15.9,35.4-35.4v0   C305.5,17.5,289.6,1.6,270.1,1.6z M270.1,46.9c-5.4,0-9.8-4.4-9.8-9.8s4.4-9.8,9.8-9.8s9.8,4.4,9.8,9.8l0,0   C279.9,42.5,275.5,46.9,270.1,46.9C270.1,46.9,270.1,46.9,270.1,46.9L270.1,46.9z"></path>
+                <g>
+                  <rect class="footer__logo__path" x="167.6" y="1.6" width="56.7" height="33.5"></rect>
+                  <rect class="footer__logo__path" x="167.6" y="40" width="56.7" height="32.5"></rect>
+                </g>
+                <path class="footer__logo__path" d="M133.2,1.6"></path>
+                <g>
+                  <path class="footer__logo__path" d="M23.9,1.8c1.9-0.6,3.5,0.5,5.1,1.8c7.7,6.3,15.3,12.4,23,18.7c5.3,4.3,10.6,8.6,15.7,13.1c4.5,4,7.5,8.9,7.5,15.2    C75.4,58,71.6,65,65.2,68.9c-4,2.5-8.7,3.7-13.5,3.6c-0.9,0-1.9-0.3-2.6-0.9c-8.9-6.4-17.8-12.9-26.5-19.5    c-6-4.4-11.4-9.5-16-15.4c-4.2-5.2-5.8-12-4.2-18.6c1.2-5.3,4.6-9.9,9.3-12.7C15.2,3.1,19.5,1.8,23.9,1.8z"></path>
+                  <path class="footer__logo__path" d="M40.2,72.4H2.7V42.4L40.2,72.4z"></path>
+                  <path class="footer__logo__path" d="M70.7,1.7v28.5L36,1.7H70.7z"></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="col"><a class="footer__email" href="mailto:work@websoho.ru">work@websoho.ru</a></div>
+          <div class="col col-xl-6">
+            <ul class="footer__navbar">
+              <li class="footer__navbar__item"><a class="footer__navbar__link" href="#">Верстка и разработка</a></li>
+              <li class="footer__navbar__item"><a class="footer__navbar__link" href="#">Реклама</a></li>
+              <li class="footer__navbar__item"><a class="footer__navbar__link" href="#">Продвижение</a></li>
+              <li class="footer__navbar__item"><a class="footer__navbar__link" href="#">Портфолио</a></li>
+              <li class="footer__navbar__item"><a class="footer__navbar__link" href="#">Блог</a></li>
+              <li class="footer__navbar__item last"><a class="footer__navbar__link" href="#">Дизайн</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

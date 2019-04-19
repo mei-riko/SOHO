@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=cyrillic');
 
 @import "variable.scss";
-@import "buttons.scss";
+
 @import "form.scss";
+@import "buttons.scss";
 @import "toggle-tabs.scss";
+@import "item.scss";
+@import "list.scss";
+
 @import "header.scss";
 @import "footer.scss";
+
 @import "blog.scss";
 @import "portfolio.scss";
 
@@ -40,6 +45,8 @@ a{
 }
 
 .p-relative{position: relative;}
+.bg-white{background: $white;}
+.bg-grey{background: #dbd6de;}
 
 .text-right{text-align: right;}
 .text-center{text-align: center;}
@@ -51,14 +58,27 @@ a{
 .text-uppercase{text-transform: uppercase; }
 .text-bold{font-weight: 700;}
 
+.margin-top{margin-top: 50px;}
+.margin-bottom{margin-bottom: 50px;}
+.margin-auto{margin: 0 auto;}
+
+.img-fluid{max-width: 100%;}
+
 .content{
     position: relative;
     padding: 100px 0;
+    
+    .margin-top{margin-top: 50px;}
+    .margin-bottom{margin-bottom: 50px;}
+    
     .heading{
         font-size: 54px;
         line-height: 60px;
         font-weight: 700;
         margin-bottom: 0;
+
+        &.margin-top{margin-top: 50px;}
+        &.margin-bottom{margin-bottom: 50px;}
         &_small{
             font-size: 32px;
             line-height: 40px;
@@ -86,11 +106,31 @@ a{
     }
     .offer{
         font-size: 16px;
-        line-height: 26px;
+        line-height: 24px;
         color: $grey;
         margin-bottom: 40px;
         &.last{
             margin-bottom: 0;
+        }
+        & + .subheading{
+            margin-top: 40px;
+        }
+    }
+    .element{
+        position: absolute;
+        &_point{
+            left: -140px;
+            bottom: -40px;
+            width: 500px;
+            height: 500px;
+            z-index: -1;
+            background: url("../images/points.png") no-repeat right center / cover;
+        }
+        //SEO
+        &_04{
+            bottom: 0;
+            right: 0;
+            width: 720px;
         }
     }
     &__btn{
@@ -116,48 +156,14 @@ a{
             }
         }
     }
-    .element{
-        &_point{
-            position: absolute;
-            left: -140px;
-            bottom: -40px;
-            width: 500px;
-            height: 500px;
-            z-index: -1;
-            background: url("../images/points.png") no-repeat right center / cover;
-        }
-        &_01{
-            position: absolute;
-            bottom: 0;
-            right: -100px;
-
-            width: 1200px;
-        }
-        &_02{
-            position: absolute;
-            top: 0;
-            left: -30px;
-
-            width: 600px;
-        }
-        &_03{
-            position: absolute;
-            width: 550px;
-            height: 550px;
-            top: calc(50% - 275px);
-            right: calc((100% - 1380px)/2);
-        }
-    }
-    .margin-top{
-        margin-top: 50px;
-    }
-    .margin-bottom{
-        margin-bottom: 50px;
+    /* PADDING LARGE */
+    &_padding{
+        padding: 150px 0;
     }
     /* HEADING BLOCK */
     &_title{
         background: linear-gradient(45deg, #2b248a 0%, #361cbc 100%);
-        padding: 260px 0 120px;
+        padding: 290px 0 100px;
         min-height: 100vh;
         &__svg{
             position: absolute;
@@ -181,12 +187,37 @@ a{
             color: #fff;
             font-size: 64px;
             line-height: 72px;
-            margin-bottom: 100px;
+            margin-bottom: 50px;
         }
         .offer{
             color: $white;
             font-size: 18px;
             line-height: 26px;
+        }
+    }
+    /* DARK FORM BLOCK */
+    &_form{
+        padding-top: 180px;
+        background: #222222;
+        color: $white;
+        .element{
+            top:0;
+            left:0;
+        }
+        .form{
+            .input-inline{
+                text-align: center;
+
+                width: 600px;
+                max-width: 100%;
+                margin: 0 auto;
+
+                color: $white;
+                border-color: $grey;
+                &::placeholder{
+                    color: $grey;
+                }
+            }
         }
     }
     /* CONTACT BLOCK */
@@ -281,6 +312,9 @@ a{
     }
     .content{
         &_title{
+            .heading{
+                margin-bottom: 100px;
+            }
             .btn{
                 border: 4px solid $white;
                 &:hover{
@@ -290,6 +324,7 @@ a{
         }
     }
 }
+/*FOR DEVELOP PAGE*/
 .dev{
     .header{
         &__email{
@@ -301,10 +336,7 @@ a{
     }
     .content{
         &_title{
-            background: linear-gradient(-135deg, #fdc830 0%, #fed61d 100%);
-            .heading{
-                margin-bottom: 50px;
-            }
+            background: linear-gradient(-135deg, #fbb614 0%, #ffd71c 100%);
             .offer{
                 margin-bottom: 100px;
             }
@@ -330,6 +362,27 @@ a{
                 color: $black;
             }
         }
+        .element{
+            //WORDPRESS
+            &_01{
+                bottom: 0;
+                right: -100px;
+                width: 1200px;
+            }
+            //MODX
+            &_02{
+                top: 0;
+                left: -30px;
+                width: 600px;
+            }
+            //PAUSE
+            &_03{
+                width: 550px;
+                height: 550px;
+                top: calc(50% - 275px);
+                right: calc((100% - 1380px)/2);
+            }
+        }
     }
     .price{
         &_large{
@@ -339,25 +392,217 @@ a{
         }
     }
 }
-
-/* STYLE ITEM*/
-.item{
-    margin-bottom: 40px;
-    &__header{
-        font-size: 32px;
-        font-weight: 700;
-
-        white-space: nowrap;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-        color: #d3d3d4;
+/*FOR SEO PAGE*/
+.seo{
+    .header{
+        &__email{
+            color: $lightgreen;
+        }
+        &__nav{
+            background: $lightgreen;
+            &__path{
+                fill: #637b0d;
+            }
+        }
     }
-    &__offer{
-        font-size: 16px;
-        color: $grey;
+    .content{
+        &_title{
+            background: linear-gradient(180deg, #637b0d 0%, #99af01 100%);
+            &__elements {
+                bottom: -100px;
+                width: 680px;
+                height: 680px;
+            }
+        }
+        &_color{
+            overflow: hidden;
+            color: $white;
+            background: linear-gradient(180deg, #637b0d 0%, #99af01 100%);
+            .heading.first{
+                margin-bottom: 60px;
+            }
+            .subheading{
+                color: $lightgreen;
+            }
+            .offer{
+                color: $white;
+            }
+            .item{
+                &_with-icon{
+                    .item__icon{
+                        background: $lightgreen;
+                    }
+                    .item__title{
+                        color: $white;
+                    }
+                    .item__offer{
+                        color: $lightgreen;
+                    }
+                }
+                
+                &_info{
+                    background: $lightgreen;
+                    margin-bottom: 0;
+                    .item__title{
+                        color: $black;
+                    }
+                    .item__offer {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &_price{
+            .subheading{
+                color: $lightgreen;
+            }
+        }
+        .element{
+            //PAUSE
+            &_03{
+                width: 420px;
+                height: 420px;
+                top: 230px;
+                left: calc((100% - 1380px)/2);
+            }
+        }
+        .col-comment{
+            .element_comment{
+                width: 320px;
+                position: absolute;
+                right: 0;
+                bottom: 50px;
+            }
+        }
+    }
+    .price{
+        &_large{
+            .price__header{
+                background: linear-gradient(180deg, #637b0d 0%, #99af01 100%);
+            }
+        }
+    }    
+}
 
-        width: 240px;
-        max-width: 100%;
+/*FOR MARKETING PAGE*/
+.marketing{
+    .header{
+        &__email{
+            color: $white;
+        }
+        &__nav{
+            background: $darkred;
+            &__path{
+                fill: $white;
+            }
+        }
+    }
+    .content{
+        &_title{
+            background: linear-gradient(180deg, #930e00 0%, #fd2d17 100%);
+            &__elements{
+                bottom: -100px;
+            }
+            &__svg{
+                transform: translateY(-30px);
+            }
+            .offer{
+                width: 440px;
+                max-width: 100%;
+            }
+        }
+        &_color{
+            color: $white;
+            background: linear-gradient(180deg, #bf0e00 0%, #fd2d17 100%);
+            .heading_small{
+                font-size: 26px;
+            }
+            .offer{
+                color: $white;
+                margin: 20px 0 0;
+
+                width: 400px;
+                max-width: 100%;
+                &.small{
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+            .element{
+                bottom: -10px;
+                left: 0;
+            }
+            .row{
+                flex-wrap: nowrap;
+                .column{
+                    padding: 0 20px;
+                    .heading{
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+        .list{
+            width: 410px;
+            max-width: 100%;
+            padding: 40px;
+            background: lighten($lightgrey, 30%);
+            &__item{
+                color: $grey;
+                &:before{
+                    background: linear-gradient(180deg, #bf0e00 0%, #fd2d17 100%);
+                }
+            }
+        }
+    }
+    .price{
+        &_large{
+            .price__header{
+                background: linear-gradient(180deg, #bf0e00 0%, #fd2d17 100%);
+            }
+        }
+    }    
+}
+
+/* PROJECT BLOCK */
+.project{
+    .heading{
+        &.margin-bottom{
+            margin-bottom: 30px;
+        }
+        & + .offer{
+            margin: 30px 0 50px;
+        }
+    }
+    .offer{
+        margin-bottom: 20px;
+    }
+    &__stats{
+        padding-top: 120px;
+        padding-left: 100px;
+        padding-bottom: 15px;
+        max-width: 400px;
+
+        background-position: left bottom;
+        background-repeat: no-repeat;
+
+        &.offer{
+            line-height: 20px;
+        }
+    }
+    &__task{
+        display: flex;
+        flex-wrap: nowrap;
+        &__item{
+            font-size: 12px;
+            line-height: 26px;
+
+            padding-right: 20px;
+            text-transform: uppercase;
+
+            flex: 0 0 110px;
+            max-width: 110px;
+        }
     }
 }
 
@@ -447,4 +692,5 @@ a{
         white-space: nowrap;
     }
 }
+
 @import "media.scss";

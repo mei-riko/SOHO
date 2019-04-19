@@ -1,14 +1,9 @@
 import $ from "jquery";
 
 $(document).ready(() => {
-    $('.scroll-pane').niceScroll({
-        autohidemode: false,
-        cursorcolor:"white",
-        cursorwidth:"4px",
-        background:"rgba(255,255,255,0.1)",
-        cursorborder:"1px solid aquamarine",
-        cursorborderradius: 2
-    });
+    if( $('.scroll-pane').length ){
+        $('.scroll-pane').jScrollPane();
+    }
 
     $("#header__nav").on("click", function(){
         $(this).toggleClass("active");

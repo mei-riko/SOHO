@@ -9,6 +9,7 @@
         left: 0px;
         width: 460px;
         height: 460px;
+        z-index: -1;
     }
     .heading{
         font-size: 64px;
@@ -19,18 +20,16 @@
         }
     }
     &__row{
-        margin-top: 80px;
-        margin-left: 100px;
+        
+        width: 2000px;
         text-align: right;
-
+        padding: 80px 0;
         overflow-x: scroll;
-        .row{
-            flex-wrap: nowrap;
-        }
     }
     &__item{
-        height: 300px;
-        margin-bottom: 40px;
+        float: left;
+        margin-right: 40px;
+        width: 360px;
     }
     &__title{
         display: inline-block;
@@ -60,8 +59,4 @@
         padding-top: 340px;
         margin-top: -340px;
     }
-}
-
-.nicescroll-rails{
-    cursor: pointer;
 }

@@ -1,0 +1,47 @@
+.item{
+    margin-bottom: 40px;
+    &__header{
+        font-size: 32px;
+        font-weight: 700;
+
+        white-space: nowrap;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        color: #d3d3d4;
+    }
+    &__title{
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $grey;
+    }
+    &__offer{
+        font-size: 16px;
+        color: $grey;
+
+        width: 240px;
+        max-width: 100%;
+    }
+    &__icon{
+        border-radius: 10px;
+        background-color: $grey;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 40px;
+        padding: 10px;
+        .active-path{
+            color: $lightgrey;
+        }
+    }
+    &_with-icon{
+        position: relative;
+        padding-left: 60px;
+    }
+    &_info{
+        padding: 30px;
+        .item__title{
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -77,14 +77,9 @@ var _jquery2 = _interopRequireDefault(_jquery);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _jquery2.default)(document).ready(function () {
-    (0, _jquery2.default)('.scroll-pane').niceScroll({
-        autohidemode: false,
-        cursorcolor: "white",
-        cursorwidth: "4px",
-        background: "rgba(255,255,255,0.1)",
-        cursorborder: "1px solid aquamarine",
-        cursorborderradius: 2
-    });
+    if ((0, _jquery2.default)('.scroll-pane').length) {
+        (0, _jquery2.default)('.scroll-pane').jScrollPane();
+    }
 
     (0, _jquery2.default)("#header__nav").on("click", function () {
         (0, _jquery2.default)(this).toggleClass("active");
