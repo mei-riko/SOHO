@@ -80,6 +80,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     if ((0, _jquery2.default)('.scroll-pane').length) {
         (0, _jquery2.default)('.scroll-pane').jScrollPane();
     }
+    (0, _jquery2.default)(window).resize(function () {
+        if ((0, _jquery2.default)('.scroll-pane').length) {
+            (0, _jquery2.default)('.scroll-pane').jScrollPane();
+        }
+    });
 
     (0, _jquery2.default)("#header__nav").on("click", function () {
         (0, _jquery2.default)(this).toggleClass("active");

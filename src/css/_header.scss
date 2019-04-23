@@ -9,8 +9,13 @@
 
         padding-top: 80px;
         font-weight: 700;
+        color: $yellow;
 
         transition: .3s;
+
+        &_inside{
+            top: 30px;
+        }
     }
     &__logo{
         position: absolute;
@@ -38,6 +43,7 @@
 
         padding: 20px;
         border-radius: 50%;
+        background: $darkblue;
         box-shadow: 0px 3px 6px 0px rgba(34, 0, 112, 0.1);
 
         transition: .5s;

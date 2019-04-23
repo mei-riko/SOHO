@@ -14,6 +14,7 @@
         font-weight: 700;
         text-transform: uppercase;
         color: $grey;
+        margin-bottom: 5px;
     }
     &__offer{
         font-size: 16px;
@@ -42,6 +43,16 @@
         padding: 30px;
         .item__title{
             margin-bottom: 20px;
+        }
+    }
+    &_result{
+        background: $white;
+        text-align: center;
+        .item__result{
+            margin-top: 10px;
+            color: $green;
+            font-size: 32px;
+            font-weight: 700;
         }
     }
 }

@@ -4,7 +4,12 @@ $(document).ready(() => {
     if( $('.scroll-pane').length ){
         $('.scroll-pane').jScrollPane();
     }
-
+    $(window).resize(function(){
+        if( $('.scroll-pane').length ){
+            $('.scroll-pane').jScrollPane();
+        }
+    });
+    
     $("#header__nav").on("click", function(){
         $(this).toggleClass("active");
         $(".header .nav").toggleClass("active");

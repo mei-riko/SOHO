@@ -54,6 +54,7 @@ a{
 
 .text-darkblue{color:$darkblue;}
 .text-red{color:$red;}
+.text-green{color:$green;}
 
 .text-uppercase{text-transform: uppercase; }
 .text-bold{font-weight: 700;}
@@ -109,11 +110,17 @@ a{
         line-height: 24px;
         color: $grey;
         margin-bottom: 40px;
+        &.small{
+            font-size: 14px;
+        }
         &.last{
             margin-bottom: 0;
         }
         & + .subheading{
             margin-top: 40px;
+        }
+        &_subtitle{
+            margin-bottom: 10px;
         }
     }
     .element{
@@ -362,6 +369,26 @@ a{
                 color: $black;
             }
         }
+        &_price{
+            .element{
+                &_1{
+                    width: 250px;
+                    top: -100px;
+                    left: -50px;
+                }
+                &_2{
+                    width: 210px;
+                    bottom: -60px;
+                    right: -120px;
+                    z-index: 11;
+                }
+                &_3{
+                    width: 280px;
+                    top: -100px;
+                    right: -50px;
+                }
+            }
+        }
         .element{
             //WORDPRESS
             &_01{
@@ -457,6 +484,20 @@ a{
                 color: $lightgreen;
             }
         }
+        &_price{
+            .element{
+                &_1{
+                    width: 220px;
+                    top: -100px;
+                    left: -50px;
+                }
+                &_3{
+                    width: 260px;
+                    top: -100px;
+                    right: -50px;
+                }
+            }
+        }
         .element{
             //PAUSE
             &_03{
@@ -483,7 +524,6 @@ a{
         }
     }    
 }
-
 /*FOR MARKETING PAGE*/
 .marketing{
     .header{
@@ -542,6 +582,30 @@ a{
                 }
             }
         }
+        &_padding{
+            z-index: 11;
+            .element{
+                position: absolute;
+                left: 0;
+                bottom: -120px;
+
+                width: 450px;
+            }
+        }
+        &_price{
+            .element{
+                &_1{
+                    width: 220px;
+                    top: -100px;
+                    left: -50px;
+                }
+                &_3{
+                    width: 260px;
+                    top: -100px;
+                    right: -50px;
+                }
+            }
+        }
         .list{
             width: 410px;
             max-width: 100%;
@@ -561,7 +625,101 @@ a{
                 background: linear-gradient(180deg, #bf0e00 0%, #fd2d17 100%);
             }
         }
-    }    
+    }
+}
+/*FOR AD PAGE*/
+.ad{
+    .header{
+        &__email{
+            color: $darkgreen;
+        }
+        &__nav{
+            background: $green;
+        }
+    }
+    .content{
+        &_title{
+            background: linear-gradient(180deg, #c5f068 0%, #d3fb78 100%);
+            .heading{
+                color: $darkgreen;
+            }
+            .offer{
+                width: 450px;
+                max-width: 100%;
+                color: $darkgreen;
+            }
+            &__elements{
+                bottom: -100px;
+            }
+            &__svg{
+                transform: translateY(-30px);
+            }
+        }
+        .offer{
+        }
+        .list{
+            &__item{
+                margin-bottom: 20px;
+                &:before{
+                    background: linear-gradient(45deg, #2b248a 0%, #361cbc 100%);
+                }
+            }
+        }
+        .item{
+            .item__icon{
+                background: $lightgrey;
+            }
+            .item__offer{
+                color: $lightgrey;
+                width: 280px;
+            }
+        }
+        &_project{
+            background: linear-gradient(180deg, #dcf599 0%, #d3fb78 100%);
+        }
+        &_element{
+            .element{
+                &_1{
+                    width: 300px;
+                    bottom: 90px;
+                    left: calc( 50% - 720px);
+                }
+                &_2{
+                    width: 300px;
+                    top: 250px;
+                    right: calc( 50% - 550px);
+                }
+            }
+        }
+        &_price{
+            .element{
+                &_1{
+                    width: 250px;
+                    top: -100px;
+                    left: -50px;
+                }
+                &_2{
+                    width: 220px;
+                    bottom: -60px;
+                    right: -120px;
+                    z-index: 11;
+                }
+                &_3{
+                    width: 210px;
+                    top: -100px;
+                    right: -50px;
+                }
+            }
+        }
+        .price{
+            &_large{
+                .price__header{
+                    background: linear-gradient(180deg, $green 0%, darken($green, 10%) 100%);
+                    padding: 12px 30px;
+                }
+            }
+        }
+    }
 }
 
 /* PROJECT BLOCK */
@@ -691,6 +849,23 @@ a{
         font-size: 18px;
         white-space: nowrap;
     }
+}
+
+/* SCROLL PANE */
+.jspTrack {
+    background: #713fe9;
+}
+.jspDrag {
+    background: #8a5df7;
+}
+
+/* FORM ERROR */
+.has-validation .form-validation .error{
+    position: absolute;
+    left: 30px;
+    top: 5px;
+    font-size: 10px;
+    color: $red;
 }
 
 @import "media.scss";
