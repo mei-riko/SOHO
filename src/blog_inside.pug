@@ -1,11 +1,11 @@
 html(lang="ru", dir="ltr")
     include chunks/head.pug
-    body
+    body.inside-page
         script(src="./js/jquery.min.js")
         script(src="./js/jquery.nicescroll.min.js")
         script(src="./js/app.min.js")
-        include chunks/header_inside.pug
-        .blog
+        include chunks/header.pug
+        .blog.page
             .blog__elements.elements_01
                 svg(viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet")
                     defs
@@ -32,33 +32,42 @@ html(lang="ru", dir="ltr")
                         rect(x="12" y="9.5" width="71" height="160")
                         rect(x="97" y="9.5" width="71" height="160")            
             .container
-                .row
-                    .col-9
-                        .heading Самое актуальное в нашем блоге
-                    .col-xl-3
-                        a.blog__item.blog__item_image(href="#" style="background-image: url('../images/belje-na-verevke.jpg')")
-                            .blog__item__title 6&nbsp;способов прокачать первый экран на&nbsp;вашем сайте
-                            .blog__item__offer 12.09.2018
-                    .col-xl-3
-                        a.blog__item.blog__item_image(href="#" style="background-image: url('../images/test-01.jpg')")
-                            .blog__item__title О&nbsp;чем нужно помнить, создавая уникальные тексты?
-                            .blog__item__offer 12.09.2018
-                    .col-xl-3
-                        a.blog__item.blog__item_image(href="#" style="background-image: url('../images/test-02.jpg')")
-                            .blog__item__title Продвижение сайта почти бесплатно
-                            .blog__item__offer 12.09.2018
-                    .col-xl-3
-                        a.blog__item.blog__item_image(href="#" style="background-image: url('../images/belje-na-verevke.jpg')")
-                            .blog__item__title 6&nbsp;способов прокачать первый экран на&nbsp;вашем сайте
-                            .blog__item__offer 12.09.2018
-                    .col-xl-3
-                        a.blog__item.blog__item_image(href="#" style="background-image: url('../images/test-01.jpg')")
-                            .blog__item__title О&nbsp;чем нужно помнить, создавая уникальные тексты?
-                            .blog__item__offer 12.09.2018
-                    .col-xl-3
-                        a.blog__item.blog__item_image(href="#" style="background-image: url('../images/test-02.jpg')")
-                            .blog__item__title Продвижение сайта почти бесплатно
-                            .blog__item__offer 12.09.2018
+                .row.justify-content-center
+                    .col-sm-10.col-xl-8
+                        .page__image(style="background-image:url('../images/image_blog.png');")
+                        .page__info.bg-grey
+                            .page__date 16 апреля 2019
+                            .page__person Автор публикации: 
+                                span.text-color Елена Павлова
+                            .page__reading Время чтения: 
+                                span.text-bold 5 минут
+                        .page__content
+                            h1.heading 6 способов прокачать первый экран на вашем сайте
+                            p Тот контент, который вы разместите на «первом экране», является ключом к успеху сайта. Дизайн может заманить, заставить юзера нажимать (на нужные кнопки) или перемещаться по странице. Что должен увидеть пользователь на экране, прежде чем захочет пролистать страницу?
+                            blockquote Первое, на что обращает внимание посетитель сайта — первый экран. Это — визитная карточка всего сайта. Остальной контент пользователь увидит потом, поэтому важно заинтересовать его с первых секунд. В данной статье предлагаем вам простые способы сделать дизайн главной страницы и особенно первого экрана качественным и информативным.
+                            img(src='../images/image_blog.png' alt="" title="")
+                            h2 Заголовок h2
+                            p Тот контент, который вы разместите на «первом экране», является ключом к успеху сайта. Дизайн может заманить, заставить юзера нажимать (на нужные кнопки) или перемещаться по странице. Что должен увидеть пользователь на экране, прежде чем захочет пролистать страницу?
+                            h3 Заголовок h3
+                            p Тот контент, который вы разместите на «первом экране», является ключом к успеху сайта. Дизайн может заманить, заставить юзера нажимать (на нужные кнопки) или перемещаться по странице. Что должен увидеть пользователь на экране, прежде чем захочет пролистать страницу?
+                            h4 Заголовок h4
+                            p Тот контент, который вы разместите на «первом экране», является ключом к успеху сайта. Дизайн может заманить, заставить юзера нажимать (на нужные кнопки) или перемещаться по странице. Что должен увидеть пользователь на экране, прежде чем захочет пролистать страницу?
+                            h5 Заголовок h5
+                            p Тот контент, который вы разместите на «первом экране», является ключом к успеху сайта. Дизайн может заманить, заставить юзера нажимать (на нужные кнопки) или перемещаться по странице. Что должен увидеть пользователь на экране, прежде чем захочет пролистать страницу?
+        .content.blog
+            .container
+                .heading Самое актуальное в нашем 
+                    a.link(href="#") блоге
+                .row.justify-content-between
+                    .col-xl-3.blog__item
+                        a(href="#").blog__item__title 6&nbsp;способов прокачать первый экран на&nbsp;вашем сайте
+                        .blog__item__offer Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.
+                    .col-xl-3.blog__item
+                        a(href="#").blog__item__title О&nbsp;чем нужно помнить, создавая уникальные тексты?
+                        .blog__item__offer Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.
+                    .col-xl-3.blog__item
+                        a(href="#").blog__item__title Продвижение сайта почти бесплатно
+                        .blog__item__offer Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.
         .content.content_contact.inside
             .container
                 .row

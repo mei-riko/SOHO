@@ -2,18 +2,6 @@
 
 @import "variable.scss";
 
-@import "form.scss";
-@import "buttons.scss";
-@import "toggle-tabs.scss";
-@import "item.scss";
-@import "list.scss";
-
-@import "header.scss";
-@import "footer.scss";
-
-@import "blog.scss";
-@import "portfolio.scss";
-
 @import "node_modules/bootstrap/scss/vendor/_rfs.scss";
 @import "node_modules/bootstrap/scss/mixins/_hover.scss";
 @import "node_modules/bootstrap/scss/mixins/_breakpoints.scss";
@@ -24,6 +12,20 @@
 @import "node_modules/bootstrap/scss/_grid.scss";
 
 @import "reboot.scss";
+
+@import "form.scss";
+@import "buttons.scss";
+@import "toggle-tabs.scss";
+@import "item.scss";
+@import "list.scss";
+
+@import "header.scss";
+@import "footer.scss";
+@import "price.scss";
+
+@import "blog.scss";
+@import "portfolio.scss";
+@import "page.scss";
 
 
 html {
@@ -65,6 +67,7 @@ a{
 
 .img-fluid{max-width: 100%;}
 
+/* CONTENT */
 .content{
     position: relative;
     padding: 100px 0;
@@ -307,7 +310,7 @@ a{
         }
     }
 }
-/* FOR INSIDE PAGE */
+/* FOR INDEX PAGE */
 .index{
     .header{
         &__email{
@@ -331,7 +334,7 @@ a{
         }
     }
 }
-/*FOR DEVELOP PAGE*/
+/* FOR DEVELOP PAGE */
 .dev{
     .header{
         &__email{
@@ -419,7 +422,7 @@ a{
         }
     }
 }
-/*FOR SEO PAGE*/
+/* FOR SEO PAGE */
 .seo{
     .header{
         &__email{
@@ -524,7 +527,7 @@ a{
         }
     }    
 }
-/*FOR MARKETING PAGE*/
+/* FOR MARKETING PAGE */
 .marketing{
     .header{
         &__email{
@@ -627,7 +630,7 @@ a{
         }
     }
 }
-/*FOR AD PAGE*/
+/* FOR AD PAGE */
 .ad{
     .header{
         &__email{
@@ -722,7 +725,7 @@ a{
     }
 }
 
-/* PROJECT BLOCK */
+/* PROJECT IN PORTFOLIO BLOCK */
 .project{
     .heading{
         &.margin-bottom{
@@ -761,93 +764,6 @@ a{
             flex: 0 0 110px;
             max-width: 110px;
         }
-    }
-}
-
-/* PRICE BLOCK */
-.price{
-    position: relative;
-    text-align: center;
-    background: #3d3d3d;
-    border-radius: 30px;
-
-    width: 330px;
-    max-width: 100%;
-    margin: 50px auto 0;
-
-    .price__header{
-        display: inline-block;
-        padding: 12px 40px;
-        font-size: 16px;
-        font-weight: 700;
-        text-transform: uppercase;
-        border-radius: 15px;
-        background-image: linear-gradient( -45deg, rgb(50,43,143) 0%, rgb(63,36,166) 62%, rgb(76,28,188) 100%);          
-        transform: translateY(-50%);
-    }    
-    .price__content{
-        font-size: 14px;
-        line-height: 22px;
-        color: darken($color: $white, $amount: 30%);
-        padding: 0 30px;
-        p{
-            margin-bottom: 10px;
-        }
-    }
-    .price__time{
-        font-size: 22px;
-        color: $white;
-        font-weight: bold;
-        margin: 20px 0;
-        padding: 0 30px;
-    }
-    .price__info{
-        font-size: 12px;
-        color: darken($color: $white, $amount: 40%);
-    }
-    .price__footer{
-        color: #b2afaf;
-        background: #515151;
-        border-radius: 0 0 30px 30px;
-        padding: 10px 30px;
-        text-transform: uppercase;
-        font-size: 12px;
-        font-weight: bold;
-        margin-top: 20px;
-    }
-    &_large{
-        width: 400px;
-        .price__header{
-            font-size: 20px;
-        }
-        .price__content{
-            font-size: 16px;
-            line-height: 24px;
-        }
-        .price__time{
-            font-size: 26px;
-        }
-    }
-}
-.price-line{
-    color: darken($color: $white, $amount: 30%);
-    background: rgba(255,255,255,.1);
-    font-size: 14px;
-    padding: 20px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    &.even{
-        background: rgba(255,255,255,.05);
-    }
-    .price-line__title{
-        padding-right: 30px;
-    }
-    .price-line__value{
-        color: darken($color: $white, $amount: 15%);
-        font-size: 18px;
-        white-space: nowrap;
     }
 }
 
