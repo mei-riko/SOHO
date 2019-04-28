@@ -3,6 +3,7 @@ html(lang="ru", dir="ltr")
     body.index
         script(src="./js/jquery.min.js")
         script(src="./js/jquery.jsscrollpane.min.js")
+        script(src="./js/jquery.inputmask.js")
         script(src="./js/app.min.js")
         include chunks/header.pug
         .content.content_title
@@ -38,14 +39,14 @@ html(lang="ru", dir="ltr")
                         path(style="fill: url(#gradient); filter: url(#shadow);" d="M10,90c0-44.2,35.8-80,80-80s80,35.8,80,80 M10,90c0,44.2,35.8,80,80,80s80-35.8,80-80 M111.3,90c0,11.7-9.5,21.3-21.3,21.3S68.7,101.7,68.7,90 M111.3,90c0-11.7-9.5-21.3-21.3-21.3S68.7,78.3,68.7,90")
             .container
                 .row
-                    .col-xl-6.offset-xl-1.align-items-center
+                    .col-xl-6.col-md-8.col-9.offset-1.offset-md-2.offset-xl-1.align-items-center
                         h1.heading Разработка. Реклама. Продвижение. Интернет-маркетинг.
                         a.btn.btn_primary(href="#") Обсудим проект?     
         .content
             .container.p-relative
                 .element.element_point
                 .row
-                    .col-xl-6
+                    .col-lg-8.col-xl-6
                         h2.heading.heading_smaller От разработки 
                             span.text-darkblue до первых клиентов 
                             | всего 10 дней
@@ -57,9 +58,9 @@ html(lang="ru", dir="ltr")
                             a.content__btn__link(href="#") Разработка сайта
                             a.content__btn__link(href="#") Маркетинг продаж
                             a.content__btn__link(href="#") Создание контента
-                    .col-xl-5.offset-xl-4
+                    .col-lg-5.offset-lg-4
                         p.offer Сроки для нас — не пустой звук. Мы четко выстраиваем работу, чтобы ваш бизнес начал приносить прибыль как можно скорее. Вы всегда будете в курсе процесса и сможете понимать на каком этапе реализация проекта.
-                    .col-xl-6.offset-xl-4
+                    .col-lg-6.offset-lg-4
                         h3.heading.heading_medium У вас будут 
                             span.text-darkblue преимущества
                         .toggle-tabs
@@ -137,28 +138,28 @@ html(lang="ru", dir="ltr")
                     //-         a.portfolio__title(href="#") #Реклама
                     //-         a(href="#")
                     //-             img.portfolio__image(src="./images/03.png")
-        .content.content_contact
+        .content.content_contact#contact
             .container
                 .row.align-items-end
-                    .col-xl-6
+                    .col-xl-6.col-lg-10
                         h4.heading Нужны клиенты? <br/> Мы знаем как их получить
                         form.form.form_inline(action="")
-                            input.input-text(type="tel" placeholder="Ваш контактный телефон" value="")
+                            input.in-phone.input-text(type="tel" placeholder="Ваш контактный телефон" value="")
                             button.btn.btn_primary(type="submit") Обсудим проект
-                    .col-xl-3
+                    .col-xl-3.col-lg-6
                         .offer.last Многие компании, предлагая свои услуги, говорят о том, какие они классные. Мы в первую очередь думаем о вас и вашем комфорте от сотрудничества с SOHO. Поэтому мы расскажем о том, что вы получите, обратившись к нам.
         .content.blog
             .container
                 .heading Самое актуальное в нашем 
                     a.link(href="#") блоге
                 .row.justify-content-between
-                    .col-xl-3.blog__item
+                    .col-lg-3.blog__item
                         a(href="#").blog__item__title 6&nbsp;способов прокачать первый экран на&nbsp;вашем сайте
                         .blog__item__offer Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.
-                    .col-xl-3.blog__item
+                    .col-lg-3.blog__item
                         a(href="#").blog__item__title О&nbsp;чем нужно помнить, создавая уникальные тексты?
                         .blog__item__offer Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.
-                    .col-xl-3.blog__item
+                    .col-lg-3.blog__item
                         a(href="#").blog__item__title Продвижение сайта почти бесплатно
                         .blog__item__offer Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.
         include chunks/footer.pug

@@ -1,13 +1,161 @@
+@media(max-width: 1200px){
+    .header{
+        &__nav{
+            right: calc((100% - 960px)/2 + 20px);
+        }
+    }
+    .content{
+        &_title{
+            &__elements {
+                bottom: -100px;
+            }
+        }
+        &_contact{
+            .form_inline{
+                margin-bottom: 40px;
+            }
+        }
+    }
+    .footer{
+        &__navbar{
+            font-size: 12px;
+            &__item {
+                padding: 0px 6px;
+            }
+        }
+    }
+}
+@media(max-width: 992px){
+    .header{
+        &__logo{
+            padding-top: 40px;
+            // width: 60px;
+        }
+        &__email{
+            padding-top: 40px;
+        }
+        &__nav{
+            top: 40px;
+            right: calc((100% - 720px)/2 + 20px);
+        }
+    }
+    .content{
+        &_title{
+            &__elements {
+                width: 680px;
+            }
+            .heading{
+                font-size: 50px;
+                line-height: 64px;
+                margin-bottom: 60px;
+            }
+        }
+        &.blog{
+            .blog__item + .blog__item{
+                margin-top: 40px;
+            }
+        }
+    }
+    .footer{
+        &__navbar{
+            font-size: 14px;
+            &__item {
+                padding: 0px 10px;
+            }
+        }
+    }
+}
+
+@media(max-width: 768px){
+    .header{
+        &__logo{
+            padding-top: 40px;
+            width: 45px;
+        }
+        &__email{
+            padding-top: 40px;
+        }
+        &__nav{
+            top: 40px;
+            right: calc((100% - 540px)/2 + 20px);
+        }
+    }
+    .content{
+        .element_point{
+            max-width: 100%;
+        }
+        .heading {
+            font-size: 44px;
+            line-height: 50px;
+        }
+        &_title{
+            padding-top: 240px;
+            &__elements{
+                width: 700px;
+            }
+        }
+        &_contact{
+            .form_inline{
+                margin: 40px 0;
+                .input-text {
+                    width: calc(100% - 280px);
+                }
+                .btn {
+                    width: 260px;
+                }
+            }
+        }
+    }
+    .portfolio{
+        .heading {
+            font-size: 54px;
+            line-height: 62px;
+        }
+    }
+    .footer{
+        &__navbar{
+            margin-top: 30px;
+            justify-content: flex-start;
+            margin-left: -10px;
+            margin-right: -10px;
+            &__item {
+                padding: 10px;
+                &.last{
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
 @media(max-width: 576px){
     .header{
         &__nav{
+            top: 20px;
             right: 20px;
         }
+        &__logo{
+            left: 20px;
+            padding-top: 20px;
+            width: 50px;
+        }
+        &__email{
+            left: auto;
+            right: 30px;
+            padding-top: 190px;
+        }
     }
-
     .content{
-
+        .heading {
+            font-size: 34px;
+            line-height: 40px;
+        }
+        &__btn{
+            &__link{
+                padding: 15px 15px 16px;
+            }
+        }
         &_title{
+            padding-top: 290px;
             .heading{
                 font-size: 30px;
                 line-height: 40px;
@@ -36,21 +184,59 @@
             }
         }
         &_contact{
+            padding-bottom: 60px;
+            .heading{
+                margin-top: 40px;
+            }
             .form{
                 .input-text{
                     float: none;
                     width: 100%;
                 }
                 .btn{
-                    margin-top: 40px;
-                    margin-left: 0;
-
+                    margin: 20px 0;
+                    width: 320px;
                 }
             }
         }
         &.blog{
-            .blog__item + .blog__item{
-                margin-top: 40px;
+            padding: 60px 0;
+        }
+    }
+    .portfolio{
+        padding-top: 60px;
+        &__elements{
+            width: 200px;
+            height: 200px;
+        }
+        .heading{
+            font-size: 30px;
+            line-height: 36px;
+        }
+        &__row{
+            padding: 40px 0;
+            width: 1200px;
+            overflow-x: hidden;
+        }
+        &__item{
+            width: 200px;
+            height: 190px;
+        }
+    }
+    .btn{
+        padding: 15px 20px;
+    }
+    
+    .index{
+        .content{
+            &_title{
+                padding-bottom: 60px;
+                &__elements{
+                    width: 720px;
+                }
+                .heading {
+                    margin-bottom: 60px;
+                }
             }
         }
     }

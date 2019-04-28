@@ -86,6 +86,25 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         }
     });
 
+    //Input mask
+    if ((0, _jquery2.default)(".in-phone").length > 0) {
+        (0, _jquery2.default)(".in-phone").inputmask({
+            mask: "+7 999 999 99 99",
+            placeholder: "",
+            showMaskOnHover: true,
+            onincomplete: function onincomplete() {
+                (0, _jquery2.default)(this).closest("form").addClass('error-phone');
+                (0, _jquery2.default)(this).addClass('error');
+                (0, _jquery2.default)(this).siblings(".error_phone").addClass('error').html('Укажите корректный номер');
+            },
+            oncomplete: function oncomplete() {
+                (0, _jquery2.default)(this).closest("form").removeClass('error-phone');
+                (0, _jquery2.default)(this).removeClass('error');
+                (0, _jquery2.default)(this).siblings(".error_phone").removeClass('error').html('');
+            }
+        });
+    }
+
     (0, _jquery2.default)("#header__nav").on("click", function () {
         (0, _jquery2.default)(this).toggleClass("active");
         (0, _jquery2.default)(".header .nav").toggleClass("active");

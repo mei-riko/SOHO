@@ -2,6 +2,7 @@ html(lang="ru", dir="ltr")
     include chunks/head.pug
     body.ad
         script(src="./js/jquery.min.js")
+        script(src="./js/jquery.inputmask.js")
         script(src="./js/app.min.js")
         include chunks/header.pug
         .content.content_title
@@ -242,7 +243,7 @@ html(lang="ru", dir="ltr")
                     .col-xl-6
                         h4.heading Нужны клиенты?<br/>Мы знаем как их получить
                         form.form.form_inline(action="")
-                            input.input-text(type="tel" placeholder="Ваш контактный телефон" value="")
+                            input.in-phone.input-text(type="tel" placeholder="Ваш контактный телефон" value="")
                             button.btn.btn_primary(type="submit") Да, нужны
                     .col-xl-3
                         .offer.last Многие компании, предлагая свои услуги, говорят о том, какие они классные. Мы в первую очередь думаем о вас и вашем комфорте от сотрудничества с SOHO. Поэтому мы расскажем о том, что вы получите, обратившись к нам.
