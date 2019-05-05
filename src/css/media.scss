@@ -1,4 +1,7 @@
 @media(max-width: 1200px){
+    .margin-bottom-lg{
+        margin-bottom: 30px;
+    }
     .header{
         &__nav{
             right: calc((100% - 960px)/2 + 20px);
@@ -24,8 +27,44 @@
             }
         }
     }
+
+    .price{
+        &_large{
+            .price__header {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .ad{
+        .content{
+            .list{
+                &__item{
+                    &_last{
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+            &_element{
+                .element_1{
+                    left: 0;
+                    bottom: 370px;
+                }
+                .element_2 {
+                    top: 100px;
+                    right: 0;
+                }
+            }
+            &_price{
+                .element{
+                    display: none;
+                }
+            }
+        }
+    }
 }
 @media(max-width: 992px){
+    .d-flex-md{display: flex;}
     .header{
         &__logo{
             padding-top: 40px;
@@ -41,13 +80,14 @@
     }
     .content{
         &_title{
+            padding-top: 340px;
             &__elements {
                 width: 680px;
             }
             .heading{
                 font-size: 50px;
                 line-height: 64px;
-                margin-bottom: 60px;
+                margin-bottom: 40px;
             }
         }
         &.blog{
@@ -59,14 +99,73 @@
     .footer{
         &__navbar{
             font-size: 14px;
+            margin-top: 30px;
+            justify-content: flex-start;
+            margin-left: -10px;
+            margin-right: -10px;
             &__item {
-                padding: 0px 10px;
+                padding: 10px;
+                &.last{
+                    padding: 10px;
+                }
+            }
+        }
+    }
+    .item{
+        &_last-md{
+            margin-bottom: 0;
+        }
+    }
+    .ad{
+        .content{
+            &_title{
+                &__elements {
+                    bottom: 60px;
+                }
+            }
+            &_price{
+                .element{
+                    display: block;
+                }
+                .element_1 {
+                    top: -10px;
+                    left: -40px;
+                }
+                .element_2{
+                    bottom: -30px;
+                    right: -30px;
+                }
+                .element_3 {
+                    top: 130px;
+                    right: -30px;
+                }
+            }
+            &_element{
+                .element{
+                    display: none;
+                }
             }
         }
     }
 }
-
 @media(max-width: 768px){
+    .margin-top-sm-none{
+        margin-top: 0px;
+        &.margin-top{margin-top: 0px;}
+    }
+    .margin-top-sm{
+        margin-top: 30px;
+        &.margin-top{margin-top: 30px;}
+    }
+    .margin-bottom-sm-none{
+        margin-bottom: 0px;
+        &.margin-bottom{margin-bottom: 0px;}
+    }
+    .margin-bottom-sm{
+        margin-bottom: 30px;
+        &.margin-bottom{margin-bottom: 30px;}
+    }
+    .d-flex-sm{display: flex;}
     .header{
         &__logo{
             padding-top: 40px;
@@ -85,8 +184,12 @@
             max-width: 100%;
         }
         .heading {
-            font-size: 44px;
-            line-height: 50px;
+            font-size: 36px;
+            line-height: 44px;
+            margin-bottom: 40px;
+            & + .offer{
+                margin-top: 40px;
+            }
         }
         &_title{
             padding-top: 240px;
@@ -105,6 +208,16 @@
                 }
             }
         }
+        &_price{
+            .content_price__container{
+                & + .content_price__container{
+                    margin-top: 50px;
+                }
+            }
+            .element{
+                display: none;
+            }
+        }
     }
     .portfolio{
         .heading {
@@ -112,22 +225,41 @@
             line-height: 62px;
         }
     }
-    .footer{
-        &__navbar{
-            margin-top: 30px;
-            justify-content: flex-start;
-            margin-left: -10px;
-            margin-right: -10px;
-            &__item {
-                padding: 10px;
-                &.last{
-                    padding: 10px;
+    .list{
+        &_ol{
+            & + .list__item{
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .ad{
+        .content{
+            &_title{
+                &__elements {
+                    bottom: -100px;
                 }
             }
         }
     }
 }
 @media(max-width: 576px){
+    .margin-top-xs-none{
+        margin-top: 0px;
+        &.margin-top{margin-top: 0px;}
+    }
+    .margin-top-xs{
+        margin-top: 30px;
+        &.margin-top{margin-top: 30px;}
+    }
+    .margin-bottom-xs-none{
+        margin-bottom: 0px;
+        &.margin-bottom{margin-bottom: 0px;}
+    }
+    .margin-bottom-xs{
+        margin-bottom: 30px;
+        &.margin-bottom{margin-bottom: 30px;}
+    }    
     .header{
         &__nav{
             top: 20px;
@@ -145,9 +277,10 @@
         }
     }
     .content{
+        padding: 50px 0;
         .heading {
-            font-size: 34px;
-            line-height: 40px;
+            font-size: 28px;
+            line-height: 34px;
         }
         &__btn{
             &__link{
@@ -155,7 +288,7 @@
             }
         }
         &_title{
-            padding-top: 290px;
+            padding-top: 250px;
             .heading{
                 font-size: 30px;
                 line-height: 40px;
@@ -183,6 +316,13 @@
                 margin-left: 0;
             }
         }
+        &_price{
+            .content_price__container{
+                & + .content_price__container{
+                    margin-top: 0px;
+                }
+            }
+        }
         &_contact{
             padding-bottom: 60px;
             .heading{
@@ -201,6 +341,11 @@
         }
         &.blog{
             padding: 60px 0;
+        }
+    }
+    .footer{
+        &__email{
+            margin-top: 10px;
         }
     }
     .portfolio{
@@ -224,7 +369,50 @@
         }
     }
     .btn{
+        font-size: 14px;
         padding: 15px 20px;
+        width: auto;
+    }
+    .item{
+        &_info{
+            padding: 20px;
+        }
+        &_result{
+            .item__result{
+                font-size: 24px;
+            }
+        }
+
+        &__offer{
+            font-size: 14px;
+        }
+        
+    }
+    .project{
+        .heading{
+            & + .offer {
+                margin: 20px 0 40px;
+            }
+        }
+        &__task{
+            &.margin-bottom {
+                margin-bottom: 30px;
+            }
+            &__item{
+                flex: 0 0 80px;
+                max-width: 80px;
+            }
+            &__content{
+                .offer{
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+    .price{
+        margin-top: 20px;
+        margin-bottom: 50px;
     }
     
     .index{
@@ -236,6 +424,15 @@
                 }
                 .heading {
                     margin-bottom: 60px;
+                }
+            }
+        }
+    }
+    .ad{
+        .content{
+            &_title{
+                &__elements {
+                    display: none;
                 }
             }
         }

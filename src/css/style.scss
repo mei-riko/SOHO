@@ -46,6 +46,10 @@ a{
     }
 }
 
+.d-flex{
+    display: flex;
+}
+
 .p-relative{position: relative;}
 .bg-white{background: $white;}
 .bg-grey{background: #dbd6de;}
@@ -657,8 +661,6 @@ a{
             &__svg{
                 transform: translateY(-30px);
             }
-        }
-        .offer{
         }
         .list{
             &__item{

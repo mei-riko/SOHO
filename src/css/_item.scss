@@ -1,5 +1,10 @@
 .item{
+    width: 100%;
+    height: auto;
     margin-bottom: 40px;
+    &_last{
+        margin-bottom: 0;           
+    }
     &__header{
         font-size: 32px;
         font-weight: 700;
