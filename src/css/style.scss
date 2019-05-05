@@ -87,6 +87,7 @@ a{
 
         &.margin-top{margin-top: 50px;}
         &.margin-bottom{margin-bottom: 50px;}
+
         &_small{
             font-size: 32px;
             line-height: 40px;
@@ -121,6 +122,9 @@ a{
             font-size: 14px;
         }
         &.last{
+            margin-bottom: 0;
+        }
+        &.last-xl{
             margin-bottom: 0;
         }
         & + .subheading{
@@ -622,6 +626,10 @@ a{
                 color: $grey;
                 &:before{
                     background: linear-gradient(180deg, #bf0e00 0%, #fd2d17 100%);
+                }
+
+                & + .list__item{
+                    margin-top: 20px;
                 }
             }
         }
