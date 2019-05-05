@@ -1,12 +1,18 @@
 .blog{
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     background: #1b1b1b;
 
-    padding: 200px 0 100px;
-
+    // padding: 200px 0 100px;
+    .header{
+        &__email{
+            left: 60px;
+            padding-top: 90px;
+        }
+    }
     &__elements{
         position: absolute;
+        max-width: 100%;
         &.elements_01{
             width: 800px;
             height: 800px;
@@ -25,7 +31,12 @@
         font-size: 48px;
         margin-bottom: 50px;
         color: #fff;
+
+        &_blog{
+            padding-top: 150px;
+        }
     }
+    
     .blog__item{
         margin-bottom: 40px;
 

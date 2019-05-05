@@ -1,64 +1,64 @@
 html(lang="ru", dir="ltr")
     include chunks/head.pug
-    body
+    body.blog
         script(src="./js/jquery.min.js")
         script(src="./js/jquery.inputmask.js")
         script(src="./js/app.min.js")
         include chunks/header_inside.pug
-        .blog
-            .blog__elements.elements_01
-                svg(viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet")
-                    defs
-                        filter#shadow(filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%")
-                            feGaussianBlur(in="SourceAlpha" result="blur" stdDeviation="3")
-                            feOffset(dx="5" dy="5" in="blur" result="offsetBlurredAlpha")
-                            feComponentTransfer
-                                feFuncA(type="linear" slope="0.2")
-                            feMerge
-                                feMergeNode
-                                feMergeNode(in="SourceGraphic")
-                        linearGradient#gradient(data-name="gradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse")
-                            stop(offset="0" stop-color="#222222")
-                            stop(offset="1" stop-color="#343434")
-                    g(fill-rule="nonzero")
-                        path(style="fill: url(#gradient); filter: url(#shadow);" d="M10,90c0-44.2,35.8-80,80-80s80,35.8,80,80 M10,90c0,44.2,35.8,80,80,80s80-35.8,80-80 M111.3,90c0,11.7-9.5,21.3-21.3,21.3S68.7,101.7,68.7,90 M111.3,90c0-11.7-9.5-21.3-21.3-21.3S68.7,78.3,68.7,90")
-            .blog__elements.elements_02
-                svg(viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet")
-                    defs
-                        linearGradient#gradient_02(data-name="gradient_02" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse")
-                            stop(offset="0" stop-color="#222222")
-                            stop(offset="1" stop-color="#343434")
-                    g(style="fill: url(#gradient_02); filter: url(#shadow);")
-                        rect(x="12" y="9.5" width="71" height="160")
-                        rect(x="97" y="9.5" width="71" height="160")            
-            .container
-                .row
-                    .col-9
-                        .heading Самое актуальное в нашем блоге
-                    .col-xl-3
-                        a.blog__item.blog__item_image(href="#" style="background-image: url('../images/belje-na-verevke.jpg')")
-                            .blog__item__title 6&nbsp;способов прокачать первый экран на&nbsp;вашем сайте
-                            .blog__item__offer 12.09.2018
-                    .col-xl-3
-                        a.blog__item.blog__item_image(href="#" style="background-image: url('../images/test-01.jpg')")
-                            .blog__item__title О&nbsp;чем нужно помнить, создавая уникальные тексты?
-                            .blog__item__offer 12.09.2018
-                    .col-xl-3
-                        a.blog__item.blog__item_image(href="#" style="background-image: url('../images/test-02.jpg')")
-                            .blog__item__title Продвижение сайта почти бесплатно
-                            .blog__item__offer 12.09.2018
-                    .col-xl-3
-                        a.blog__item.blog__item_image(href="#" style="background-image: url('../images/belje-na-verevke.jpg')")
-                            .blog__item__title 6&nbsp;способов прокачать первый экран на&nbsp;вашем сайте
-                            .blog__item__offer 12.09.2018
-                    .col-xl-3
-                        a.blog__item.blog__item_image(href="#" style="background-image: url('../images/test-01.jpg')")
-                            .blog__item__title О&nbsp;чем нужно помнить, создавая уникальные тексты?
-                            .blog__item__offer 12.09.2018
-                    .col-xl-3
-                        a.blog__item.blog__item_image(href="#" style="background-image: url('../images/test-02.jpg')")
-                            .blog__item__title Продвижение сайта почти бесплатно
-                            .blog__item__offer 12.09.2018
+        
+        .blog__elements.elements_01
+            svg(viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet")
+                defs
+                    filter#shadow(filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%")
+                        feGaussianBlur(in="SourceAlpha" result="blur" stdDeviation="3")
+                        feOffset(dx="5" dy="5" in="blur" result="offsetBlurredAlpha")
+                        feComponentTransfer
+                            feFuncA(type="linear" slope="0.2")
+                        feMerge
+                            feMergeNode
+                            feMergeNode(in="SourceGraphic")
+                    linearGradient#gradient(data-name="gradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse")
+                        stop(offset="0" stop-color="#222222")
+                        stop(offset="1" stop-color="#343434")
+                g(fill-rule="nonzero")
+                    path(style="fill: url(#gradient); filter: url(#shadow);" d="M10,90c0-44.2,35.8-80,80-80s80,35.8,80,80 M10,90c0,44.2,35.8,80,80,80s80-35.8,80-80 M111.3,90c0,11.7-9.5,21.3-21.3,21.3S68.7,101.7,68.7,90 M111.3,90c0-11.7-9.5-21.3-21.3-21.3S68.7,78.3,68.7,90")
+        .blog__elements.elements_02
+            svg(viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet")
+                defs
+                    linearGradient#gradient_02(data-name="gradient_02" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse")
+                        stop(offset="0" stop-color="#222222")
+                        stop(offset="1" stop-color="#343434")
+                g(style="fill: url(#gradient_02); filter: url(#shadow);")
+                    rect(x="12" y="9.5" width="71" height="160")
+                    rect(x="97" y="9.5" width="71" height="160")            
+        .container
+            .row
+                .col-9
+                    h1.heading.heading_blog Самое актуальное в нашем блоге
+                .col-xl-3.col-md-5
+                    a.blog__item.blog__item_image(href="#" style="background-image: url('../images/belje-na-verevke.jpg')")
+                        .blog__item__title 6&nbsp;способов прокачать первый экран на&nbsp;вашем сайте
+                        .blog__item__offer 12.09.2018
+                .col-xl-3.col-md-5
+                    a.blog__item.blog__item_image(href="#" style="background-image: url('../images/test-01.jpg')")
+                        .blog__item__title О&nbsp;чем нужно помнить, создавая уникальные тексты?
+                        .blog__item__offer 12.09.2018
+                .col-xl-3.col-md-5
+                    a.blog__item.blog__item_image(href="#" style="background-image: url('../images/test-02.jpg')")
+                        .blog__item__title Продвижение сайта почти бесплатно
+                        .blog__item__offer 12.09.2018
+                .col-xl-3.col-md-5
+                    a.blog__item.blog__item_image(href="#" style="background-image: url('../images/belje-na-verevke.jpg')")
+                        .blog__item__title 6&nbsp;способов прокачать первый экран на&nbsp;вашем сайте
+                        .blog__item__offer 12.09.2018
+                .col-xl-3.col-md-5
+                    a.blog__item.blog__item_image(href="#" style="background-image: url('../images/test-01.jpg')")
+                        .blog__item__title О&nbsp;чем нужно помнить, создавая уникальные тексты?
+                        .blog__item__offer 12.09.2018
+                .col-xl-3.col-md-5
+                    a.blog__item.blog__item_image(href="#" style="background-image: url('../images/test-02.jpg')")
+                        .blog__item__title Продвижение сайта почти бесплатно
+                        .blog__item__offer 12.09.2018
         .content.content_contact.inside
             .container
                 .row
