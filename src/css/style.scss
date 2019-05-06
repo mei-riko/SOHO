@@ -446,11 +446,6 @@ a{
     .content{
         &_title{
             background: linear-gradient(180deg, #637b0d 0%, #99af01 100%);
-            &__elements {
-                bottom: -100px;
-                width: 680px;
-                height: 680px;
-            }
         }
         &_color{
             overflow: hidden;
@@ -734,7 +729,6 @@ a{
         }
     }
 }
-
 /* PROJECT IN PORTFOLIO BLOCK */
 .project{
     .heading{
@@ -776,7 +770,6 @@ a{
         }
     }
 }
-
 /* SCROLL PANE */
 .jspTrack {
     background: #713fe9;
@@ -784,7 +777,6 @@ a{
 .jspDrag {
     background: #8a5df7;
 }
-
 /* FORM ERROR */
 .has-validation .form-validation .error{
     position: absolute;
@@ -792,6 +784,16 @@ a{
     top: 5px;
     font-size: 10px;
     color: $red;
+}
+/* Breadcrumbs */
+.breadcrumb {
+    padding: 0;
+    margin: 0 0 20px;
+    font-size: 12px;
+    list-style: none;
+    &__item {
+        display: inline-block;
+    }
 }
 
 @import "media.scss";

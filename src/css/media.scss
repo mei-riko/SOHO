@@ -81,7 +81,7 @@
             &_color{
                 .row{
                     .column{
-                        max-width: calc(100%/3);
+                        // max-width: calc(100%/3);
                         .heading {
                             font-size: 18px;
                             line-height: 24px;
@@ -90,6 +90,20 @@
                     }
                 }
             }
+        }
+    }
+    .inside-page{
+        .header__nav{
+            top: 20px;
+        }
+        .header__logo {
+            padding-top: 20px;
+        }
+        .header__email {
+            padding-top: 40px;
+        }
+        .page{
+            padding-top: 110px;
         }
     }
 }
@@ -115,7 +129,6 @@
     .header{
         &__logo{
             padding-top: 40px;
-            // width: 60px;
         }
         &__email{
             padding-top: 40px;
@@ -137,6 +150,12 @@
                 margin-bottom: 40px;
             }
         }
+        &_form{
+            overflow: hidden;
+            .element {
+                width: 1200px;
+            }
+        }       
         &.blog{
             .blog__item + .blog__item{
                 margin-top: 40px;
@@ -197,9 +216,9 @@
             .row{
                 flex-wrap: wrap;
                 .column{
-                    max-width: 100%;
+                    // max-width: 100%;
                     & + .column{
-                        margin-top: 50px;
+                        // margin-top: 50px;
                     }
                     .heading {
                         font-size: 26px;
@@ -211,14 +230,17 @@
                         }
                     }
                 }
-                
+            }
+        }
+        .content_padding{
+            .element {
+                bottom: -80px;
             }
         }
     }
     .seo{
         .content{
             .col-comment{
-                padding-top: 50px;
                 .element_comment{
                     display: none;
                 }
@@ -227,23 +249,18 @@
     }
     .blog{
         .header{
-            &__logo{
-                padding-top: 50px;
-            }
             &__email{
                 left: 60px;
                 right: auto;
                 padding-top: 60px;
             }
+            &__logo{
+                width: 250px;
+            }
         }
         .heading{
             font-size: 32px;
             line-height: 40px;
-        }
-    }
-    .inside-page{
-        .header__nav{
-            top: 5px;
         }
     }
     .page{
@@ -257,6 +274,12 @@
             .page__reading{
                 font-size: 12px;
                 padding: 10px 20px;
+            }
+            .page__breadcrumb{
+                padding: 10px 20px;
+                &.breadcrumb{
+                    padding: 10px 20px;
+                }
             }
             .page__person{
                 padding: 10px 0;
@@ -379,8 +402,9 @@
         }
     }
     .form{
+        .input-text,
         .input-inline{
-            font-size: 16px;
+            font-size: 14px;
         }
     }
     .ad{
@@ -410,6 +434,19 @@
             }
         }
     }    
+    .blog{
+        .header{
+            &__email{
+                left: 20px;
+                padding-top: 100px;
+            }
+        }
+    }
+    .inside-page{
+        .header__logo{
+            padding-top: 110px;
+        }
+    }
 }
 @media(max-width: 576px){
     .margin-top-xs-none{
@@ -461,12 +498,20 @@
         }
         &_title{
             padding-top: 250px;
+            min-height: 550px;
+            &__elements{
+                width: 720px;
+            }
             .heading{
                 font-size: 30px;
                 line-height: 40px;
             }
             .btn {
                 margin-left: 0px;
+            }
+
+            & + .content{
+                padding-top: 80px;
             }
         }
         &_section{
@@ -504,7 +549,7 @@
                 }
                 .btn{
                     margin: 20px 0;
-                    width: 320px;
+                    width: 100%;
                 }
             }
         }
@@ -546,8 +591,8 @@
         }
     }
     .btn{
-        font-size: 14px;
-        padding: 15px 20px;
+        font-size: 16px;
+        padding: 15px 40px;
         width: auto;
     }
     .item{
@@ -596,20 +641,8 @@
         .content{
             &_title{
                 padding-bottom: 60px;
-                &__elements{
-                    width: 720px;
-                }
                 .heading {
                     margin-bottom: 60px;
-                }
-            }
-        }
-    }
-    .ad{
-        .content{
-            &_title{
-                &__elements {
-                    display: none;
                 }
             }
         }
@@ -636,9 +669,6 @@
                     word-break: break-word;
                 }
             }
-            .col-comment{
-                padding-top: 50px;
-            }
         }
     }
     .blog{
@@ -656,7 +686,7 @@
             margin-right: -20px;
         }
         &__info{
-            padding: 15px 0;
+            padding: 10px 0;
             margin-left: -20px;
             margin-right: -20px;
             flex-wrap: wrap;
@@ -667,6 +697,12 @@
                 width: 100%;
                 padding: 5px 20px;
                 margin: 0;
+            }
+            .page__breadcrumb{
+                padding: 5px 20px;
+                &.breadcrumb{
+                    padding: 5px 20px;
+                }
             }
         }
         &__content {
@@ -707,7 +743,11 @@
             }
         }
     }
-    .inside-page .header__email{
-        left: 0;
+    .inside-page{
+        .header__email{
+            padding-top: 45px;
+            left: 20px;
+        }
     }
+    
 }

@@ -20,6 +20,16 @@
         display: flex;
         flex-wrap: nowrap;
     }
+    &__breadcrumb{
+        padding: 10px 60px;
+        &.breadcrumb{
+            padding: 10px 60px;
+            margin: 0;
+            .breadcrumb__item {
+                line-height: 20px;
+            }
+        }
+    }
     &__date{
         padding: 10px 60px;
     }
