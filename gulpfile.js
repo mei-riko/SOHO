@@ -74,12 +74,12 @@ gulp.task('css', function () {
       browsers: ['last 5 versions'],
       cascade: false
     }))
-    .pipe(cleanCSS({ level: { 1: { specialComments: 0 } } } )) //uncommit on production
-    .pipe(minifyCSS()) //uncommit on production
-    // .pipe(concat('style.css'))
-    // .pipe(gulp.dest('./public/css/'))
-    .pipe(rename({ suffix: '.min', prefix: '' }))
+    // .pipe(cleanCSS({ level: { 1: { specialComments: 0 } } } )) //uncommit on production
+    // .pipe(minifyCSS()) //uncommit on production
+    .pipe(concat('style.css'))
     .pipe(gulp.dest('./public/css/'))
+    // .pipe(rename({ suffix: '.min', prefix: '' }))
+    // .pipe(gulp.dest('./public/css/'))
     .on('end', browserSync.reload);
 });
 gulp.task('watch', function () {
