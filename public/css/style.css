@@ -2830,7 +2830,7 @@ template {
 .inside-page .header__link {
   right: 20px;
   left: auto;
-  color: #30219f;
+  color: #ffffff;
 }
 
 .page {
@@ -2927,6 +2927,10 @@ template {
   font-size: 18px;
   line-height: 28px;
   margin-bottom: 20px;
+}
+
+.page__content p img {
+  margin-bottom: 0;
 }
 
 .page__content ul li + li {
@@ -3923,6 +3927,9 @@ a:hover, a:focus {
   .inside-page .header__email, .inside-page .header__link {
     padding-top: 40px;
   }
+  .inside-page .header__link {
+    right: 110px;
+  }
   .inside-page .page {
     padding-top: 110px;
   }
@@ -4449,15 +4456,20 @@ a:hover, a:focus {
     line-height: 24px;
   }
   .page__content p {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 26px;
   }
   .page__content blockquote {
     padding-left: 30px;
     background: url("../images/icons/quotes.svg") no-repeat left top/20px;
   }
   .inside-page .header__email, .inside-page .header__link {
-    padding-top: 45px;
+    padding-top: 20px;
+    left: 20px;
+  }
+  .inside-page .header__link {
+    padding-top: 65px;
+    right: auto;
     left: 20px;
   }
 }

@@ -102,6 +102,9 @@
         .header__email {
             padding-top: 40px;
         }
+        .header__link {
+            right: 110px;
+        }
         .page{
             padding-top: 110px;
         }
@@ -734,8 +737,8 @@
                 line-height: 24px;
             }
             p{
-                font-size: 14px;
-                line-height: 22px;
+                font-size: 16px;
+                line-height: 26px;
             }
             blockquote{
                 padding-left: 30px;
@@ -745,7 +748,12 @@
     }
     .inside-page{
         .header__email{
-            padding-top: 45px;
+            padding-top: 20px;
+            left: 20px;
+        }
+        .header__link {
+            padding-top: 65px;
+            right: auto;
             left: 20px;
         }
     }

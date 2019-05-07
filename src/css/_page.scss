@@ -9,7 +9,7 @@
         @extend .header__email;
         right: 20px;
         left: auto;
-        color: $violet;
+        color: $white;
     }
 }
 .page{
@@ -86,6 +86,9 @@
             font-size: 18px;
             line-height: 28px;
             margin-bottom: 20px;
+            img{
+                margin-bottom: 0;
+            }
         }
         ul{
             li + li{
