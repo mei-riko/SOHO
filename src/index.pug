@@ -4,6 +4,7 @@ html(lang="ru", dir="ltr")
         script(src="./js/jquery.min.js")
         script(src="./js/jquery.jsscrollpane.min.js")
         script(src="./js/jquery.inputmask.js")
+        script(src="./js/jquery.fancybox.min.js")
         script(src="./js/app.min.js")
         include chunks/header.pug
         .content.content_title
@@ -41,7 +42,7 @@ html(lang="ru", dir="ltr")
                 .row
                     .col-xl-6.col-md-8.col-10.offset-md-2.offset-xl-1
                         h1.heading Разработка. Реклама. Продвижение. Интернет-маркетинг.
-                        a.btn.btn_primary(href="#") Обсудим проект?     
+                        a.btn.btn_primary(data-fancybox="" data-animation-duration="500" data-src="#callModal" href="javascript:;") Обсудим проект?     
         .content
             .container.p-relative
                 .element.element_point

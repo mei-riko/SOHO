@@ -128,25 +128,31 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         item.find(".toggle-tabs__item__content").slideToggle();
     });
 
+    if ((0, _jquery2.default)("[data-fancybox]").length > 0) {
+        (0, _jquery2.default)("[data-fancybox]").fancybox({
+            autoFocus: false
+        });
+    }
+    (0, _jquery2.default)("#btnInfo").on("click", function () {
+        var valueInput = (0, _jquery2.default)("#inputText").val();
+        (0, _jquery2.default)(".modal#callModal textarea").val(valueInput);
+    });
+
+    (0, _jquery2.default)('.go-to-top').on("click", function () {
+        (0, _jquery2.default)("body").animate({ scrollTop: 0 }, '500');
+    });
+
     if ((0, _jquery2.default)(window).scrollTop() > 150) {
-        // $('.header').addClass("scroll");
-        // $('.header .header__email').hide();            
-        // $('.header .header__logo').hide();            
-    } else if ((0, _jquery2.default)(window).scrollTop() < 60) {
-        // $('.header').removeClass("scroll");
-        // $('.header .header__email').show();            
-        // $('.header .header__logo').show();  
+        (0, _jquery2.default)('.go-to-top').addClass("active");
+    } else if ((0, _jquery2.default)(window).scrollTop() < 150) {
+        (0, _jquery2.default)('.go-to-top').removeClass("active");
     }
 
     (0, _jquery2.default)(window).scroll(function () {
         if ((0, _jquery2.default)(this).scrollTop() > 150) {
-            (0, _jquery2.default)('.header').addClass("scroll");
-            // $('.header .header__email').fadeOut();            
-            // $('.header .header__logo').fadeOut();            
+            (0, _jquery2.default)('.go-to-top').addClass("active");
         } else if ((0, _jquery2.default)(this).scrollTop() < 60) {
-            (0, _jquery2.default)('.header').removeClass("scroll");
-            // $('.header .header__email').fadeIn();            
-            // $('.header .header__logo').fadeIn();  
+            (0, _jquery2.default)('.go-to-top').removeClass("active");
         }
     });
 });

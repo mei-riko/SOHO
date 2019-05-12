@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>SOHO студия</title>
+    <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
     <link href="./css/jquery.jscrollpane.css" rel="stylesheet"/>
-    <link href="./css/style.min.css" rel="stylesheet"/>
+    <link href="./css/style.css" rel="stylesheet"/>
   </head>
   <body class="marketing">
     <script src="./js/jquery.min.js"></script>
     <script src="./js/jquery.inputmask.js"></script>
+    <script src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/app.min.js"></script>
     <header class="header">
       <div class="container">
@@ -158,8 +160,8 @@
           <div class="col-xl-7 text-center">
             <h4 class="heading heading_medium margin-bottom">Каких целей вы хотите достичь при&nbsp;помощи интернет-маркетинга?</h4>
             <form class="form" action="">
-              <textarea class="input-inline" name="" placeholder="Опишите здесь, каких целей вы хотите достичь с помощью вашего сайта"></textarea>
-              <button class="btn btn_primary" type="submit">Заказать интернет-маркетинг      </button>
+              <textarea class="input-inline" id="inputText" name="" placeholder="Опишите здесь, каких целей вы хотите достичь с помощью вашего сайта"></textarea>
+              <button class="btn btn_primary" id="btnInfo" data-fancybox="" data-animation-duration="500" data-src="#callModal" href="javascript:;">Заказать интернет-маркетинг      </button>
             </form>
           </div>
         </div>
@@ -235,7 +237,7 @@
         <div class="row">
           <div class="col-lg-5 margin-bottom"><img class="img-fluid" src="../images/default.png"/></div>
           <div class="col-lg-5 margin-bottom"><img class="img-fluid" src="../images/default.png"/></div>
-          <div class="col-xl-10"><a class="btn btn_primary" href="#">Хочу такой же результат</a></div>
+          <div class="col-xl-10"><a class="btn btn_primary" data-fancybox="" data-animation-duration="500" data-src="#callModal" href="javascript:;">Хочу такой же результат</a></div>
         </div>
       </div>
     </div>
@@ -340,5 +342,19 @@
         </div>
       </div>
     </footer>
+    <svg class="go-to-top" x="0px" y="0px" viewBox="0 0 477.175 477.175" xml:space="preserve">
+      <g>
+        <path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225   c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path>
+      </g>
+    </svg>
+    <div class="modal modal_dark" id="callModal">
+      <p class="modal__title">Оставьте сообщение для нас и мы перезвоним</p>
+      <form class="form form_column" action="">
+        <input class="input-text" type="text" placeholder="Ваше имя" value=""/>
+        <input class="in-phone input-text" type="tel" placeholder="Контактный телефон" value=""/>
+        <textarea class="input-text" name="" placeholder="Опишите здесь, каких целей вы хотите достичь с помощью вашего сайта"></textarea>
+        <button class="btn btn_primary" type="submit">Обсудим проект</button>
+      </form>
+    </div>
   </body>
 </html>
