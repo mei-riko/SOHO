@@ -139,7 +139,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     });
 
     (0, _jquery2.default)('.go-to-top').on("click", function () {
-        (0, _jquery2.default)("body").animate({ scrollTop: 0 }, '500');
+        (0, _jquery2.default)("html,body").animate({ scrollTop: 0 }, '500');
     });
 
     if ((0, _jquery2.default)(window).scrollTop() > 150) {

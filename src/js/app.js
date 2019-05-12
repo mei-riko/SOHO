@@ -62,7 +62,7 @@ $(document).ready(() => {
     });
 
     $('.go-to-top').on("click", function(){
-        $("body").animate({scrollTop:0}, '500');
+        $("html,body").animate({scrollTop:0}, '500');
     });
 
     if($(window).scrollTop() > 150) {

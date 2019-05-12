@@ -2192,10 +2192,9 @@ template {
   margin-top: 30px;
 }
 
-.form_column .input-text + .input-text {
-  margin-top: 30px;
-}
-
+.form_column .has-validation + .input-text,
+.form_column .input-text + .has-validation,
+.form_column .input-text + .input-text,
 .form_column .input-text + .btn {
   margin-top: 30px;
 }
@@ -2476,6 +2475,7 @@ template {
   right: 0;
   bottom: 0;
   min-height: 100vh;
+  z-index: 101;
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
