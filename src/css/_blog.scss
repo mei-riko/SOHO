@@ -1,31 +1,12 @@
 .blog{
     position: relative;
-    // overflow: hidden;
     background: #1b1b1b;
 
-    // padding: 200px 0 100px;
     .header{
         &__email{
             left: 60px;
             padding-top: 90px;
         }
-    }
-    &__elements{
-        position: absolute;
-        max-width: 100%;
-        &.elements_01{
-            width: 800px;
-            height: 800px;
-            left: -200px;
-            top: 140px;
-        }
-        &.elements_02{
-            width: 500px;
-            height: 500px;
-            right: 140px;
-            top: 40px;
-        }
-        
     }
     .heading{
         font-size: 48px;
@@ -36,7 +17,6 @@
             padding-top: 150px;
         }
     }
-    
     .blog__item{
         margin-bottom: 40px;
 
@@ -65,5 +45,23 @@
             background: rgba(39, 39, 39, 0.5);
             padding: 0 20px 10px;
         }
+    }
+
+    &__elements{
+        position: absolute;
+        max-width: 100%;
+        &.elements_01{
+            width: 800px;
+            height: 800px;
+            left: -200px;
+            top: 140px;
+        }
+        &.elements_02{
+            width: 500px;
+            height: 500px;
+            right: 140px;
+            top: 40px;
+        }
+        
     }
 }

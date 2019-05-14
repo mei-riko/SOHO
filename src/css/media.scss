@@ -49,7 +49,14 @@
             }
         }
     }
-
+    .design{
+        .content{
+            &_color{
+                background-position-y: -120px;
+                padding-top: 150px;
+            }
+        }
+    }
     .ad{
         .content{
             .list{
@@ -109,9 +116,15 @@
             padding-top: 110px;
         }
     }
+
+    .go-to-top{
+        top: auto;
+        bottom: 20px;
+    }
 }
 @media(max-width: 992px){
     .d-flex-md{display: flex;}
+    .text-md-left{text-align: left;}
     .margin-top-md-none{
         margin-top: 0px;
         &.margin-top{margin-top: 0px;}
@@ -250,6 +263,20 @@
             }
         }
     }
+    .design{
+        .content{
+            &_color{
+                background-position-y: -70px;
+                padding-top: 150px;
+                .heading + .subheading {
+                    margin-top: 40px;
+                }
+                .element{
+                    margin: 60px 0;
+                }
+            }
+        }
+    }
     .blog{
         .header{
             &__email{
@@ -314,6 +341,10 @@
                 background: url('../images/icons/quotes.svg') no-repeat left top / 25px;
             }
         }
+    }
+    .go-to-top{
+        top: auto;
+        bottom: 20px;
     }
 }
 @media(max-width: 768px){
@@ -436,7 +467,21 @@
                 }
             }
         }
-    }    
+    }  
+    .design{
+        .content{
+            &_color{
+                background-position-y: -50px;
+                padding-top: 100px;
+                .heading + .subheading {
+                    margin-top: 40px;
+                }
+                .element{
+                    margin: 40px 0;
+                }
+            }
+        }
+    }  
     .blog{
         .header{
             &__email{
@@ -449,6 +494,10 @@
         .header__logo{
             padding-top: 110px;
         }
+    }
+    .go-to-top{
+        top: auto;
+        bottom: 20px;
     }
 }
 @media(max-width: 576px){
@@ -611,6 +660,17 @@
         &__offer{
             font-size: 14px;
         }
+
+        &_image{
+            position: relative;
+            padding: 0 26px;
+            .item__number{
+                position: absolute;
+                margin: 0;
+                left: -10px;
+            }
+
+        }
         
     }
     .project{
@@ -674,6 +734,21 @@
             }
         }
     }
+    .design{
+        .content{
+            &_color{
+                background-position-y: -30px;
+                padding-top: 80px;
+                .heading + .subheading {
+                    margin-top: 40px;
+                }
+                .element{
+                    margin: 40px 0;
+                }
+            }
+        }
+    }
+
     .blog{
         .header{
             &__email{
@@ -757,5 +832,8 @@
             left: 20px;
         }
     }
-    
+    .go-to-top{
+        top: auto;
+        bottom: 20px;
+    }
 }
