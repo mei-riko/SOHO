@@ -56,6 +56,15 @@
             font-size: 50px;
             line-height: 54px;
             color: $black;
+
+            &_portfolio{
+                margin-bottom: 15px;
+            }
+        }
+        .subheading{
+            font-size: 14px;
+            line-height: 22px;
+            color: $grey;
         }
         h2,.h2{
             font-size: 36px;
@@ -85,8 +94,12 @@
         p{
             font-size: 18px;
             line-height: 28px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             img{
+                margin-bottom: 0;
+            }
+
+            &:last-child{
                 margin-bottom: 0;
             }
         }
@@ -98,11 +111,19 @@
         blockquote{
             padding-left: 80px;
             background: url('../images/icons/quotes.svg') no-repeat left top / 55px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         img{
             @extend .img-fluid;
-            margin-bottom: 20px;
+            height: auto!important;
+            margin-bottom: 30px;
+
+            & + h2, & + .h2,
+            & + h3, & + .h3,
+            & + h4, & + .h4,
+            & + h5, & + .h5{
+                margin-top: 0;
+            }
         }
     }
 }

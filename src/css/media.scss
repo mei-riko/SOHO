@@ -103,6 +103,10 @@
         .header__nav{
             top: 20px;
         }
+        .go-to-top{
+            top: auto;
+            bottom: 20px;
+        }
         .header__logo {
             padding-top: 20px;
         }
@@ -172,8 +176,8 @@
                 width: 1200px;
             }
         }       
-        &.blog{
-            .blog__item + .blog__item{
+        &.post{
+            .post__item_last{
                 margin-top: 40px;
             }
         }
@@ -277,7 +281,7 @@
             }
         }
     }
-    .blog{
+    .post{
         .header{
             &__email{
                 left: 60px;
@@ -421,6 +425,16 @@
                 display: none;
             }
         }
+
+        &.post{
+            .post__item{
+                margin-bottom: 40px;
+                &_last{
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+            }
+        }
     }
     .portfolio{
         .heading {
@@ -482,7 +496,7 @@
             }
         }
     }  
-    .blog{
+    .post{
         .header{
             &__email{
                 left: 20px;
@@ -605,7 +619,7 @@
                 }
             }
         }
-        &.blog{
+        &.post{
             padding: 60px 0;
         }
     }
@@ -749,7 +763,7 @@
         }
     }
 
-    .blog{
+    .post{
         .header{
             &__email{
                 left: 20px;

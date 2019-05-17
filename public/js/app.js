@@ -77,6 +77,8 @@ var _jquery2 = _interopRequireDefault(_jquery);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _jquery2.default)(document).ready(function () {
+
+    // Scroll Pane
     if ((0, _jquery2.default)('.scroll-pane').length) {
         (0, _jquery2.default)('.scroll-pane').jScrollPane();
     }
@@ -104,7 +106,45 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
             }
         });
     }
+    (0, _jquery2.default)('input.in-phone').on('keydown', function (event) {
+        if (event.keyCode === 13 && !(0, _jquery2.default)(this).inputmask("isComplete")) {
+            event.preventDefault();
+            (0, _jquery2.default)(this).blur();
+            return false;
+        }
+    });
 
+    //YANDEXREALGOAL SUBMIT SUCCESS
+    (0, _jquery2.default)(document).on('af_complete', function (event, response) {
+        var form = response.form;
+
+        // Yandex Target
+        if (form.hasClass("form-1")) {
+            form.attr('data-yareach', 'glav_stran');
+        }
+        if (form.hasClass("form-19")) {
+            form.attr('data-yareach', 'razrab_verst');
+        }
+        if (form.hasClass("form-18")) {
+            form.attr('data-yareach', 'seo_prodviga');
+        }
+        if (form.hasClass("form-20")) {
+            form.attr('data-yareach', 'marketiin');
+        }
+        if (form.hasClass("form-21")) {
+            form.attr('data-yareach', 'rekklama');
+        }
+
+        console.log(form.data('yareach'));
+
+        if (response.success) {
+            if (form.data('yareach') && typeof yaCounter53189068 != 'undefined') {
+                yaCounter53189068.reachGoal(form.data('yareach'));
+            }
+        }
+    });
+
+    // Header Navbar
     (0, _jquery2.default)("#header__nav").on("click", function () {
         (0, _jquery2.default)(this).toggleClass("active");
         (0, _jquery2.default)(".header .nav").toggleClass("active");
@@ -122,32 +162,35 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         }
     });
 
+    // Toggle
     (0, _jquery2.default)(".toggle-tabs .toggle-tabs__item .toggle-tabs__item__title").on("click", function () {
         var item = (0, _jquery2.default)(this).parent();
         (0, _jquery2.default)(this).toggleClass("active");
         item.find(".toggle-tabs__item__content").slideToggle();
     });
 
+    // Fancybox
     if ((0, _jquery2.default)("[data-fancybox]").length > 0) {
         (0, _jquery2.default)("[data-fancybox]").fancybox({
             autoFocus: false
         });
     }
+
+    // Form Marketing
     (0, _jquery2.default)("#btnInfo").on("click", function () {
         var valueInput = (0, _jquery2.default)("#inputText").val();
         (0, _jquery2.default)(".modal#callModal textarea").val(valueInput);
     });
 
+    // Go to Top
     (0, _jquery2.default)('.go-to-top').on("click", function () {
         (0, _jquery2.default)("html,body").animate({ scrollTop: 0 }, '500');
     });
-
     if ((0, _jquery2.default)(window).scrollTop() > 150) {
         (0, _jquery2.default)('.go-to-top').addClass("active");
     } else if ((0, _jquery2.default)(window).scrollTop() < 150) {
         (0, _jquery2.default)('.go-to-top').removeClass("active");
     }
-
     (0, _jquery2.default)(window).scroll(function () {
         if ((0, _jquery2.default)(this).scrollTop() > 150) {
             (0, _jquery2.default)('.go-to-top').addClass("active");

@@ -2750,27 +2750,27 @@ template {
   white-space: nowrap;
 }
 
-.blog {
+.post {
   position: relative;
   background: #1b1b1b;
 }
 
-.blog .header__email, .blog .inside-page .header__link, .inside-page .blog .header__link {
+.post .header__email, .post .inside-page .header__link, .inside-page .post .header__link {
   left: 60px;
   padding-top: 90px;
 }
 
-.blog .heading {
+.post .heading {
   font-size: 48px;
   margin-bottom: 50px;
   color: #fff;
 }
 
-.blog .heading_blog {
+.post .heading_blog {
   padding-top: 150px;
 }
 
-.blog .blog__item {
+.post .post__item {
   margin-bottom: 40px;
   background-size: cover;
   background-position: center;
@@ -2778,11 +2778,11 @@ template {
   padding-top: 150px;
 }
 
-.blog .blog__item:hover {
+.post .post__item:hover {
   text-decoration: none;
 }
 
-.blog .blog__item__title {
+.post .post__item__title {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -2792,30 +2792,39 @@ template {
   height: 50px;
 }
 
-.blog .blog__item__offer {
+.post .post__item__offer {
   font-size: 12px;
   color: #fff;
   background: rgba(39, 39, 39, 0.5);
   padding: 0 20px 10px;
 }
 
-.blog__elements {
+.post__elements {
   position: absolute;
   max-width: 100%;
 }
 
-.blog__elements.elements_01 {
+.post__elements.elements_01 {
   width: 800px;
   height: 800px;
   left: -200px;
   top: 140px;
 }
 
-.blog__elements.elements_02 {
+.post__elements.elements_02 {
   width: 500px;
   height: 500px;
   right: 140px;
   top: 40px;
+}
+
+@media (min-width: 992px) {
+  .post .col-lg-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 calc(100%/3);
+    flex: 0 0 calc(100%/3);
+    max-width: calc(100%/3);
+  }
 }
 
 .portfolio {
@@ -2968,6 +2977,16 @@ template {
   color: #0e0101;
 }
 
+.page__content .heading_portfolio {
+  margin-bottom: 15px;
+}
+
+.page__content .subheading {
+  font-size: 14px;
+  line-height: 22px;
+  color: #3f3f3f;
+}
+
 .page__content h2, .page__content .h2 {
   font-size: 36px;
   line-height: 42px;
@@ -3000,10 +3019,14 @@ template {
 .page__content p {
   font-size: 18px;
   line-height: 28px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .page__content p img {
+  margin-bottom: 0;
+}
+
+.page__content p:last-child {
   margin-bottom: 0;
 }
 
@@ -3014,11 +3037,19 @@ template {
 .page__content blockquote {
   padding-left: 80px;
   background: url("../images/icons/quotes.svg") no-repeat left top/55px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .page__content img {
-  margin-bottom: 20px;
+  height: auto !important;
+  margin-bottom: 30px;
+}
+
+.page__content img + h2, .page__content img + .h2,
+.page__content img + h3, .page__content img + .h3,
+.page__content img + h4, .page__content img + .h4,
+.page__content img + h5, .page__content img + .h5 {
+  margin-top: 0;
 }
 
 html {
@@ -3061,7 +3092,7 @@ a:hover, a:focus {
 }
 
 .bg-grey {
-  background: #dbd6de;
+  background: #f1f1f1;
 }
 
 .text-right {
@@ -3128,7 +3159,6 @@ a:hover, a:focus {
   /* HEADING BLOCK */
   /* DARK FORM BLOCK */
   /* CONTACT BLOCK */
-  /* PREVIEW LAST BLOG POST */
   /* PRICE BLOCK */
 }
 
@@ -3370,31 +3400,34 @@ a:hover, a:focus {
   background: #272727;
 }
 
-.content.blog {
+.content.post {
+  padding: 60px 0;
   background: #272727;
   color: #fff;
+  /* PREVIEW LAST POST */
+  /* PREVIEW LAST PORTFOLIO */
 }
 
-.content.blog .heading {
+.content.post .heading {
   font-size: 28px;
   line-height: 34px;
   margin-bottom: 40px;
 }
 
-.content.blog .link {
+.content.post .link {
   color: #fdc830;
 }
 
-.content.blog .link:hover {
+.content.post .link:hover {
   color: #fedc7c;
 }
 
-.content.blog .blog__item {
+.content.post_preview .post__item {
   padding-top: 0;
   margin-bottom: 0;
 }
 
-.content.blog .blog__item__title {
+.content.post_preview .post__item__title {
   color: #fff;
   font-size: 22px;
   font-weight: 600;
@@ -3404,10 +3437,19 @@ a:hover, a:focus {
   height: auto;
 }
 
-.content.blog .blog__item__offer {
+.content.post_preview .post__item__offer {
   font-size: 14px;
   color: #858585;
   padding: 0;
+}
+
+.content.post_portfolio {
+  background: #1b1b1b;
+  color: #fff;
+}
+
+.content.post_portfolio .post__item {
+  margin-bottom: 0;
 }
 
 .content_price {
@@ -4130,6 +4172,10 @@ a:hover, a:focus {
   .inside-page .header__nav, .inside-page .go-to-top {
     top: 20px;
   }
+  .inside-page .go-to-top {
+    top: auto;
+    bottom: 20px;
+  }
   .inside-page .header__logo {
     padding-top: 20px;
   }
@@ -4208,7 +4254,7 @@ a:hover, a:focus {
   .content_form .element {
     width: 1200px;
   }
-  .content.blog .blog__item + .blog__item {
+  .content.post .post__item_last {
     margin-top: 40px;
   }
   .footer__navbar {
@@ -4273,15 +4319,15 @@ a:hover, a:focus {
   .design .content_color .element {
     margin: 60px 0;
   }
-  .blog .header__email, .blog .inside-page .header__link, .inside-page .blog .header__link {
+  .post .header__email, .post .inside-page .header__link, .inside-page .post .header__link {
     left: 60px;
     right: auto;
     padding-top: 60px;
   }
-  .blog .header__logo {
+  .post .header__logo {
     width: 250px;
   }
-  .blog .heading {
+  .post .heading {
     font-size: 32px;
     line-height: 40px;
   }
@@ -4412,6 +4458,13 @@ a:hover, a:focus {
   .content_price .element {
     display: none;
   }
+  .content.post .post__item {
+    margin-bottom: 40px;
+  }
+  .content.post .post__item_last {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
   .portfolio .heading {
     font-size: 54px;
     line-height: 62px;
@@ -4444,7 +4497,7 @@ a:hover, a:focus {
   .design .content_color .element {
     margin: 40px 0;
   }
-  .blog .header__email, .blog .inside-page .header__link, .inside-page .blog .header__link {
+  .post .header__email, .post .inside-page .header__link, .inside-page .post .header__link {
     left: 20px;
     padding-top: 100px;
   }
@@ -4556,7 +4609,7 @@ a:hover, a:focus {
     margin: 20px 0;
     width: 100%;
   }
-  .content.blog {
+  .content.post {
     padding: 60px 0;
   }
   .footer__email {
@@ -4659,7 +4712,7 @@ a:hover, a:focus {
   .design .content_color .element {
     margin: 40px 0;
   }
-  .blog .header__email, .blog .inside-page .header__link, .inside-page .blog .header__link {
+  .post .header__email, .post .inside-page .header__link, .inside-page .post .header__link {
     left: 20px;
     padding-top: 90px;
   }

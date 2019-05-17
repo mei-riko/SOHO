@@ -23,7 +23,7 @@
 @import "footer.scss";
 @import "price.scss";
 
-@import "blog.scss";
+@import "post.scss";
 @import "portfolio.scss";
 @import "page.scss";
 
@@ -52,7 +52,7 @@ a{
 
 .p-relative{position: relative;}
 .bg-white{background: $white;}
-.bg-grey{background: #dbd6de;}
+.bg-grey{background: #f1f1f1;}
 
 .text-right{text-align: right;}
 .text-center{text-align: center;}
@@ -270,8 +270,9 @@ a{
             }
         }
     }
-    /* PREVIEW LAST BLOG POST */
-    &.blog{
+    
+    &.post{
+        padding: 60px 0;
         background: #272727;
         color: #fff;
         .heading{
@@ -285,27 +286,40 @@ a{
                 color: lighten($color: $yellow, $amount: 15%);
             }
         }
-        .blog__item{
-            padding-top: 0;
-            margin-bottom: 0;
-            &__title{
-                color: #fff;
-                font-size: 22px;
-                font-weight: 600;
-                margin-bottom: 20px;
+        /* PREVIEW LAST POST */
+        &_preview{
+            .post__item{
+                padding-top: 0;
+                margin-bottom: 0;
+                &__title{
+                    color: #fff;
+                    font-size: 22px;
+                    font-weight: 600;
+                    margin-bottom: 20px;
 
-                text-transform: none;
-                padding: 0;
-                height: auto;
+                    text-transform: none;
+                    padding: 0;
+                    height: auto;
+                }
+                &__offer{
+                    font-size: 14px;
+                    color: $lightgrey;
+
+                    padding: 0;
+                }
             }
-            &__offer{
-                font-size: 14px;
-                color: $lightgrey;
+        }
+        /* PREVIEW LAST PORTFOLIO */
+        &_portfolio{
+            background: #1b1b1b;
+            color: #fff;
 
-                padding: 0;
+            .post__item{
+                margin-bottom: 0;
             }
         }
     }
+    
     /* PRICE BLOCK */
     &_price{
         background: #272727;
