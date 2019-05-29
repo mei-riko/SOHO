@@ -85,6 +85,7 @@ gulp.task('css', function () {
 gulp.task('watch', function () {
   gulp.watch(['./src/*.pug'], ['html']);
   gulp.watch(['./src/css/*.scss'], ['css']);
+  gulp.watch(['./src/css/*/*.scss'], ['css']);
   gulp.watch(['./src/js/*.js'], ['scripts']);
 });
 

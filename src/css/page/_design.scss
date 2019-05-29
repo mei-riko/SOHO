@@ -1,0 +1,60 @@
+.design{
+    .header{
+        &__email{
+            color: $pink;
+        }
+        &__nav{
+            background: $pink;
+        }
+    }
+    .content{
+        &_title{
+            background: linear-gradient(180deg, #ecc2f9 0%, #f1dcf9 100%);
+            .heading{
+                color: $grey;
+            }
+            .offer{
+                max-width: 100%;
+                color: $grey;
+            }
+            &__svg{
+                transform: translateY(-30px);
+            }
+        }
+        &_color{
+            background: #f2dff8 url("../images/bg_design.png") no-repeat center top/contain;
+            background-position-y: -150px;
+            padding-top: 200px;
+
+            color: $grey;
+
+            .heading + .subheading {
+                margin-top: 60px;
+            }
+            .subheading + .offer {
+                margin-top: 20px;
+            }
+            .element{
+                position: relative;
+                width: 100%;
+                margin-bottom: 60px;
+            }
+        }
+
+        .item{
+            .item__number{
+                background: $pink;
+            }
+            &_image{
+                .item__image:before{
+                    background: rgba(250, 33, 161, .15);
+                }
+                .item__image:hover{
+                    &:before{
+                        background: rgba(250, 33, 161, 0);
+                    }   
+                }
+            }
+        }
+    }
+}

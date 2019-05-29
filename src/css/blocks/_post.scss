@@ -2,7 +2,13 @@
     position: relative;
     padding: 100px 0;
     color: $white;
-    background: #1b1b1b;
+    background: darken($darkgrey, 4%);
+
+    &_portfolio{
+        background: darken($darkgrey, 3%);
+        padding: 60px 0 20px;
+
+    }
 
     .heading{
         font-size: 28px;
@@ -32,5 +38,12 @@
             font-size: 14px;
             color: $lightgrey;
         }
+    }
+}
+
+@media (min-width: 992px){
+    .post-preview .col-lg-3 {
+        flex: 0 0 calc(100%/3);
+        max-width: calc(100%/3);
     }
 }

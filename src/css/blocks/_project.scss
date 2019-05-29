@@ -1,0 +1,42 @@
+.project{
+    .heading{
+        & + .offer{
+            margin: 20px 0 60px;
+        }
+    }
+    .offer{
+        margin-bottom: 20px;
+    }
+    &__stats{
+        padding-top: 120px;
+        padding-left: 100px;
+        padding-bottom: 15px;
+        max-width: 400px;
+
+        background-position: left bottom;
+        background-repeat: no-repeat;
+
+        &.offer{
+            line-height: 20px;
+        }
+    }
+    &__task{
+        display: flex;
+        flex-wrap: nowrap;
+
+        margin-bottom: 40px;
+
+        &__item{
+            font-size: 12px;
+            line-height: 26px;
+
+            padding-right: 20px;
+            text-transform: uppercase;
+
+            flex: 0 0 110px;
+            max-width: 110px;
+
+            color: $lightgrey;
+        }
+    }
+}

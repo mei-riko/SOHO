@@ -1,0 +1,106 @@
+.seo{
+    .header{
+        &__email{
+            color: $lightgreen;
+        }
+        &__nav{
+            background: $lightgreen;
+            &__path{
+                fill: #637b0d;
+            }
+        }
+    }
+    .content{
+        &_title{
+            background: linear-gradient(180deg, #637b0d 0%, #99af01 100%);
+            &__elements{
+                bottom: -100px;
+            }
+        }
+        &_color{
+            overflow: hidden;
+            color: $white;
+            background: linear-gradient(180deg, #637b0d 0%, #99af01 100%);
+            .heading.first{
+                margin-bottom: 60px;
+            }
+            .subheading{
+                color: $lightgreen;
+            }
+            .offer{
+                color: $white;
+            }
+            .item{
+                &_with-icon{
+                    .item__icon{
+                        background: $lightgreen;
+                    }
+                    .item__title{
+                        color: $white;
+                    }
+                    .item__offer{
+                        color: $lightgreen;
+                    }
+                }
+                
+                &_info{
+                    background: $lightgreen;
+                    margin-bottom: 0;
+                    .item__title{
+                        color: $black;
+                    }
+                    .item__offer {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &_price{
+            .subheading{
+                color: $lightgreen;
+            }
+            .element{
+                &_1{
+                    width: 220px;
+                    top: -100px;
+                    left: -50px;
+                }
+                &_3{
+                    width: 260px;
+                    top: -100px;
+                    right: -50px;
+                }
+            }
+        }
+        .element{
+            //PAUSE
+            &_03{
+                width: 420px;
+                height: 420px;
+                top: 230px;
+                left: calc((100% - 1380px)/2);
+            }
+            //SEO
+            &_04{
+                bottom: 0;
+                right: 0;
+                width: 720px;
+            }
+        }
+        .col-comment{
+            .element_comment{
+                width: 320px;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+    .price{
+        &_large{
+            .price__header{
+                background: linear-gradient(180deg, #637b0d 0%, #99af01 100%);
+            }
+        }
+    }    
+}

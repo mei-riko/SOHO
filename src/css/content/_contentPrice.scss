@@ -1,0 +1,15 @@
+.content_price{
+    background: #272727;
+    color: $white;
+
+    .offer{
+        color: darken($color: $white, $amount: 50%);
+        width: 650px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .content_price__container + .content_price__container{
+        margin-top: 100px;
+    }
+}

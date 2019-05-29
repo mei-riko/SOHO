@@ -1,0 +1,81 @@
+.dev{
+    .header{
+        &__email{
+            color: $red;
+        }
+        &__nav{
+            background: $red;
+        }
+    }
+    .content{
+        &_title{
+            background: linear-gradient(-135deg, #fbb614 0%, #ffd71c 100%);
+            &__elements{
+                bottom: -100px;
+            }
+        }
+        &_background{
+            background: url("../images/bg_dev.png") no-repeat left bottom / 680px;
+        }
+        &_color{
+            overflow: hidden;
+            padding: 150px 0;
+            background: linear-gradient(90deg, #fdc830 0%, #fed61d 100%);
+
+            .subheading{
+                color: #a47a00;
+            }
+            .offer{
+                color: $black;
+            }
+        }
+        &_price{
+            .element{
+                &_1{
+                    width: 250px;
+                    top: -100px;
+                    left: -50px;
+                }
+                &_2{
+                    width: 210px;
+                    bottom: -60px;
+                    right: -120px;
+                    z-index: 11;
+                }
+                &_3{
+                    width: 280px;
+                    top: -100px;
+                    right: -50px;
+                }
+            }
+        }
+        .element{
+            //WORDPRESS
+            &_01{
+                bottom: 0;
+                right: -100px;
+                width: 1200px;
+            }
+            //MODX
+            &_02{
+                top: 0;
+                left: -30px;
+                width: 600px;
+            }
+            //PAUSE
+            &_03{
+                width: 550px;
+                height: 550px;
+                top: calc(50% - 275px);
+                right: calc((100% - 1380px)/2);
+            }
+        }
+    }
+    .price{
+        &_large{
+            .price__header{
+                background: linear-gradient(-135deg, #fdc830 0%, #fed61d 100%);
+            }
+        }
+    }
+}

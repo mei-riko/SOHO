@@ -10,16 +10,13 @@
 
     &_ol{
         counter-reset: myCounter;
+        
         .list__item{
             position: relative;
             list-style: none;
 
             padding-left: 50px;
             min-height: 30px;
-
-            // & + .list__item{
-            //     margin-top: 20px;
-            // }
 
             display: flex;
             align-items: center;

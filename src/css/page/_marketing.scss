@@ -1,0 +1,106 @@
+.marketing{
+    .header{
+        &__email{
+            color: $white;
+        }
+        &__nav{
+            background: $darkred;
+            &__path{
+                fill: $white;
+            }
+        }
+    }
+    .content{
+        &_title{
+            background: linear-gradient(180deg, #930e00 0%, #fd2d17 100%);
+            &__elements{
+                bottom: -100px;
+            }
+            &__svg{
+                transform: translateY(-30px);
+            }
+            .offer{
+                width: 440px;
+                max-width: 100%;
+            }
+        }
+        &_color{
+            color: $white;
+            background: linear-gradient(180deg, #bf0e00 0%, #fd2d17 100%);
+            .heading_small{
+                font-size: 26px;
+            }
+            .offer{
+                color: $white;
+                margin: 20px 0 0;
+                width: 400px;
+                max-width: 100%;
+            }
+            .element{
+                bottom: -10px;
+                left: 0;
+            }
+            .row{
+                flex-wrap: nowrap;
+                .column{
+                    padding: 0 20px;
+                    .heading{
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+        &_price{
+            .element{
+                &_1{
+                    width: 220px;
+                    top: -100px;
+                    left: -50px;
+                }
+                &_3{
+                    width: 260px;
+                    top: -100px;
+                    right: -50px;
+                }
+            }
+        }
+        &_mockup{
+            z-index: 10;
+            .element{
+                position: absolute;
+                left: 0;
+                bottom: -120px;
+                width: 450px;
+            }
+        }
+        .list{
+            width: 410px;
+            max-width: 100%;
+            padding: 40px;
+            background: lighten($lightgrey, 30%);
+            &__item{
+                color: $grey;
+                &:before{
+                    background: linear-gradient(180deg, #bf0e00 0%, #fd2d17 100%);
+                }
+
+                & + .list__item{
+                    margin-top: 20px;
+                }
+            }
+        }
+        .col-comment{
+            .element{
+                bottom: 0;
+                right: -120px;
+            }
+        }
+    }
+    .price{
+        &_large{
+            .price__header{
+                background: linear-gradient(180deg, #bf0e00 0%, #fd2d17 100%);
+            }
+        }
+    }
+}

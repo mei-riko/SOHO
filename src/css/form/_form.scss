@@ -58,3 +58,12 @@
         }
     }
 }
+
+/* FORM ERROR */
+.has-validation .form-validation .error{
+    position: absolute;
+    left: 30px;
+    top: 5px;
+    font-size: 10px;
+    color: $red;
+}

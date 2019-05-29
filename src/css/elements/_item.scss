@@ -2,20 +2,19 @@
     width: 100%;
     height: auto;
     margin-bottom: 40px;
-    &_last{
-        margin-bottom: 0;           
-    }
+
     &__header{
         font-size: 32px;
         font-weight: 700;
 
         white-space: nowrap;
         margin-bottom: 10px;
+
         text-transform: uppercase;
         color: #d3d3d4;
     }
     &__title{
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 700;
         text-transform: uppercase;
         color: $grey;
@@ -55,6 +54,10 @@
     }
     &__image{
         max-width: 100%;
+    }
+
+    &_last{
+        margin-bottom: 0;           
     }
     &_with-icon{
         position: relative;

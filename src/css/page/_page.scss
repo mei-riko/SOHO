@@ -25,6 +25,9 @@
     &__info{
         display: flex;
         flex-wrap: nowrap;
+
+        background: lighten($color: $lightgrey, $amount: 46%);
+        border-bottom: 1px solid lighten($color: $lightgrey, $amount: 25%);
     }
     &__breadcrumb{
         padding: 10px 60px;
@@ -47,14 +50,17 @@
         margin-left: auto;
     }
     &__content{
-        padding: 60px;
+        padding: 40px 60px 60px;
         background: $white;
         
         font-size: 18px;
         line-height: 28px;
         .heading{
             font-size: 50px;
+            font-weight: 700;
             line-height: 54px;
+
+            margin-bottom: 30px;
             color: $black;
 
             &_portfolio{
