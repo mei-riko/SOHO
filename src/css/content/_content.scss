@@ -1,0 +1,112 @@
+.content{
+    position: relative;
+    padding: 100px 0;
+
+    // .margin-top{margin-top: 50px;}
+    // .margin-bottom{margin-bottom: 50px;}
+
+    .heading{
+        font-size: 54px;
+        font-weight: 700;
+        line-height: 60px;
+
+        /* Size */
+
+        &_small{
+            font-size: 32px;
+            line-height: 40px;
+        }
+        &_medium{
+            font-size: 42px;
+            line-height: 50px;
+        }
+
+        /* Indent */
+
+        // margin-bottom: 0;
+        // &.margin-top{margin-top: 50px;}
+        // &.margin-bottom{margin-bottom: 50px;}
+        & + .subheading{
+            margin-top: 40px;
+        }
+        & + .offer{
+            margin-top: 40px;
+        }
+        & + .toggle-tabs{
+            margin-top: 60px;
+        }
+    }
+    .subheading{
+        font-weight: 700;
+        text-transform: uppercase;
+
+        /* Indent */
+        & + .offer{
+            margin-top: 40px;
+        }
+    }
+    .offer{
+        font-size: 16px;
+        line-height: 24px;
+
+        // color: $grey;
+        
+        /* Size */
+        &.small{
+            font-size: 14px;
+        }
+
+        /* Indent */
+        margin-bottom: 40px;
+        &.last{
+            margin-bottom: 0;
+        }
+        &.last-xl{
+            margin-bottom: 0;
+        }
+        & + .subheading{
+            margin-top: 40px;
+        }
+    }
+    .element{
+        position: absolute;
+
+        &_point{
+            left: -140px;
+            bottom: -40px;
+            width: 500px;
+            height: 500px;
+            z-index: -1;
+            background: url("../images/points.png") no-repeat right center / cover;
+        }
+    }
+    &__group{
+        margin: 40px 0;
+        
+        &__link{
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            border-radius: 5px;
+            padding: 15px 30px 16px; 
+
+            margin-right: 15px;
+            margin-bottom: 15px;
+
+            color: $grey;
+            background: linear-gradient(-45deg, #d4d4d4 0%, #d0cbe3 62%, #d5c3ff 100%);
+
+            &:hover{
+                color: $darkblue;
+                text-decoration: none;
+            }
+        }
+    }
+
+    /* PADDING LARGE */
+    &_padding{
+        padding: 150px 0;
+    }
+}

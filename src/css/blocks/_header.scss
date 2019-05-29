@@ -1,0 +1,140 @@
+.header{
+    position: relative;
+    z-index: 11;
+
+    &__logo{
+        position: absolute;
+        top: 0;
+        left: 20px;
+
+        padding-top: 80px;
+        
+        width: 60px;
+        max-width: 100%;
+        transition: .3s;
+        &__path{
+            fill: #fff;
+        }
+        &.header__logo_inside{
+            width: 200px;
+            max-width: 100%;
+        }
+    }
+
+    &__email{
+        position: absolute;
+        top: 0;
+        left: 20px;
+
+        padding-top: 80px;
+        font-weight: 700;
+        color: $yellow;
+
+        transition: .3s;
+        &:hover{
+            color: lighten($color: $yellow, $amount: 5%);
+        }
+        &_inside{
+            top: 30px;
+        }
+    }
+    
+    &__nav{
+        position: fixed;
+        top: 80px;
+        right: calc( (100% - 1380px)/2 + 20px);
+
+        height: 70px;
+        width: 70px;
+
+        z-index: 99;
+
+        padding: 20px;
+        border-radius: 50%;
+        background: $darkblue;
+        box-shadow: 0px 3px 6px 0px rgba(34, 0, 112, 0.1);
+
+        transition: .5s;
+        cursor: pointer;
+
+        &__path{
+            fill: #fff;
+        }
+        &:hover{
+            background: rgb(63, 45, 165);
+        }
+    }
+    
+    &__navbar{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        &__link{
+            font-weight: 500;
+            color: $black;
+            &:hover{
+                color: $violet;
+                text-decoration: none;
+            }
+        }
+        &__item{
+            padding: 10px 0;
+        }
+    }
+}
+
+/* Media */
+@media(max-width: 1400px){
+    .header{
+        &__nav{
+            right: calc((100% - 960px)/2 + 20px);
+        }
+    }
+}
+@media(max-width: 992px){
+    .header{
+        &__logo{
+            padding-top: 40px;
+        }
+        &__email{
+            padding-top: 40px;
+        }
+        &__nav{
+            top: 40px;
+            right: calc((100% - 720px)/2 + 20px);
+        }
+    }
+}
+@media(max-width: 768px){
+    .header{
+        &__logo{
+            padding-top: 40px;
+            width: 45px;
+        }
+        &__email{
+            padding-top: 40px;
+        }
+        &__nav{
+            top: 40px;
+            right: calc((100% - 540px)/2 + 20px);
+        }
+    }
+}
+@media(max-width: 576px){
+    .header{
+        &__logo{
+            left: 20px;
+            padding-top: 20px;
+            width: 50px;
+        }
+        &__email{
+            left: auto;
+            right: 30px;
+            padding-top: 190px;
+        }
+        &__nav{
+            top: 20px;
+            right: 20px;
+        }
+    }
+}

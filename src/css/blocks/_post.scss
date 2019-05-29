@@ -1,0 +1,36 @@
+.post-preview{
+    position: relative;
+    padding: 100px 0;
+    color: $white;
+    background: #1b1b1b;
+
+    .heading{
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 34px;
+        margin-bottom: 40px;
+    }
+    .link{
+        color: $yellow;
+        &:hover{
+            color: lighten($color: $yellow, $amount: 15%);
+        }
+    }
+
+    &__item{
+        &__title{
+            font-size: 22px;
+            font-weight: 600;
+            color: $white;
+            margin-bottom: 20px;
+
+            &:hover{
+                color: $yellow;
+            }
+        }
+        &__offer{
+            font-size: 14px;
+            color: $lightgrey;
+        }
+    }
+}

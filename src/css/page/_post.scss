@@ -1,7 +1,4 @@
 .post{
-    position: relative;
-    background: #1b1b1b;
-
     .header{
         &__email{
             left: 60px;
@@ -17,7 +14,25 @@
             padding-top: 150px;
         }
     }
-    .post__item{
+
+    &__elements{
+        position: absolute;
+        max-width: 100%;
+        &.elements_01{
+            width: 800px;
+            height: 800px;
+            left: -200px;
+            top: 140px;
+        }
+        &.elements_02{
+            width: 500px;
+            height: 500px;
+            right: 140px;
+            top: 40px;
+        }
+        
+    }
+    &__item{
         margin-bottom: 40px;
 
         background-size: cover;
@@ -45,24 +60,6 @@
             background: rgba(39, 39, 39, 0.5);
             padding: 0 20px 10px;
         }
-    }
-
-    &__elements{
-        position: absolute;
-        max-width: 100%;
-        &.elements_01{
-            width: 800px;
-            height: 800px;
-            left: -200px;
-            top: 140px;
-        }
-        &.elements_02{
-            width: 500px;
-            height: 500px;
-            right: 140px;
-            top: 40px;
-        }
-        
     }
 }
 

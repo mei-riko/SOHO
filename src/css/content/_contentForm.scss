@@ -1,0 +1,27 @@
+.content_form{
+    padding-top: 180px;
+    background: $darkgrey;
+    color: $white;
+
+    .element{
+        top:0;
+        left:0;
+    }
+
+    .form{
+        .input-inline{
+            text-align: center;
+
+            width: 600px;
+            max-width: 100%;
+            margin: 0 auto;
+
+            color: $white;
+            border-color: $grey;
+
+            &::placeholder{
+                color: $grey;
+            }
+        }
+    }
+}

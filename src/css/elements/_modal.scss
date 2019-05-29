@@ -1,0 +1,29 @@
+.modal{
+    display: none;
+
+    max-width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+
+    transition: all .5s;
+
+    * {
+        color: $white;
+    }
+    
+    .input-text{
+        text-transform: none;
+    }
+
+    &_dark{
+        background: linear-gradient(45deg, #543093 32%, #2a16bc 100%);
+        .btn{
+            border: 4px solid #ffffff;
+        }
+    }
+
+    &#callModal{
+        width: 600px;
+        text-align: center;
+    }
+}

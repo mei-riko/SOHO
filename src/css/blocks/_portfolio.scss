@@ -3,6 +3,19 @@
     z-index: 2;
     padding: 100px 0 300px;
     background: #222222 url("../images/bg_portfolio.svg") no-repeat center bottom/ cover;
+
+    .heading{
+        font-size: 64px;
+        line-height: 72px;
+        color: $white;
+        &__link{
+            color: $white;
+            &:hover{
+                color: $yellow;
+            }
+        }
+    }
+
     &__elements{
         position: absolute;
         top: 160px;
@@ -11,20 +24,16 @@
         height: 460px;
         z-index: -1;
     }
-    .heading{
-        font-size: 64px;
-        line-height: 72px;
-        color: #fff;
-        &__link{
-            color: #fff;
-        }
-    }
     &__row{
         width: 2000px;
         text-align: right;
         padding: 80px 0;
         overflow-x: hidden;
         overflow-y: hidden;
+
+        &:focus{
+            outline: none;
+        }
     }
     &__item{
         float: left;

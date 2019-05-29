@@ -1,0 +1,10 @@
+.index{
+    .header{
+        &__email{
+            color: $yellow;
+        }
+        &__nav{
+            background: $darkblue;
+        }
+    }
+}

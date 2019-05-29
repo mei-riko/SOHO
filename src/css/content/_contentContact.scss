@@ -1,0 +1,31 @@
+.content_contact{
+    background: $darkgrey;
+    z-index: 1;
+
+    .heading{
+        color:$white;
+    }
+    .offer{
+        color:$lightgrey;       
+    }
+    .form{
+        margin-top: 80px;
+        margin-bottom: 0;
+        
+        &_inline{
+            .input-text{
+                float: left;
+                width: calc(100% - 340px);
+            }
+            .btn{
+                margin-left: 20px;
+                width: 320px;
+                max-width: 100%;
+            }
+        }
+        .input-text{
+            color: $white;
+            background: darken($color: $darkgrey, $amount: 5%);
+        }
+    }
+}
