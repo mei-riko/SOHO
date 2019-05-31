@@ -121,3 +121,40 @@
         }
     }
 }
+
+/* Media */
+@media(max-width: 1400px){}
+@media(max-width: 992px){
+    .item{
+        &_last-md{
+            margin-bottom: 0;
+        }
+    }
+}
+@media(max-width: 768px){}
+@media(max-width: 576px){
+    .item{
+        margin-bottom: 20px;
+        &__offer{
+            font-size: 14px;
+        }
+
+        &_info{
+            padding: 20px;
+        }
+        &_result{
+            .item__result{
+                font-size: 24px;
+            }
+        }
+        &_image{
+            position: relative;
+            padding: 0 26px;
+            .item__number{
+                position: absolute;
+                margin: 0;
+                left: -10px;
+            }
+        }
+    }
+}

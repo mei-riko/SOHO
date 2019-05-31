@@ -67,3 +67,18 @@
     font-size: 10px;
     color: $red;
 }
+
+/* Media */
+@media(max-width: 1400px){}
+@media(max-width: 992px){}
+@media(max-width: 768px){
+    .form{
+        .input-text{
+            font-size: 14px;
+        }
+        .input-inline{
+            font-size: 14px;
+        }
+    }
+}
+@media(max-width: 576px){}

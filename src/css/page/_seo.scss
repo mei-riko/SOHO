@@ -104,3 +104,43 @@
         }
     }    
 }
+
+/* Media */
+@media(max-width: 1400px){}
+@media(max-width: 992px){
+    .seo{
+        .content{
+            .col-comment{
+                .element_comment{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 768px){
+    .seo{
+        .content{
+            &_color{
+                .elements{
+                    width: 100px;
+                    margin: 40px auto;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 576px){
+    .seo{
+        .content{
+            &_title{
+                .heading{
+                    font-size: 28px;
+                    line-height: 38px;
+                    word-break: break-word;
+                }
+            }
+        }
+    }
+}

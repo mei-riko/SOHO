@@ -41,6 +41,28 @@
     }
 }
 
+/* Media */
+@media(max-width: 1400px){}
+@media(max-width: 992px){
+    .post-preview{
+        &__item{
+            margin-bottom: 40px;
+            &.last{
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+@media(max-width: 768px){
+}
+@media(max-width: 576px){
+    .post-preview{
+        padding: 60px 0;
+    }
+}
+
+/* Castomize column */
 @media (min-width: 992px){
     .post-preview .col-lg-3 {
         flex: 0 0 calc(100%/3);

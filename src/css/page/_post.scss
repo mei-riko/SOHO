@@ -6,18 +6,6 @@
             padding-top: 90px;
         }
     }
-    .heading{
-        font-size: 48px;
-        font-weight: 400;
-
-        margin-bottom: 60px;
-        color: #fff;
-
-        &_blog{
-            padding-top: 150px;
-        }
-    }
-
     &__elements{
         position: absolute;
         z-index: 2;
@@ -39,6 +27,19 @@
     &__container{
         position: relative;
         z-index: 3;
+
+        .heading{
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 54px;
+    
+            margin-bottom: 60px;
+            color: #fff;
+    
+            &_blog{
+                padding-top: 150px;
+            }
+        }
     }
     &__item{
         margin-bottom: 40px;
@@ -48,6 +49,10 @@
 
         width: 100%;
         padding-top: 150px;
+
+        &.last{
+            margin-bottom: 0;
+        }
 
         &:hover{
             text-decoration: none;
@@ -79,6 +84,65 @@
     }
 }
 
+/* Media */
+@media(max-width: 1400px){}
+@media(max-width: 992px){
+    .post{
+        .header{
+            &__email{
+                left: 60px;
+                right: auto;
+                padding-top: 60px;
+            }
+            &__logo{
+                width: 250px;
+            }
+        }
+        &__container{
+            .heading{
+                font-size: 36px;
+                line-height: 40px;
+            }
+        }
+    }
+}
+@media(max-width: 768px){
+    .post{
+        .header{
+            &__email{
+                left: 20px;
+                padding-top: 120px;
+            }
+        }
+        &__container{
+            .heading{
+                &_blog {
+                    padding-top: 180px;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 576px){
+    .post{
+        .header{
+            &__email{
+                left: 20px;
+                padding-top: 90px;
+            }
+        }
+        &__container{
+            .heading{
+                font-size: 28px;
+                font-weight: bold;
+                line-height: 34px;
+            }
+        }
+    }
+}
+
+
+/* Castomize post column */
 @media (min-width: 992px){
     .post .col-lg-3 {
         flex: 0 0 calc(100%/3);

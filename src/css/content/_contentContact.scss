@@ -29,3 +29,41 @@
         }
     }
 }
+
+/* Media */
+@media(max-width: 1400px){
+    .content_contact{
+        .form_inline{
+            margin-bottom: 40px;
+        }
+    }
+}
+@media(max-width: 992px){}
+@media(max-width: 768px){
+    .content_contact{
+        .form_inline{
+            margin: 40px 0;
+            .input-text {
+                width: calc(100% - 280px);
+            }
+            .btn {
+                width: 260px;
+            }
+        }
+    }
+}
+@media(max-width: 576px){
+    .content_contact{
+        padding-bottom: 50px;
+        .form{
+            .input-text{
+                float: none;
+                width: 100%;
+            }
+            .btn{
+                margin: 20px 0;
+                width: 100%;
+            }
+        }
+    }
+}

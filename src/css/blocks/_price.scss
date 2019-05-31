@@ -95,3 +95,22 @@
         white-space: nowrap;
     }
 }
+
+/* Media */
+@media(max-width: 1400px){
+    .price{
+        &_large{
+            .price__header {
+                font-size: 18px;
+            }
+        }
+    }
+}
+@media(max-width: 992px){}
+@media(max-width: 768px){}
+@media(max-width: 576px){
+    .price{
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+}

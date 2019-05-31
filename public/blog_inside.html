@@ -56,106 +56,108 @@
         </ul><a class="nav__close" id="navbarClose">Закрыть меню</a>
       </div>
     </header>
-    <div class="post page">
-      <div class="post__elements elements_01">
-        <svg viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet">
-          <defs>
-            <filter id="shadow" filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%">
-              <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="3"></feGaussianBlur>
-              <feOffset dx="5" dy="5" in="blur" result="offsetBlurredAlpha"></feOffset>
-              <feComponentTransfer>
-                <feFuncA type="linear" slope="0.2"></feFuncA>
-              </feComponentTransfer>
-              <feMerge>
-                <feMergeNode></feMergeNode>
-                <feMergeNode in="SourceGraphic"></feMergeNode>
-              </feMerge>
-            </filter>
-            <linearGradient id="gradient" data-name="gradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stop-color="#222222"></stop>
-              <stop offset="1" stop-color="#343434"></stop>
-            </linearGradient>
-          </defs>
-          <g fill-rule="nonzero">
-            <path style="fill: url(#gradient); filter: url(#shadow);" d="M10,90c0-44.2,35.8-80,80-80s80,35.8,80,80 M10,90c0,44.2,35.8,80,80,80s80-35.8,80-80 M111.3,90c0,11.7-9.5,21.3-21.3,21.3S68.7,101.7,68.7,90 M111.3,90c0-11.7-9.5-21.3-21.3-21.3S68.7,78.3,68.7,90"></path>
-          </g>
-        </svg>
-      </div>
-      <div class="post__elements elements_02">
-        <svg viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet">
-          <defs>
-            <linearGradient id="gradient_02" data-name="gradient_02" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stop-color="#222222"></stop>
-              <stop offset="1" stop-color="#343434"></stop>
-            </linearGradient>
-          </defs>
-          <g style="fill: url(#gradient_02); filter: url(#shadow);">
-            <rect x="12" y="9.5" width="71" height="160"></rect>
-            <rect x="97" y="9.5" width="71" height="160">           </rect>
-          </g>
-        </svg>
-      </div>
-      <div class="container post__container">
-        <div class="row justify-content-center">
-          <div class="col-sm-10 col-xl-8">
-            <div class="page__image" style="background-image:url('../images/image_blog.png');"></div>
-            <div class="page__info">
-              <div class="page__breadcrumb breadcrumb">
-                <div class="breadcrumb__item"> <a href="#">Главная</a></div> / 
-                <div class="breadcrumb__item"> <a href="#">Блог</a></div> / 
-                <div class="breadcrumb__item"> <span>6 способов прокачать первый экран на вашем сайте</span></div>
+    <main>
+      <article class="post page">
+        <div class="post__elements elements_01">
+          <svg viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet">
+            <defs>
+              <filter id="shadow" filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%">
+                <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="3"></feGaussianBlur>
+                <feOffset dx="5" dy="5" in="blur" result="offsetBlurredAlpha"></feOffset>
+                <feComponentTransfer>
+                  <feFuncA type="linear" slope="0.2"></feFuncA>
+                </feComponentTransfer>
+                <feMerge>
+                  <feMergeNode></feMergeNode>
+                  <feMergeNode in="SourceGraphic"></feMergeNode>
+                </feMerge>
+              </filter>
+              <linearGradient id="gradient" data-name="gradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#222222"></stop>
+                <stop offset="1" stop-color="#343434"></stop>
+              </linearGradient>
+            </defs>
+            <g fill-rule="nonzero">
+              <path style="fill: url(#gradient); filter: url(#shadow);" d="M10,90c0-44.2,35.8-80,80-80s80,35.8,80,80 M10,90c0,44.2,35.8,80,80,80s80-35.8,80-80 M111.3,90c0,11.7-9.5,21.3-21.3,21.3S68.7,101.7,68.7,90 M111.3,90c0-11.7-9.5-21.3-21.3-21.3S68.7,78.3,68.7,90"></path>
+            </g>
+          </svg>
+        </div>
+        <div class="post__elements elements_02">
+          <svg viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet">
+            <defs>
+              <linearGradient id="gradient_02" data-name="gradient_02" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#222222"></stop>
+                <stop offset="1" stop-color="#343434"></stop>
+              </linearGradient>
+            </defs>
+            <g style="fill: url(#gradient_02); filter: url(#shadow);">
+              <rect x="12" y="9.5" width="71" height="160"></rect>
+              <rect x="97" y="9.5" width="71" height="160">           </rect>
+            </g>
+          </svg>
+        </div>
+        <section class="container post__container">
+          <div class="row justify-content-center">
+            <div class="col-sm-10 col-xl-8">
+              <div class="page__image" style="background-image:url('../images/image_blog.png');"></div>
+              <div class="page__info">
+                <div class="page__breadcrumb breadcrumb">
+                  <div class="breadcrumb__item"> <a href="#">Главная</a></div> / 
+                  <div class="breadcrumb__item"> <a href="#">Блог</a></div> / 
+                  <div class="breadcrumb__item"> <span>6 способов прокачать первый экран на вашем сайте</span></div>
+                </div>
+                <div class="page__reading">Время чтения: <span class="text-bold">5 минут</span></div>
               </div>
-              <div class="page__reading">Время чтения: <span class="text-bold">5 минут</span></div>
+              <div class="page__content">
+                <h1 class="heading">6 способов прокачать первый экран на вашем сайте</h1>
+                <p>Тот контент, который вы разместите на «первом экране», является ключом к успеху сайта. Дизайн может заманить, заставить юзера нажимать (на нужные кнопки) или перемещаться по странице. Что должен увидеть пользователь на экране, прежде чем захочет пролистать страницу?</p>
+                <blockquote>Первое, на что обращает внимание посетитель сайта — первый экран. Это — визитная карточка всего сайта. Остальной контент пользователь увидит потом, поэтому важно заинтересовать его с первых секунд. В данной статье предлагаем вам простые способы сделать дизайн главной страницы и особенно первого экрана качественным и информативным.</blockquote><img class="img-fluid img-border" src="../images/test-02.jpg" alt="" title=""/>
+                <h2>Заголовок h2</h2>
+                <p>Тот контент, который вы разместите на «первом экране», является ключом к успеху сайта. Дизайн может заманить, заставить юзера нажимать (на нужные кнопки) или перемещаться по странице. Что должен увидеть пользователь на экране, прежде чем захочет пролистать страницу?</p>
+                <h3>Заголовок h3</h3>
+                <p>Тот контент, который вы разместите на «первом экране», является ключом к успеху сайта. Дизайн может заманить, заставить юзера нажимать (на нужные кнопки) или перемещаться по странице. Что должен увидеть пользователь на экране, прежде чем захочет пролистать страницу?</p>
+                <h4>Заголовок h4</h4>
+                <p>Тот контент, который вы разместите на «первом экране», является ключом к успеху сайта. Дизайн может заманить, заставить юзера нажимать (на нужные кнопки) или перемещаться по странице. Что должен увидеть пользователь на экране, прежде чем захочет пролистать страницу?</p>
+                <h5>Заголовок h5</h5>
+                <p>Тот контент, который вы разместите на «первом экране», является ключом к успеху сайта. Дизайн может заманить, заставить юзера нажимать (на нужные кнопки) или перемещаться по странице. Что должен увидеть пользователь на экране, прежде чем захочет пролистать страницу?</p>
+              </div>
             </div>
-            <div class="page__content">
-              <h1 class="heading">6 способов прокачать первый экран на вашем сайте</h1>
-              <p>Тот контент, который вы разместите на «первом экране», является ключом к успеху сайта. Дизайн может заманить, заставить юзера нажимать (на нужные кнопки) или перемещаться по странице. Что должен увидеть пользователь на экране, прежде чем захочет пролистать страницу?</p>
-              <blockquote>Первое, на что обращает внимание посетитель сайта — первый экран. Это — визитная карточка всего сайта. Остальной контент пользователь увидит потом, поэтому важно заинтересовать его с первых секунд. В данной статье предлагаем вам простые способы сделать дизайн главной страницы и особенно первого экрана качественным и информативным.</blockquote><img class="img-fluid img-border" src="../images/test-02.jpg" alt="" title=""/>
-              <h2>Заголовок h2</h2>
-              <p>Тот контент, который вы разместите на «первом экране», является ключом к успеху сайта. Дизайн может заманить, заставить юзера нажимать (на нужные кнопки) или перемещаться по странице. Что должен увидеть пользователь на экране, прежде чем захочет пролистать страницу?</p>
-              <h3>Заголовок h3</h3>
-              <p>Тот контент, который вы разместите на «первом экране», является ключом к успеху сайта. Дизайн может заманить, заставить юзера нажимать (на нужные кнопки) или перемещаться по странице. Что должен увидеть пользователь на экране, прежде чем захочет пролистать страницу?</p>
-              <h4>Заголовок h4</h4>
-              <p>Тот контент, который вы разместите на «первом экране», является ключом к успеху сайта. Дизайн может заманить, заставить юзера нажимать (на нужные кнопки) или перемещаться по странице. Что должен увидеть пользователь на экране, прежде чем захочет пролистать страницу?</p>
-              <h5>Заголовок h5</h5>
-              <p>Тот контент, который вы разместите на «первом экране», является ключом к успеху сайта. Дизайн может заманить, заставить юзера нажимать (на нужные кнопки) или перемещаться по странице. Что должен увидеть пользователь на экране, прежде чем захочет пролистать страницу?</p>
+          </div>
+        </section>
+      </article>
+      <aside class="post-preview">
+        <div class="container">
+          <header class="heading">Самое актуальное в нашем <a class="link" href="#">блоге</a></header>
+          <div class="row">
+            <article class="col-xl-3 col-lg-5 post-preview__item"><a class="post-preview__item__title" href="#">6&nbsp;способов прокачать первый экран на&nbsp;вашем сайте</a>
+              <div class="post-preview__item__offer">Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.</div>
+            </article>
+            <article class="col-xl-3 col-lg-5 post-preview__item"><a class="post-preview__item__title" href="#">О&nbsp;чем нужно помнить, создавая уникальные тексты?</a>
+              <div class="post-preview__item__offer">Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.</div>
+            </article>
+            <article class="col-xl-3 col-lg-10 post-preview__item last"><a class="post-preview__item__title" href="#">Продвижение сайта почти бесплатно</a>
+              <div class="post-preview__item__offer">Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.</div>
+            </article>
+          </div>
+        </div>
+      </aside>
+      <aside class="content content_contact inside">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-6">
+              <h4 class="heading heading_medium">Нужны клиенты? <br/> Мы знаем как их получить</h4>
+              <form class="form form_inline" action="">
+                <input class="in-phone input-text" type="tel" placeholder="Ваш контактный телефон" value=""/>
+                <button class="btn btn_primary" type="submit">Хочу больше клиентов</button>
+              </form>
+            </div>
+            <div class="col-xl-3">
+              <div class="offer">How one dull get busy dare far. At principle perfectly by sweetness do. Decisively advantages nor expression unpleasing she led met. Indulgence contrasted sufficient to unpleasant in in insensible favourable. Hard do me sigh with west same lady. So by colonel hearted ferrars. Small for ask shade water manor think men begin. Equally he minutes my hastily. Estate was tended ten boy nearer seemed. Estate was tended ten boy nearer seemed. Up hung mr we give rest half. Their saved linen downs tears son add music. </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="post-preview">
-      <div class="container">
-        <div class="heading">Самое актуальное в нашем <a class="link" href="#">блоге</a></div>
-        <div class="row">
-          <div class="col-lg-3 post-preview__item"><a class="post-preview__item__title" href="#">6&nbsp;способов прокачать первый экран на&nbsp;вашем сайте</a>
-            <div class="post-preview__item__offer">Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.</div>
-          </div>
-          <div class="col-lg-3 post-preview__item"><a class="post-preview__item__title" href="#">О&nbsp;чем нужно помнить, создавая уникальные тексты?</a>
-            <div class="post-preview__item__offer">Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.</div>
-          </div>
-          <div class="col-lg-3 post-preview__item"><a class="post-preview__item__title" href="#">Продвижение сайта почти бесплатно</a>
-            <div class="post-preview__item__offer">Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content content_contact inside">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-6">
-            <h4 class="heading heading_medium">Нужны клиенты? <br/> Мы знаем как их получить</h4>
-            <form class="form form_inline" action="">
-              <input class="in-phone input-text" type="tel" placeholder="Ваш контактный телефон" value=""/>
-              <button class="btn btn_primary" type="submit">Хочу больше клиентов</button>
-            </form>
-          </div>
-          <div class="col-xl-3">
-            <div class="offer">How one dull get busy dare far. At principle perfectly by sweetness do. Decisively advantages nor expression unpleasing she led met. Indulgence contrasted sufficient to unpleasant in in insensible favourable. Hard do me sigh with west same lady. So by colonel hearted ferrars. Small for ask shade water manor think men begin. Equally he minutes my hastily. Estate was tended ten boy nearer seemed. Estate was tended ten boy nearer seemed. Up hung mr we give rest half. Their saved linen downs tears son add music. </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      </aside>
+    </main>
     <footer class="footer">
       <div class="container">
         <div class="row justify-content-between align-items-center">
@@ -178,7 +180,7 @@
             </svg>
           </div>
           <div class="col-12 col-sm-4 col-lg-2"><a class="footer__email" href="mailto:work@websoho.ru">work@websoho.ru</a></div>
-          <div class="col-12 col-xl-6 col-lg-6">
+          <nav class="col-12 col-xl-6 col-lg-6">
             <ul class="footer__navbar">
               <li class="footer__navbar__item"><a class="footer__navbar__link" href="#">Дизайн</a></li>
               <li class="footer__navbar__item"><a class="footer__navbar__link" href="#">Верстка и разработка</a></li>
@@ -188,7 +190,7 @@
               <li class="footer__navbar__item"><a class="footer__navbar__link" href="#">Портфолио</a></li>
               <li class="footer__navbar__item"><a class="footer__navbar__link" href="#">Блог</a></li>
             </ul>
-          </div>
+          </nav>
         </div>
       </div>
     </footer>

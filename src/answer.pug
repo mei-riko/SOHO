@@ -23,7 +23,7 @@ html(lang="ru", dir="ltr")
                     .col-10.col-md-4.col-xl-2
                         a.header__email(href="mailto:work@websoho.ru") work@websoho.ru
                     .col-10.col-md-5.col-xl-6
-                        a.header__link(href="#") Вернуться назад
+                        a.header__link(href="#") Вернуться в блог
             svg.header__nav#header__nav(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve")
                 g
                     path.header__nav__path(d="M6.979,271.181c30.288,25.979,64.616,55.426,131.017,55.426c66.403-0.001,100.733-29.447,131.022-55.426c28.644-24.568,53.382-45.787,104.98-45.787c51.599,0,76.337,21.219,104.98,45.787c8.385,7.191,21.011,6.225,28.202-2.159c7.191-8.385,6.225-21.011-2.16-28.202c-30.289-25.979-64.619-55.426-131.022-55.426S273.265,214.84,242.976,240.82c-28.644,24.568-53.382,45.787-104.98,45.787c-51.597,0-76.332-21.218-104.974-45.787c-8.384-7.191-21.01-6.226-28.202,2.159C-2.372,251.363-1.405,263.99,6.979,271.181z")
@@ -45,78 +45,63 @@ html(lang="ru", dir="ltr")
                     li.header__navbar__item
                         a.header__navbar__link(href="#") Дизайн
                 a.nav__close#navbarClose Закрыть меню
-        .post.page
-            .post__elements.elements_01
-                svg(viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet")
-                    defs
-                        filter#shadow(filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%")
-                            feGaussianBlur(in="SourceAlpha" result="blur" stdDeviation="3")
-                            feOffset(dx="5" dy="5" in="blur" result="offsetBlurredAlpha")
-                            feComponentTransfer
-                                feFuncA(type="linear" slope="0.2")
-                            feMerge
-                                feMergeNode
-                                feMergeNode(in="SourceGraphic")
-                        linearGradient#gradient(data-name="gradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse")
-                            stop(offset="0" stop-color="#222222")
-                            stop(offset="1" stop-color="#343434")
-                    g(fill-rule="nonzero")
-                        path(style="fill: url(#gradient); filter: url(#shadow);" d="M10,90c0-44.2,35.8-80,80-80s80,35.8,80,80 M10,90c0,44.2,35.8,80,80,80s80-35.8,80-80 M111.3,90c0,11.7-9.5,21.3-21.3,21.3S68.7,101.7,68.7,90 M111.3,90c0-11.7-9.5-21.3-21.3-21.3S68.7,78.3,68.7,90")
-            .post__elements.elements_02
-                svg(viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet")
-                    defs
-                        linearGradient#gradient_02(data-name="gradient_02" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse")
-                            stop(offset="0" stop-color="#222222")
-                            stop(offset="1" stop-color="#343434")
-                    g(style="fill: url(#gradient_02); filter: url(#shadow);")
-                        rect(x="12" y="9.5" width="71" height="160")
-                        rect(x="97" y="9.5" width="71" height="160")            
-            .container
-                .row.justify-content-center
-                    .col-sm-10.col-xl-8
-                        .page__image(style="background-image:url('../images/image_thanks.jpg');")
-                        .page__content
-                            h1.heading Спасибо за оставленную заявку!
-                            p Мы постараемся ответить вам как можно скорее.
-        .content.post.post_portfolio
-            .container
-                .heading Реализованные 
-                    a.link(href="#") проекты
-                .row.justify-content-center.justify-content-lg-between
-                    .col-lg-3.col-md-5
-                        a.post__item.post__item_image(href="#" style="background-image: url('../images/belje-na-verevke.jpg')")
-                            .post__item__title 6&nbsp;способов прокачать первый экран на&nbsp;вашем сайте
-                            .post__item__offer 12.09.2018
-                    .col-lg-3.col-md-5
-                        a.post__item.post__item_image(href="#" style="background-image: url('../images/test-01.jpg')")
-                            .post__item__title О&nbsp;чем нужно помнить, создавая уникальные тексты?
-                            .post__item__offer 12.09.2018
-                    .col-lg-3.col-md-10
-                        a.post__item.post__item_last.post__item_image(href="#" style="background-image: url('../images/test-02.jpg')")
-                            .post__item__title Продвижение сайта почти бесплатно
-                            .post__item__offer 12.09.2018
-        .content.post.post_preview
-            .container
-                .heading Самое актуальное в нашем 
-                    a.link(href="#") блоге
-                .row.justify-content-between
-                    .col-lg-3.col-md-5.post__item
-                        a(href="#").post__item__title 6&nbsp;способов прокачать первый экран на&nbsp;вашем сайте
-                        .post__item__offer Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.
-                    .col-lg-3.col-md-5.post__item
-                        a(href="#").post__item__title О&nbsp;чем нужно помнить, создавая уникальные тексты?
-                        .post__item__offer Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.
-                    .col-lg-3.col-md-10.post__item.post__item_last
-                        a(href="#").post__item__title Продвижение сайта почти бесплатно
-                        .post__item__offer Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.
-        .content.content_contact.inside
-            .container
-                .row
-                    .col-xl-6
-                        h4.heading Нужны клиенты? <br/> Мы знаем как их получить
-                        form.form.form_inline(action="")
-                            input.in-phone.input-text(type="tel" placeholder="Ваш контактный телефон" value="")
-                            button.btn.btn_primary(type="submit") Хочу больше клиентов
-                    .col-lg-3
-                        .offer.last How one dull get busy dare far. At principle perfectly by sweetness do. Decisively advantages nor expression unpleasing she led met. Indulgence contrasted sufficient to unpleasant in in insensible favourable. Hard do me sigh with west same lady. So by colonel hearted ferrars. Small for ask shade water manor think men begin. Equally he minutes my hastily. Estate was tended ten boy nearer seemed. Estate was tended ten boy nearer seemed. Up hung mr we give rest half. Their saved linen downs tears son add music. 
+        main
+            article
+                .post.page
+                    .post__elements.elements_02
+                        svg(viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet")
+                            defs
+                                linearGradient#gradient_02(data-name="gradient_02" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse")
+                                    stop(offset="0" stop-color="#222222")
+                                    stop(offset="1" stop-color="#343434")
+                            g(style="fill: url(#gradient_02); filter: url(#shadow);")
+                                rect(x="12" y="9.5" width="71" height="160")
+                                rect(x="97" y="9.5" width="71" height="160")            
+                    section.container.post__container
+                        .row.justify-content-center
+                            .col-sm-10.col-xl-8
+                                .page__image(style="background-image:url('../images/image_thanks.jpg');")
+                                .page__content
+                                    h1.heading Спасибо за оставленную заявку!
+                                    p Мы постараемся ответить вам как можно скорее.
+                aside.post-preview.post-preview_portfolio
+                    .container
+                        header.heading.text-center.text-md-left Другие работы студии
+                        .row.justify-content-start.justify-content-md-center
+                            article.col-lg-3.col-md-5
+                                a.post__item.post__item_image(href="#" style="background-image: url('../images/belje-na-verevke.jpg')")
+                                    .post__item__title 6&nbsp;способов прокачать первый экран на&nbsp;вашем сайте
+                                    .post__item__info 12.09.2018
+                            article.col-lg-3.col-md-5
+                                a.post__item.post__item_image(href="#" style="background-image: url('../images/belje-na-verevke.jpg')")
+                                    .post__item__title 6&nbsp;способов прокачать первый экран на&nbsp;вашем сайте
+                                    .post__item__info 12.09.2018
+                            article.col-lg-3.col-md-10
+                                a.post__item.post__item_image.last(href="#" style="background-image: url('../images/belje-na-verevke.jpg')")
+                                    .post__item__title 6&nbsp;способов прокачать первый экран на&nbsp;вашем сайте
+                                    .post__item__info 12.09.2018
+                aside.post-preview
+                    .container
+                        header.heading Самое актуальное в нашем 
+                            a.link(href="#") блоге
+                        .row
+                            article.col-lg-3.post-preview__item
+                                a(href="#").post-preview__item__title 6&nbsp;способов прокачать первый экран на&nbsp;вашем сайте
+                                .post-preview__item__offer Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.
+                            article.col-lg-3.post-preview__item
+                                a(href="#").post-preview__item__title О&nbsp;чем нужно помнить, создавая уникальные тексты?
+                                .post-preview__item__offer Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.
+                            article.col-lg-3.post-preview__item.last
+                                a(href="#").post-preview__item__title Продвижение сайта почти бесплатно
+                                .post-preview__item__offer Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.
+                section.content.content_contact.inside
+                    .container
+                        .row
+                            .col-xl-6
+                                h4.heading.heading_medium Нужны клиенты? <br/> Мы знаем как их получить
+                                form.form.form_inline(action="")
+                                    input.in-phone.input-text(type="tel" placeholder="Ваш контактный телефон" value="")
+                                    button.btn.btn_primary(type="submit") Хочу больше клиентов
+                            .col-xl-3
+                                .offer How one dull get busy dare far. At principle perfectly by sweetness do. Decisively advantages nor expression unpleasing she led met. Indulgence contrasted sufficient to unpleasant in in insensible favourable. Hard do me sigh with west same lady. So by colonel hearted ferrars. Small for ask shade water manor think men begin. Equally he minutes my hastily. Estate was tended ten boy nearer seemed. Estate was tended ten boy nearer seemed. Up hung mr we give rest half. Their saved linen downs tears son add music. 
         include chunks/footer.pug

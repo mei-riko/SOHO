@@ -40,3 +40,29 @@
         }
     }
 }
+
+/* Media */
+@media(max-width: 1400px){}
+@media(max-width: 992px){}
+@media(max-width: 768px){}
+@media(max-width: 576px){
+    .project{
+        .heading{
+            & + .offer {
+                margin: 20px 0 40px;
+            }
+        }
+        &__task{
+            &__item{
+                flex: 0 0 80px;
+                max-width: 80px;
+            }
+            &__content{
+                .offer{
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}

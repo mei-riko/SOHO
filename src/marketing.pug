@@ -6,187 +6,189 @@ html(lang="ru", dir="ltr")
         script(src="./js/jquery.fancybox.min.js")
         script(src="./js/app.min.js")
         include chunks/header.pug
-        .content.content_title
-            svg.content_title__svg(viewBox="0 0 1920 520" preserveAspectRatio="xMidYMax slice")
-                defs
-                    filter#shadow_03(filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%")
-                        feGaussianBlur(in="SourceAlpha" result="blur" stdDeviation="5")
-                        feOffset(dx="2" dy="6" in="blur" result="offsetBlurredAlpha")
-                        feComponentTransfer
-                            feFuncA(type="linear" slope="0.2")
-                        feMerge
-                            feMergeNode
-                            feMergeNode(in="SourceGraphic")
-                    linearGradient(id="PSgrad_0" x1="0%" x2="50%" y1="100%" y2="0%")
-                        stop(offset="0%" stop-color="#d31400" stop-opacity="1")
-                        stop(offset="100%" stop-color="#bf0e00" stop-opacity="1")
-                path(fill="url(#PSgrad_0)" filter="url(#shadow_03)" d="M1952.000,0.000 L0.000,0.000 C0.000,0.000 0.000,0.000 0.000,62.261 C48.455,87.927 227.239,217.781 370.380,209.418 C543.886,199.297 539.967,119.636 732.975,108.649 C895.861,99.358 895.062,345.632 945.000,414.000 C1039.188,542.961 1243.446,475.024 1406.000,401.000 C1458.954,376.881 1673.736,238.965 1716.000,215.000 C1805.329,164.347 1952.000,205.000 1952.000,205.000 L1952.000,0.000 Z")
-            .content_title__elements
-                svg.elements(viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet")
-                    defs
-                        filter#shadow(filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%")
-                            feGaussianBlur(in="SourceAlpha" result="blur" stdDeviation="3")
-                            feOffset(dx="5" dy="5" in="blur" result="offsetBlurredAlpha")
-                            feComponentTransfer
-                                feFuncA(type="linear" slope="0.2")
-                            feMerge
-                                feMergeNode
-                                feMergeNode(in="SourceGraphic")
-                        linearGradient#gradient(data-name="gradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse")
-                            stop(offset="0" stop-color="#df2410")
-                            stop(offset="1" stop-color="#bf0e00")
-                    g(fill-rule="nonzero")
-                        path(style="fill: url(#gradient); filter: url(#shadow);" d="M10,90c0-44.2,35.8-80,80-80s80,35.8,80,80 M10,90c0,44.2,35.8,80,80,80s80-35.8,80-80 M111.3,90c0,11.7-9.5,21.3-21.3,21.3S68.7,101.7,68.7,90 M111.3,90c0-11.7-9.5-21.3-21.3-21.3S68.7,78.3,68.7,90")
-            .container
-                .row
-                    .col-xl-6.col-md-8.col-10.offset-md-2.offset-xl-1
-                        h1.heading Интернет-маркетинг под&nbsp;ключ
-                        .offer.last Разработаем систему привлечения новых клиентов индивидуально для вашего бизнеса
-        .content
-            .container
-                .row
-                    .col-xl-10
-                        h2.heading.margin-bottom Зачем нужен интернет-маркетинг?
-                .row.justify-content-between.align-items-center
-                    .col-xl-5.col-lg-6.col-comment
-                        p.offer Вы задумывались, что побуждает пользователя сделать заказ услуги или купить товар на сайте? Конечно, во многом - это ваша заслуга. Вы предлагаете товар, который нравится людям и они его покупают. 
-                        p.offer Однако, чтобы люди узнали об уникальной услуге или особенном товаре, нужна командная работа профессиональных интернет-маркетологов. Именно они могут не только грамотно рассказать об уникальных свойствах продукта, но и привлечь заинтересованную целевую аудиторию. 
-                        p.offer.last-xl Интернет-маркетинг - универсальный инструмент для любого бизнеса. Он необходим всем отраслям, потому что решает сразу несколько важных задач. 
-                        img.element.element_comment(src="./images/comment/arrow.png")                   
-                    .col-xl-4.col-lg-4
-                        ol.list.list_ol
-                            li.list__item Повышение узнаваемости бренда
-                            li.list__item Возвращение ушедших клиентов
-                            li.list__item Увеличение количества заявок
-                            li.list__item Повышение эффективности рекламы
-        .content.content_form.p-relative
-            svg.element(viewBox="40 50 1920 250" preserveAspectRatio="xMidYMax slice")
-                defs
-                    filter#shadow_02(filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%")
-                        feGaussianBlur(in="SourceAlpha" result="blur" stdDeviation="5")
-                        feOffset(dx="2" dy="6" in="blur" result="offsetBlurredAlpha")
-                        feComponentTransfer
-                            feFuncA(type="linear" slope="0.3")
-                        feMerge
-                            feMergeNode
-                            feMergeNode(in="SourceGraphic")
-                    linearGradient(id="gradient_dark" x1="0%" x2="50%" y1="100%" y2="0%")
-                        stop(offset="0%" stop-color="#323232" stop-opacity="1")
-                        stop(offset="100%" stop-color="#242424" stop-opacity="1")
-                path(fill="url(#gradient_dark)" filter="url(#shadow_02)" d="M42.000,26.000 L1964.000,26.000 L1964.000,128.000 C1964.000,128.000 1869.396,239.798 1711.000,247.000 C1551.987,254.230 1610.163,102.000 1268.000,202.000 C1075.597,258.231 910.735,83.000 700.000,83.000 C555.112,83.000 479.426,171.264 297.630,172.028 C108.350,172.825 42.027,127.770 42.000,128.000 L42.000,26.000 Z")
-            .container
-                .row.justify-content-center
-                    .col-xl-7.text-center
-                        h4.heading.heading_medium.margin-bottom Каких целей вы хотите достичь при&nbsp;помощи интернет-маркетинга?
-                        form.form(action="")
-                            textarea.input-inline#inputText(name="", placeholder="Опишите здесь, каких целей вы хотите достичь с помощью вашего сайта")
-                            button.btn.btn_primary#btnInfo(data-fancybox="" data-animation-duration="500" data-src="#callModal" href="javascript:;") Заказать интернет-маркетинг      
-        .content.content_color.p-relative
-            svg.element(viewBox="0 0 1500 250" preserveAspectRatio="xMinYMin meet")
-                path(fill-rule="evenodd"  opacity="0.04" fill="rgb(255, 255, 255)" d="M1824.100,148.124 L1824.100,106.581 L1918.013,106.581 L1918.013,228.635 C1902.793,233.574 1888.463,237.036 1875.023,239.021 C1861.584,241.006 1847.846,242.000 1833.815,242.000 C1798.084,242.000 1770.800,231.561 1751.965,210.681 C1733.127,189.804 1723.710,159.826 1723.710,120.751 C1723.710,82.750 1734.639,53.122 1756.499,31.867 C1778.358,10.612 1808.662,-0.015 1847.416,-0.015 C1871.704,-0.015 1895.127,4.816 1917.689,14.477 L1901.011,54.410 C1883.739,45.823 1865.766,41.529 1847.092,41.529 C1825.395,41.529 1808.014,48.775 1794.954,63.266 C1781.892,77.758 1775.362,97.242 1775.362,121.717 C1775.362,147.267 1780.625,166.778 1791.149,180.248 C1801.674,193.721 1816.975,200.457 1837.053,200.457 C1847.522,200.457 1858.156,199.385 1868.952,197.236 L1868.952,148.124 L1824.100,148.124 ZM1508.593,60.690 L1507.136,60.690 C1509.185,92.145 1510.213,114.579 1510.213,127.997 L1510.213,238.780 L1465.361,238.780 L1465.361,3.366 L1528.672,3.366 L1631.490,179.685 L1632.624,179.685 C1631.005,149.091 1630.195,127.461 1630.195,114.793 L1630.195,3.366 L1675.370,3.366 L1675.370,238.780 L1611.574,238.780 L1508.593,60.690 ZM1357.812,3.366 L1408.007,3.366 L1408.007,238.780 L1357.812,238.780 L1357.812,3.366 ZM1256.441,238.780 L1206.246,238.780 L1206.246,44.910 L1141.964,44.910 L1141.964,3.366 L1320.723,3.366 L1320.723,44.910 L1256.441,44.910 L1256.441,238.780 ZM981.389,3.366 L1117.725,3.366 L1117.725,44.266 L1031.584,44.266 L1031.584,95.954 L1111.734,95.954 L1111.734,136.853 L1031.584,136.853 L1031.584,197.558 L1117.725,197.558 L1117.725,238.780 L981.389,238.780 L981.389,3.366 ZM895.230,238.780 L833.215,139.590 L812.004,154.726 L812.004,238.780 L761.808,238.780 L761.808,3.366 L812.004,3.366 L812.004,111.090 L831.758,83.394 L895.878,3.366 L951.578,3.366 L868.999,107.547 L952.226,238.780 L895.230,238.780 ZM675.650,238.780 L619.140,148.447 L592.423,148.447 L592.423,238.780 L542.228,238.780 L542.228,3.366 L611.206,3.366 C643.372,3.366 667.174,9.191 682.612,20.837 C698.048,32.486 705.767,50.171 705.767,73.894 C705.767,87.741 701.934,100.060 694.271,110.848 C686.605,121.636 675.756,130.090 661.725,136.209 C697.347,189.132 720.555,223.321 731.350,238.780 L675.650,238.780 ZM643.509,51.351 C635.790,46.628 623.836,44.266 607.644,44.266 L592.423,44.266 L592.423,107.869 L608.615,107.869 C624.483,107.869 636.195,105.240 643.752,99.979 C651.306,94.721 655.086,86.453 655.086,75.182 C655.086,64.019 651.225,56.076 643.509,51.351 ZM441.440,182.744 L355.137,182.744 L337.974,238.780 L283.893,238.780 L367.443,2.400 L428.810,2.400 L512.685,238.780 L458.604,238.780 L441.440,182.744 ZM402.660,54.732 C400.662,48.077 399.232,42.817 398.370,38.952 C394.807,52.694 384.606,86.670 367.767,140.878 L429.458,140.878 C413.590,90.104 404.657,61.389 402.660,54.732 ZM206.285,127.353 C206.285,122.094 206.366,116.028 206.528,109.157 C206.690,102.289 207.419,84.038 208.714,54.410 L207.257,54.410 L146.213,238.780 L100.228,238.780 L43.232,54.088 L41.775,54.088 C43.824,91.662 44.852,116.726 44.852,129.285 L44.852,238.780 L-0.000,238.780 L-0.000,3.366 L68.330,3.366 L124.354,183.388 L125.325,183.388 L184.750,3.366 L253.080,3.366 L253.080,238.780 L206.285,238.780 L206.285,127.353 Z")
-            .container
-                .row.justify-content-between
-                    .column.col-lg-3.col-sm-5.margin-bottom-md
-                        .heading.heading_small Разработка под ваш бизнес
-                        .offer.small Стратегия создается исходя из направления бизнеса и поставленных вами задач
-                    .column.col-lg-3.col-sm-5.margin-bottom-md
-                        .heading.heading_small Комплексная услуга
-                        .offer.small Для быстрого достижения целей используем весь арсенал маркетинговых инструментов
-                    .column.col-lg-3.col-xl-4
-                        .heading.heading_small Проверенные инструменты продаж
-                        .offer.small Заказав услугу, вы получаете профессионалов, которые создадут работающий инструмент продаж
-        .content.content_mockup.bg-white.p-relative
-            img.element.element.img-fluid(src="../images/marketing.png")
-            .container.p-relative
-                .row
-                    .col-xl-7.offset-xl-3
-                        h3.heading Услуги по интернет-маркетингу
-                        p.offer Обратившись к нам, вы получите эффективный инструмент продаж. Мы не просто знаем о том, как сделать сайт продающим, но и сами внедряем разработки, которые увеличивают количество посетителей уже в первый месяц! 
-                        .content__group
-                            .content__group__link Маркетинговая аналитика
-                            .content__group__link Брендинг
-                            .content__group__link Составление портрета пользователя
-                            .content__group__link Квиз-маркетинг
-                            .content__group__link Создание воронки продаж
-                            .content__group__link Создание посадочных страниц
-        .content.project.bg-grey
-            .container
-                .row
-                    .col-xl-10
-                        h4.heading.heading_medium Проект по интернет-маркетингу
-                        .offer Один из последних проектов SOHO
-                    .col-xl-5
-                        .project__task
-                            .project__task__item Задача
-                            .project__task__content 
-                                p.offer Проработать маркетинговую составляющую сайта: разработка УТП, преимуществ, продающих текстов и форм. Сделать его привлекательным, наполнить актуальной информацией, подготовить все страницы к запуску рекламы. 
-                                p.offer Настроить рекламную кампанию, повысить число заявок с нее и из поисковых систем.
-                                ul
-                                    li переработать всю информацию на сайте для повышения количества заявок;
-                                    li улучшить общее восприятие информации;
-                                    li изменить дизайн сайта на более современный и&nbsp;внушающий&nbsp;доверие
-                    .col-xl-5
-                        .project__task
-                            .project__task__item Решение
-                            .project__task__content
-                                p.offer Работы начали с проработки структуры страниц и составления прототипов. Каждый блок продумывался, исходя из реальных преимуществ компании и отдельной услуги. 
-                                p.offer После этого последовал редизайн сайта, подбор семантики, проработка нового контента. Когда сайт внешне был готов, мы добавили на него формы захвата лидов. 
-                .row.margin-bottom
-                    .col-xl-10
-                        p.heading.heading_small Достигнутый эффект
-                    .col-xl-6
-                        p.offer После всех проведенных на сайте работ, конверсия выросла с 0,1% до 13%. 
-                        p.offer.last Благодаря тщательной работе с возражениями, редизайну и качественной проработке инфомационных блоков, с ресурса начали поступать заявки. Точно настроенная реклама обеспечивала стабильный рост заинтересованной аудитории и, как следствие, заявок с сайта.
-                .row
-                    .col-lg-5.margin-bottom
-                        img.img-fluid(src="../images/default.png")
-                    .col-lg-5.margin-bottom
-                        img.img-fluid(src="../images/default.png")
-                    .col-xl-10
-                        a.btn.btn_primary(data-fancybox="" data-animation-duration="500" data-src="#callModal" href="javascript:;") Хочу такой же результат
-        .content.content_price
-            .container.content_price__container
-                .row
-                    .col-xl-6.offset-xl-2.text-center.margin-bottom
-                        .heading.heading_small Сколько стоит интернет-маркетинг?
-                        .offer В зависимости от конкурентности тематики сайта, а также поставдленных задач, рассчитывается стоимость предоставляемых услуг. Также вы можете выбрать пакетное предложение, которое поможет достичь поставленных целей без больших затрат.
-                .row.align-items-center.justify-content-center
-                    .col-xl-3.col-lg-3.p-relative
-                        img.element.element_1(src="../images/comment/dev_comment_0.png")
-                        .price
-                            .price__header Есть SEO-продвижение
-                            .price__content
-                                p.text-uppercase.text-bold В предложение входит
-                                p вы ставите задачу — мы формируем пакет услуг подходящий под ваши цели. В конце месяца предоставляем отчет о работе и результатах
-                            .price__footer стоимость 15к+
-                    .col-xl-3.col-lg-4
-                        .price.price_large
-                            .price__header Есть реклама
-                            .price__content
-                                p.text-uppercase.text-bold В предложение входит
-                                p займемся технической оптимизацией, улучшением информации на сайте и внешнего вида - предложение сформируем исходя из ваших целей
-                            .price__footer стоимость 25к+
-                    .col-xl-3.col-lg-3.p-relative
-                        img.element.element_3(src="../images/comment/dev_comment_1.png")
-                        .price
-                            .price__header Нужно больше заказов
-                            .price__content
-                                p.text-uppercase.text-bold В предложение входит
-                                p прорвемся через все трудности повышенной конкуренции предложим оптимальный план продвижение сайта: тариф включает все что можно и нельзя
-                            .price__footer стоимость 35к+
-            .container.content_price__container
-                .row.justify-content-center
-                    .col-lg-7.text-center
-                        .heading.heading_small Окончательную цену вы можете узнать на&nbsp;консультации
-                        .offer.last Стоимость услуги рассчитывается индивидуально в зависимости от проекта. При расчете мы учитываем направление деятельности, а также что именно вы ожидаете получить в качестве результата. После консультации и предварительного анализа вашего ресурса мы составляем список услуг и озвучиваем стоимость. 
-        .content.content_contact
-            .container
-                .row.align-items-end
-                    .col-xl-6
-                        h4.heading.heading_medium Нужны клиенты?<br/>Мы знаем как их получить
-                        form.form.form_inline(action="")
-                            input.in-phone.input-text(type="tel" placeholder="Ваш контактный телефон" value="")
-                            button.btn.btn_primary(type="submit") Да, нужны
-                    .col-xl-3
-                        .offer.last Многие компании, предлагая свои услуги, говорят о том, какие они классные. Мы в первую очередь думаем о вас и вашем комфорте от сотрудничества с SOHO. Поэтому мы расскажем о том, что вы получите, обратившись к нам.
+        main
+            article
+                header.content.content_title
+                    svg.content_title__svg(viewBox="0 0 1920 520" preserveAspectRatio="xMidYMax slice")
+                        defs
+                            filter#shadow_03(filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%")
+                                feGaussianBlur(in="SourceAlpha" result="blur" stdDeviation="5")
+                                feOffset(dx="2" dy="6" in="blur" result="offsetBlurredAlpha")
+                                feComponentTransfer
+                                    feFuncA(type="linear" slope="0.2")
+                                feMerge
+                                    feMergeNode
+                                    feMergeNode(in="SourceGraphic")
+                            linearGradient(id="PSgrad_0" x1="0%" x2="50%" y1="100%" y2="0%")
+                                stop(offset="0%" stop-color="#d31400" stop-opacity="1")
+                                stop(offset="100%" stop-color="#bf0e00" stop-opacity="1")
+                        path(fill="url(#PSgrad_0)" filter="url(#shadow_03)" d="M1952.000,0.000 L0.000,0.000 C0.000,0.000 0.000,0.000 0.000,62.261 C48.455,87.927 227.239,217.781 370.380,209.418 C543.886,199.297 539.967,119.636 732.975,108.649 C895.861,99.358 895.062,345.632 945.000,414.000 C1039.188,542.961 1243.446,475.024 1406.000,401.000 C1458.954,376.881 1673.736,238.965 1716.000,215.000 C1805.329,164.347 1952.000,205.000 1952.000,205.000 L1952.000,0.000 Z")
+                    .content_title__elements
+                        svg.elements(viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet")
+                            defs
+                                filter#shadow(filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%")
+                                    feGaussianBlur(in="SourceAlpha" result="blur" stdDeviation="3")
+                                    feOffset(dx="5" dy="5" in="blur" result="offsetBlurredAlpha")
+                                    feComponentTransfer
+                                        feFuncA(type="linear" slope="0.2")
+                                    feMerge
+                                        feMergeNode
+                                        feMergeNode(in="SourceGraphic")
+                                linearGradient#gradient(data-name="gradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse")
+                                    stop(offset="0" stop-color="#df2410")
+                                    stop(offset="1" stop-color="#bf0e00")
+                            g(fill-rule="nonzero")
+                                path(style="fill: url(#gradient); filter: url(#shadow);" d="M10,90c0-44.2,35.8-80,80-80s80,35.8,80,80 M10,90c0,44.2,35.8,80,80,80s80-35.8,80-80 M111.3,90c0,11.7-9.5,21.3-21.3,21.3S68.7,101.7,68.7,90 M111.3,90c0-11.7-9.5-21.3-21.3-21.3S68.7,78.3,68.7,90")
+                    .container
+                        .row
+                            .col-xl-6.col-md-8.col-10.offset-md-2.offset-xl-1
+                                h1.heading Интернет-маркетинг под&nbsp;ключ
+                                .offer.last Разработаем систему привлечения новых клиентов индивидуально для вашего бизнеса
+                section.content
+                    .container
+                        .row
+                            .col-xl-10
+                                h2.heading.margin-bottom Зачем нужен интернет-маркетинг?
+                        .row.justify-content-between.align-items-center
+                            .col-xl-5.col-lg-6.col-comment
+                                p.offer Вы задумывались, что побуждает пользователя сделать заказ услуги или купить товар на сайте? Конечно, во многом - это ваша заслуга. Вы предлагаете товар, который нравится людям и они его покупают. 
+                                p.offer Однако, чтобы люди узнали об уникальной услуге или особенном товаре, нужна командная работа профессиональных интернет-маркетологов. Именно они могут не только грамотно рассказать об уникальных свойствах продукта, но и привлечь заинтересованную целевую аудиторию. 
+                                p.offer.last-xl Интернет-маркетинг - универсальный инструмент для любого бизнеса. Он необходим всем отраслям, потому что решает сразу несколько важных задач. 
+                                img.element.element_comment(src="./images/comment/arrow.png")                   
+                            .col-xl-4.col-lg-4
+                                ol.list.list_ol
+                                    li.list__item Повышение узнаваемости бренда
+                                    li.list__item Возвращение ушедших клиентов
+                                    li.list__item Увеличение количества заявок
+                                    li.list__item Повышение эффективности рекламы
+                section.content.content_form.p-relative
+                    svg.element(viewBox="40 50 1920 250" preserveAspectRatio="xMidYMax slice")
+                        defs
+                            filter#shadow_02(filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%")
+                                feGaussianBlur(in="SourceAlpha" result="blur" stdDeviation="5")
+                                feOffset(dx="2" dy="6" in="blur" result="offsetBlurredAlpha")
+                                feComponentTransfer
+                                    feFuncA(type="linear" slope="0.3")
+                                feMerge
+                                    feMergeNode
+                                    feMergeNode(in="SourceGraphic")
+                            linearGradient(id="gradient_dark" x1="0%" x2="50%" y1="100%" y2="0%")
+                                stop(offset="0%" stop-color="#323232" stop-opacity="1")
+                                stop(offset="100%" stop-color="#242424" stop-opacity="1")
+                        path(fill="url(#gradient_dark)" filter="url(#shadow_02)" d="M42.000,26.000 L1964.000,26.000 L1964.000,128.000 C1964.000,128.000 1869.396,239.798 1711.000,247.000 C1551.987,254.230 1610.163,102.000 1268.000,202.000 C1075.597,258.231 910.735,83.000 700.000,83.000 C555.112,83.000 479.426,171.264 297.630,172.028 C108.350,172.825 42.027,127.770 42.000,128.000 L42.000,26.000 Z")
+                    .container
+                        .row.justify-content-center
+                            .col-xl-7.text-center
+                                h4.heading.heading_medium.margin-bottom Каких целей вы хотите достичь при&nbsp;помощи интернет-маркетинга?
+                                form.form(action="")
+                                    textarea.input-inline#inputText(name="", placeholder="Опишите здесь, каких целей вы хотите достичь с помощью вашего сайта")
+                                    button.btn.btn_primary#btnInfo(data-fancybox="" data-animation-duration="500" data-src="#callModal" href="javascript:;") Заказать интернет-маркетинг      
+                section.content.content_color.p-relative
+                    svg.element(viewBox="0 0 1500 250" preserveAspectRatio="xMinYMin meet")
+                        path(fill-rule="evenodd"  opacity="0.04" fill="rgb(255, 255, 255)" d="M1824.100,148.124 L1824.100,106.581 L1918.013,106.581 L1918.013,228.635 C1902.793,233.574 1888.463,237.036 1875.023,239.021 C1861.584,241.006 1847.846,242.000 1833.815,242.000 C1798.084,242.000 1770.800,231.561 1751.965,210.681 C1733.127,189.804 1723.710,159.826 1723.710,120.751 C1723.710,82.750 1734.639,53.122 1756.499,31.867 C1778.358,10.612 1808.662,-0.015 1847.416,-0.015 C1871.704,-0.015 1895.127,4.816 1917.689,14.477 L1901.011,54.410 C1883.739,45.823 1865.766,41.529 1847.092,41.529 C1825.395,41.529 1808.014,48.775 1794.954,63.266 C1781.892,77.758 1775.362,97.242 1775.362,121.717 C1775.362,147.267 1780.625,166.778 1791.149,180.248 C1801.674,193.721 1816.975,200.457 1837.053,200.457 C1847.522,200.457 1858.156,199.385 1868.952,197.236 L1868.952,148.124 L1824.100,148.124 ZM1508.593,60.690 L1507.136,60.690 C1509.185,92.145 1510.213,114.579 1510.213,127.997 L1510.213,238.780 L1465.361,238.780 L1465.361,3.366 L1528.672,3.366 L1631.490,179.685 L1632.624,179.685 C1631.005,149.091 1630.195,127.461 1630.195,114.793 L1630.195,3.366 L1675.370,3.366 L1675.370,238.780 L1611.574,238.780 L1508.593,60.690 ZM1357.812,3.366 L1408.007,3.366 L1408.007,238.780 L1357.812,238.780 L1357.812,3.366 ZM1256.441,238.780 L1206.246,238.780 L1206.246,44.910 L1141.964,44.910 L1141.964,3.366 L1320.723,3.366 L1320.723,44.910 L1256.441,44.910 L1256.441,238.780 ZM981.389,3.366 L1117.725,3.366 L1117.725,44.266 L1031.584,44.266 L1031.584,95.954 L1111.734,95.954 L1111.734,136.853 L1031.584,136.853 L1031.584,197.558 L1117.725,197.558 L1117.725,238.780 L981.389,238.780 L981.389,3.366 ZM895.230,238.780 L833.215,139.590 L812.004,154.726 L812.004,238.780 L761.808,238.780 L761.808,3.366 L812.004,3.366 L812.004,111.090 L831.758,83.394 L895.878,3.366 L951.578,3.366 L868.999,107.547 L952.226,238.780 L895.230,238.780 ZM675.650,238.780 L619.140,148.447 L592.423,148.447 L592.423,238.780 L542.228,238.780 L542.228,3.366 L611.206,3.366 C643.372,3.366 667.174,9.191 682.612,20.837 C698.048,32.486 705.767,50.171 705.767,73.894 C705.767,87.741 701.934,100.060 694.271,110.848 C686.605,121.636 675.756,130.090 661.725,136.209 C697.347,189.132 720.555,223.321 731.350,238.780 L675.650,238.780 ZM643.509,51.351 C635.790,46.628 623.836,44.266 607.644,44.266 L592.423,44.266 L592.423,107.869 L608.615,107.869 C624.483,107.869 636.195,105.240 643.752,99.979 C651.306,94.721 655.086,86.453 655.086,75.182 C655.086,64.019 651.225,56.076 643.509,51.351 ZM441.440,182.744 L355.137,182.744 L337.974,238.780 L283.893,238.780 L367.443,2.400 L428.810,2.400 L512.685,238.780 L458.604,238.780 L441.440,182.744 ZM402.660,54.732 C400.662,48.077 399.232,42.817 398.370,38.952 C394.807,52.694 384.606,86.670 367.767,140.878 L429.458,140.878 C413.590,90.104 404.657,61.389 402.660,54.732 ZM206.285,127.353 C206.285,122.094 206.366,116.028 206.528,109.157 C206.690,102.289 207.419,84.038 208.714,54.410 L207.257,54.410 L146.213,238.780 L100.228,238.780 L43.232,54.088 L41.775,54.088 C43.824,91.662 44.852,116.726 44.852,129.285 L44.852,238.780 L-0.000,238.780 L-0.000,3.366 L68.330,3.366 L124.354,183.388 L125.325,183.388 L184.750,3.366 L253.080,3.366 L253.080,238.780 L206.285,238.780 L206.285,127.353 Z")
+                    .container
+                        .row.justify-content-between
+                            .column.col-lg-3.col-sm-5.margin-bottom-md
+                                .heading.heading_small Разработка под ваш бизнес
+                                .offer.small Стратегия создается исходя из направления бизнеса и поставленных вами задач
+                            .column.col-lg-3.col-sm-5.margin-bottom-md
+                                .heading.heading_small Комплексная услуга
+                                .offer.small Для быстрого достижения целей используем весь арсенал маркетинговых инструментов
+                            .column.col-lg-3.col-xl-4
+                                .heading.heading_small Проверенные инструменты продаж
+                                .offer.small Заказав услугу, вы получаете профессионалов, которые создадут работающий инструмент продаж
+                section.content.content_mockup.bg-white.p-relative
+                    img.element.element.img-fluid(src="../images/marketing.png")
+                    .container.p-relative
+                        .row
+                            .col-xl-7.offset-xl-3
+                                h3.heading Услуги по интернет-маркетингу
+                                p.offer Обратившись к нам, вы получите эффективный инструмент продаж. Мы не просто знаем о том, как сделать сайт продающим, но и сами внедряем разработки, которые увеличивают количество посетителей уже в первый месяц! 
+                                .content__group
+                                    .content__group__link Маркетинговая аналитика
+                                    .content__group__link Брендинг
+                                    .content__group__link Составление портрета пользователя
+                                    .content__group__link Квиз-маркетинг
+                                    .content__group__link Создание воронки продаж
+                                    .content__group__link Создание посадочных страниц
+                section.content.project.bg-grey
+                    .container
+                        .row
+                            .col-xl-10
+                                h4.heading.heading_medium Проект по интернет-маркетингу
+                                .offer Один из последних проектов SOHO
+                            .col-xl-5
+                                .project__task
+                                    .project__task__item Задача
+                                    .project__task__content 
+                                        p.offer Проработать маркетинговую составляющую сайта: разработка УТП, преимуществ, продающих текстов и форм. Сделать его привлекательным, наполнить актуальной информацией, подготовить все страницы к запуску рекламы. 
+                                        p.offer Настроить рекламную кампанию, повысить число заявок с нее и из поисковых систем.
+                                        ul
+                                            li переработать всю информацию на сайте для повышения количества заявок;
+                                            li улучшить общее восприятие информации;
+                                            li изменить дизайн сайта на более современный и&nbsp;внушающий&nbsp;доверие
+                            .col-xl-5
+                                .project__task
+                                    .project__task__item Решение
+                                    .project__task__content
+                                        p.offer Работы начали с проработки структуры страниц и составления прототипов. Каждый блок продумывался, исходя из реальных преимуществ компании и отдельной услуги. 
+                                        p.offer После этого последовал редизайн сайта, подбор семантики, проработка нового контента. Когда сайт внешне был готов, мы добавили на него формы захвата лидов. 
+                        .row.margin-bottom
+                            .col-xl-10
+                                p.heading.heading_small Достигнутый эффект
+                            .col-xl-6
+                                p.offer После всех проведенных на сайте работ, конверсия выросла с 0,1% до 13%. 
+                                p.offer.last Благодаря тщательной работе с возражениями, редизайну и качественной проработке инфомационных блоков, с ресурса начали поступать заявки. Точно настроенная реклама обеспечивала стабильный рост заинтересованной аудитории и, как следствие, заявок с сайта.
+                        .row
+                            .col-lg-5.margin-bottom
+                                img.img-fluid(src="../images/default.png")
+                            .col-lg-5.margin-bottom
+                                img.img-fluid(src="../images/default.png")
+                            .col-xl-10
+                                a.btn.btn_primary(data-fancybox="" data-animation-duration="500" data-src="#callModal" href="javascript:;") Хочу такой же результат
+                section.content.content_price
+                    .container.content_price__container
+                        .row
+                            .col-xl-6.offset-xl-2.text-center.margin-bottom
+                                .heading.heading_small Сколько стоит интернет-маркетинг?
+                                .offer В зависимости от конкурентности тематики сайта, а также поставдленных задач, рассчитывается стоимость предоставляемых услуг. Также вы можете выбрать пакетное предложение, которое поможет достичь поставленных целей без больших затрат.
+                        .row.align-items-center.justify-content-center
+                            .col-xl-3.col-lg-3.p-relative
+                                img.element.element_1(src="../images/comment/dev_comment_0.png")
+                                .price
+                                    .price__header Есть SEO-продвижение
+                                    .price__content
+                                        p.text-uppercase.text-bold В предложение входит
+                                        p вы ставите задачу — мы формируем пакет услуг подходящий под ваши цели. В конце месяца предоставляем отчет о работе и результатах
+                                    .price__footer стоимость 15к+
+                            .col-xl-3.col-lg-4
+                                .price.price_large
+                                    .price__header Есть реклама
+                                    .price__content
+                                        p.text-uppercase.text-bold В предложение входит
+                                        p займемся технической оптимизацией, улучшением информации на сайте и внешнего вида - предложение сформируем исходя из ваших целей
+                                    .price__footer стоимость 25к+
+                            .col-xl-3.col-lg-3.p-relative
+                                img.element.element_3(src="../images/comment/dev_comment_1.png")
+                                .price
+                                    .price__header Нужно больше заказов
+                                    .price__content
+                                        p.text-uppercase.text-bold В предложение входит
+                                        p прорвемся через все трудности повышенной конкуренции предложим оптимальный план продвижение сайта: тариф включает все что можно и нельзя
+                                    .price__footer стоимость 35к+
+                    .container.content_price__container
+                        .row.justify-content-center
+                            .col-lg-7.text-center
+                                .heading.heading_small Окончательную цену вы можете узнать на&nbsp;консультации
+                                .offer.last Стоимость услуги рассчитывается индивидуально в зависимости от проекта. При расчете мы учитываем направление деятельности, а также что именно вы ожидаете получить в качестве результата. После консультации и предварительного анализа вашего ресурса мы составляем список услуг и озвучиваем стоимость. 
+                section.content.content_contact
+                    .container
+                        .row.align-items-end
+                            .col-xl-6
+                                h4.heading.heading_medium Нужны клиенты?<br/>Мы знаем как их получить
+                                form.form.form_inline(action="")
+                                    input.in-phone.input-text(type="tel" placeholder="Ваш контактный телефон" value="")
+                                    button.btn.btn_primary(type="submit") Да, нужны
+                            .col-xl-3
+                                .offer.last Многие компании, предлагая свои услуги, говорят о том, какие они классные. Мы в первую очередь думаем о вас и вашем комфорте от сотрудничества с SOHO. Поэтому мы расскажем о том, что вы получите, обратившись к нам.
         include chunks/footer.pug

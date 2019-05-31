@@ -38,3 +38,17 @@
         }
     }
 }
+
+/* Media */
+@media(max-width: 1400px){}
+@media(max-width: 992px){}
+@media(max-width: 768px){
+    .list{
+        &_ol{
+            & + .list__item{
+                margin-top: 20px;
+            }
+        }
+    }
+}
+@media(max-width: 576px){}

@@ -5,68 +5,68 @@ html(lang="ru", dir="ltr")
         script(src="./js/jquery.inputmask.js")
         script(src="./js/app.min.js")
         include chunks/header_inside.pug
-        
-        .post__elements.elements_01
-            svg(viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet")
-                defs
-                    filter#shadow(filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%")
-                        feGaussianBlur(in="SourceAlpha" result="blur" stdDeviation="3")
-                        feOffset(dx="5" dy="5" in="blur" result="offsetBlurredAlpha")
-                        feComponentTransfer
-                            feFuncA(type="linear" slope="0.2")
-                        feMerge
-                            feMergeNode
-                            feMergeNode(in="SourceGraphic")
-                    linearGradient#gradient(data-name="gradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse")
-                        stop(offset="0" stop-color="#222222")
-                        stop(offset="1" stop-color="#343434")
-                g(fill-rule="nonzero")
-                    path(style="fill: url(#gradient); filter: url(#shadow);" d="M10,90c0-44.2,35.8-80,80-80s80,35.8,80,80 M10,90c0,44.2,35.8,80,80,80s80-35.8,80-80 M111.3,90c0,11.7-9.5,21.3-21.3,21.3S68.7,101.7,68.7,90 M111.3,90c0-11.7-9.5-21.3-21.3-21.3S68.7,78.3,68.7,90")
-        .post__elements.elements_02
-            svg(viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet")
-                defs
-                    linearGradient#gradient_02(data-name="gradient_02" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse")
-                        stop(offset="0" stop-color="#222222")
-                        stop(offset="1" stop-color="#343434")
-                g(style="fill: url(#gradient_02); filter: url(#shadow);")
-                    rect(x="12" y="9.5" width="71" height="160")
-                    rect(x="97" y="9.5" width="71" height="160")            
-        .container.post__container
-            .row.margin-bottom
-                .col-9
-                    h1.heading.heading_blog Самое актуальное в нашем блоге
-                .col-xl-3.col-md-5
-                    a.post__item.post__item_image(href="#" style="background-image: url('../images/belje-na-verevke.jpg')")
-                        .post__item__title 6&nbsp;способов прокачать первый экран на&nbsp;вашем сайте
-                        .post__item__info 12.09.2018
-                .col-xl-3.col-md-5
-                    a.post__item.post__item_image(href="#" style="background-image: url('../images/test-01.jpg')")
-                        .post__item__title О&nbsp;чем нужно помнить, создавая уникальные тексты?
-                        .post__item__info 12.09.2018
-                .col-xl-3.col-md-5
-                    a.post__item.post__item_image(href="#" style="background-image: url('../images/test-02.jpg')")
-                        .post__item__title Продвижение сайта почти бесплатно
-                        .post__item__info 12.09.2018
-                .col-xl-3.col-md-5
-                    a.post__item.post__item_image(href="#" style="background-image: url('../images/belje-na-verevke.jpg')")
-                        .post__item__title 6&nbsp;способов прокачать первый экран на&nbsp;вашем сайте
-                        .post__item__info 12.09.2018
-                .col-xl-3.col-md-5
-                    a.post__item.post__item_image(href="#" style="background-image: url('../images/test-01.jpg')")
-                        .post__item__title О&nbsp;чем нужно помнить, создавая уникальные тексты?
-                        .post__item__info 12.09.2018
-                .col-xl-3.col-md-5
-                    a.post__item.post__item_image(href="#" style="background-image: url('../images/test-02.jpg')")
-                        .post__item__title Продвижение сайта почти бесплатно
-                        .post__item__info 12.09.2018
-        .content.content_contact.inside
-            .container
-                .row
-                    .col-xl-6
-                        h4.heading Нужны клиенты? <br/> Мы знаем как их получить
-                        form.form.form_inline(action="")
-                            input.in-phone.input-text(type="tel" placeholder="Ваш контактный телефон" value="")
-                            button.btn.btn_primary(type="submit") Хочу больше клиентов
-                    .col-xl-3
-                        .offer How one dull get busy dare far. At principle perfectly by sweetness do. Decisively advantages nor expression unpleasing she led met. Indulgence contrasted sufficient to unpleasant in in insensible favourable. Hard do me sigh with west same lady. So by colonel hearted ferrars. Small for ask shade water manor think men begin. Equally he minutes my hastily. Estate was tended ten boy nearer seemed. Estate was tended ten boy nearer seemed. Up hung mr we give rest half. Their saved linen downs tears son add music. 
+        main
+            .post__elements.elements_01
+                svg(viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet")
+                    defs
+                        filter#shadow(filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%")
+                            feGaussianBlur(in="SourceAlpha" result="blur" stdDeviation="3")
+                            feOffset(dx="5" dy="5" in="blur" result="offsetBlurredAlpha")
+                            feComponentTransfer
+                                feFuncA(type="linear" slope="0.2")
+                            feMerge
+                                feMergeNode
+                                feMergeNode(in="SourceGraphic")
+                        linearGradient#gradient(data-name="gradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse")
+                            stop(offset="0" stop-color="#222222")
+                            stop(offset="1" stop-color="#343434")
+                    g(fill-rule="nonzero")
+                        path(style="fill: url(#gradient); filter: url(#shadow);" d="M10,90c0-44.2,35.8-80,80-80s80,35.8,80,80 M10,90c0,44.2,35.8,80,80,80s80-35.8,80-80 M111.3,90c0,11.7-9.5,21.3-21.3,21.3S68.7,101.7,68.7,90 M111.3,90c0-11.7-9.5-21.3-21.3-21.3S68.7,78.3,68.7,90")
+            .post__elements.elements_02
+                svg(viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet")
+                    defs
+                        linearGradient#gradient_02(data-name="gradient_02" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse")
+                            stop(offset="0" stop-color="#222222")
+                            stop(offset="1" stop-color="#343434")
+                    g(style="fill: url(#gradient_02); filter: url(#shadow);")
+                        rect(x="12" y="9.5" width="71" height="160")
+                        rect(x="97" y="9.5" width="71" height="160")            
+            section.container.post__container
+                .row.margin-bottom
+                    header.col-10.col-md-9
+                        h1.heading.heading_blog Самое актуальное в нашем блоге
+                    article.col-xl-3.col-md-5
+                        a.post__item.post__item_image(href="#" style="background-image: url('../images/belje-na-verevke.jpg')")
+                            .post__item__title 6&nbsp;способов прокачать первый экран на&nbsp;вашем сайте
+                            .post__item__info 12.09.2018
+                    article.col-xl-3.col-md-5
+                        a.post__item.post__item_image(href="#" style="background-image: url('../images/test-01.jpg')")
+                            .post__item__title О&nbsp;чем нужно помнить, создавая уникальные тексты?
+                            .post__item__info 12.09.2018
+                    article.col-xl-3.col-md-5
+                        a.post__item.post__item_image(href="#" style="background-image: url('../images/test-02.jpg')")
+                            .post__item__title Продвижение сайта почти бесплатно
+                            .post__item__info 12.09.2018
+                    article.col-xl-3.col-md-5
+                        a.post__item.post__item_image(href="#" style="background-image: url('../images/belje-na-verevke.jpg')")
+                            .post__item__title 6&nbsp;способов прокачать первый экран на&nbsp;вашем сайте
+                            .post__item__info 12.09.2018
+                    article.col-xl-3.col-md-5
+                        a.post__item.post__item_image(href="#" style="background-image: url('../images/test-01.jpg')")
+                            .post__item__title О&nbsp;чем нужно помнить, создавая уникальные тексты?
+                            .post__item__info 12.09.2018
+                    article.col-xl-3.col-md-5
+                        a.post__item.post__item_image(href="#" style="background-image: url('../images/test-02.jpg')")
+                            .post__item__title Продвижение сайта почти бесплатно
+                            .post__item__info 12.09.2018
+            section.content.content_contact.inside
+                .container
+                    .row
+                        .col-xl-6
+                            h4.heading Нужны клиенты? <br/> Мы знаем как их получить
+                            form.form.form_inline(action="")
+                                input.in-phone.input-text(type="tel" placeholder="Ваш контактный телефон" value="")
+                                button.btn.btn_primary(type="submit") Хочу больше клиентов
+                        .col-xl-3
+                            .offer How one dull get busy dare far. At principle perfectly by sweetness do. Decisively advantages nor expression unpleasing she led met. Indulgence contrasted sufficient to unpleasant in in insensible favourable. Hard do me sigh with west same lady. So by colonel hearted ferrars. Small for ask shade water manor think men begin. Equally he minutes my hastily. Estate was tended ten boy nearer seemed. Estate was tended ten boy nearer seemed. Up hung mr we give rest half. Their saved linen downs tears son add music. 
         include chunks/footer.pug

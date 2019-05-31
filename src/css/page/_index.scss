@@ -8,3 +8,20 @@
         }
     }
 }
+
+/* Media */
+@media(max-width: 1400px){}
+@media(max-width: 992px){}
+@media(max-width: 768px){}
+@media(max-width: 576px){
+    .index{
+        .content{
+            &_title{
+                padding-bottom: 60px;
+                .heading {
+                    margin-bottom: 60px;
+                }
+            }
+        }
+    }
+}

@@ -35,3 +35,59 @@
         line-height: 26px;
     }
 }
+@media(max-width: 1400px){
+    .content_title{
+        .heading {
+            font-size: 60px;
+            line-height: 70px;
+        }
+        &__elements {
+            bottom: -100px;
+        }
+    }
+}
+@media(max-width: 992px){
+    .content_title{
+        padding-top: 340px;
+        
+        .heading{
+            font-size: 50px;
+            line-height: 64px;
+            margin-bottom: 40px;
+        }
+
+        &__elements {
+            width: 680px;
+        }
+    }
+}
+@media(max-width: 768px){
+    .content_title{
+        padding-top: 240px;
+        &__elements{
+            width: 700px;
+        }
+    }
+}
+@media(max-width: 576px){
+    .content_title{
+        padding-top: 250px;
+        min-height: 550px;
+
+        .heading{
+            font-size: 30px;
+            line-height: 40px;
+        }
+        .btn {
+            margin-left: 0px;
+        }
+
+        & + .content{
+            padding-top: 80px;
+        }
+
+        &__elements{
+            width: 720px;
+        }
+    }
+}

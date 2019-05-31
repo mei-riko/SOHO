@@ -133,3 +133,181 @@
         }
     }
 }
+
+/* Media */
+@media(max-width: 1400px){
+    .inside-page{
+        .header{
+            &__nav{
+                top: 20px;
+            }
+            &__logo {
+                padding-top: 130px;
+                left: 40px;
+            }
+            &__email {
+                left: -50px;
+                padding-top: 40px;
+            }
+            &__link {
+                left: auto;
+                right: 120px;
+            }
+        }
+        .page{
+            padding-top: 110px;
+        }
+
+        .go-to-top{
+            top: auto;
+            bottom: 20px;
+        }
+    }
+}
+@media(max-width: 992px){
+    .page{
+        &__image{
+            height: 300px;
+        }
+        &__info{
+            .page__date,
+            .page__person,
+            .page__reading{
+                font-size: 12px;
+                padding: 10px 20px;
+            }
+            .page__breadcrumb{
+                padding: 10px 20px;
+                &.breadcrumb{
+                    padding: 10px 20px;
+                }
+            }
+            .page__person{
+                padding: 10px 0;
+            }
+        }
+        &__content {
+            padding: 40px 20px;
+            font-size: 16px;
+            line-height: 24px;
+            .heading {
+                font-size: 36px;
+                line-height: 40px;
+                margin-bottom: 40px;
+            }
+            h2,.h2{
+                font-size: 32px;
+                line-height: 38px;
+            }
+            h3,.h3{
+                font-size: 26px;
+                line-height: 32px;
+            }
+            p, ul, ol{
+                font-size: 16px;
+                line-height: 24px;
+            }
+            blockquote{
+                padding-left: 40px;
+                background: url('../images/icons/quotes.svg') no-repeat left top / 25px;
+            }
+        }
+    }
+}
+@media(max-width: 768px){
+    .inside-page{
+        .header{
+            &__email{
+                left: 20px;
+            }
+            &__link{
+                left: auto;
+            }
+        }
+    }
+}
+@media(max-width: 576px){
+    .inside-page{
+        .header{
+            &__email{
+                padding-top: 20px;
+                left: 20px;
+            }
+            &__link {
+                padding-top: 65px;
+                right: auto;
+                left: 20px;
+            }
+            &__logo {
+                padding-top: 115px;
+                left: 20px;
+            }
+        }
+    }
+    .page{
+        &__image{
+            height: 200px;
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+        &__info{
+            padding: 10px 0;
+            margin-left: -20px;
+            margin-right: -20px;
+            flex-wrap: wrap;
+            .page__date,
+            .page__person{
+                font-size: 14px;
+                width: 100%;
+                padding: 5px 20px;
+                margin: 0;
+            }
+            .page__reading{
+                display:none;
+            }
+            .page__breadcrumb{
+                padding: 5px 20px;
+                &.breadcrumb{
+                    padding: 5px 20px;
+                }
+            }
+        }
+        &__content {
+            padding: 40px 20px;
+            margin-left: -20px;
+            margin-right: -20px;
+            font-size: 14px;
+            line-height: 22px;
+            .heading {
+                font-size: 26px;
+                line-height: 30px;
+                margin-bottom: 40px;
+            }
+            h2,.h2{
+                font-size: 24px;
+                line-height: 28px;
+                margin-bottom: 20px;
+            }
+            h3,h3{
+                font-size: 20px;
+                line-height: 26px;
+            }
+            h4,h4{
+                font-size: 18px;
+                line-height: 24px;
+            }
+            h5,.h5,h6,.h6{
+                font-size: 16px;
+                line-height: 24px;
+            }
+            p, ul, ol{
+                font-size: 16px;
+                line-height: 26px;
+            }
+            blockquote{
+                padding-left: 30px;
+                background: url('../images/icons/quotes.svg') no-repeat left top / 20px;
+            }
+        }
+    }
+}

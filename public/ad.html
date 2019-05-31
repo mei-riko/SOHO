@@ -44,7 +44,7 @@
           <path class="header__nav__path" d="M505.02,350.213c-30.289-25.979-64.619-55.426-131.022-55.426s-100.733,29.446-131.022,55.426C214.332,374.781,189.594,396,137.996,396c-51.594,0-76.331-21.218-104.973-45.785l-0.002-0.002c-8.384-7.189-21.009-6.223-28.201,2.16c-7.191,8.384-6.224,21.011,2.16,28.202C37.268,406.555,71.597,436,137.996,436c66.403,0,100.733-29.446,131.022-55.426c28.644-24.568,53.382-45.787,104.98-45.787c51.599,0,76.337,21.219,104.98,45.787c8.385,7.191,21.011,6.225,28.202-2.159C514.371,370.03,513.405,357.404,505.02,350.213z"></path>
         </g>
       </svg>
-      <div class="nav">
+      <nav class="nav">
         <ul class="header__navbar">
           <li class="header__navbar__item"><a class="header__navbar__link" href="#">Верстка и разработка</a></li>
           <li class="header__navbar__item"><a class="header__navbar__link" href="#">Реклама</a></li>
@@ -53,342 +53,346 @@
           <li class="header__navbar__item"><a class="header__navbar__link" href="#">Блог</a></li>
           <li class="header__navbar__item"><a class="header__navbar__link" href="#">Дизайн</a></li>
         </ul><a class="nav__close" id="navbarClose">Закрыть меню</a>
-      </div>
+      </nav>
     </header>
-    <div class="content content_title">
-      <svg class="content_title__svg" viewBox="0 0 1920 520" preserveAspectRatio="xMidYMax slice">
-        <defs>
-          <filter id="shadow_03" filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%">
-            <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="5"></feGaussianBlur>
-            <feOffset dx="2" dy="6" in="blur" result="offsetBlurredAlpha"></feOffset>
-            <feComponentTransfer>
-              <feFuncA type="linear" slope="0.2"></feFuncA>
-            </feComponentTransfer>
-            <feMerge>
-              <feMergeNode></feMergeNode>
-              <feMergeNode in="SourceGraphic"></feMergeNode>
-            </feMerge>
-          </filter>
-          <linearGradient id="PSgrad_0" x1="0%" x2="50%" y1="100%" y2="0%">
-            <stop offset="0%" stop-color="#c7f16a" stop-opacity="1"></stop>
-            <stop offset="100%" stop-color="#d2fb77" stop-opacity="1"></stop>
-          </linearGradient>
-        </defs>
-        <path fill="url(#PSgrad_0)" filter="url(#shadow_03)" d="M1952.000,0.000 L0.000,0.000 C0.000,0.000 0.000,0.000 0.000,62.261 C48.455,87.927 227.239,217.781 370.380,209.418 C543.886,199.297 539.967,119.636 732.975,108.649 C895.861,99.358 895.062,345.632 945.000,414.000 C1039.188,542.961 1243.446,475.024 1406.000,401.000 C1458.954,376.881 1673.736,238.965 1716.000,215.000 C1805.329,164.347 1952.000,205.000 1952.000,205.000 L1952.000,0.000 Z"></path>
-      </svg>
-      <div class="content_title__elements">
-        <svg class="elements" viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet">
-          <defs>
-            <filter id="shadow" filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%">
-              <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="3"></feGaussianBlur>
-              <feOffset dx="5" dy="5" in="blur" result="offsetBlurredAlpha"></feOffset>
-              <feComponentTransfer>
-                <feFuncA type="linear" slope="0.2"></feFuncA>
-              </feComponentTransfer>
-              <feMerge>
-                <feMergeNode></feMergeNode>
-                <feMergeNode in="SourceGraphic"></feMergeNode>
-              </feMerge>
-            </filter>
-            <linearGradient id="gradient" data-name="gradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stop-color="#d4fc79"></stop>
-              <stop offset="1" stop-color="#ccf670"></stop>
-            </linearGradient>
-          </defs>
-          <g fill-rule="nonzero">
-            <path style="fill: url(#gradient); filter: url(#shadow);" d="M10,90c0-44.2,35.8-80,80-80s80,35.8,80,80 M10,90c0,44.2,35.8,80,80,80s80-35.8,80-80 M111.3,90c0,11.7-9.5,21.3-21.3,21.3S68.7,101.7,68.7,90 M111.3,90c0-11.7-9.5-21.3-21.3-21.3S68.7,78.3,68.7,90"></path>
-          </g>
-        </svg>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-6 col-md-8 col-10 offset-md-2 offset-xl-1">
-            <h1 class="heading">Качественная реклама для&nbsp;любого бизнеса</h1>
-            <div class="offer last">Быстро. Точно. Эффективно. Новые возможности для&nbsp;вашего бизнеса с&nbsp;рекламой от&nbsp;SOHO.</div>
+    <main>
+      <article>
+        <header class="content content_title">
+          <svg class="content_title__svg" viewBox="0 0 1920 520" preserveAspectRatio="xMidYMax slice">
+            <defs>
+              <filter id="shadow_03" filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%">
+                <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="5"></feGaussianBlur>
+                <feOffset dx="2" dy="6" in="blur" result="offsetBlurredAlpha"></feOffset>
+                <feComponentTransfer>
+                  <feFuncA type="linear" slope="0.2"></feFuncA>
+                </feComponentTransfer>
+                <feMerge>
+                  <feMergeNode></feMergeNode>
+                  <feMergeNode in="SourceGraphic"></feMergeNode>
+                </feMerge>
+              </filter>
+              <linearGradient id="PSgrad_0" x1="0%" x2="50%" y1="100%" y2="0%">
+                <stop offset="0%" stop-color="#c7f16a" stop-opacity="1"></stop>
+                <stop offset="100%" stop-color="#d2fb77" stop-opacity="1"></stop>
+              </linearGradient>
+            </defs>
+            <path fill="url(#PSgrad_0)" filter="url(#shadow_03)" d="M1952.000,0.000 L0.000,0.000 C0.000,0.000 0.000,0.000 0.000,62.261 C48.455,87.927 227.239,217.781 370.380,209.418 C543.886,199.297 539.967,119.636 732.975,108.649 C895.861,99.358 895.062,345.632 945.000,414.000 C1039.188,542.961 1243.446,475.024 1406.000,401.000 C1458.954,376.881 1673.736,238.965 1716.000,215.000 C1805.329,164.347 1952.000,205.000 1952.000,205.000 L1952.000,0.000 Z"></path>
+          </svg>
+          <div class="content_title__elements">
+            <svg class="elements" viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet">
+              <defs>
+                <filter id="shadow" filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%">
+                  <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="3"></feGaussianBlur>
+                  <feOffset dx="5" dy="5" in="blur" result="offsetBlurredAlpha"></feOffset>
+                  <feComponentTransfer>
+                    <feFuncA type="linear" slope="0.2"></feFuncA>
+                  </feComponentTransfer>
+                  <feMerge>
+                    <feMergeNode></feMergeNode>
+                    <feMergeNode in="SourceGraphic"></feMergeNode>
+                  </feMerge>
+                </filter>
+                <linearGradient id="gradient" data-name="gradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#d4fc79"></stop>
+                  <stop offset="1" stop-color="#ccf670"></stop>
+                </linearGradient>
+              </defs>
+              <g fill-rule="nonzero">
+                <path style="fill: url(#gradient); filter: url(#shadow);" d="M10,90c0-44.2,35.8-80,80-80s80,35.8,80,80 M10,90c0,44.2,35.8,80,80,80s80-35.8,80-80 M111.3,90c0,11.7-9.5,21.3-21.3,21.3S68.7,101.7,68.7,90 M111.3,90c0-11.7-9.5-21.3-21.3-21.3S68.7,78.3,68.7,90"></path>
+              </g>
+            </svg>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="content p-relative content_element"><img class="element element_1" src="../images/google-logo.png"/><img class="element element_2" src="../images/yandex-logo.png"/>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-9 col-lg-8">
-            <h2 class="heading margin-bottom">Зачем нужна настройка контекстной <span class="text-green">рекламы в&nbsp;Яндекс и&nbsp;Google</span></h2>
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-6 col-md-8 col-10 offset-md-2 offset-xl-1">
+                <h1 class="heading">Качественная реклама для&nbsp;любого бизнеса</h1>
+                <div class="offer last">Быстро. Точно. Эффективно. Новые возможности для&nbsp;вашего бизнеса с&nbsp;рекламой от&nbsp;SOHO.</div>
+              </div>
+            </div>
           </div>
-          <div class="col-xl-6 offset-xl-1">
-            <ol class="list list_ol row justify-content-between align-items-center margin-bottom margin-bottom-xs-none">
-              <li class="list__item col-lg-5">Повышение узнаваемости бренда</li>
-              <li class="list__item col-lg-5">Возвращение ушедших клиентов</li>
-              <li class="list__item col-lg-5">Увеличение количества заявок</li>
-              <li class="list__item list__item_last col-lg-5">Повышение эффективности рекламы</li>
-            </ol>
+        </header>
+        <section class="content p-relative content_element"><img class="element element_1" src="../images/google-logo.png"/><img class="element element_2" src="../images/yandex-logo.png"/>
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-9 col-lg-8">
+                <h2 class="heading margin-bottom">Зачем нужна настройка контекстной <span class="text-green">рекламы в&nbsp;Яндекс и&nbsp;Google</span></h2>
+              </div>
+              <div class="col-xl-6 offset-xl-1">
+                <ol class="list list_ol row justify-content-between align-items-center margin-bottom margin-bottom-xs-none">
+                  <li class="list__item col-lg-5">Повышение узнаваемости бренда</li>
+                  <li class="list__item col-lg-5">Возвращение ушедших клиентов</li>
+                  <li class="list__item col-lg-5">Увеличение количества заявок</li>
+                  <li class="list__item list__item_last col-lg-5">Повышение эффективности рекламы</li>
+                </ol>
+              </div>
+              <div class="col-xl-5 offset-xl-1">
+                <h3 class="heading heading_small margin-top">Почему выбирают рекламу от SOHO?</h3>
+                <p class="offer margin-bottom">Профессиональная настройка рекламы с использованием наиболее эффективных методов Яндекс и Google. Разработка преимуществ и уникальных торговых предложений (УТП), чтобы получить высокую рентабельность вложений. </p>
+              </div>
+              <div class="col-xl-6 offset-xl-1">
+                <div class="row margin-bottom">
+                  <div class="col-sm-5">
+                    <div class="item item_with-icon">
+                      <svg class="item__icon" viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet">
+                        <g>
+                          <path class="active-path" d="M150.383,18.301c-7.13-3.928-15.308-6.187-24.033-6.187c-15.394,0-29.18,7.015-38.283,18.015    c-9.146-11-22.919-18.015-38.334-18.015c-8.704,0-16.867,2.259-24.013,6.187C10.388,26.792,0,43.117,0,61.878    C0,67.249,0.874,72.4,2.457,77.219c8.537,38.374,85.61,86.771,85.61,86.771s77.022-48.396,85.571-86.771    c1.583-4.819,2.466-9.977,2.466-15.341C176.104,43.124,165.716,26.804,150.383,18.301z" data-original="#000000" data-old_color="#FCFAFA" fill="#FCFBFB"></path>
+                        </g>
+                      </svg>
+                      <div class="item__title">БЫСТРО </div>
+                      <div class="item__offer">Настройка и запуск рекламной кампании в срок от 1 до 5 дней</div>
+                    </div>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="item item_with-icon">
+                      <svg class="item__icon" viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet">
+                        <g>
+                          <path class="active-path" d="M150.383,18.301c-7.13-3.928-15.308-6.187-24.033-6.187c-15.394,0-29.18,7.015-38.283,18.015    c-9.146-11-22.919-18.015-38.334-18.015c-8.704,0-16.867,2.259-24.013,6.187C10.388,26.792,0,43.117,0,61.878    C0,67.249,0.874,72.4,2.457,77.219c8.537,38.374,85.61,86.771,85.61,86.771s77.022-48.396,85.571-86.771    c1.583-4.819,2.466-9.977,2.466-15.341C176.104,43.124,165.716,26.804,150.383,18.301z" data-original="#000000" data-old_color="#FCFAFA" fill="#FCFBFB"></path>
+                        </g>
+                      </svg>
+                      <div class="item__title">ТОЧНО </div>
+                      <div class="item__offer">Находим только целевую аудиторию, что снижает стоимость клиента</div>
+                    </div>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="item item_with-icon">
+                      <svg class="item__icon" viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet">
+                        <g>
+                          <path class="active-path" d="M150.383,18.301c-7.13-3.928-15.308-6.187-24.033-6.187c-15.394,0-29.18,7.015-38.283,18.015    c-9.146-11-22.919-18.015-38.334-18.015c-8.704,0-16.867,2.259-24.013,6.187C10.388,26.792,0,43.117,0,61.878    C0,67.249,0.874,72.4,2.457,77.219c8.537,38.374,85.61,86.771,85.61,86.771s77.022-48.396,85.571-86.771    c1.583-4.819,2.466-9.977,2.466-15.341C176.104,43.124,165.716,26.804,150.383,18.301z" data-original="#000000" data-old_color="#FCFAFA" fill="#FCFBFB"></path>
+                        </g>
+                      </svg>
+                      <div class="item__title">Прозрачно </div>
+                      <div class="item__offer">Вы получите полный доступ к&nbsp;статистике и отчет в конце месяца</div>
+                    </div>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="item item_last-md item_with-icon">
+                      <svg class="item__icon" viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet">
+                        <g>
+                          <path class="active-path" d="M150.383,18.301c-7.13-3.928-15.308-6.187-24.033-6.187c-15.394,0-29.18,7.015-38.283,18.015    c-9.146-11-22.919-18.015-38.334-18.015c-8.704,0-16.867,2.259-24.013,6.187C10.388,26.792,0,43.117,0,61.878    C0,67.249,0.874,72.4,2.457,77.219c8.537,38.374,85.61,86.771,85.61,86.771s77.022-48.396,85.571-86.771    c1.583-4.819,2.466-9.977,2.466-15.341C176.104,43.124,165.716,26.804,150.383,18.301z" data-original="#000000" data-old_color="#FCFAFA" fill="#FCFBFB"></path>
+                        </g>
+                      </svg>
+                      <div class="item__title">ЭФФЕКТИВНО </div>
+                      <div class="item__offer">Постоянный контроль кампании и&nbsp;оптимизация&nbsp;рекламы               </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row align-items-end">
+              <div class="col-xl-4 offset-xl-2 col-lg-6 offset-lg-3">
+                <p class="heading heading_small">У вас <span class="text-green">уже есть реклама, </span>но&nbsp;вы недовольны результатами?</p>
+                <p class="offer">Клиентов, которые заказывают товар, очень мало? Конечная стоимость клиента слишком высока? Затраты на рекламу больше, чем доход от нее? Вам кажется, что бюждет просто “сливают”?</p><a class="btn btn_primary margin-bottom-lg" href="#">Анализ рекламной кампании</a>
+              </div>
+              <div class="col-xl-4 col-md-8 offset-md-2 col-lg-6 offset-lg-3 offset-xl-0">
+                <p class="offer offer_subtitle text-uppercase text-bold">Выход есть — <span class="text-green">многофакторный анализ </span>НАСТРОЙКИ КОНТЕКСТНОЙ РЕКЛАМЫ              </p>
+                <p class="offer small">Он проводится на всех уровнях: рынок, стратегия, потребность в товаре, размер ставок и корректировок</p>
+                <p class="offer small last"><span class="text-bold">В результате </span>мы составим список рекомендаций: как улучшить рекламную кампанию и страницы сайта. Это приведет к повышению эффективности и увеличению вашего дохода, одновременно помогая оценить работу специалистов, которые в данный момент занимаются ведением рекламы Яндекс и/или Google.            </p>
+              </div>
+            </div>
           </div>
-          <div class="col-xl-5 offset-xl-1">
-            <h3 class="heading heading_small margin-top">Почему выбирают рекламу от SOHO?</h3>
-            <p class="offer margin-bottom">Профессиональная настройка рекламы с использованием наиболее эффективных методов Яндекс и Google. Разработка преимуществ и уникальных торговых предложений (УТП), чтобы получить высокую рентабельность вложений. </p>
-          </div>
-          <div class="col-xl-6 offset-xl-1">
+        </section>
+        <section class="content project">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-10">
+                <h4 class="heading heading_medium">Пример рекламной кампании</h4>
+                <div class="offer">Один из последних проектов SOHO</div>
+              </div>
+              <div class="col-xl-5 col-lg-8">
+                <div class="project__task">
+                  <div class="project__task__item">Задача</div>
+                  <div class="project__task__content"> 
+                    <p class="offer last">Необходимо было быстро настроить рекламную кампанию в Директе, для скорейшего обеспечения клиента заказами. После этого настроить рекламу в Google. Одно из ключевых требований - только целевая аудитория и ни в коем случае не выходить за рамки бюджета. </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-5 col-lg-8">
+                <div class="project__task">
+                  <div class="project__task__item">Решение</div>
+                  <div class="project__task__content">
+                    <p class="offer last">Изначально разработали рекомендации по улучшению посадочных страниц, чтобы посетители видели необходимую информацию, проходили большую часть этапов продажи на странице и оставляли заявку. Пока вносились правки на сайте, собрали ключевые слова, разработали УТП, проработали тексты объявлений, настроили счетчики, аналитику  и цели для возможности точной оценки эффективности рекламы.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-5 margin-bottom-xs">
+                <p class="heading heading_small">Результаты через 1 месяц</p>
+                <p class="offer last">
+                  Бюджет рекламной кампании был израсходован только на 30%, а все плановые показатели по заявкам были выполнены. Оптимизация велась каждый день (тестовое ведение рекламы именно поэтому такое дорогое), 
+                  нам удалось избежать нецелевого трафика и получить заказы по согласованной цене заявки.
+                </p>
+              </div>
+              <div class="col-xl-5 margin-bottom-xs">
+                <p class="heading heading_small">Результаты через 2 месяца</p>
+                <p class="offer last">Сумма расходов увеличилась на 1520 руб. за месяц. И вот каких результатов нам удалось достичь:</p>
+              </div>
+            </div>
             <div class="row margin-bottom">
-              <div class="col-sm-5">
-                <div class="item item_with-icon">
-                  <svg class="item__icon" viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet">
-                    <g>
-                      <path class="active-path" d="M150.383,18.301c-7.13-3.928-15.308-6.187-24.033-6.187c-15.394,0-29.18,7.015-38.283,18.015    c-9.146-11-22.919-18.015-38.334-18.015c-8.704,0-16.867,2.259-24.013,6.187C10.388,26.792,0,43.117,0,61.878    C0,67.249,0.874,72.4,2.457,77.219c8.537,38.374,85.61,86.771,85.61,86.771s77.022-48.396,85.571-86.771    c1.583-4.819,2.466-9.977,2.466-15.341C176.104,43.124,165.716,26.804,150.383,18.301z" data-original="#000000" data-old_color="#FCFAFA" fill="#FCFBFB"></path>
-                    </g>
-                  </svg>
-                  <div class="item__title">БЫСТРО </div>
-                  <div class="item__offer">Настройка и запуск рекламной кампании в срок от 1 до 5 дней</div>
+              <div class="col-xl-2 col-lg-4 col-5 d-flex">
+                <div class="item item_result item_info">
+                  <div class="item__offer">увеличили количество переходов на&nbsp;сайт</div>
+                  <div class="item__result">на 24%</div>
                 </div>
               </div>
-              <div class="col-sm-5">
-                <div class="item item_with-icon">
-                  <svg class="item__icon" viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet">
-                    <g>
-                      <path class="active-path" d="M150.383,18.301c-7.13-3.928-15.308-6.187-24.033-6.187c-15.394,0-29.18,7.015-38.283,18.015    c-9.146-11-22.919-18.015-38.334-18.015c-8.704,0-16.867,2.259-24.013,6.187C10.388,26.792,0,43.117,0,61.878    C0,67.249,0.874,72.4,2.457,77.219c8.537,38.374,85.61,86.771,85.61,86.771s77.022-48.396,85.571-86.771    c1.583-4.819,2.466-9.977,2.466-15.341C176.104,43.124,165.716,26.804,150.383,18.301z" data-original="#000000" data-old_color="#FCFAFA" fill="#FCFBFB"></path>
-                    </g>
-                  </svg>
-                  <div class="item__title">ТОЧНО </div>
-                  <div class="item__offer">Находим только целевую аудиторию, что снижает стоимость клиента</div>
+              <div class="col-xl-2 col-lg-4 col-5 d-flex">
+                <div class="item item_result item_info">
+                  <div class="item__offer">снизили стоимость цены заказа</div>
+                  <div class="item__result">в 3 раза</div>
                 </div>
               </div>
-              <div class="col-sm-5">
-                <div class="item item_with-icon">
-                  <svg class="item__icon" viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet">
-                    <g>
-                      <path class="active-path" d="M150.383,18.301c-7.13-3.928-15.308-6.187-24.033-6.187c-15.394,0-29.18,7.015-38.283,18.015    c-9.146-11-22.919-18.015-38.334-18.015c-8.704,0-16.867,2.259-24.013,6.187C10.388,26.792,0,43.117,0,61.878    C0,67.249,0.874,72.4,2.457,77.219c8.537,38.374,85.61,86.771,85.61,86.771s77.022-48.396,85.571-86.771    c1.583-4.819,2.466-9.977,2.466-15.341C176.104,43.124,165.716,26.804,150.383,18.301z" data-original="#000000" data-old_color="#FCFAFA" fill="#FCFBFB"></path>
-                    </g>
-                  </svg>
-                  <div class="item__title">Прозрачно </div>
-                  <div class="item__offer">Вы получите полный доступ к&nbsp;статистике и отчет в конце месяца</div>
+              <div class="col-xl-2 col-lg-4 col-5 d-flex">
+                <div class="item item_result item_info item_last-md">
+                  <div class="item__offer">увеличили количество заявок с&nbsp;сайта</div>
+                  <div class="item__result">в 2,1 раза</div>
                 </div>
               </div>
-              <div class="col-sm-5">
-                <div class="item item_last-md item_with-icon">
-                  <svg class="item__icon" viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet">
-                    <g>
-                      <path class="active-path" d="M150.383,18.301c-7.13-3.928-15.308-6.187-24.033-6.187c-15.394,0-29.18,7.015-38.283,18.015    c-9.146-11-22.919-18.015-38.334-18.015c-8.704,0-16.867,2.259-24.013,6.187C10.388,26.792,0,43.117,0,61.878    C0,67.249,0.874,72.4,2.457,77.219c8.537,38.374,85.61,86.771,85.61,86.771s77.022-48.396,85.571-86.771    c1.583-4.819,2.466-9.977,2.466-15.341C176.104,43.124,165.716,26.804,150.383,18.301z" data-original="#000000" data-old_color="#FCFAFA" fill="#FCFBFB"></path>
-                    </g>
-                  </svg>
-                  <div class="item__title">ЭФФЕКТИВНО </div>
-                  <div class="item__offer">Постоянный контроль кампании и&nbsp;оптимизация&nbsp;рекламы               </div>
+              <div class="col-xl-2 col-lg-4 col-5 d-flex">
+                <div class="item item_result item_info item_last-md">
+                  <div class="item__offer">доходность инвестиции в&nbsp;рекламу</div>
+                  <div class="item__result">700%</div>
                 </div>
               </div>
             </div>
+            <div class="row align-items-center">
+              <div class="col-xl-4 col-md-6">
+                <p class="heading heading_small">Результаты через 3&nbsp;месяца</p>
+                <p class="offer">Цена клика стала еще меньше в&nbsp;1,9 раза, а&nbsp;количество заявок увеличилось на&nbsp;57%</p>
+                <p class="offer"> <a class="btn btn_primary" href="#">Хочу эффективную рекламу</a></p>
+              </div>
+              <div class="col-xl-4 col-md-4 margin-top-sm"><img class="img-fluid img-border" src="../images/graphic-ad-portfolio.svg"/></div>
+            </div>
           </div>
-        </div>
-        <div class="row align-items-end">
-          <div class="col-xl-4 offset-xl-2 col-lg-6 offset-lg-3">
-            <p class="heading heading_small">У вас <span class="text-green">уже есть реклама, </span>но&nbsp;вы недовольны результатами?</p>
-            <p class="offer">Клиентов, которые заказывают товар, очень мало? Конечная стоимость клиента слишком высока? Затраты на рекламу больше, чем доход от нее? Вам кажется, что бюждет просто “сливают”?</p><a class="btn btn_primary margin-bottom-lg" href="#">Анализ рекламной кампании</a>
-          </div>
-          <div class="col-xl-4 col-md-8 offset-md-2 col-lg-6 offset-lg-3 offset-xl-0">
-            <p class="offer offer_subtitle text-uppercase text-bold">Выход есть — <span class="text-green">многофакторный анализ </span>НАСТРОЙКИ КОНТЕКСТНОЙ РЕКЛАМЫ              </p>
-            <p class="offer small">Он проводится на всех уровнях: рынок, стратегия, потребность в товаре, размер ставок и корректировок</p>
-            <p class="offer small last"><span class="text-bold">В результате </span>мы составим список рекомендаций: как улучшить рекламную кампанию и страницы сайта. Это приведет к повышению эффективности и увеличению вашего дохода, одновременно помогая оценить работу специалистов, которые в данный момент занимаются ведением рекламы Яндекс и/или Google.            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content project">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-10">
-            <h4 class="heading heading_medium">Пример рекламной кампании</h4>
-            <div class="offer">Один из последних проектов SOHO</div>
-          </div>
-          <div class="col-xl-5 col-lg-8">
-            <div class="project__task">
-              <div class="project__task__item">Задача</div>
-              <div class="project__task__content"> 
-                <p class="offer last">Необходимо было быстро настроить рекламную кампанию в Директе, для скорейшего обеспечения клиента заказами. После этого настроить рекламу в Google. Одно из ключевых требований - только целевая аудитория и ни в коем случае не выходить за рамки бюджета. </p>
+        </section>
+        <section class="content content_price">
+          <div class="container content_price__container">
+            <div class="row">
+              <div class="col-xl-6 offset-xl-2 text-center margin-bottom">
+                <div class="heading heading_small">Тарифы для тех, у кого <span class="text-green">еще нет рекламы</span></div>
+                <div class="offer">В зависимости от конкурентности тематики сайта, а также поставдленных задач, рассчитывается стоимость предоставляемых услуг. Также вы можете выбрать пакетное предложение, которое поможет достичь поставленных целей без больших затрат.</div>
+              </div>
+            </div>
+            <div class="row align-items-center justify-content-center">
+              <div class="col-xl-3 col-lg-3 p-relative"><img class="element element_1" src="../images/comment/ad_comment_0.png"/>
+                <div class="price">
+                  <div class="price__header">Для сайтов визиток</div>
+                  <div class="price__content">
+                    <p class="text-uppercase text-bold">В предложение входит</p>
+                    <p>
+                      подбор ключевых фраз (до 300 шт)прогноз бюджета
+                      проработка преимуществ
+                      разработка УТП
+                      настройка объявлений
+                      настройка заголовков
+                      подключение до 3 целей
+                      подключение Метрики и Analytics
+                    </p>
+                  </div>
+                  <div class="price__footer">стоимость 17к</div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 p-relative"><img class="element element_2" src="../images/comment/ad_comment_2.png"/>
+                <div class="price price_large">
+                  <div class="price__header">для небольших каталогов</div>
+                  <div class="price__content">
+                    <p class="text-uppercase text-bold">В предложение входит</p>
+                    <p>
+                      подбор ключевых фраз (до 500 шт)прогноз бюджета
+                      проработка преимуществ
+                      разработка УТП
+                      настройка объявлений
+                      настройка заголовков
+                      подключение до 10 целей
+                      подключение Метрики и Analytics
+                    </p>
+                  </div>
+                  <div class="price__footer">стоимость 27к</div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-3 p-relative"><img class="element element_3" src="../images/comment/ad_comment_1.png"/>
+                <div class="price">
+                  <div class="price__header">Для интернет-магазинов</div>
+                  <div class="price__content">
+                    <p class="text-uppercase text-bold">В предложение входит</p>
+                    <p>
+                      подбор ключевых фраз (до 10000 шт)прогноз бюджета
+                      проработка преимуществ
+                      разработка УТП
+                      настройка объявлений
+                      настройка заголовков
+                      подключение всех целей
+                      подключение Метрики и Analytics
+                    </p>
+                  </div>
+                  <div class="price__footer">стоимость 40к</div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-xl-5 col-lg-8">
-            <div class="project__task">
-              <div class="project__task__item">Решение</div>
-              <div class="project__task__content">
-                <p class="offer last">Изначально разработали рекомендации по улучшению посадочных страниц, чтобы посетители видели необходимую информацию, проходили большую часть этапов продажи на странице и оставляли заявку. Пока вносились правки на сайте, собрали ключевые слова, разработали УТП, проработали тексты объявлений, настроили счетчики, аналитику  и цели для возможности точной оценки эффективности рекламы.</p>
+          <div class="container content_price__container">
+            <div class="row justify-content-center margin-bottom margin-bottom-sm-none">
+              <div class="col-xl-7 text-center">
+                <div class="heading heading_small">Тарифы для тех, у кого <span class="text-green">уже есть реклама</span></div>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-xl-4 col-md-5">
+                <div class="price-line">
+                  <div class="price-line__title">Ведение рекламной кампании (оптимизация цены клика и бюджета, составление минус слов, мониторинг)</div>
+                  <div class="price-line__value">от 5к</div>
+                </div>
+                <div class="price-line even">
+                  <div class="price-line__title">Тестовое ведение рекламной кампании (первый месяц после настройки)</div>
+                  <div class="price-line__value">от 5к</div>
+                </div>
+                <div class="price-line">
+                  <div class="price-line__title">Анализ и план оптимизации 1 посадочной страницы под рекламу (список улучшений для увеличения заказов, уменьшения % отказов)</div>
+                  <div class="price-line__value">от 5к</div>
+                </div>
+                <div class="price-line even">
+                  <div class="price-line__title">Настройка ретаргетинга (показ рекламы тем, кто ушел с сайта без покупки или заказа услуги)</div>
+                  <div class="price-line__value">от 5к</div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-md-5">
+                <div class="price-line">
+                  <div class="price-line__title">Ведение рекламной кампании (оптимизация цены клика и бюджета, составление минус слов, мониторинг)</div>
+                  <div class="price-line__value">от 5к</div>
+                </div>
+                <div class="price-line even">
+                  <div class="price-line__title">Тестовое ведение рекламной кампании (первый месяц после настройки)</div>
+                  <div class="price-line__value">от 5к</div>
+                </div>
+                <div class="price-line">
+                  <div class="price-line__title">Анализ и план оптимизации 1 посадочной страницы под рекламу (список улучшений для увеличения заказов, уменьшения % отказов)</div>
+                  <div class="price-line__value">от 5к</div>
+                </div>
+                <div class="price-line even">
+                  <div class="price-line__title">Настройка ретаргетинга (показ рекламы тем, кто ушел с сайта без покупки или заказа услуги)</div>
+                  <div class="price-line__value">от 5к</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-xl-5 margin-bottom-xs">
-            <p class="heading heading_small">Результаты через 1 месяц</p>
-            <p class="offer last">
-              Бюджет рекламной кампании был израсходован только на 30%, а все плановые показатели по заявкам были выполнены. Оптимизация велась каждый день (тестовое ведение рекламы именно поэтому такое дорогое), 
-              нам удалось избежать нецелевого трафика и получить заказы по согласованной цене заявки.
-            </p>
-          </div>
-          <div class="col-xl-5 margin-bottom-xs">
-            <p class="heading heading_small">Результаты через 2 месяца</p>
-            <p class="offer last">Сумма расходов увеличилась на 1520 руб. за месяц. И вот каких результатов нам удалось достичь:</p>
-          </div>
-        </div>
-        <div class="row margin-bottom">
-          <div class="col-xl-2 col-lg-4 col-5 d-flex">
-            <div class="item item_result item_info">
-              <div class="item__offer">увеличили количество переходов на&nbsp;сайт</div>
-              <div class="item__result">на 24%</div>
-            </div>
-          </div>
-          <div class="col-xl-2 col-lg-4 col-5 d-flex">
-            <div class="item item_result item_info">
-              <div class="item__offer">снизили стоимость цены заказа</div>
-              <div class="item__result">в 3 раза</div>
-            </div>
-          </div>
-          <div class="col-xl-2 col-lg-4 col-5 d-flex">
-            <div class="item item_result item_info item_last-md">
-              <div class="item__offer">увеличили количество заявок с&nbsp;сайта</div>
-              <div class="item__result">в 2,1 раза</div>
-            </div>
-          </div>
-          <div class="col-xl-2 col-lg-4 col-5 d-flex">
-            <div class="item item_result item_info item_last-md">
-              <div class="item__offer">доходность инвестиции в&nbsp;рекламу</div>
-              <div class="item__result">700%</div>
-            </div>
-          </div>
-        </div>
-        <div class="row align-items-center">
-          <div class="col-xl-4 col-md-6">
-            <p class="heading heading_small">Результаты через 3&nbsp;месяца</p>
-            <p class="offer">Цена клика стала еще меньше в&nbsp;1,9 раза, а&nbsp;количество заявок увеличилось на&nbsp;57%</p>
-            <p class="offer"> <a class="btn btn_primary" href="#">Хочу эффективную рекламу</a></p>
-          </div>
-          <div class="col-xl-4 col-md-4 margin-top-sm"><img class="img-fluid img-border" src="../images/graphic-ad-portfolio.svg"/></div>
-        </div>
-      </div>
-    </div>
-    <div class="content content_price">
-      <div class="container content_price__container">
-        <div class="row">
-          <div class="col-xl-6 offset-xl-2 text-center margin-bottom">
-            <div class="heading heading_small">Тарифы для тех, у кого <span class="text-green">еще нет рекламы</span></div>
-            <div class="offer">В зависимости от конкурентности тематики сайта, а также поставдленных задач, рассчитывается стоимость предоставляемых услуг. Также вы можете выбрать пакетное предложение, которое поможет достичь поставленных целей без больших затрат.</div>
-          </div>
-        </div>
-        <div class="row align-items-center justify-content-center">
-          <div class="col-xl-3 col-lg-3 p-relative"><img class="element element_1" src="../images/comment/ad_comment_0.png"/>
-            <div class="price">
-              <div class="price__header">Для сайтов визиток</div>
-              <div class="price__content">
-                <p class="text-uppercase text-bold">В предложение входит</p>
-                <p>
-                  подбор ключевых фраз (до 300 шт)прогноз бюджета
-                  проработка преимуществ
-                  разработка УТП
-                  настройка объявлений
-                  настройка заголовков
-                  подключение до 3 целей
-                  подключение Метрики и Analytics
-                </p>
+        </section>
+        <section class="content content_contact">
+          <div class="container">
+            <div class="row align-items-end">
+              <div class="col-xl-6">
+                <h4 class="heading heading_medium">Нужны клиенты?<br/>Мы знаем как их получить</h4>
+                <form class="form form_inline" action="">
+                  <input class="in-phone input-text" type="tel" placeholder="Ваш контактный телефон" value=""/>
+                  <button class="btn btn_primary" type="submit">Да, нужны</button>
+                </form>
               </div>
-              <div class="price__footer">стоимость 17к</div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 p-relative"><img class="element element_2" src="../images/comment/ad_comment_2.png"/>
-            <div class="price price_large">
-              <div class="price__header">для небольших каталогов</div>
-              <div class="price__content">
-                <p class="text-uppercase text-bold">В предложение входит</p>
-                <p>
-                  подбор ключевых фраз (до 500 шт)прогноз бюджета
-                  проработка преимуществ
-                  разработка УТП
-                  настройка объявлений
-                  настройка заголовков
-                  подключение до 10 целей
-                  подключение Метрики и Analytics
-                </p>
+              <div class="col-xl-3">
+                <div class="offer last">Многие компании, предлагая свои услуги, говорят о том, какие они классные. Мы в первую очередь думаем о вас и вашем комфорте от сотрудничества с SOHO. Поэтому мы расскажем о том, что вы получите, обратившись к нам.</div>
               </div>
-              <div class="price__footer">стоимость 27к</div>
             </div>
           </div>
-          <div class="col-xl-3 col-lg-3 p-relative"><img class="element element_3" src="../images/comment/ad_comment_1.png"/>
-            <div class="price">
-              <div class="price__header">Для интернет-магазинов</div>
-              <div class="price__content">
-                <p class="text-uppercase text-bold">В предложение входит</p>
-                <p>
-                  подбор ключевых фраз (до 10000 шт)прогноз бюджета
-                  проработка преимуществ
-                  разработка УТП
-                  настройка объявлений
-                  настройка заголовков
-                  подключение всех целей
-                  подключение Метрики и Analytics
-                </p>
-              </div>
-              <div class="price__footer">стоимость 40к</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container content_price__container">
-        <div class="row justify-content-center margin-bottom margin-bottom-sm-none">
-          <div class="col-xl-7 text-center">
-            <div class="heading heading_small">Тарифы для тех, у кого <span class="text-green">уже есть реклама</span></div>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-xl-4 col-md-5">
-            <div class="price-line">
-              <div class="price-line__title">Ведение рекламной кампании (оптимизация цены клика и бюджета, составление минус слов, мониторинг)</div>
-              <div class="price-line__value">от 5к</div>
-            </div>
-            <div class="price-line even">
-              <div class="price-line__title">Тестовое ведение рекламной кампании (первый месяц после настройки)</div>
-              <div class="price-line__value">от 5к</div>
-            </div>
-            <div class="price-line">
-              <div class="price-line__title">Анализ и план оптимизации 1 посадочной страницы под рекламу (список улучшений для увеличения заказов, уменьшения % отказов)</div>
-              <div class="price-line__value">от 5к</div>
-            </div>
-            <div class="price-line even">
-              <div class="price-line__title">Настройка ретаргетинга (показ рекламы тем, кто ушел с сайта без покупки или заказа услуги)</div>
-              <div class="price-line__value">от 5к</div>
-            </div>
-          </div>
-          <div class="col-xl-4 col-md-5">
-            <div class="price-line">
-              <div class="price-line__title">Ведение рекламной кампании (оптимизация цены клика и бюджета, составление минус слов, мониторинг)</div>
-              <div class="price-line__value">от 5к</div>
-            </div>
-            <div class="price-line even">
-              <div class="price-line__title">Тестовое ведение рекламной кампании (первый месяц после настройки)</div>
-              <div class="price-line__value">от 5к</div>
-            </div>
-            <div class="price-line">
-              <div class="price-line__title">Анализ и план оптимизации 1 посадочной страницы под рекламу (список улучшений для увеличения заказов, уменьшения % отказов)</div>
-              <div class="price-line__value">от 5к</div>
-            </div>
-            <div class="price-line even">
-              <div class="price-line__title">Настройка ретаргетинга (показ рекламы тем, кто ушел с сайта без покупки или заказа услуги)</div>
-              <div class="price-line__value">от 5к</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content content_contact">
-      <div class="container">
-        <div class="row align-items-end">
-          <div class="col-xl-6">
-            <h4 class="heading heading_medium">Нужны клиенты?<br/>Мы знаем как их получить</h4>
-            <form class="form form_inline" action="">
-              <input class="in-phone input-text" type="tel" placeholder="Ваш контактный телефон" value=""/>
-              <button class="btn btn_primary" type="submit">Да, нужны</button>
-            </form>
-          </div>
-          <div class="col-xl-3">
-            <div class="offer last">Многие компании, предлагая свои услуги, говорят о том, какие они классные. Мы в первую очередь думаем о вас и вашем комфорте от сотрудничества с SOHO. Поэтому мы расскажем о том, что вы получите, обратившись к нам.</div>
-          </div>
-        </div>
-      </div>
-    </div>
+        </section>
+      </article>
+    </main>
     <footer class="footer">
       <div class="container">
         <div class="row justify-content-between align-items-center">
@@ -411,7 +415,7 @@
             </svg>
           </div>
           <div class="col-12 col-sm-4 col-lg-2"><a class="footer__email" href="mailto:work@websoho.ru">work@websoho.ru</a></div>
-          <div class="col-12 col-xl-6 col-lg-6">
+          <nav class="col-12 col-xl-6 col-lg-6">
             <ul class="footer__navbar">
               <li class="footer__navbar__item"><a class="footer__navbar__link" href="#">Дизайн</a></li>
               <li class="footer__navbar__item"><a class="footer__navbar__link" href="#">Верстка и разработка</a></li>
@@ -421,7 +425,7 @@
               <li class="footer__navbar__item"><a class="footer__navbar__link" href="#">Портфолио</a></li>
               <li class="footer__navbar__item"><a class="footer__navbar__link" href="#">Блог</a></li>
             </ul>
-          </div>
+          </nav>
         </div>
       </div>
     </footer>

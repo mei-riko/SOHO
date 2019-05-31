@@ -7,160 +7,162 @@ html(lang="ru", dir="ltr")
         script(src="./js/jquery.fancybox.min.js")
         script(src="./js/app.min.js")
         include chunks/header.pug
-        .content.content_title
-            svg.content_title__svg(viewBox="0 0 1920 520" preserveAspectRatio="xMidYMax slice")
-                defs
-                    filter#shadow_03(filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%")
-                        feGaussianBlur(in="SourceAlpha" result="blur" stdDeviation="5")
-                        feOffset(dx="2" dy="6" in="blur" result="offsetBlurredAlpha")
-                        feComponentTransfer
-                            feFuncA(type="linear" slope="0.2")
-                        feMerge
-                            feMergeNode
-                            feMergeNode(in="SourceGraphic")
-                    linearGradient(id="PSgrad_0" x1="0%" x2="50%" y1="100%" y2="0%")
-                        stop(offset="0%" stop-color="#2b238b" stop-opacity="1")
-                        stop(offset="100%" stop-color="#2b16bc" stop-opacity="1")
-                path(fill="url(#PSgrad_0)" filter="url(#shadow_03)" d="M1952.000,0.000 L0.000,0.000 C0.000,0.000 0.000,0.000 0.000,62.261 C48.455,87.927 227.239,217.781 370.380,209.418 C543.886,199.297 539.967,119.636 732.975,108.649 C895.861,99.358 895.062,345.632 945.000,414.000 C1039.188,542.961 1243.446,475.024 1406.000,401.000 C1458.954,376.881 1673.736,238.965 1716.000,215.000 C1805.329,164.347 1952.000,205.000 1952.000,205.000 L1952.000,0.000 Z")
-            .content_title__elements
-                svg.elements(viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet")
-                    defs
-                        filter#shadow(filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%")
-                            feGaussianBlur(in="SourceAlpha" result="blur" stdDeviation="3")
-                            feOffset(dx="5" dy="5" in="blur" result="offsetBlurredAlpha")
-                            feComponentTransfer
-                                feFuncA(type="linear" slope="0.2")
-                            feMerge
-                                feMergeNode
-                                feMergeNode(in="SourceGraphic")
-                        linearGradient#gradient(data-name="gradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse")
-                            stop(offset="0" stop-color="#2a16bc")
-                            stop(offset="1" stop-color="#2f20a0")
-                    g(fill-rule="nonzero")
-                        path(style="fill: url(#gradient); filter: url(#shadow);" d="M10,90c0-44.2,35.8-80,80-80s80,35.8,80,80 M10,90c0,44.2,35.8,80,80,80s80-35.8,80-80 M111.3,90c0,11.7-9.5,21.3-21.3,21.3S68.7,101.7,68.7,90 M111.3,90c0-11.7-9.5-21.3-21.3-21.3S68.7,78.3,68.7,90")
-            .container
-                .row
-                    .col-xl-6.col-md-8.col-10.offset-md-2.offset-xl-1
-                        h1.heading Разработка сайта. Реклама. Продвижение. Маркетинг.
-                        a.btn.btn_primary.btn_border(data-fancybox="" data-animation-duration="500" data-src="#callModal" href="javascript:;") Обсудим проект?     
-        .content
-            .container.p-relative
-                .element.element_point
-                .row
-                    .col-lg-8.col-xl-6
-                        h2.heading.heading_smaller От разработки 
-                            span.text-darkblue до первых клиентов 
-                            | всего 10 дней
-                        p.offer Занимаемся любимым делом более 5 лет, поэтому не просто делаем и продвигаем сайты. Мы&nbsp;заинтересованы в&nbsp;вашем росте. Поверьте, мы болеем за&nbsp;ваш проект так&nbsp;же, как&nbsp;и&nbsp;вы, поэтому тщательно прорабатываем все детали, чтобы сайт нравился не&nbsp;только вам, но и&nbsp;потребителю. Обращаясь&nbsp;к&nbsp;нам, вы&nbsp;получаете соратников, которые знают короткий путь к&nbsp;сердцам ваших покупателей. 
-                        .content__group
-                            a.content__group__link(href="#") Веб-дизайн
-                            a.content__group__link(href="#") SEO-продвижение
-                            a.content__group__link(href="#") Контекстная реклама
-                            a.content__group__link(href="#") Разработка сайта
-                            a.content__group__link(href="#") Маркетинг продаж
-                            a.content__group__link(href="#") Создание контента
-                    .col-lg-5.offset-lg-4
-                        p.offer Сроки для нас — не пустой звук. Мы четко выстраиваем работу, чтобы ваш бизнес начал приносить прибыль как можно скорее. Вы всегда будете в курсе процесса и сможете понимать на каком этапе реализация проекта.
-                    .col-lg-6.offset-lg-4
-                        h3.heading.heading_medium У вас будут 
-                            span.text-darkblue преимущества
-                        .toggle-tabs
-                            .toggle-tabs__item
-                                .toggle-tabs__item__title Бизнес на любом устройстве 
-                                .toggle-tabs__item__content Создаём сайт, который прекрасно выглядит и&nbsp;функционирует на&nbsp;любом размере экрана: мобильный телефон, планшет и&nbsp;компьютер.
-                            .toggle-tabs__item
-                                .toggle-tabs__item__title Digital маркетинг
-                                .toggle-tabs__item__content Позволяет управлять вниманием и&nbsp;поведением пользователей
-                            .toggle-tabs__item
-                                .toggle-tabs__item__title Концепция
-                                .toggle-tabs__item__content Продуманная и&nbsp;выдержанная направленность, соответствующая тематике сайта
-                            .toggle-tabs__item
-                                .toggle-tabs__item__title Воронка продаж
-                                .toggle-tabs__item__content Сайт будет содержать все необходимые блоки для совершения продаж
-                            .toggle-tabs__item
-                                .toggle-tabs__item__title Гармоничный контент
-                                .toggle-tabs__item__content Только качественный и&nbsp;релевантный контент может обеспечить большие продажи и&nbsp;первые места в&nbsp;поисковых системах
-                            .toggle-tabs__item.last
-                                .toggle-tabs__item__title Работающий дизайн
-                                .toggle-tabs__item__content Создает положительный имидж компании и формирует эффект воздействия на потребителя
-        .portfolio
-            .portfolio__elements
-                svg.elements(viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet")
-                    defs
-                        linearGradient#gradient_02(data-name="gradient_02" x1="0" y1="0" x2="1122.56" y2="425.41" gradientUnits="userSpaceOnUse")
-                            stop(offset="0" stop-color="#581cbc")
-                            stop(offset="1" stop-color="#2f20a0")
-                    g(style="fill: url(#gradient_02); filter: url(#shadow);" fill-rule="nonzero")
-                        rect(x="12" y="9.5" width="71" height="160")
-                        rect(x="97" y="9.5" width="71" height="160")
-            .container
-                .row
-                    .col-xl-5
-                        h4.heading Реализованные 
-                            a.heading__link(href="#") проекты
-                    .col-xl-3.offset-xl-1
-                        a.portfolio__link(href="#") все проекты здесь > 
-                .scroll-pane
-                    .portfolio__row
-                        .portfolio__item
-                            a.portfolio__title(href="#") #Логотип
-                            a(href="#")
-                                img.portfolio__image(src="./images/01.png")
-                        .portfolio__item
-                            a.portfolio__title(href="#") #Веб-разработка
-                            a(href="#")
-                                img.portfolio__image(src="./images/02.png")
-                        .portfolio__item
-                            a.portfolio__title(href="#") #Реклама
-                            a(href="#")
-                                img.portfolio__image(src="./images/03.png")
-                        .portfolio__item
-                            a.portfolio__title(href="#") #Реклама
-                            a(href="#")
-                                img.portfolio__image(src="./images/03.png")
-                        .portfolio__item
-                            a.portfolio__title(href="#") #Реклама
-                            a(href="#")
-                                img.portfolio__image(src="./images/03.png")
-                    //- .row.portfolio__row
-                    //-     .col-10.col-sm-5.col-lg-3.portfolio__item
-                    //-         a.portfolio__title(href="#") #Логотип
-                    //-         a(href="#")
-                    //-             img.portfolio__image(src="./images/01.png")
-                    //-     .col-10.col-sm-5.col-lg-3.portfolio__item
-                    //-         a.portfolio__title(href="#") #Веб-разработка
-                    //-         a(href="#")
-                    //-             img.portfolio__image(src="./images/02.png")
-                    //-     .col-10.col-sm-5.col-lg-3.portfolio__item
-                    //-         a.portfolio__title(href="#") #Реклама
-                    //-         a(href="#")
-                    //-             img.portfolio__image(src="./images/03.png")
-                    //-     .col-10.col-sm-5.col-lg-3.portfolio__item
-                    //-         a.portfolio__title(href="#") #Реклама
-                    //-         a(href="#")
-                    //-             img.portfolio__image(src="./images/03.png")
-        .content.content_contact#contact
-            .container
-                .row.align-items-end
-                    .col-xl-6.col-lg-10
-                        h4.heading.heading_medium Нужны клиенты? <br/> Мы знаем как их получить
-                        form.form.form_inline(action="")
-                            input.in-phone.input-text(type="tel" placeholder="Ваш контактный телефон" value="")
-                            button.btn.btn_primary(type="submit") Обсудим проект
-                    .col-xl-3.col-lg-6
-                        .offer.last Многие компании, предлагая свои услуги, говорят о том, какие они классные. Мы в первую очередь думаем о вас и вашем комфорте от сотрудничества с SOHO. Поэтому мы расскажем о том, что вы получите, обратившись к нам.
-        .post-preview
-            .container
-                .heading Самое актуальное в нашем 
-                    a.link(href="#") блоге
-                .row.justify-content-between
-                    .col-lg-3.post-preview__item
-                        a(href="#").post-preview__item__title 6&nbsp;способов прокачать первый экран на&nbsp;вашем сайте
-                        .post-preview__item__offer Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.
-                    .col-lg-3.post-preview__item
-                        a(href="#").post-preview__item__title О&nbsp;чем нужно помнить, создавая уникальные тексты?
-                        .post-preview__item__offer Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.
-                    .col-lg-3.post-preview__item
-                        a(href="#").post-preview__item__title Продвижение сайта почти бесплатно
-                        .post-preview__item__offer Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.
+        main
+            article
+                header.content.content_title
+                    svg.content_title__svg(viewBox="0 0 1920 520" preserveAspectRatio="xMidYMax slice")
+                        defs
+                            filter#shadow_03(filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%")
+                                feGaussianBlur(in="SourceAlpha" result="blur" stdDeviation="5")
+                                feOffset(dx="2" dy="6" in="blur" result="offsetBlurredAlpha")
+                                feComponentTransfer
+                                    feFuncA(type="linear" slope="0.2")
+                                feMerge
+                                    feMergeNode
+                                    feMergeNode(in="SourceGraphic")
+                            linearGradient(id="PSgrad_0" x1="0%" x2="50%" y1="100%" y2="0%")
+                                stop(offset="0%" stop-color="#2b238b" stop-opacity="1")
+                                stop(offset="100%" stop-color="#2b16bc" stop-opacity="1")
+                        path(fill="url(#PSgrad_0)" filter="url(#shadow_03)" d="M1952.000,0.000 L0.000,0.000 C0.000,0.000 0.000,0.000 0.000,62.261 C48.455,87.927 227.239,217.781 370.380,209.418 C543.886,199.297 539.967,119.636 732.975,108.649 C895.861,99.358 895.062,345.632 945.000,414.000 C1039.188,542.961 1243.446,475.024 1406.000,401.000 C1458.954,376.881 1673.736,238.965 1716.000,215.000 C1805.329,164.347 1952.000,205.000 1952.000,205.000 L1952.000,0.000 Z")
+                    .content_title__elements
+                        svg.elements(viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet")
+                            defs
+                                filter#shadow(filterUnits="objectBoundingBox" height="130%" width="140%" x="-15%" y="-15%")
+                                    feGaussianBlur(in="SourceAlpha" result="blur" stdDeviation="3")
+                                    feOffset(dx="5" dy="5" in="blur" result="offsetBlurredAlpha")
+                                    feComponentTransfer
+                                        feFuncA(type="linear" slope="0.2")
+                                    feMerge
+                                        feMergeNode
+                                        feMergeNode(in="SourceGraphic")
+                                linearGradient#gradient(data-name="gradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse")
+                                    stop(offset="0" stop-color="#2a16bc")
+                                    stop(offset="1" stop-color="#2f20a0")
+                            g(fill-rule="nonzero")
+                                path(style="fill: url(#gradient); filter: url(#shadow);" d="M10,90c0-44.2,35.8-80,80-80s80,35.8,80,80 M10,90c0,44.2,35.8,80,80,80s80-35.8,80-80 M111.3,90c0,11.7-9.5,21.3-21.3,21.3S68.7,101.7,68.7,90 M111.3,90c0-11.7-9.5-21.3-21.3-21.3S68.7,78.3,68.7,90")
+                    .container
+                        .row
+                            .col-xl-6.col-md-8.col-10.offset-md-2.offset-xl-1
+                                h1.heading Разработка сайта. Реклама. Продвижение. Маркетинг.
+                                a.btn.btn_primary.btn_border(data-fancybox="" data-animation-duration="500" data-src="#callModal" href="javascript:;") Обсудим проект?     
+                section.content
+                    .container.p-relative
+                        .element.element_point
+                        .row
+                            .col-lg-8.col-xl-6
+                                h2.heading.heading_smaller От разработки 
+                                    span.text-darkblue до первых клиентов 
+                                    | всего 10 дней
+                                p.offer Занимаемся любимым делом более 5 лет, поэтому не просто делаем и продвигаем сайты. Мы&nbsp;заинтересованы в&nbsp;вашем росте. Поверьте, мы болеем за&nbsp;ваш проект так&nbsp;же, как&nbsp;и&nbsp;вы, поэтому тщательно прорабатываем все детали, чтобы сайт нравился не&nbsp;только вам, но и&nbsp;потребителю. Обращаясь&nbsp;к&nbsp;нам, вы&nbsp;получаете соратников, которые знают короткий путь к&nbsp;сердцам ваших покупателей. 
+                                .content__group
+                                    a.content__group__link(href="#") Веб-дизайн
+                                    a.content__group__link(href="#") SEO-продвижение
+                                    a.content__group__link(href="#") Контекстная реклама
+                                    a.content__group__link(href="#") Разработка сайта
+                                    a.content__group__link(href="#") Маркетинг продаж
+                                    a.content__group__link(href="#") Создание контента
+                            .col-lg-5.offset-lg-4
+                                p.offer Сроки для нас — не пустой звук. Мы четко выстраиваем работу, чтобы ваш бизнес начал приносить прибыль как можно скорее. Вы всегда будете в курсе процесса и сможете понимать на каком этапе реализация проекта.
+                            .col-lg-6.offset-lg-4
+                                h3.heading.heading_medium У вас будут 
+                                    span.text-darkblue преимущества
+                                .toggle-tabs
+                                    .toggle-tabs__item
+                                        .toggle-tabs__item__title Бизнес на любом устройстве 
+                                        .toggle-tabs__item__content Создаём сайт, который прекрасно выглядит и&nbsp;функционирует на&nbsp;любом размере экрана: мобильный телефон, планшет и&nbsp;компьютер.
+                                    .toggle-tabs__item
+                                        .toggle-tabs__item__title Digital маркетинг
+                                        .toggle-tabs__item__content Позволяет управлять вниманием и&nbsp;поведением пользователей
+                                    .toggle-tabs__item
+                                        .toggle-tabs__item__title Концепция
+                                        .toggle-tabs__item__content Продуманная и&nbsp;выдержанная направленность, соответствующая тематике сайта
+                                    .toggle-tabs__item
+                                        .toggle-tabs__item__title Воронка продаж
+                                        .toggle-tabs__item__content Сайт будет содержать все необходимые блоки для совершения продаж
+                                    .toggle-tabs__item
+                                        .toggle-tabs__item__title Гармоничный контент
+                                        .toggle-tabs__item__content Только качественный и&nbsp;релевантный контент может обеспечить большие продажи и&nbsp;первые места в&nbsp;поисковых системах
+                                    .toggle-tabs__item.last
+                                        .toggle-tabs__item__title Работающий дизайн
+                                        .toggle-tabs__item__content Создает положительный имидж компании и формирует эффект воздействия на потребителя
+                aside.portfolio
+                    .portfolio__elements
+                        svg.elements(viewBox="0 0 180 180" preserveAspectRatio="xMidYMin meet")
+                            defs
+                                linearGradient#gradient_02(data-name="gradient_02" x1="0" y1="0" x2="1122.56" y2="425.41" gradientUnits="userSpaceOnUse")
+                                    stop(offset="0" stop-color="#581cbc")
+                                    stop(offset="1" stop-color="#2f20a0")
+                            g(style="fill: url(#gradient_02); filter: url(#shadow);" fill-rule="nonzero")
+                                rect(x="12" y="9.5" width="71" height="160")
+                                rect(x="97" y="9.5" width="71" height="160")
+                    .container
+                        .row
+                            .col-xl-5
+                                h4.heading Реализованные 
+                                    a.heading__link(href="#") проекты
+                            .col-xl-3.offset-xl-1
+                                a.portfolio__link(href="#") все проекты здесь > 
+                        .scroll-pane
+                            .portfolio__row
+                                .portfolio__item
+                                    a.portfolio__title(href="#") #Логотип
+                                    a(href="#")
+                                        img.portfolio__image(src="./images/01.png")
+                                .portfolio__item
+                                    a.portfolio__title(href="#") #Веб-разработка
+                                    a(href="#")
+                                        img.portfolio__image(src="./images/02.png")
+                                .portfolio__item
+                                    a.portfolio__title(href="#") #Реклама
+                                    a(href="#")
+                                        img.portfolio__image(src="./images/03.png")
+                                .portfolio__item
+                                    a.portfolio__title(href="#") #Реклама
+                                    a(href="#")
+                                        img.portfolio__image(src="./images/03.png")
+                                .portfolio__item.last
+                                    a.portfolio__title(href="#") #Реклама
+                                    a(href="#")
+                                        img.portfolio__image(src="./images/03.png")
+                            //- .row.portfolio__row
+                            //-     .col-10.col-sm-5.col-lg-3.portfolio__item
+                            //-         a.portfolio__title(href="#") #Логотип
+                            //-         a(href="#")
+                            //-             img.portfolio__image(src="./images/01.png")
+                            //-     .col-10.col-sm-5.col-lg-3.portfolio__item
+                            //-         a.portfolio__title(href="#") #Веб-разработка
+                            //-         a(href="#")
+                            //-             img.portfolio__image(src="./images/02.png")
+                            //-     .col-10.col-sm-5.col-lg-3.portfolio__item
+                            //-         a.portfolio__title(href="#") #Реклама
+                            //-         a(href="#")
+                            //-             img.portfolio__image(src="./images/03.png")
+                            //-     .col-10.col-sm-5.col-lg-3.portfolio__item
+                            //-         a.portfolio__title(href="#") #Реклама
+                            //-         a(href="#")
+                            //-             img.portfolio__image(src="./images/03.png")
+                section.content.content_contact#contact
+                    .container
+                        .row.align-items-end
+                            .col-xl-6.col-lg-10
+                                h4.heading.heading_medium Нужны клиенты? <br/> Мы знаем как их получить
+                                form.form.form_inline(action="")
+                                    input.in-phone.input-text(type="tel" placeholder="Ваш контактный телефон" value="")
+                                    button.btn.btn_primary(type="submit") Обсудим проект
+                            .col-xl-3.col-lg-6
+                                .offer.last Многие компании, предлагая свои услуги, говорят о том, какие они классные. Мы в первую очередь думаем о вас и вашем комфорте от сотрудничества с SOHO. Поэтому мы расскажем о том, что вы получите, обратившись к нам.
+                aside.post-preview
+                    .container
+                        h4.heading Самое актуальное в нашем 
+                            a.link(href="#") блоге
+                        .row.justify-content-between
+                            .col-lg-3.post-preview__item
+                                a(href="#").post-preview__item__title 6&nbsp;способов прокачать первый экран на&nbsp;вашем сайте
+                                .post-preview__item__offer Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.
+                            .col-lg-3.post-preview__item
+                                a(href="#").post-preview__item__title О&nbsp;чем нужно помнить, создавая уникальные тексты?
+                                .post-preview__item__offer Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.
+                            .col-lg-3.post-preview__item.last
+                                a(href="#").post-preview__item__title Продвижение сайта почти бесплатно
+                                .post-preview__item__offer Воспользуйтесь нашими советами чтобы создать впечатляющий «первый экран» на вашем веб-сайте. Это не так сложно, как может показаться на первый взгляд.
         include chunks/footer.pug

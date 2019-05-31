@@ -46,14 +46,13 @@
 @import "page/ad.scss";
 @import "page/post.scss";
 @import "page/page.scss";
+@import "page/fulldev.scss";
 
 html {
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
 }
-*,
-*::before,
-*::after {
+*,*::before,*::after {
     box-sizing: inherit;
 }
 a{
@@ -75,12 +74,8 @@ a{
 .img-border{border: 1px solid lighten($color: $lightgrey, $amount: 25%);}
 
 /* SCROLL PANE */
-.jspTrack {
-    background: #713fe9;
-}
-.jspDrag {
-    background: #8a5df7;
-}
+.jspTrack {background: #713fe9;}
+.jspDrag {background: #8a5df7;}
 
 .go-to-top{
     @extend .header__nav;
@@ -104,4 +99,31 @@ a{
     }
 }
 
-// @import "media.scss";
+
+/* Media */
+@media(max-width: 1400px){
+    .go-to-top{
+        top: auto;
+        bottom: 20px;
+    }
+}
+@media(max-width: 992px){
+    .d-flex-md{display: flex;}
+    .go-to-top{
+        top: auto;
+        bottom: 20px;
+    }
+}
+@media(max-width: 768px){
+    .d-flex-sm{display: flex;}
+    .go-to-top{
+        top: auto;
+        bottom: 20px;
+    }
+}
+@media(max-width: 576px){
+    .go-to-top{
+        top: auto;
+        bottom: 20px;
+    }
+}

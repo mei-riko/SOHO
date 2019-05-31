@@ -79,3 +79,28 @@
         }
     }
 }
+
+/* Media */
+@media(max-width: 1400px){}
+@media(max-width: 992px){
+    .dev{
+        .content{
+            &_element{
+                .element{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 768px){
+    .dev{
+        .item{
+            margin-bottom: 30px;
+            &__header{
+                font-size: 28px;
+            }
+        }
+    }
+}
+@media(max-width: 576px){}
