@@ -6,10 +6,11 @@
 .text-red{color:$red;}
 .text-green{color:$green;}
 .text-pink{color:$pink;}
+.text-blue{color:$blue;}
 
 .text-uppercase{text-transform: uppercase; }
 .text-light{font-weight: 300;}
-.text-bold{font-weight: 700;}
+strong, b, .text-bold{font-weight: 700;}
 
 .text-wrap{white-space: nowrap;}
 

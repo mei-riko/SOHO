@@ -29,26 +29,6 @@
                 color: $black;
             }
         }
-        &_price{
-            .element{
-                &_1{
-                    width: 250px;
-                    top: -100px;
-                    left: -50px;
-                }
-                &_2{
-                    width: 210px;
-                    bottom: -60px;
-                    right: -120px;
-                    z-index: 11;
-                }
-                &_3{
-                    width: 280px;
-                    top: -100px;
-                    right: -50px;
-                }
-            }
-        }
         .element{
             //WORDPRESS
             &_01{

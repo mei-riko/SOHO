@@ -53,6 +53,7 @@
             }
         }
         &__task{
+            flex-wrap: wrap;
             &__item{
                 flex: 0 0 80px;
                 max-width: 80px;

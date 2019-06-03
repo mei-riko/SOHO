@@ -1,0 +1,127 @@
+.fulldev{
+    .header{
+        &__email{
+            color: $white;
+        }
+    }
+    .content{
+        .element{
+            &_point{
+                bottom: 200px;
+            }
+        }
+        &_title{
+            background: linear-gradient(-135deg, #7a95d2 0%, #516ab6 100%);
+        }
+        &_background{
+            .heading + .offer {
+                margin-top: 20px;
+                margin-bottom: 40px;
+            }
+            .list{
+                padding-left: 0;
+                .list__item{
+                    &:before{
+                        background: $blue;
+                    }
+                    & + .list__item{
+                        margin-top: 15px;
+                    }
+                }
+            }
+            .item{
+                &__offer{
+                    width: 100%;
+                }
+            }
+        }
+        &_color{
+            background: linear-gradient(-135deg, #7a95d2 0%, #516ab6 100%);
+            color: $white;
+            padding-bottom: 60px;
+            .item{
+                &__icon{
+                    background: #d2d0d9;
+                    .active-path{
+                        fill: $white;
+                    }
+                }
+                &__title{
+                    color: $white;
+                    margin-bottom: 10px;
+                }
+                &__offer{
+                    width: 100%;
+                    color: $white;
+                }
+            }
+        }
+        &_price{
+            .element{
+                &_1{
+                    width: 250px;
+                    top: -100px;
+                    left: -50px;
+                }
+                &_2{
+                    width: 210px;
+                    bottom: -60px;
+                    right: -120px;
+                    z-index: 11;
+                }
+                &_3{
+                    width: 280px;
+                    top: -100px;
+                    right: -50px;
+                }
+            }
+        }
+    }
+    .price{
+        &_large{
+            .price__header{
+                background: linear-gradient(-135deg, #fdc830 0%, #fed61d 100%);
+            }
+        }
+    }
+}
+
+/* Media */
+@media(max-width: 1400px){}
+@media(max-width: 992px){
+    .fulldev{
+        .content{
+            &_background{
+                .item{
+                    &__offer{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 768px){
+    .fulldev{
+        .content{
+            .item{
+                &__header{
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 576px){
+    .fulldev{
+        .content{
+            &_background{
+                .list{
+                    &__item{
+                        text-transform: none;
+                    }
+                }
+            }
+        }
+    }
+}

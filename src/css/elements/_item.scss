@@ -26,6 +26,17 @@
 
         width: 240px;
         max-width: 100%;
+
+        &.small{
+            font-size: 12px;
+        }
+
+        p{
+            margin-bottom: 0;
+            & + p{
+                margin-top: 10px;
+            }
+        }
     }
     &__icon{
         border-radius: 10px;
