@@ -221,7 +221,7 @@
                   <div class="project__task__content"> 
                     <p class="offer">Проработать маркетинговую составляющую сайта: разработка УТП, преимуществ, продающих текстов и форм. Сделать его привлекательным, наполнить актуальной информацией, подготовить все страницы к запуску рекламы. </p>
                     <p class="offer">Настроить рекламную кампанию, повысить число заявок с нее и из поисковых систем.</p>
-                    <ul>
+                    <ul class="offer last">
                       <li>переработать всю информацию на сайте для повышения количества заявок;</li>
                       <li>улучшить общее восприятие информации;</li>
                       <li>изменить дизайн сайта на более современный и&nbsp;внушающий&nbsp;доверие</li>
@@ -313,6 +313,11 @@
                 <form class="form form_inline" action="">
                   <input class="in-phone input-text" type="tel" placeholder="Ваш контактный телефон" value=""/>
                   <button class="btn btn_primary" type="submit">Да, нужны</button>
+                  <div class="policy">
+                    <input type="hidden" name="agree[]" value=""/>
+                    <input class="policy__checkbox" id="policy" type="checkbox" name="agree[]" checked=""/>
+                    <label class="policy__offer" for="policy">согласен с <a class="link" href="/privacy-policy-websoho.pdf" title="Соглашение на обработку персональных данных">обработкой персональных данных</a></label>
+                  </div>
                 </form>
               </div>
               <div class="col-xl-3">

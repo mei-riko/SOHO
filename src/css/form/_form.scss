@@ -68,6 +68,41 @@
     color: $red;
 }
 
+/* Personal Policy */
+.policy{
+    display: flex;
+
+    color: $white;
+    opacity:0.4;
+        
+    font-size:12px;
+    line-height: 12px;
+
+    margin-top:10px;
+    transition: .2s;
+
+    outline: none;
+    
+    &:hover{
+        opacity: .6;
+    }
+
+    .policy__checkbox{
+        margin-right: 10px;
+        cursor: pointer;
+        &:focus{
+            outline-color: $white;
+        }
+    }
+    .policy__offer{
+        margin-bottom: 0;
+        cursor: pointer;
+        .link{
+            color: $white;
+            text-decoration: underline;
+        }
+    }
+}
 /* Media */
 @media(max-width: 1400px){}
 @media(max-width: 992px){}

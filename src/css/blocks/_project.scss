@@ -38,6 +38,12 @@
 
             color: $lightgrey;
         }
+        &__content{
+            .offer{
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
     }
 }
 
@@ -48,21 +54,19 @@
 @media(max-width: 576px){
     .project{
         .heading{
+            margin-bottom: 20px;
             & + .offer {
-                margin: 20px 0 40px;
+                font-size: 14px;
+                margin: 0 0 40px;
             }
         }
         &__task{
             flex-wrap: wrap;
             &__item{
-                flex: 0 0 80px;
-                max-width: 80px;
-            }
-            &__content{
-                .offer{
-                    font-size: 14px;
-                    line-height: 22px;
-                }
+                // flex: 0 0 80px;
+                // max-width: 80px;
+
+                margin-bottom: 10px;
             }
         }
     }

@@ -145,9 +145,12 @@
 @media(max-width: 768px){}
 @media(max-width: 576px){
     .item{
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
         &__offer{
             font-size: 14px;
+            &.small{
+                font-size: 14px;
+            }
         }
 
         &_info{
