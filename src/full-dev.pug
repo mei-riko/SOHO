@@ -1,8 +1,20 @@
 html(lang="ru", dir="ltr")
-    include chunks/head.pug
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title SOHO студия
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        link(href='./css/slick.css', rel='stylesheet')
+        link(href='./css/slick-theme.css', rel='stylesheet')
+
+        link(href='./css/framework.css', rel='stylesheet')
+        link(href='./css/fulldev.css', rel='stylesheet')
     body.fulldev
         script(src="./js/jquery.min.js")
         script(src="./js/jquery.inputmask.js")
+        script(src="./js/slick.min.js")
         script(src="./js/app.min.js")
         include chunks/header.pug
         main
@@ -220,21 +232,28 @@ html(lang="ru", dir="ltr")
                         .row.margin-bottom
                             .col-xl-10
                                 p.heading.heading_small Результат
-                            .col-xl-6
-                                p.offer.last Готовый многостраничный сайт-визитка, где представлена вся информация 
+                            .col-xl-5.margin-bottom.margin-bottom-sm
+                                p.offer Готовый многостраничный сайт-визитка, где представлена вся информация 
                                     | об услугах, которые оказывает компания. Страницы отличаются интуитивно понятной 
                                     | структурой, а дизайн согласуется с видом деятельности фирмы. 
                                     | Подробнее о проделанной работе 
                                     a(href="#") в порфтолио 
                                     |  или можете посмотреть финальный результа 
                                     a(href="#") на сайте.
-                        .row
-                            .col-lg-3.margin-bottom.margin-bottom-sm
-                                img.img-fluid(src="../images/frontbox-test-01.jpg")
-                            .col-lg-3.margin-bottom.margin-bottom-sm
-                                img.img-fluid(src="../images/frontbox-test-02.jpg")
-                            .col-xl-10
-                                a.btn.btn_primary(data-fancybox="" data-animation-duration="500" data-src="#callModal" href="javascript:;") Заказать сайт под ключ
+                                a.btn.btn_primary(data-fancybox="" data-animation-duration="500" data-src="#callModal" href="javascript:;") Заказать сайт под ключ                                
+                            .col-xl-5
+                                .slick-slider
+                                    .item
+                                        img.img-fluid(src="../images/web-frontbox-index-04.jpg")
+                                    .item
+                                        p Google Page Speed влияет на позиции сайта. Оптимальная оценка для мобильных - 65+, для компьютеров - 85+
+                                        img.img-fluid(src="../images/frontbox-test-01.jpg")
+                                    .item
+                                        p Тесты скорости загрузки сайта и кешируемости его стилей и фотографий (A - наивысшая оценка).
+                                        img.img-fluid(src="../images/frontbox-test-02.jpg")
+                                    .item
+                                        p Тесты скорости загрузки сайта и кешируемости его стилей и фотографий (A - наивысшая оценка).
+                                        img.img-fluid(src="../images/frontbox-test-03.jpg")
                 .content.content_price
                     .container.content_price__container
                         .row

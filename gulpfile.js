@@ -66,22 +66,21 @@ gulp.task('html', function () {
 });
 
 gulp.task('css', function () {
-  return gulp.src(['./src/css/style.scss'])
+  return gulp.src(['./src/css/*.scss'])
+    .pipe(changed('public', { extension: '.css' }))
     .pipe(plumber())
     .pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
-    // .pipe(changed('public', { extension: '.css' }))
     .pipe(autoprefixer({
       browsers: ['last 5 versions'],
       cascade: false
     }))
     // .pipe(cleanCSS({ level: { 1: { specialComments: 0 } } } )) //uncommit on production
     // .pipe(minifyCSS()) //uncommit on production
-    .pipe(concat('style.css'))
+    // .pipe(concat('style.css')) // объединяет файлы
     .pipe(gulp.dest('./public/css/'))
-    // .pipe(rename({ suffix: '.min', prefix: '' }))
-    // .pipe(gulp.dest('./public/css/'))
     .on('end', browserSync.reload);
 });
+
 gulp.task('watch', function () {
   gulp.watch(['./src/*.pug'], ['html']);
   gulp.watch(['./src/css/*.scss'], ['css']);
@@ -107,4 +106,6 @@ gulp.task("image", function() {
     }))
     .pipe(gulp.dest("public/img-shakal"));
 });
+
+
 gulp.task('default', ['html', 'css', 'scripts', 'watch', 'browser-sync' ]);

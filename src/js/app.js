@@ -2,6 +2,13 @@ import $ from "jquery";
 
 $(document).ready(() => {
 
+    //Slick
+    $(".slick-slider").slick({
+        infinite: true,
+        dots: true,
+        arrow: true,
+        adaptiveHeight: true,
+    });
     // Scroll Pane
     if( $('.scroll-pane').length ){
         $('.scroll-pane').jScrollPane();

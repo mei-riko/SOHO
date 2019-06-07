@@ -6,12 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>SOHO студия</title>
     <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
-    <link href="./css/jquery.jscrollpane.css" rel="stylesheet"/>
-    <link href="./css/style.css" rel="stylesheet"/>
+    <link href="./css/slick.css" rel="stylesheet"/>
+    <link href="./css/slick-theme.css" rel="stylesheet"/>
+    <link href="./css/framework.css" rel="stylesheet"/>
+    <link href="./css/fulldev.css" rel="stylesheet"/>
   </head>
   <body class="fulldev">
     <script src="./js/jquery.min.js"></script>
     <script src="./js/jquery.inputmask.js"></script>
+    <script src="./js/slick.min.js"></script>
     <script src="./js/app.min.js"></script>
     <header class="header">
       <div class="container">
@@ -355,18 +358,27 @@
               <div class="col-xl-10">
                 <p class="heading heading_small">Результат</p>
               </div>
-              <div class="col-xl-6">
-                <p class="offer last">
+              <div class="col-xl-5 margin-bottom margin-bottom-sm">
+                <p class="offer">
                   Готовый многостраничный сайт-визитка, где представлена вся информация об услугах, которые оказывает компания. Страницы отличаются интуитивно понятной 
                   структурой, а дизайн согласуется с видом деятельности фирмы. 
                   Подробнее о проделанной работе <a href="#">в порфтолио </a> или можете посмотреть финальный результа <a href="#">на сайте.</a>
-                </p>
+                </p><a class="btn btn_primary" data-fancybox="" data-animation-duration="500" data-src="#callModal" href="javascript:;">Заказать сайт под ключ                                </a>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-3 margin-bottom margin-bottom-sm"><img class="img-fluid" src="../images/frontbox-test-01.jpg"/></div>
-              <div class="col-lg-3 margin-bottom margin-bottom-sm"><img class="img-fluid" src="../images/frontbox-test-02.jpg"/></div>
-              <div class="col-xl-10"><a class="btn btn_primary" data-fancybox="" data-animation-duration="500" data-src="#callModal" href="javascript:;">Заказать сайт под ключ</a></div>
+              <div class="col-xl-5">
+                <div class="slick-slider">
+                  <div class="item"><img class="img-fluid" src="../images/web-frontbox-index-04.jpg"/></div>
+                  <div class="item">
+                    <p>Google Page Speed влияет на позиции сайта. Оптимальная оценка для мобильных - 65+, для компьютеров - 85+</p><img class="img-fluid" src="../images/frontbox-test-01.jpg"/>
+                  </div>
+                  <div class="item">
+                    <p>Тесты скорости загрузки сайта и кешируемости его стилей и фотографий (A - наивысшая оценка).</p><img class="img-fluid" src="../images/frontbox-test-02.jpg"/>
+                  </div>
+                  <div class="item">
+                    <p>Тесты скорости загрузки сайта и кешируемости его стилей и фотографий (A - наивысшая оценка).</p><img class="img-fluid" src="../images/frontbox-test-03.jpg"/>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

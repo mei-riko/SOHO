@@ -1,0 +1,55 @@
+@import "variable.scss";
+
+@import "elements/list.scss";
+@import "elements/item.scss";
+@import "elements/toggle-tabs.scss";
+
+@import "blocks/project.scss";
+@import "blocks/price.scss";
+
+@import "content/content.scss";
+@import "content/contentTitle.scss";
+@import "content/contentContact.scss";
+@import "content/contentPrice.scss";
+@import "content/contentForm.scss";
+
+@import "page/fulldev.scss";
+
+.slick-prev{
+    width: 30px;
+    height: 30px;
+    background: url("../images/icons/arrow-prev.svg") no-repeat left center / 22px;
+    &:hover, &:focus{
+        background: url("../images/icons/arrow-prev.svg") no-repeat left center / 22px;
+    }
+}
+.slick-next{
+    width: 30px;
+    height: 30px;
+    background: url("../images/icons/arrow-next.svg") no-repeat right center / 22px;
+    &:hover, &:focus{
+        background: url("../images/icons/arrow-next.svg") no-repeat right center / 22px;
+    }
+}
+.slick-prev:before, 
+.slick-next:before{
+    content:'';
+}
+.slick-dots{
+    li{
+        &.slick-active{
+            button{
+                &:before{
+                    font-size: 30px;
+                    color: #1c097a;
+                }
+            }    
+        }
+        button{
+            &:before{
+                font-size: 30px;
+                color: #1c097a;
+            }
+        }
+    }
+}

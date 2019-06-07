@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=cyrillic');
+
+@import "variable.scss";
+
+@import "node_modules/bootstrap/scss/vendor/_rfs.scss";
+@import "node_modules/bootstrap/scss/mixins/_hover.scss";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints.scss";
+@import "node_modules/bootstrap/scss/utilities/_flex.scss";
+
+@import "node_modules/bootstrap/scss/mixins/_grid-framework.scss";
+@import "node_modules/bootstrap/scss/mixins/_grid.scss";
+@import "node_modules/bootstrap/scss/_grid.scss";
+
+@import "reboot.scss";
+
+@import "elements/text.scss";
+@import "elements/indent.scss";
+@import "elements/modal.scss";
+
+@import "form/form.scss";
+@import "form/buttons.scss";
+
+@import "blocks/header.scss";
+@import "blocks/nav.scss";
+@import "blocks/footer.scss";
+
+html {
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
+}
+*,*::before,*::after {
+    box-sizing: inherit;
+}
+a{
+    display: inline-block;
+    outline: none;
+    transition: .3s;
+    &:hover, &:focus{
+        outline: none;
+    }
+}
+
+.d-flex{display: flex;}
+.p-relative{position: relative;}
+
+.bg-white{background: $white;}
+.bg-grey{background: #f1f1f1;}
+
+.img-fluid{max-width: 100%;}
+.img-border{border: 1px solid lighten($color: $lightgrey, $amount: 25%);}
+
+.go-to-top{
+    @extend .header__nav;
+
+    height: 70px;
+    opacity: 0;
+    display: none;
+
+    top: auto;
+    bottom: 20px;
+
+    transform: rotate(90deg);
+    fill: $white;
+
+    &.active{
+        display: block;
+        opacity: .4;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+
+/* Media */
+@media(max-width: 1400px){
+    .go-to-top{
+        top: auto;
+        bottom: 20px;
+    }
+}
+@media(max-width: 992px){
+    .d-flex-md{display: flex;}
+    .go-to-top{
+        top: auto;
+        bottom: 20px;
+    }
+}
+@media(max-width: 768px){
+    .d-flex-sm{display: flex;}
+    .go-to-top{
+        top: auto;
+        bottom: 20px;
+    }
+}
+@media(max-width: 576px){
+    .d-flex-xs{display: flex;}
+    .go-to-top{
+        top: auto;
+        bottom: 20px;
+    }
+}

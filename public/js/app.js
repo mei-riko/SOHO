@@ -78,6 +78,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 (0, _jquery2.default)(document).ready(function () {
 
+    //Slick
+    (0, _jquery2.default)(".slick-slider").slick({
+        infinite: true,
+        dots: true,
+        arrow: true,
+        adaptiveHeight: true
+    });
     // Scroll Pane
     if ((0, _jquery2.default)('.scroll-pane').length) {
         (0, _jquery2.default)('.scroll-pane').jScrollPane();
