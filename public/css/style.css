@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=cyrillic");
 .flex-row {
   -webkit-box-orient: horizontal !important;
@@ -1811,7 +1812,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Open Sans", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.3;
@@ -2156,6 +2157,10 @@ template {
   color: #5973bc;
 }
 
+.text-grey {
+  color: #858585;
+}
+
 .text-uppercase {
   text-transform: uppercase;
 }
@@ -2170,6 +2175,10 @@ strong, b, .text-bold {
 
 .text-wrap {
   white-space: nowrap;
+}
+
+.text-small {
+  font-size: 90%;
 }
 
 /* Media */
@@ -2779,7 +2788,7 @@ strong, b, .text-bold {
 
 .btn {
   display: inline-block;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -2819,7 +2828,6 @@ strong, b, .text-bold {
 /* Media */
 @media (max-width: 1400px) {
   .btn {
-    font-size: 16px;
     padding: 15px 40px;
   }
 }
@@ -3098,6 +3106,7 @@ strong, b, .text-bold {
 }
 
 .content_contact {
+  padding: 60px 0;
   background: #222222;
   z-index: 1;
 }
@@ -4745,15 +4754,16 @@ strong, b, .text-bold {
 }
 
 .page__reading {
-  padding: 10px 60px;
+  font-size: 12px;
+  padding: 12px 60px;
   margin-left: auto;
 }
 
 .page__content {
   padding: 40px 60px 60px;
   background: #ffffff;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
 .page__content .heading {
@@ -4804,9 +4814,14 @@ strong, b, .text-bold {
 }
 
 .page__content p {
-  font-size: 18px;
-  line-height: 28px;
-  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.page__content p.text-small {
+  font-size: 90%;
+  font-weight: 300;
 }
 
 .page__content p img {
@@ -4817,19 +4832,29 @@ strong, b, .text-bold {
   margin-bottom: 0;
 }
 
-.page__content ul li + li {
-  margin-top: 10px;
+.page__content ul, .page__content ol {
+  line-height: 22px;
+  margin-bottom: 20px;
 }
 
-.page__content blockquote {
+.page__content ul li + li, .page__content ol li + li {
+  margin-top: 8px;
+}
+
+.page__content ul {
+  list-style: circle;
+}
+
+.page__content blockquote, .page__content .blockquote {
   padding-left: 80px;
   background: url("../images/icons/quotes.svg") no-repeat left top/55px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .page__content img {
   height: auto !important;
-  margin-bottom: 30px;
+  display: block;
+  margin: 0 auto 30px;
 }
 
 .page__content img + h2, .page__content img + .h2,
@@ -4837,6 +4862,52 @@ strong, b, .text-bold {
 .page__content img + h4, .page__content img + .h4,
 .page__content img + h5, .page__content img + .h5 {
   margin-top: 0;
+}
+
+.page__content .info {
+  position: relative;
+  padding-left: 30px;
+  border-left: 8px solid #e5e5e5;
+}
+
+.page__content .info_yandex {
+  padding: 15px 0;
+  padding-left: 50px;
+  border-color: #d70000;
+  list-style: none;
+}
+
+.page__content .info_yandex:before {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  content: 'Я';
+  color: #d70000;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.page__content .info_google {
+  padding: 15px 0;
+  padding-left: 50px;
+  border-color: #5973bc;
+  list-style: none;
+}
+
+.page__content .info_google:before {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  content: 'G';
+  color: #5973bc;
+  font-size: 28px;
+  font-weight: 700;
 }
 
 /* Media */
@@ -4870,8 +4941,7 @@ strong, b, .text-bold {
     height: 300px;
   }
   .page__info .page__date,
-  .page__info .page__person,
-  .page__info .page__reading {
+  .page__info .page__person {
     font-size: 12px;
     padding: 10px 20px;
   }
@@ -4885,7 +4955,7 @@ strong, b, .text-bold {
     padding: 10px 0;
   }
   .page__content {
-    padding: 40px 20px;
+    padding: 40px;
     font-size: 16px;
     line-height: 24px;
   }

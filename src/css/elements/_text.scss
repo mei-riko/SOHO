@@ -2,17 +2,20 @@
 .text-center{text-align: center;}
 .text-left{text-align: left;}
 
-.text-darkblue{color:$darkblue;}
-.text-red{color:$red;}
-.text-green{color:$green;}
-.text-pink{color:$pink;}
-.text-blue{color:$blue;}
+.text-darkblue  {color:$darkblue;}
+.text-red       {color:$red;}
+.text-green     {color:$green;}
+.text-pink      {color:$pink;}
+.text-blue      {color:$blue;}
+.text-grey      {color:$lightgrey;}
 
 .text-uppercase{text-transform: uppercase; }
 .text-light{font-weight: 300;}
 strong, b, .text-bold{font-weight: 700;}
 
 .text-wrap{white-space: nowrap;}
+
+.text-small{font-size: 90%;}
 
 /* Media */
 @media(max-width: 1400px){

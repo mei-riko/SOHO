@@ -38,6 +38,9 @@ a{
     &:hover, &:focus{
         outline: none;
     }
+    &:visited{
+        color: $blue;
+    }
 }
 
 .d-flex{display: flex;}

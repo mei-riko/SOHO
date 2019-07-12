@@ -46,15 +46,17 @@
         padding: 10px 0;
     }
     &__reading{
-        padding: 10px 60px;
+        font-size: 12px;
+        padding: 12px 60px;
         margin-left: auto;
     }
     &__content{
         padding: 40px 60px 60px;
         background: $white;
         
-        font-size: 18px;
-        line-height: 28px;
+        font-size: 16px;
+        line-height: 1.7;
+
         .heading{
             font-size: 50px;
             font-weight: 700;
@@ -98,9 +100,15 @@
             margin-bottom: 30px;
         }
         p{
-            font-size: 18px;
-            line-height: 28px;
-            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+
+            &.text-small{
+                font-size: 90%;
+                font-weight: 300;
+            }
+
             img{
                 margin-bottom: 0;
             }
@@ -109,26 +117,70 @@
                 margin-bottom: 0;
             }
         }
-        ul{
+        ul, ol{
+            line-height: 22px;
+            margin-bottom: 20px;
             li + li{
-                margin-top: 10px;
+                margin-top: 8px;
             }
         }
-        blockquote{
+        ul{
+            list-style: circle;
+        }
+        blockquote,.blockquote{
             padding-left: 80px;
             background: url('../images/icons/quotes.svg') no-repeat left top / 55px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         img{
             @extend .img-fluid;
             height: auto!important;
-            margin-bottom: 30px;
+
+            display: block;
+            margin: 0 auto 30px;
 
             & + h2, & + .h2,
             & + h3, & + .h3,
             & + h4, & + .h4,
             & + h5, & + .h5{
                 margin-top: 0;
+            }
+        }
+        .info{
+            position: relative;
+            padding-left: 30px;
+            border-left: 8px solid #e5e5e5;
+            &_yandex{
+                padding: 15px 0;
+                padding-left: 50px;
+                border-color: $red;
+                list-style: none;
+                &:before{
+                    position: absolute;
+                    left: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    content: 'Я';
+                    color: $red;
+                    font-size: 28px;
+                    font-weight: 700;
+                }
+            }
+            &_google{
+                padding: 15px 0;
+                padding-left: 50px;
+                border-color: $blue;
+                list-style: none;
+                &:before{
+                    position: absolute;
+                    left: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    content: 'G';
+                    color: $blue;
+                    font-size: 28px;
+                    font-weight: 700;
+                }
             }
         }
     }
@@ -171,8 +223,7 @@
         }
         &__info{
             .page__date,
-            .page__person,
-            .page__reading{
+            .page__person{
                 font-size: 12px;
                 padding: 10px 20px;
             }
@@ -187,7 +238,7 @@
             }
         }
         &__content {
-            padding: 40px 20px;
+            padding: 40px;
             font-size: 16px;
             line-height: 24px;
             .heading {
