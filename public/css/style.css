@@ -20,7 +20,7 @@ body {
   margin: 0;
   font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
-  font-weight: 200;
+  font-weight: 400;
   line-height: 1.4;
   color: #ffffff;
   text-align: left;
@@ -1844,8 +1844,8 @@ template {
 }
 
 html, body {
-  font-size: 16px;
-  font-weight: 300;
+  font-size: 15px;
+  font-weight: 400;
   line-height: 1.6;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1877,11 +1877,11 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .h2, h2 {
-  font-size: 42px;
+  font-size: 40px;
 }
 
 .h3, h3 {
-  font-size: 36px;
+  font-size: 32px;
 }
 
 .h4, h4 {
@@ -1990,6 +1990,10 @@ table td {
   color: #c1ea1d;
 }
 
+.text-light {
+  color: #e7e7e7;
+}
+
 .text-uppercase {
   text-transform: uppercase;
 }
@@ -2053,7 +2057,7 @@ table td {
 
 @media all and (max-width: 1400px) {
   html, body {
-    font-size: 16px;
+    font-size: 15px;
   }
   .d-lg-flex {
     display: -webkit-box;
@@ -2105,7 +2109,7 @@ table td {
 
 @media all and (max-width: 768px) {
   html, body {
-    font-size: 14px;
+    font-size: 13px;
   }
   .h1, h1 {
     font-size: 32px;
@@ -2481,8 +2485,10 @@ table td {
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  font-weight: 600;
   font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .5px;
   color: #ffffff;
   text-transform: uppercase;
   -webkit-transition: all .4s;

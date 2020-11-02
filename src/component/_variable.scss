@@ -35,7 +35,7 @@ $container-max-widths: (
 ) !default;
 
 $font-size-base       : 1rem;
-$font-weight-base     : 200;
+$font-weight-base     : 400;
 $line-height-base     : 1.4;
 
 $font-family-heading  : "Open Sans", sans-serif;
@@ -44,10 +44,10 @@ $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,   "Liberation M
 
 $font-size: (
   xs: 0,
-  sm: 14px,
+  sm: 13px,
   md: 14px,
-  lg: 16px,
-  xl: 16px
+  lg: 15px,
+  // xl: 16px
 ) !default;
 
 $font-weight-heading: 700;

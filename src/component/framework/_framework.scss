@@ -1,6 +1,6 @@
 html,body {
-    font-size: map-get($font-size, 'xl');
-    font-weight: $font-weight-light;
+    font-size: map-get($font-size, 'lg');
+    font-weight: $font-weight-base;
     line-height: $line-height;
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
@@ -23,8 +23,8 @@ h1, h2, h3, h4, h5, h6,
     margin-top: map-get($spacers, 1);
 }
 .h1,h1{font-size: 48px;}
-.h2,h2{font-size: 42px;}
-.h3,h3{font-size: 36px;}
+.h2,h2{font-size: 40px;}
+.h3,h3{font-size: 32px;}
 .h4,h4{font-size: 24px;}
 .h5,h5{font-size: 18px;}
 .h6,h6{font-size: 1rem;}
@@ -81,6 +81,7 @@ table{
 .text-white{color: $white;}
 .text-black{color: $black;}
 .text-green{color: $green;}
+.text-light{color: $light-grey;}
 
 .text-uppercase{text-transform: uppercase;}
 .text-bold,strong,b{font-weight: 700;}

@@ -9,12 +9,19 @@
     }
     &__intro{
         width: 520px;
-        max-width: 100%;
-        color: $grey;
-        line-height: $line-height-base;
+        max-width: 90%;
+        color: $light-grey;
     }
     &__action{
+        position: relative;
         padding: map-get($map: $spacers, $key: 4) 0 map-get($map: $spacers, $key: 2);
+
+        &-main{
+            position: absolute;
+            bottom: -62px;
+            left: 152px;
+            width: 600px;
+        }
     }
     &__preview{
         position: relative;

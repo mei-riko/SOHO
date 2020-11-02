@@ -10,13 +10,20 @@
 
 .content-main__intro {
   width: 520px;
-  max-width: 100%;
-  color: #a7a7a7;
-  line-height: 1.4;
+  max-width: 90%;
+  color: #e7e7e7;
 }
 
 .content-main__action {
+  position: relative;
   padding: 60px 0 20px;
+}
+
+.content-main__action-main {
+  position: absolute;
+  bottom: -62px;
+  left: 152px;
+  width: 600px;
 }
 
 .content-main__preview {
