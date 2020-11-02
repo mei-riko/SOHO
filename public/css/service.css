@@ -1,0 +1,38 @@
+.content-main {
+  padding: 40px 0;
+}
+
+.content-main__title {
+  padding-top: 20px;
+  width: 740px;
+  max-width: 100%;
+}
+
+.content-main__intro {
+  width: 520px;
+  max-width: 100%;
+  color: #a7a7a7;
+  line-height: 1.4;
+}
+
+.content-main__action {
+  padding: 60px 0 20px;
+}
+
+.content-main__preview {
+  position: relative;
+}
+
+.content-main__prototype {
+  position: relative;
+  z-index: 1;
+}
+
+.content-main__example {
+  position: absolute;
+  z-index: 2;
+  bottom: 40px;
+  right: 0;
+  -webkit-box-shadow: 4px 0 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.5);
+}

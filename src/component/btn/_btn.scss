@@ -1,0 +1,25 @@
+.btn{
+    border: none;
+    outline: none;
+    box-shadow: none;
+
+    font-weight: $font-weight-bolder;
+    font-family: $font-family-heading;
+    color: $body-color;
+
+    text-transform: uppercase;
+    
+    transition: all .4s;
+
+    &__icon{
+        margin-left: 6px;
+    }
+
+    &:hover, &:focus{
+        text-decoration: none;
+    }
+
+    &--full{
+        width: 100%;
+    }
+}
