@@ -1,0 +1,24 @@
+.item{
+    &__title{
+        font-size: 1.1rem;
+        font-weight: $font-weight-bold;
+        margin-bottom: $spacer/4;
+
+        &_has-icon{
+            position: relative;
+            padding-left: 34px;
+        }
+    }
+    &__icon{
+        width: 24px;
+        &_inside-title{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &__intro{
+        color: $grey;
+    }
+}

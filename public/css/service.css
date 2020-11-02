@@ -1,3 +1,31 @@
+.item__title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.item__title_has-icon {
+  position: relative;
+  padding-left: 34px;
+}
+
+.item__icon {
+  width: 24px;
+}
+
+.item__icon_inside-title {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.item__intro {
+  color: #a7a7a7;
+}
+
 .content-main {
   padding: 40px 0;
 }
@@ -28,6 +56,7 @@
 
 .content-main__preview {
   position: relative;
+  max-width: 100%;
 }
 
 .content-main__prototype {
@@ -39,7 +68,7 @@
   position: absolute;
   z-index: 2;
   bottom: 40px;
-  right: 0;
+  right: 15px;
   -webkit-box-shadow: 4px 0 8px rgba(0, 0, 0, 0.5);
   box-shadow: 4px 0 8px rgba(0, 0, 0, 0.5);
 }

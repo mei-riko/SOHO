@@ -12,55 +12,74 @@ html(lang="ru")
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include component/header/header.pug
         main.container
-            section.container__inner.content-main
-                .row.align-items-center
-                    .col-7
-                        h1.content-main__title
-                            span.text-green Got
-                            | овый сайт на 
-                            span.text-green Tilda 
-                            | за&nbsp;3&nbsp;дня и&nbsp;15к+
-                        p.content-main__intro Спроектируем сайт, напишем тексты, разработаем дизайн и запустим проект. От 3 дней и 15 000 рублей. Получите консультацию и расчет стоимости за Ваш сайт.
-                        .content-main__action
-                            a.btn(data-fancybox data-src="order" href="javascript;") Заполнить бриф
-                            <svg class="content-main__action-main" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 595 400" xml:space="preserve">
-                                <path fill="none" stroke="#C1EA1D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M26,327.4c0,0,65.5,45.8,131.1,41.4c88-5.9,126.3-128.5,190.1-149.5c64.6-21.3,193.3,27.3,229.8-15.2c36.8-42.9-20.9-109.8-17.4-160.3c2.3-33.2,27.6-40.3,27.6-40.3"/>
-                                <path fill="#C1EA1D" d="M3.9,310.2l2,5l2.6-2.6l4.4,3.5L16,302l-16,6.7L3.9,310.2z M11.5,306l-4.9,4.5L6,312.8L4.8,310L11.5,306z"/>
-                            </svg>
-                    .col-5
-                        .content-main__image
-                            img.content-main__prototype(src="../demo/prototype.png" alt="" title="")
-                            img.content-main__example(src="../demo/example.png" alt="" title="")
-                .row.pt-3
-                    .col-4
-                        h2.h3 Всё, что нужно для&nbsp;
-                            span.text-green online 
-                            | продаж
-                .row
-                    .col-4
-                        p.content-main__intro Платформа Tilda позволяет реализовать любой дизайн в 2-3 раза быстрее, чем при разработке с нуля. Кроме того в Тильде интегрировано множество популярных решений, которые легко можно подключить к сайту.
-                    .col-8
-                        .row
-                            .col-6.item.mb-3
-                                .item__title.item__title_adv Анализ задачи
-                                    .item__icon
-                                .item__intro Заполняем подробный бриф и на него основе составляем КП. Если всё в порядке, подписываем договор и выставляем счёт на 50% стоимости проекта.
-                            .col-6.item.mb-3
-                                .item__title.item__title_adv Дизайн концепт
-                                    .item__icon
-                                .item__intro Заполняем подробный бриф и на него основе составляем КП. Если всё в порядке, подписываем договор и выставляем счёт на 50% стоимости проекта.
-                            .col-6.item.mb-3
-                                .item__title.item__title_adv Сборка на Tilda
-                                    .item__icon
-                                .item__intro Заполняем подробный бриф и на него основе составляем КП. Если всё в порядке, подписываем договор и выставляем счёт на 50% стоимости проекта.
-                            .col-6.item.mb-3
-                                .item__title.item__title_adv Рекламный кабинет
-                                    .item__icon
-                                .item__intro Заполняем подробный бриф и на него основе составляем КП. Если всё в порядке, подписываем договор и выставляем счёт на 50% стоимости проекта.
-                    //- a.btn.btn_animation(data-fancybox data-src="order" href="javascript;") Заполнить бриф
-                    //-     svg.btn__icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 -31 512 512" width="16px" height="16px")
-                    //-         path(fill="#c1ea1d" d="m123.195312 260.738281 63.679688 159.1875 82.902344-82.902343 142.140625 112.976562 100.082031-450-512 213.265625zm242.5-131.628906-156.714843 142.941406-19.519531 73.566407-36.058594-90.164063zm0 0")
-                    
+            section.container__inner
+                .content-main
+                    //- Main Screen
+                    .row.align-items-center
+                        .col-7
+                            h1.content-main__title
+                                span.text-green Got
+                                | овый сайт на 
+                                span.text-green Tilda 
+                                | за&nbsp;3&nbsp;дня и&nbsp;15к+
+                            p.content-main__intro Спроектируем сайт, напишем тексты, разработаем дизайн и запустим проект. От 3 дней и 15 000 рублей. Получите консультацию и расчет стоимости за Ваш сайт.
+                            .content-main__action
+                                a.btn(data-fancybox data-src="order" href="javascript;") Заполнить бриф
+                                <svg class="content-main__action-main" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 595 400" xml:space="preserve">
+                                    <path fill="none" stroke="#C1EA1D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M26,327.4c0,0,65.5,45.8,131.1,41.4c88-5.9,126.3-128.5,190.1-149.5c64.6-21.3,193.3,27.3,229.8-15.2c36.8-42.9-20.9-109.8-17.4-160.3c2.3-33.2,27.6-40.3,27.6-40.3"/>
+                                    <path fill="#C1EA1D" d="M3.9,310.2l2,5l2.6-2.6l4.4,3.5L16,302l-16,6.7L3.9,310.2z M11.5,306l-4.9,4.5L6,312.8L4.8,310L11.5,306z"/>
+                                </svg>
+                        .col-5
+                            .content-main__image
+                                img.content-main__prototype(src="../demo/prototype.png" alt="" title="")
+                                img.content-main__example(src="../demo/example.png" alt="" title="")
+                    //- Step & Advantage
+                    .row.pt-4
+                        .col-4
+                            h2.h3 Всё, что нужно для&nbsp;
+                                span.text-green online 
+                                | продаж
+                    .row
+                        .col-4
+                            p.content-main__intro Платформа Tilda позволяет реализовать любой дизайн в 2-3 раза быстрее, чем при разработке с нуля. Кроме того в Тильде интегрировано множество популярных решений, которые легко можно подключить к сайту.
+                        .col-8
+                            .row
+                                .col-6.item.mb-3
+                                    .item__title.item__title_has-icon 
+                                        img.item__icon.item__icon_inside-title(src="../icon/suspicious.svg" alt="" title="")
+                                        | Анализ задачи
+                                    .item__intro Заполняем подробный бриф и на него основе составляем КП. Если всё в порядке, подписываем договор и выставляем счёт на 50% стоимости проекта.
+                                .col-6.item.mb-3
+                                    .item__title.item__title_has-icon 
+                                        img.item__icon.item__icon_inside-title(src="../icon/suspicious.svg" alt="" title="")
+                                        | Дизайн концепт
+                                    .item__intro Заполняем подробный бриф и на него основе составляем КП. Если всё в порядке, подписываем договор и выставляем счёт на 50% стоимости проекта.
+                                .col-6.item.mb-3
+                                    .item__title.item__title_has-icon
+                                        img.item__icon.item__icon_inside-title(src="../icon/suspicious.svg" alt="" title="")
+                                        | Сборка на Tilda
+                                    .item__intro Заполняем подробный бриф и на него основе составляем КП. Если всё в порядке, подписываем договор и выставляем счёт на 50% стоимости проекта.
+                                .col-6.item.mb-3
+                                    .item__title.item__title_has-icon 
+                                        img.item__icon.item__icon_inside-title(src="../icon/suspicious.svg" alt="" title="")
+                                        | Рекламный кабинет
+                                    .item__intro Заполняем подробный бриф и на него основе составляем КП. Если всё в порядке, подписываем договор и выставляем счёт на 50% стоимости проекта.
+                        //- a.btn.btn_animation(data-fancybox data-src="order" href="javascript;") Заполнить бриф
+                        //-     svg.btn__icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 -31 512 512" width="16px" height="16px")
+                        //-         path(fill="#c1ea1d" d="m123.195312 260.738281 63.679688 159.1875 82.902344-82.902343 142.140625 112.976562 100.082031-450-512 213.265625zm242.5-131.628906-156.714843 142.941406-19.519531 73.566407-36.058594-90.164063zm0 0")
+                //- Compare
+                .content-compare
+                    .row.justify-content-between
+                        .col-3
+                            .content-compare__image(style="background-image: url('../demo/img.png');")
+                        .col-8
+                            .row
+                                .col-6
+                                    h3 Tilda — идеальное решение?
+                                .col-6
+                                    p Честно обо всех 
+                                        span.text-bold.text-green «за» и «против» 
+                                        | разработки сайта на Тильда. Нам важно, чтобы вы имели представление обо всех нюансах работы.
         include component/footer/footer.pug
         script(src="./js/jquery.inputmask.min.js")
 
