@@ -1,0 +1,19 @@
+.navbar{
+    &__title{
+        font-weight: $font-weight-bold;
+        margin-bottom: $spacer/2;
+    }
+    &__item{
+        color: $light-grey;
+        line-height: 1.4;
+        margin-bottom: $spacer/4;
+
+        &:hover, &:focus{
+            color: $green;
+        }
+
+        & + .navbar__title{
+            margin-top: $spacer/2;
+        }
+    }
+}

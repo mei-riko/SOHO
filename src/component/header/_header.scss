@@ -1,0 +1,51 @@
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    width: 100%;
+
+    &__logo{
+        position: fixed;
+        top: $spacer;
+        left: 44px;
+        
+        width: 42px;
+
+        &__path{
+            fill: $white;
+        }
+    }
+    &__top{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: $spacer 0 0;
+        font-size: map-get($map: $font-size, $key: "sm");
+    }
+
+    &__email{
+        font-weight: $font-weight-bold;
+        color: $green;
+        text-transform: uppercase;
+        margin-right: $spacer;
+    }
+    &__link{
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        color: $white;
+
+        &:hover, &:focus{
+            color: $light-grey;
+        }
+    }
+    &__nav{
+        height: 50px;
+        width: 50px;
+        padding: 14px;
+        border-radius: 50%;
+        background: $white;
+
+        cursor: pointer;
+    }
+}

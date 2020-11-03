@@ -1,0 +1,28 @@
+.content-form{
+    padding: map-get($map: $spacers, $key: 4) 0;
+
+    &__intro{
+        max-width: calc(100% - 40px);
+        color: $grey;
+    }
+    &__form{
+        margin-top: $spacer;
+    }
+    &__animation{
+        max-width: 90%;
+        margin: 0 auto;
+
+        #path, #elem{
+            transition: .4s;
+        }
+
+        &:hover, &:focus{
+            #path{
+                stroke: $grey;
+            }
+            #elem{
+                fill: $white;
+            }
+        }
+    }
+}

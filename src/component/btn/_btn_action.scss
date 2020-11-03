@@ -1,8 +1,11 @@
 .btn_action{
-    // background: $bg-secondary;
-    color: $white;
+    font-weight: $font-weight-bold;
+    background: $green;
+    color: $black;
+    padding: 14px 34px;
+
     &:hover, &:focus{
-        // background: lighten($color: $bg-secondary, $amount: 4);
-        color: $white;
+        background: darken($color: $green, $amount: 10);
+        color: $black;
     }
 }

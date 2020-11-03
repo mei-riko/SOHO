@@ -1,0 +1,80 @@
+.item_price{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    background-color: $white;
+    color: $black;
+    padding: $grid-gutter-width;
+
+    transition: .4s;
+    cursor: pointer;
+
+    // Content Col
+    &__content{
+        flex: 0 0 calc(100% - 350px);
+        max-width: calc(100% - 350px);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    // Price Col
+    &__info{
+        flex: 0 0 250px;
+        max-width: 250px;
+    }
+    // Main Title
+    &__title{
+        font-size: 2rem;
+        line-height: $line-height-heading;
+        font-weight: $font-weight-bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: $spacer/4;
+
+        & + .item_price__add{
+            margin-top: $spacer/2;
+        }
+    }
+    // Price Info
+    &__add{
+        font-size: 1.35rem;
+        line-height: $line-height-heading;
+        font-weight: $font-weight-bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        opacity: .5;
+    }
+    &__add-intro{
+        font-size: map-get($map: $font-size, $key: "sm");
+        opacity: .5;
+
+        & + .item_price__add{
+            margin-top: $spacer/4;
+        }
+    }
+    // Tags
+    &__group{
+        margin-top: $spacer/2;
+    }
+    &__label{
+        display: inline-block;
+        font-size: map-get($map: $font-size, $key: "sm");
+
+        background-color: $black;
+        color: $white;
+        padding: 4px 8px;
+    }
+
+    // Selected Item
+    &-promo{
+        background-color: $green;
+        // color: $black;
+    }
+
+    // Forse state
+    &:hover, &:focus{
+        transform: scale(.95);
+    }
+}

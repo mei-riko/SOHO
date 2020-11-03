@@ -35,105 +35,42 @@ $(document).ready(() =>{
       return false;
     }
   });
-
   // Modal
   $('[data-fancybox]').fancybox({
     autoFocus: false
   });
-  // Отмена стандартного поведения ссылки
+  // Link Disable
   $('a[data-trigger="click"]').click(function(e){
     e.preventDefault();
   })
-  // Раскрытие блока
-  $('.toggle-item').on("click", function(e){
-    e.preventDefault();
-    let toggle = $(this);
-    if( !toggle.hasClass("toggle-item--active")){
-      toggle.addClass("toggle-item--active");
-      toggle.find(".toggle-item__title").addClass("toggle-item__title--active");
-      toggle.find(".toggle-item__content").slideDown();
-		}else{
-			toggle.removeClass("toggle-item--active");
-      toggle.find(".toggle-item__title").removeClass("toggle-item__title--active");
-      toggle.find(".toggle-item__content").slideUp();
-    }
+	// Navbar
+  $(".header .header__nav#open-nav").on("click", function(){
+    $(".navbar.navbar_header").addClass("navbar_header--active");
+    $(".overlay").addClass("overlay--navbar");
+    $(".overlay").removeClass("overlay--disable");
+    $("body").addClass("hidden open-navbar");
   });
-  // Слайдер
-	if( $('.slider').length > 0 ){
-    // Review Block Col
-    let $slickReview = $('#reviews');
-		$slickReview.slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			arrows      : true,
-			dots        : true,
-      autoplay  : false,
-      responsive: [
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            infinite: true,
-            arrows: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            arrows: false,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            infinite: true,
-            arrows: false,
-            dots: true
-          }
-        }
-      ]
-    });
-  }
-	// Mobile Navbar
-  $(".navbar-toggle#nav").on("click", function(e){
-		e.preventDefault();
-    let navbar = $(".navbar-collapse");
-		if( !navbar.hasClass("navbar-collapse--active")){
-			navbar.addClass("navbar-collapse--active");
-			$(".navbar-overlay").addClass("navbar-overlay--active");
-		}else{
-			navbar.removeClass("navbar-collapse--active");
-			$(".navbar-overlay").removeClass("navbar-overlay--active");
-		}
+  $(".navbar.navbar_header #close-nav").on("click", function(){
+      $(".navbar.navbar_header").removeClass("navbar_header--active");
+
+      $(".overlay").removeClass("overlay--navbar");
+      $(".overlay").addClass("overlay--disable");
+      
+      $("body").removeClass("hidden");
+      $("body").removeClass("open-navbar");
   });
-  $(".navbar-close").on("click", function(e){
-    e.preventDefault();
-    $(".navbar-collapse").removeClass("navbar-collapse--active");
-    $(".navbar-overlay").removeClass("navbar-overlay--active");
-  });
+
   $(document).mouseup(function (e){ // событие клика по веб-документу
-    let dropdownActive = $(".navbar-collapse.navbar-collapse--active"); // элемент
+    let dropdownActive = $(".navbar.navbar_header.navbar_header--active"); // элемент
     if (!dropdownActive.is(e.target) // клик был не по блоку
-          // && dropdownActive.has(e.target).length === 0 // и не по его дочерним элементам
-          && !$(".navbar-toggle#nav").is(e.target) ) { 
-              $(".navbar-collapse").removeClass("navbar-collapse--active");
-              $(".navbar-overlay").removeClass("navbar-overlay--active");
+          && dropdownActive.has(e.target).length === 0 // и не по его дочерним элементам
+          && !$("#open-nav").is(e.target) ) { 
+              $(".navbar.navbar_header").removeClass("navbar_header--active");
+              $(".overlay").removeClass("overlay--navbar");
+              $(".overlay").addClass("overlay--disable");
+              
+              $("body").removeClass("hidden");
+              $("body").removeClass("open-navbar");
             }
-  });
-  // Hide Navigation on Desktop
-  $(window).resize(function(){
-    if ( $(window).width() > 991 || !window.matchMedia('screen and (max-width: 992px)').matches ){
-      $(".navbar-toggle").removeClass("navbar-toggle--active");
-        $(".navbar-collapse").removeClass("navbar-collapse--active");
-        $(".navbar-overlay").removeClass("navbar-overlay--active");
-    }
   });
 });

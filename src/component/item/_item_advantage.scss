@@ -1,0 +1,40 @@
+.item_advantage{
+    padding: $spacer/2;
+    border: 1px solid $border-color;
+
+    &__title{
+        line-height: 1.3;
+        font-weight: $font-weight-bold;
+        margin-top: $spacer/2;
+
+        &--inverse{
+            color: $grey;
+        }
+    }
+    &__positive{
+        fill: $body-bg;
+        stroke: $green;
+        stroke-width: 5;
+        transition: .4s;
+    }
+    &__negative{
+        fill: lighten($color: $body-bg, $amount: 2);
+        stroke: $red;
+        stroke-width: 3;
+        transition: .4s;
+    }
+
+    &--inverse{
+        border-color: lighten($color: $body-bg, $amount: 2);
+        background-color: lighten($color: $body-bg, $amount: 2);
+    }
+
+    &:hover, &:focus{
+        .item_advantage__positive{
+            fill: $green;
+        }
+        .item_advantage__negative{
+            fill: $red;
+        }
+    }
+}

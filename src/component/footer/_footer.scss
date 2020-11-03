@@ -1,0 +1,34 @@
+.footer{
+    font-size: map-get($map: $font-size, $key: "sm");
+    padding: map-get($map: $spacers, $key: 4) 0;
+
+    &__logo{
+        width: 160px;
+        max-width: 100%;
+        margin-bottom: $spacer/4;
+
+        fill: $white;
+    }
+    &__offer{
+        font-weight: $font-weight-bold;
+    }
+    &__email{
+        font-weight: $font-weight-bold;
+        color: $green;
+        margin: $spacer/4 0 $spacer/2;
+    }
+    &__copyright{
+        color: $grey;
+    }
+
+    &__title{
+        font-size: map-get($map: $font-size, $key: "sm");
+        font-weight: $font-weight-bold;
+        margin-bottom: $spacer/4;
+    }
+    &__link{
+        display: block;
+        color: $grey;
+        margin-bottom: $spacer/6;
+    }
+}

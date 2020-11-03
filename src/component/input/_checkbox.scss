@@ -9,21 +9,21 @@
         &:checked + .checkbox__label:after {
             content: '';
             display: block;
-            background-color: $red;
+            background: url("../icon/checkmark.svg") no-repeat center / 8px;
 
-            width: 5px;
-            height: 5px;
+            width: 14px;
+            height: 14px;
 
             position: absolute;
-            left: 4px;
-            top: 4px;
+            left: 0;
+            top: calc( 50% - 7px);
         }
     }
     &__label{
         position: relative;
         margin: 0;
-        padding-left: 20px;
-        line-height: 12px;
+        padding-left: 24px;
+        // line-height: 12px;
 
         cursor: pointer;
 
@@ -33,12 +33,12 @@
 
             border: 1px solid $grey;
 
-            width: 13px;
-            height: 13px;
+            width: 14px;
+            height: 14px;
 
             position: absolute;
             left: 0;
-            top: 0;
+            top: calc( 50% - 7px);
         }
     }
 }
