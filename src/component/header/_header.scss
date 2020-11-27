@@ -26,9 +26,14 @@
 
     &__email{
         font-weight: $font-weight-bold;
-        color: $green;
+        color: $white;
         text-transform: uppercase;
+        text-decoration: underline;
         margin-right: $spacer;
+
+        &:hover, &:focus{
+            color: $light-grey;
+        }
     }
     &__link{
         font-weight: $font-weight-bold;
@@ -40,9 +45,14 @@
         }
     }
     &__nav{
+        position: fixed;
+        top: $spacer;
+        right: $spacer/2;
+
         height: 50px;
         width: 50px;
         padding: 14px;
+        
         border-radius: 50%;
         background: $white;
 

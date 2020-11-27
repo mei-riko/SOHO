@@ -37,7 +37,8 @@ $(document).ready(() =>{
   });
   // Modal
   $('[data-fancybox]').fancybox({
-    autoFocus: false
+    autoFocus: false,
+    touch: false
   });
   // Link Disable
   $('a[data-trigger="click"]').click(function(e){
@@ -48,7 +49,8 @@ $(document).ready(() =>{
     $(".navbar.navbar_header").addClass("navbar_header--active");
     $(".overlay").addClass("overlay--navbar");
     $(".overlay").removeClass("overlay--disable");
-    $("body").addClass("hidden open-navbar");
+    $("body").addClass("hidden open-navbar compensate-for-scrollbar");
+
   });
   $(".navbar.navbar_header #close-nav").on("click", function(){
       $(".navbar.navbar_header").removeClass("navbar_header--active");
@@ -58,6 +60,7 @@ $(document).ready(() =>{
       
       $("body").removeClass("hidden");
       $("body").removeClass("open-navbar");
+      $("body").removeClass("compensate-for-scrollbar");
   });
 
   $(document).mouseup(function (e){ // событие клика по веб-документу

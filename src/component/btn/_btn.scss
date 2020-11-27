@@ -4,7 +4,7 @@
     box-shadow: none;
 
     font-family: $font-family-heading;
-    font-size: map-get($map: $font-size, $key: "sm");
+    font-size: map-get($map: $font-size, $key: "xs");
     font-weight: $font-weight-bolder;
     letter-spacing: .5px;
     color: $body-color;

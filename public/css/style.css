@@ -118,7 +118,7 @@ sup {
 }
 
 a {
-  color: #a7a7a7;
+  color: #d5d5d5;
   text-decoration: none;
   background-color: transparent;
 }
@@ -1846,7 +1846,7 @@ template {
 html, body {
   font-size: 15px;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.7;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
@@ -1925,7 +1925,7 @@ a {
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
-  color: #a7a7a7;
+  color: #d5d5d5;
 }
 
 a:hover, a:focus {
@@ -1938,7 +1938,7 @@ a:hover, a:focus {
 }
 
 .link-inverse:hover {
-  color: #a7a7a7;
+  color: #d5d5d5;
 }
 
 table td {
@@ -2022,7 +2022,7 @@ table td {
 }
 
 .text-grey {
-  color: #a7a7a7;
+  color: #d5d5d5;
 }
 
 .text-uppercase {
@@ -2530,7 +2530,7 @@ table td {
   -webkit-box-shadow: none;
   box-shadow: none;
   font-family: "Open Sans", sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: .5px;
   color: #ffffff;
@@ -2573,13 +2573,25 @@ table td {
   color: #242424;
 }
 
+.btn_secondary {
+  font-weight: 800;
+  border: 3px solid #c1ea1d;
+  color: #ffffff;
+  padding: 14px 34px;
+}
+
+.btn_secondary:hover, .btn_secondary:focus {
+  border-color: #79930e;
+  color: #ffffff;
+}
+
 .form {
   margin: 0;
 }
 
 .form__agree {
   font-size: 12px;
-  color: #a7a7a7;
+  color: #d5d5d5;
 }
 
 .ajax_form span.error {
@@ -2661,32 +2673,32 @@ table td {
 .input::-webkit-input-placeholder {
   -webkit-transition: .4s;
   transition: .4s;
-  color: #a7a7a7;
+  color: #d5d5d5;
 }
 
 .input::-moz-placeholder {
   -moz-transition: .4s;
   transition: .4s;
-  color: #a7a7a7;
+  color: #d5d5d5;
 }
 
 .input:-ms-input-placeholder {
   -ms-transition: .4s;
   transition: .4s;
-  color: #a7a7a7;
+  color: #d5d5d5;
 }
 
 .input::-ms-input-placeholder {
   -ms-transition: .4s;
   transition: .4s;
-  color: #a7a7a7;
+  color: #d5d5d5;
 }
 
 .input::placeholder {
   -webkit-transition: .4s;
   -o-transition: .4s;
   transition: .4s;
-  color: #a7a7a7;
+  color: #d5d5d5;
 }
 
 .input:hover, .input:focus {
@@ -2754,7 +2766,7 @@ table td {
 .checkbox__label:before {
   content: '';
   display: block;
-  border: 1px solid #a7a7a7;
+  border: 1px solid #d5d5d5;
   width: 14px;
   height: 14px;
   position: absolute;
@@ -2840,9 +2852,14 @@ table td {
 
 .header__email {
   font-weight: 800;
-  color: #c1ea1d;
+  color: #ffffff;
   text-transform: uppercase;
+  text-decoration: underline;
   margin-right: 40px;
+}
+
+.header__email:hover, .header__email:focus {
+  color: #e7e7e7;
 }
 
 .header__link {
@@ -2856,6 +2873,9 @@ table td {
 }
 
 .header__nav {
+  position: fixed;
+  top: 40px;
+  right: 20px;
   height: 50px;
   width: 50px;
   padding: 14px;
@@ -2887,7 +2907,7 @@ table td {
 }
 
 .footer__copyright {
-  color: #a7a7a7;
+  color: #d5d5d5;
 }
 
 .footer__title {
@@ -2898,7 +2918,7 @@ table td {
 
 .footer__link {
   display: block;
-  color: #a7a7a7;
+  color: #d5d5d5;
   margin-bottom: 6.66667px;
 }
 

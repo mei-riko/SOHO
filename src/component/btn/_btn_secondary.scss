@@ -1,0 +1,11 @@
+.btn_secondary{
+    font-weight: $font-weight-bold;
+    border: 3px solid $green;
+    color: $white;
+    padding: 14px 34px;
+
+    &:hover, &:focus{
+        border-color: darken($color: $green, $amount: 20);
+        color: $white;
+    }
+}

@@ -29,9 +29,11 @@
     &__preview{
         transition: .4s;
         filter: grayscale(1);
+        cursor: pointer;
 
         &:hover, &:focus{
             filter: grayscale(0);
+            transform: scale(.95);
         }
     }
 }
