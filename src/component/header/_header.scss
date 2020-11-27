@@ -59,3 +59,29 @@
         cursor: pointer;
     }
 }
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .header{
+        &__logo{
+            width: 30px;
+            left: 30px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .header{
+        &__top{
+            padding-top: $spacer/2;
+        }
+        &__logo{
+            top: 26px;
+            left: 12px;
+            width: 24px;
+        }
+        &__nav{
+            top: $spacer/2;
+        }
+        &__link{
+            display: none;
+        }
+    }
+}

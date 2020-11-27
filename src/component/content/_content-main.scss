@@ -43,6 +43,7 @@
         right: $grid-gutter-width/2;
 
         width: 460px;
+        max-width: 100%;
 
         box-shadow: 4px 0 8px rgba(0, 0, 0, 0.5);
     }
@@ -57,13 +58,91 @@
         transform: rotate(-15deg);
     }
 }
-
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .content-main{
+        &__title{
+            font-size: 40px;
+        }
+        &__intro{
+            width: 440px;
+        }
         &__action{
+            &-main{
+                bottom: -30px;
+                left: 220px;
+                width: 280px;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .content-main{
+        &__title{
+            margin-top: 2*$spacer;
+        }
+        &__action{
+            padding-top: $spacer/2;
             &-main{
                 display: none;
             }
+        }
+        &__example{
+            right: -$grid-gutter-width/3;
+        }
+        &__sale{
+            width: 120px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .content-main{
+        &__title{
+            margin-top: $spacer;
+            font-size: 32px;
+        }
+        &__image{
+            margin-top: $spacer;
+        }
+        &__prototype{
+            width: 200px;
+            margin-left: $spacer/2;
+        }
+        &__sale{
+            left: -$spacer/2;
+            bottom: -$spacer/2;
+        }
+        &__example{
+            bottom: 60px;
+            right: 0px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .content-main{
+        &__title{
+            margin-top: $spacer/2;
+        }
+        &__action{
+            padding-top: 0;
+            padding-bottom: 0;
+            .btn{
+                width: 100%;
+            }
+        }
+        &__image{
+            margin-top: $spacer;
+        }
+        &__prototype{
+            display: none;
+        }
+        &__example{
+            position: inherit;
+            max-width: 100%;
+        }
+        &__sale{
+            width: 80px;
+            left: -$spacer/4;
+            bottom: -$spacer/2;
         }
     }
 }

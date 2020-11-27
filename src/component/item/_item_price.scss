@@ -7,6 +7,9 @@
     color: $black;
     padding: $grid-gutter-width;
 
+    width: 795px;
+    max-width: 100%;
+    
     transition: .4s;
     cursor: pointer;
 
@@ -65,6 +68,7 @@
         background-color: $black;
         color: $white;
         padding: 4px 8px;
+        margin: 2px;
     }
 
     // Selected Item
@@ -76,5 +80,47 @@
     // Forse state
     &:hover, &:focus{
         transform: scale(.95);
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .item_price{
+        // Content Col
+        &__content{
+            flex: 0 0 calc(100% - 200px);
+            max-width: calc(100% - 200px);
+        }
+        // Price Col
+        &__info{
+            flex: 0 0 150px;
+            max-width: 150px;
+        }
+        &__group{
+            margin-top: 0;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .item_price{
+        // Content Col
+        &__content{
+            flex: 0 0 calc(100% - 150px);
+            max-width: calc(100% - 150px);
+        }
+        // Price Col
+        &__info{
+            flex: 0 0 130px;
+            max-width: 130px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .item_price{
+        padding: $spacer/2;
+
+        &__content{
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: $spacer/2;
+        }
     }
 }

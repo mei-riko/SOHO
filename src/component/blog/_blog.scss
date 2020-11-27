@@ -1,8 +1,11 @@
 .blog{
     &__item-image{
+        background: no-repeat center / cover;
         max-width: 100%;
+        height: 120px;
 
         &--full{
+            height: 200px;
             margin-bottom: $spacer/2;
         }
     }
@@ -23,5 +26,28 @@
         font-size: 12px;
         color: $grey;
         margin-bottom: $spacer/4;
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .blog{
+        &__item-image{
+            height: 80px;
+    
+            &--full{
+                height: 80px;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .blog{
+        &__item-image{
+            height: 60px;
+    
+            &--full{
+                height: 60px;
+            }
+        }
     }
 }

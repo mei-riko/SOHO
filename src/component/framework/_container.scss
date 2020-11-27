@@ -24,6 +24,23 @@
   padding-right: 0;
   padding-left: 0
 }
+
+
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+  .container{
+    &__inner{
+      margin-left: 80px;
+    }
+  }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+  .container{
+    padding-right: $grid-gutter-width;
+    &__inner{
+      margin-left: $spacer;
+    }
+  }
+}
 // < 1600px
 // @media all and (max-width: map-get($grid-breakpoints, 'xl')){
 //   .container{

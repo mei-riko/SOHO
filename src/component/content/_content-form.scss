@@ -26,3 +26,10 @@
         }
     }
 }
+
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .content-form{
+        padding-top: map-get($map: $spacers, $key: 3);
+    }
+}

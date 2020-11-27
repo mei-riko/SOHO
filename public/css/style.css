@@ -358,6 +358,21 @@ template {
   padding-left: 0;
 }
 
+@media all and (max-width: 1360px) {
+  .container__inner {
+    margin-left: 80px;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .container {
+    padding-right: 30px;
+  }
+  .container__inner {
+    margin-left: 40px;
+  }
+}
+
 .col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
   position: relative;
   width: 100%;
@@ -533,7 +548,7 @@ template {
   }
 }
 
-@media all and (max-width: 1400px) {
+@media all and (max-width: 1360px) {
   .col-lg-1 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 8.33333%;
@@ -1191,7 +1206,7 @@ template {
   }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1360px) {
   .flex-lg-column, .flex-lg-row {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
@@ -2089,7 +2104,7 @@ table td {
   }
 }
 
-@media all and (max-width: 1400px) {
+@media all and (max-width: 1360px) {
   .d-lg-flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2335,7 +2350,7 @@ table td {
   }
 }
 
-@media all and (max-width: 1400px) {
+@media all and (max-width: 1360px) {
   .mt-lg-0 {
     margin-top: 0;
   }
@@ -2565,7 +2580,8 @@ table td {
   font-weight: 800;
   background: #c1ea1d;
   color: #242424;
-  padding: 14px 34px;
+  text-align: center;
+  padding: 14px 24px;
 }
 
 .btn_action:hover, .btn_action:focus {
@@ -2577,7 +2593,8 @@ table td {
   font-weight: 800;
   border: 3px solid #c1ea1d;
   color: #ffffff;
-  padding: 14px 34px;
+  text-align: center;
+  padding: 14px 24px;
 }
 
 .btn_secondary:hover, .btn_secondary:focus {
@@ -2882,6 +2899,30 @@ table td {
   border-radius: 50%;
   background: #ffffff;
   cursor: pointer;
+}
+
+@media all and (max-width: 1360px) {
+  .header__logo {
+    width: 30px;
+    left: 30px;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .header__top {
+    padding-top: 20px;
+  }
+  .header__logo {
+    top: 26px;
+    left: 12px;
+    width: 24px;
+  }
+  .header__nav {
+    top: 20px;
+  }
+  .header__link {
+    display: none;
+  }
 }
 
 .footer {

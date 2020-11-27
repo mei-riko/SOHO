@@ -2,7 +2,8 @@
     font-weight: $font-weight-bold;
     background: $green;
     color: $black;
-    padding: 14px 34px;
+    text-align: center;
+    padding: 14px 24px;
 
     &:hover, &:focus{
         background: darken($color: $green, $amount: 10);
