@@ -69,11 +69,13 @@ $(document).ready(() =>{
           && dropdownActive.has(e.target).length === 0 // и не по его дочерним элементам
           && !$("#open-nav").is(e.target) ) { 
               $(".navbar.navbar_header").removeClass("navbar_header--active");
+
               $(".overlay").removeClass("overlay--navbar");
               $(".overlay").addClass("overlay--disable");
               
               $("body").removeClass("hidden");
               $("body").removeClass("open-navbar");
+              $("body").removeClass("compensate-for-scrollbar");
             }
   });
 });
