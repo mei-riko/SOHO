@@ -2048,6 +2048,10 @@ table td {
   font-weight: 700;
 }
 
+.text-underline {
+  text-decoration: underline;
+}
+
 .text-small, small, .small {
   font-size: 0.9rem;
 }
@@ -2548,8 +2552,10 @@ table td {
   font-size: 12px;
   font-weight: 600;
   letter-spacing: .5px;
-  color: #ffffff;
   text-transform: uppercase;
+  color: #ffffff;
+  background-color: inherit;
+  padding: 0;
   -webkit-transition: all .4s;
   -o-transition: all .4s;
   transition: all .4s;
@@ -2557,10 +2563,14 @@ table td {
 
 .btn__icon {
   margin-left: 10px;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
 }
 
 .btn:hover, .btn:focus {
   text-decoration: none;
+  outline: none;
 }
 
 .btn--full {
@@ -2574,6 +2584,10 @@ table td {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.btn--has-icon:hover .btn__icon, .btn--has-icon:focus .btn__icon {
+  margin-left: 15px;
 }
 
 .btn_action {
@@ -2606,25 +2620,23 @@ table td {
   margin: 0;
 }
 
+.form__validation {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
 .form__agree {
   font-size: 12px;
   color: #d5d5d5;
 }
 
-.ajax_form span.error {
-  color: #c62024 !important;
-  font-size: 12px;
-}
-
-.ajax_form .error-inverse {
-  color: #ffffff !important;
-}
-
-.ajax_form .form__input.error {
+.input.error,
+.ajax_form .input.error {
   border-color: #c62024;
 }
 
-.ajax_form .form-validation.error {
+.form__validation.error,
+.ajax_form .form__validation.error {
   color: #c62024 !important;
 }
 
@@ -2655,25 +2667,29 @@ table td {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 30px;
+  font-size: 21px;
   line-height: 30px;
   width: 34px;
   text-align: center;
-  border-radius: 0 0 0 15px;
+  border-radius: 0;
   color: #fff;
   outline: 0;
 }
 
 .jGrowl#jGrowl .jGrowl-notification.af-message-success {
-  background-color: #f9fcf7 !important;
+  background-color: #fff !important;
+}
+
+.jGrowl#jGrowl .jGrowl-notification.af-message-success .jGrowl-close {
+  background: #c1ea1d;
 }
 
 .jGrowl#jGrowl .jGrowl-notification.af-message-error {
-  background-color: #fef8f8 !important;
+  background-color: #fff !important;
 }
 
 .jGrowl#jGrowl .jGrowl-notification.af-message-error .jGrowl-close {
-  background: #df0a0a;
+  background: #c62024;
 }
 
 .input {
@@ -2745,6 +2761,10 @@ table td {
 
 .input--full {
   width: 100%;
+}
+
+.input--has-validation {
+  margin-bottom: 6.66667px;
 }
 
 .checkbox {

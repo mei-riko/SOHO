@@ -213,9 +213,10 @@ html(lang="ru")
                         form.form.content-form__form
                             .form__group.row
                                 .col-6.col-xs-12
-                                    input.input.input--full(type="Email" placeholder="E-mail * ")
+                                    input.input.input--full(type="Email" placeholder="E-mail")
                                 .col-6.col-xs-12
-                                    input.input.input--full.phone(type="tel" placeholder="Телефон")
+                                    input.input.input--has-validation.input--full.phone(type="tel" placeholder="Телефон *")
+                                    .form__validation.error_phone.error Укажите корректный номер
                             .form__group.row
                                 .col-6.col-xs-12
                                     input.input.input--full(type="text" placeholder="Ваш бюджет?")
@@ -226,7 +227,7 @@ html(lang="ru")
                                     input.checkbox__input#agreeInline(type="checkbox" name="agreeInline" checked="checked" required="required")
                                     label.checkbox__label(for="agreeInline") согласен с обработкой 
                                         a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных
-                                a.btn.btn--has-icon(type="submit") Обсудить проект
+                                button.btn.btn--has-icon(type="submit") Обсудить проект
                                     svg.btn__icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 -31 512 512" width="16px" height="16px")
                                         path(fill="#c1ea1d" d="m123.195312 260.738281 63.679688 159.1875 82.902344-82.902343 142.140625 112.976562 100.082031-450-512 213.265625zm242.5-131.628906-156.714843 142.941406-19.519531 73.566407-36.058594-90.164063zm0 0")
                     .col-4.d-md-none

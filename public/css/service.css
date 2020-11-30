@@ -578,5 +578,9 @@
 }
 
 .modal_portfolio {
-  width: 1200px;
+  width: 1080px;
+}
+
+.modal_portfolio.fancybox-content {
+  padding: 0;
 }

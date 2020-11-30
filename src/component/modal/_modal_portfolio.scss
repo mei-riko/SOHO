@@ -1,3 +1,7 @@
 .modal_portfolio{
-    width: 1200px;
+    width: 1080px;
+
+    &.fancybox-content{
+        padding: 0;
+    }
 }

@@ -7,18 +7,22 @@
     font-size: map-get($map: $font-size, $key: "xs");
     font-weight: $font-weight-bolder;
     letter-spacing: .5px;
-    color: $body-color;
-
     text-transform: uppercase;
-    
+
+    color: $body-color;
+    background-color: inherit;
+    padding: 0;
+
     transition: all .4s;
 
     &__icon{
         margin-left: 10px;
+        transition: all .4s;
     }
 
     &:hover, &:focus{
         text-decoration: none;
+        outline: none;
     }
 
     &--full{
@@ -27,5 +31,11 @@
     &--has-icon{
         display: inline-flex;
         align-items: center;
+
+        &:hover, &:focus{
+            .btn__icon{
+                margin-left: 15px;
+            }
+        }
     }
 }

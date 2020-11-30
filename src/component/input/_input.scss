@@ -21,4 +21,7 @@
     &--full{
         width: 100%;
     }
+    &--has-validation{
+        margin-bottom: $spacer/6;
+    } 
 }

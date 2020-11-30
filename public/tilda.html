@@ -274,10 +274,11 @@
             <form class="form content-form__form">
               <div class="form__group row">
                 <div class="col-6 col-xs-12">
-                  <input class="input input--full" type="Email" placeholder="E-mail * "/>
+                  <input class="input input--full" type="Email" placeholder="E-mail"/>
                 </div>
                 <div class="col-6 col-xs-12">
-                  <input class="input input--full phone" type="tel" placeholder="Телефон"/>
+                  <input class="input input--has-validation input--full phone" type="tel" placeholder="Телефон *"/>
+                  <div class="form__validation error_phone error">Укажите корректный номер</div>
                 </div>
               </div>
               <div class="form__group row">
@@ -292,10 +293,12 @@
                 <div class="mt-1 mb-3 form__agree checkbox">
                   <input class="checkbox__input" id="agreeInline" type="checkbox" name="agreeInline" checked="checked" required="required"/>
                   <label class="checkbox__label" for="agreeInline">согласен с обработкой <a class="form__link-inverse" href="/policy.pdf" target="_blank">персональных данных</a></label>
-                </div><a class="btn btn--has-icon" type="submit">Обсудить проект
+                </div>
+                <button class="btn btn--has-icon" type="submit">Обсудить проект
                   <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -31 512 512" width="16px" height="16px">
                     <path fill="#c1ea1d" d="m123.195312 260.738281 63.679688 159.1875 82.902344-82.902343 142.140625 112.976562 100.082031-450-512 213.265625zm242.5-131.628906-156.714843 142.941406-19.519531 73.566407-36.058594-90.164063zm0 0"></path>
-                  </svg></a>
+                  </svg>
+                </button>
               </div>
             </form>
           </div>
