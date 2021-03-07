@@ -1,6 +1,7 @@
 .navbar{
     &__title{
-        font-weight: $font-weight-bold;
+        font-size: 1.25rem;
+        font-weight: $font-weight-bolder;
         margin-bottom: $spacer/2;
     }
     &__item{

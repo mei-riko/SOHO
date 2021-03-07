@@ -4,6 +4,7 @@ html,body {
     line-height: $line-height;
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
+
     &.hidden{
         overflow: hidden;
     }
@@ -104,15 +105,37 @@ table{
 .text-white{color: $white;}
 .text-black{color: $black;}
 .text-green{color: $green;}
+.text-purple{color: $purple;}
 .text-light{color: $light-grey;}
 .text-grey{color: $grey;}
 
 .text-uppercase{text-transform: uppercase;}
+.text-bolder{font-weight: 500;}
 .text-bold,strong,b{font-weight: 700;}
 .text-underline{text-decoration: underline;}
 
 .text-small,small,.small{font-size: 0.9rem;}
 .text-lead,.lead{font-size: 1.2rem;}
+
+.text-dialog{
+    position: relative;
+    display: inline-block;
+    padding: 4px 6px;
+    border: 4px solid $green;
+    color: $green;
+
+    &:after{
+        border: 10px solid transparent;
+        border-top: 10px solid $green;
+        border-right: none;
+
+        position: absolute;
+        bottom: -24px;
+        right: -4px;
+
+        content: '';
+    }
+}
 
 .text{
     &-right{text-align: right;}

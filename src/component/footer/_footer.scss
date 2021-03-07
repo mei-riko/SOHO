@@ -10,12 +10,12 @@
         fill: $white;
     }
     &__offer{
-        font-weight: $font-weight-bold;
+        // font-weight: $font-weight-bold;
     }
     &__email{
         font-weight: $font-weight-bold;
         color: $green;
-        margin: $spacer/4 0 $spacer/2;
+        margin: $spacer/2 0;
     }
     &__copyright{
         color: $grey;

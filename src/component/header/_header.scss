@@ -1,27 +1,21 @@
 .header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 12;
-    width: 100%;
-
     &__logo{
-        position: fixed;
-        top: $spacer;
-        left: 44px;
+        margin-right: $spacer;
+        transform: translateY(-5px);
         
-        width: 42px;
-
-        &__path{
+        &-svg{
+            width: 160px;
+        }
+        &-path{
             fill: $white;
         }
     }
     &__top{
         display: flex;
         flex-wrap: nowrap;
-        justify-content: space-between;
-        padding: $spacer 0 0;
-        font-size: map-get($map: $font-size, $key: "sm");
+        align-items: center;
+        padding: $spacer 0;
+        font-size: 11px;
     }
 
     &__email{
@@ -30,24 +24,16 @@
         text-transform: uppercase;
         text-decoration: underline;
         margin-right: $spacer;
-
-        &:hover, &:focus{
-            color: $light-grey;
-        }
     }
     &__link{
         font-weight: $font-weight-bold;
         text-transform: uppercase;
         color: $white;
-
-        &:hover, &:focus{
-            color: $light-grey;
-        }
     }
     &__nav{
         position: fixed;
-        top: $spacer;
-        right: $spacer/2;
+        top: 30px;
+        right: $spacer;
 
         height: 50px;
         width: 50px;
@@ -57,6 +43,7 @@
         background: $white;
 
         cursor: pointer;
+        z-index: 999;
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){

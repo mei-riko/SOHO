@@ -1,0 +1,25 @@
+.portfolio{
+    display: grid;
+    grid-gap: $spacer/4;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+
+    &__subtitle{
+        color: $grey;
+        text-decoration: none;
+        font-size: map-get($map: $font-size, $key: xs);
+        padding: $spacer/4 $spacer/2;
+        margin: 0;
+    }
+    &__title{
+        font-weight: $font-weight-bold;
+        padding: $spacer/4 $spacer/2 $spacer/2;
+        margin: 0;
+    }
+
+    &__col{
+        background-color: darken($color: $black, $amount: 4);
+
+        &:hover, &:focus{ text-decoration: none; }
+    }
+}
