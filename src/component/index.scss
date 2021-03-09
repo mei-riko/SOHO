@@ -1,15 +1,11 @@
 @import "variable";
 
 @import "item/item";
-@import "item/item_advantage";
+@import "item/item_link";
 @import "item/item_price";
-@import "item/item_info";
 
 @import "content/content-main";
-@import "content/content-compare";
-@import "content/content-intro";
-@import "content/content-form";
 
 @import "portfolio/portfolio";
 
-@import "modal/modal_portfolio";
+@import "price/price";

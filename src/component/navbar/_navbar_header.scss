@@ -5,7 +5,7 @@
     left: auto;
     right: 0;
 
-    width: 360px;
+    width: 100%;
     max-width: 100%;
 
     padding: $spacer;
@@ -17,7 +17,7 @@
 
     overflow-y: auto;
     overflow-x: hidden;
-    transform: translateX(360px);
+    transform: translateX(100%);
     transition: transform 0.2s 0s;
     transition-property: transform, visibility;
 

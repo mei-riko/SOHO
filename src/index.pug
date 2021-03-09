@@ -3,10 +3,256 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Basic Page
 
+        title Index Page
+
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet")
         link(href='./css/style.css', rel='stylesheet')
+        link(href='./css/index.css', rel='stylesheet')
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include component/mixin.pug
+        include component/header/header.pug
+        .container
+            section.container__inner.mb-5
+                //- Main Screen
+                .content-main
+                    h1.content-main__title Маркетинговое агентство полного цикла
+                    span.content-main__subtitle для малого бизнеса
+                    .row.justify-content-end.mt-3
+                        .col-5
+                            p.content-main__intro Разрабатываем лендинги и&nbsp;сайты. Создаём логотипы и&nbsp;фирменные стили.
+                                |  SEO-продвижение и&nbsp;настройка рекламы ведутся на&nbsp;основе тщательного анализа 
+                                |  ниши и&nbsp;конкурентов.
+                            button.btn.btn--has-icon(data-fancybox data-src="#hidden-form" href="javascript:;") Обсудить проект
+                                svg.btn__icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 -31 512 512" width="16px" height="16px")
+                                    path(fill="#c1ea1d" d="m123.195312 260.738281 63.679688 159.1875 82.902344-82.902343 142.140625 112.976562 100.082031-450-512 213.265625zm242.5-131.628906-156.714843 142.941406-19.519531 73.566407-36.058594-90.164063zm0 0")
+                //- Services
+                .row.mt-1
+                    +service("Сайт под ключ", "Срок: от 35 дней","../icon/suspicious.svg")
+                    +service("Сайт на Tilda", "Срок: от 4 дней","../icon/suspicious.svg")
+                    +service("Разработка лого", "Срок: от 8 дней","")
+                    +service("Фирменный стиль","Срок: от 16 дней","../icon/suspicious.svg")
+                    +service("Презентации","Срок: от 5 дней","../icon/suspicious.svg")
+                    +service("E-mail рассылки","Срок: от 2 дней","../icon/suspicious.svg")
+                    +service("Полиграфия","Срок: от 1 дня","../icon/suspicious.svg")
+                    +service("Контекстная реклама","Срок: от 6 дней","../icon/suspicious.svg")
+                    +service("Таргет","Срок: от 6 дней","../icon/suspicious.svg")
+                    +service("Упаковка продукта","Срок: от 24 дней","../icon/suspicious.svg")
+                    +service("Контент","Срок: от 3 дней","../icon/suspicious.svg")
+                    +service("SEO","Срок: от 14 дней","../icon/suspicious.svg")
+                    +service("Тех.поддержка сайта","С понедельника по пятницу","../icon/suspicious.svg")
+                    +service("Анализ сайта","Срок: от 2 дней","../icon/suspicious.svg")
+                    +service("Управление репутацией","Срок: от 15 дней","../icon/suspicious.svg")
+                //- Portfolio Link
+                .row.align-items-end.mt-5
+                    .col-6
+                        h4.text-uppercase Новое в&nbsp;нашем портфолио
+                    .col-6.text-right
+                        a.btn.btn_action.btn--small(href="portfolio.html") Все проекты
+                .portfolio.mt-3
+                    +portfolio-link("text.html", "", "/demo/demo-preview.jpg", "EuroComm", "Сайт-визитка на MODx Revo")
+                    +portfolio-link("text.html", "", "/demo/demo-preview.jpg", "KAM fish", "Логотип и иконки для хайлайтс")
+                    +portfolio-link("text.html", "", "/demo/demo-preview.jpg", "Pelibox", "Открытки для доставки еды")
+                //- Promo Price
+                .row.mt-5
+                    .col-5.col-lg-8.col-md-7.col-xs-12
+                        h2.mb-0 Мы знаем, как&nbsp;это 
+                            span.text-green работает
+                .row.mt-2.align-items-end
+                    .col-8.col-lg-10.col-sm-12
+                        p Все рецепты SEO-бабушек и&nbsp;Digital-дедушек остались в&nbsp;прошлом. 
+                            | Мы не боимся брать ответственность за&nbsp;решения: нам доверились 100+ компаний 
+                            | и&nbsp;уже получили крутые результаты. Никаких штампов. Не&nbsp;пишем «сочные» тексты 
+                            | и&nbsp;не&nbsp;делаем «вкусные картинки», 
+                            | а&nbsp;помогаем привлечь клиентов на&nbsp;сайт.
+                    .col-4.col-lg-10.col-sm-12.text-right.text-lg-left
+                        a.btn.btn_action.btn--small(href="price.html") Наш прайс-лист
+                .price.mt-3
+                    .price__col
+                        .item.item_price
+                            .item_price__content
+                                p.item_price__title Логотип 1.0
+                                p.item_price__intro Для тех, кто знает, что хочет: логотип и руководство по его применению. 
+                                .item_price__group
+                                    .item_price__label 1 концепция
+                                    .item_price__label логобук
+                            .item_price__info
+                                p.item_price__title 10000
+                                .item_price__add +4000
+                                .item_price__add-intro гайдлайн вместо логобука
+                                .item_price__add +4000
+                                .item_price__add-intro подготовка макетов для&nbsp;печати
+                    .price__col
+                        .item.item_price
+                            .item_price__content
+                                p.item_price__title mini.Лендинг
+                                p.item_price__intro Презентуйте свои услуги или товары на одной небольшой странице. 
+                                .item_price__group
+                                    .item_price__label Tilda
+                                    .item_price__label CRM
+                                    .item_price__label Я.Директ бесплатно
+                            .item_price__info
+                                p.item_price__title 20000
+                                .item_price__add +4500
+                                .item_price__add-intro онлайн-оплата
+                                .item_price__add +5000
+                                .item_price__add-intro настройка Google Ads
+                    .price__col
+                        .item.item_price
+                            .item_price__content
+                                p.item_price__title SEO-аудит
+                                p.item_price__intro Корректность работы, оптимизация под продвижение, мета-информация, тексты и пр.
+                                .item_price__group
+                                    .item_price__label Google
+                                    .item_price__label Яндекс
+                            .item_price__info
+                                p.item_price__title 15000
+                                .item_price__add +5000
+                                .item_price__add-intro контент-план
+                                .item_price__add +300
+                                .item_price__add-intro подбор семантики на одну страницу
+                    .price__col
+                        .item.item_price
+                            .item_price__content
+                                p.item_price__title Реклама 1+1
+                                p.item_price__intro Подбор ключевых фраз (до 300 шт), настройка объявлений и заголовков, 
+                                    | подключение до 3 целей.
+                                .item_price__group
+                                    .item_price__label Google
+                                    .item_price__label Яндекс
+                            .item_price__info
+                                p.item_price__title 21000
+                                .item_price__add +2000
+                                .item_price__add-intro оптимизация посадочной страницы
+                                .item_price__add +7500
+                                .item_price__add-intro настройка ретаргетинга
+                //- Motivation
+                .content-main.mt-5
+                    h4.content-main__title.content-main__title_secondary Акулы пера? Тигры веб-дизайна? 
+                        | Алигаторы маркетинга? У нас 
+                        span.text-green не зоопарк
+                        | , а сильная команда.
+                    span.content-main__subtitle dream team
+                    .row.justify-content-end.mt-3
+                        .col-4
+                            p.lead.text-bolder При работе над проектами:
+                            p.content-main__list заключаем договор
+                            p.content-main__list погружаемся в тему
+                            p.content-main__list избегаем клише
+                            p.content-main__list ориентируемся на результат
+                            p.content-main__list постоянно взаимодействуем с клиентом
+                        .col-4
+                            p.lead.text-bolder Что мы умеем простыми словами:
+                            p.content-main__list писать интересные тексты
+                            p.content-main__list рисовать стильные сайты
+                            p.content-main__list делать рекламу и она работает
+                            p.content-main__list настраивать удобную админку
+                            p.content-main__list создавать лого, которые нравятся
+            //- Contact Form
+            aside.container__inner.content-form
+                .row
+                    .col-8.col-md-12
+                        h4.h3
+                            span.text-green Pro
+                            | консультируем бесплатно. 
+                            span.d-block И честно
+                                span.text-green .
+                        p.content-form__intro Многие компании, предлагая свои услуги, говорят о том, какие они классные. Мы в первую очередь думаем о вас и вашем комфорте от сотрудничества с SOHO. Поэтому мы расскажем о том, что вы получите, обратившись к нам.
+                        form.form.content-form__form
+                            .form__group.row
+                                .col-6.col-xs-12
+                                    input.input.input--full(type="Email" placeholder="E-mail")
+                                .col-6.col-xs-12
+                                    input.input.input--has-validation.input--full.phone(type="tel" placeholder="Телефон *")
+                                    .form__validation.error_phone.error Укажите корректный номер
+                            .form__group.row
+                                .col-6.col-xs-12
+                                    input.input.input--full(type="text" placeholder="Ваш бюджет?")
+                                .col-6.col-xs-12
+                                    input.input.input--full(type="text" placeholder="Какая услуга интересует?")
+                            .form__group
+                                .mt-1.mb-3.form__agree.checkbox
+                                    input.checkbox__input#agreeInline(type="checkbox" name="agreeInline" checked="checked" required="required")
+                                    label.checkbox__label(for="agreeInline") согласен с обработкой 
+                                        a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных
+                                button.btn.btn_action(type="submit") Обсудить проект
+                    .col-4.d-md-none
+                        <svg class="content-form__animation" id="parent" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+                            <path id="path" fill="none" stroke="#3e3e3e" stroke-width="2" stroke-dasharray="10" d="M 25, 250 a 225,225 0 1,0 450,0 a 225,225 0 1,0 -450,0"/>
+                            <circle id="elem" cx="0" cy="0" r="14" fill="#3e3e3e"/>
+                            <animateMotion xlink:href="#elem" dur="6s" begin="0s" fill="freeze" restart="whenNotActive" repeatCount="indefinite">
+                                <mpath xlink:href="#path" />
+                            </animateMotion>
+                        </svg>
+        include component/footer/footer.pug
+        .modal.modal_form#hidden-form
+            p.h4.modal_form__title 
+                span.text-green Brief 
+                | для начала обсуждения проекта
+            p Заполните бриф сейчас и мы свяжемся с вами уже имея представление о вашем бизнесе.
+            form.form
+                p.text-small.text-bold Контактные данные
+                .form__group.row
+                    .col-6
+                        input.input.input--full(type="Email" placeholder="E-mail * ")
+                    .col-6
+                        input.input.input--full.phone(type="tel" placeholder="Телефон *")
+                p.text-small.text-bold.mt-2 О вашем проекте
+                .form__group.row
+                    .col-6
+                        input.input.input--full(type="text" placeholder="Название компании / проекта")
+                    .col-6
+                        input.input.input--full(type="text" placeholder="Сфера деятельности")
+                p.text-small.text-bold.mt-2 С чем мы можем помочь?
+                .form__group.row
+                    .col-6
+                        .checkbox.mb-1
+                            input.checkbox__input#siteBrief(type="checkbox" name="siteBrief")
+                            label.checkbox__label(for="siteBrief") Разработать сайт с нуля
+                        .checkbox.mb-1
+                            input.checkbox__input#styleBrief(type="checkbox" name="styleBrief")
+                            label.checkbox__label(for="styleBrief") Создать логотип / фирменный стиль
+                        .checkbox
+                            input.checkbox__input#seoBrief(type="checkbox" name="seoBrief")
+                            label.checkbox__label(for="seoBrief") Нужен уникальный контент / SEO
+                    .col-6
+                        .checkbox.mb-1
+                            input.checkbox__input#techBrief(type="checkbox" name="techBrief")
+                            label.checkbox__label(for="techBrief") Анализ или тех. поддержка
+                        .checkbox.mb-1
+                            input.checkbox__input#adsBrief(type="checkbox" name="adsBrief")
+                            label.checkbox__label(for="adsBrief") Настроить рекламу
+                        .checkbox
+                            input.checkbox__input#etcBrief(type="checkbox" name="etcBrief")
+                            label.checkbox__label(for="etcBrief") Другое
+                p.text-small.text-bold.mt-3 Как с вами лучше связаться?
+                .form__group.row
+                    .col-6
+                        .checkbox.mb-1
+                            input.checkbox__input#emailTypeBrief(type="checkbox" name="emailType")
+                            label.checkbox__label(for="emailTypeBrief") Написать на e-mail
+                        .checkbox
+                            input.checkbox__input#phoneTypeBrief(type="checkbox" name="phoneType")
+                            label.checkbox__label(for="phoneTypeBrief") Перезвонить
+                    .col-6
+                        .checkbox.mb-1
+                            input.checkbox__input#messTypeBrief1(type="checkbox" name="messType1")
+                            label.checkbox__label(for="messType1Brief") Telegram
+                        .checkbox
+                            input.checkbox__input#messType2Brief(type="checkbox" name="messType2")
+                            label.checkbox__label(for="messType2Brief") WhatsApp
+                .form__group.mt-3
+                    button.btn.btn_action(type="submit") Обсудить проект
+                    .mt-2.form__agree.checkbox
+                        input.checkbox__input#agreeInlineBrief(type="checkbox" name="agreeInline" checked="checked" required="required")
+                        label.checkbox__label(for="agreeInlineBrief") согласен с обработкой 
+                            a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных
+        script(src="./js/jquery.inputmask.min.js")
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+        
         script(src="./js/app.min.js")

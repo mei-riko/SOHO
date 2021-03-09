@@ -37,13 +37,18 @@
 
         height: 50px;
         width: 50px;
-        padding: 14px;
+        padding: 10px;
         
-        border-radius: 50%;
-        background: $white;
+        // border-radius: 50%;
+        background: darken($color: $black, $amount: 4);
+        border: 1px solid $green;
 
         cursor: pointer;
         z-index: 999;
+
+        &-path{
+            fill: $green;
+        }
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){

@@ -3,15 +3,16 @@
     outline: none;
     box-shadow: none;
 
-    font-family: $font-family-heading;
+    font-family: $font-family-serif;
     font-size: map-get($map: $font-size, $key: "xs");
-    font-weight: $font-weight-bolder;
-    letter-spacing: .5px;
+    font-weight: $font-weight-bold;
+    letter-spacing: 1px;
     text-transform: uppercase;
 
     color: $body-color;
     background-color: inherit;
-    padding: 0;
+    // padding: 0;
+    padding: 14px 24px;
 
     transition: all .4s;
 
@@ -31,11 +32,15 @@
     &--has-icon{
         display: inline-flex;
         align-items: center;
+        padding: 0;
 
         &:hover, &:focus{
             .btn__icon{
                 margin-left: 15px;
             }
         }
+    }
+    &--small{
+        padding: 8px 12px;
     }
 }

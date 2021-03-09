@@ -5,6 +5,8 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Tilda Promo
 
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet")
         link(href='./css/style.css', rel='stylesheet')
         link(href='./css/service.css', rel='stylesheet')
 
@@ -111,9 +113,9 @@ html(lang="ru")
                             p.content-main__list современный дизайн
                 //- Portfolio
                 .portfolio.mt-4
-                    +portfolio("#portfolio-promo","../demo/promo-page.jpg","Портфолио | Promo page","Презентация услуг личного стилиста")
-                    +portfolio("#portfolio-guest","../demo/corp-page.jpg","Портфолио | Simple site","Визитка для гостевого дома в Вардане")
-                    +portfolio("#portfolio-store","../demo/store-page.jpg","Портфолио | E-commerce","Он-лайн магазин масок для лица")
+                    +portfolio-link("javascript:;", "#portfolio-promo", "/demo/demo-preview.jpg", "Промо-страница", "Презентация услуг личного стилиста")
+                    +portfolio-link("javascript:;", "#portfolio-guest", "/demo/demo-preview.jpg", "Сайт-визитка", "Визитка для гостевого дома в Вардане")
+                    +portfolio-link("javascript:;", "#portfolio-promo", "/demo/demo-preview.jpg", "Интернет-магазин", "Он-лайн магазин масок для лица")
                 //- Price
                 .row.pt-2.pb-2.mt-4
                     .col-4.col-lg-8.col-md-10.col-sm-12.mb-lg-3.text-grey

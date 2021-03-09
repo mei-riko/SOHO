@@ -1,0 +1,10 @@
+.item_link{
+    display: block;
+    padding: $grid-gutter-width;
+    border: 1px solid $border-color;
+
+    &:hover, &:focus{
+        background-color: darken($color: $black, $amount: 4);
+        text-decoration: none;
+    }
+}

@@ -10,8 +10,26 @@ mixin no-advantage(name)
             svg.item__icon.item_advantage__negative(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve")
                 path(d="M15.5,65.7C9.3,60.1,4.7,52.8,2.8,44.5C1.3,38.5,2,35.1,2,35.1c1.2-13.6,10.8-24.9,24.1-24.9c8.3,0,15.2,4.4,19.4,11l0,0L31.8,41.2l26.7,3.6L37.5,64L53,73.7l-6.7,20L15.5,65.7z M97.1,44.5c-1.9,8.3-6.5,15.6-12.7,21.2L54.9,92l6.6-19.9l-13.9-8.7l23.2-21.3l-28.6-3.8c0,0,6.3-11.2,8.7-14.7c5.1-7.8,12.5-13.4,21.8-13.4c13.3,0,23.9,11.4,25.1,24.9C97.9,35.1,98.5,38.5,97.1,44.5z")
             .item_advantage__title.item_advantage__title--inverse!= name
-mixin portfolio(href, image, subtitle, title)
-    a.portfolio__col(href="javascript:;" data-fancybox="portfolio" data-src=href)
-        img.img-fluid(src=image )
-        p.portfolio__subtitle= subtitle
-        p.portfolio__title= title
+mixin portfolio-link(href, src, image, title, intro)
+    if href == "javascript:;"
+        a.portfolio__col(href=href data-fancybox="portfolio" data-src=src)
+            img.img-fluid(src=image)
+            p.portfolio__title.text-small.text-bold.text-uppercase= title
+            p.portfolio__intro.text-small!= intro
+    else 
+        a.portfolio__col(href=href)
+            img.img-fluid(src=image)
+            p.portfolio__title.text-small.text-bold.text-uppercase= title
+            p.portfolio__intro.text-small!= intro
+mixin service(title, intro, image)
+    if image != ""
+        .col-3.mt-2
+            a.item.item_link(href="#" title=title)
+                p.item__title.item__title_has-icon.mb-0= title
+                    img.item__icon.item__icon_inside-title(src=image alt=title title=title)
+                p.item__intro.text-small!= intro
+    else
+        .col-3.mt-2
+            a.item.item_link(href="#" title=title)
+                p.item__title.mb-0= title
+                p.item__intro.text-small!= intro

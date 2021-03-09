@@ -16,8 +16,8 @@
 
     // Content Col
     &__content{
-        flex: 0 0 calc(100% - 350px);
-        max-width: calc(100% - 350px);
+        flex: 0 0 calc(100% - 300px);
+        max-width: calc(100% - 300px);
 
         display: flex;
         flex-direction: column;
@@ -25,8 +25,8 @@
     }
     // Price Col
     &__info{
-        flex: 0 0 250px;
-        max-width: 250px;
+        flex: 0 0 200px;
+        max-width: 200px;
     }
     // Main Title
     &__title{
@@ -52,6 +52,8 @@
     }
     &__add-intro{
         font-size: map-get($map: $font-size, $key: "sm");
+        line-height: 18px;
+        margin-top: 4px;
         opacity: .5;
 
         & + .item_price__add{

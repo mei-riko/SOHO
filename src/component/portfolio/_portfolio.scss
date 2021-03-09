@@ -3,23 +3,29 @@
     grid-gap: $spacer/4;
     grid-template-columns: repeat(3, minmax(0, 1fr));
 
-
-    &__subtitle{
-        color: $grey;
-        text-decoration: none;
-        font-size: map-get($map: $font-size, $key: xs);
-        padding: $spacer/4 $spacer/2;
-        margin: 0;
-    }
     &__title{
-        font-weight: $font-weight-bold;
-        padding: $spacer/4 $spacer/2 $spacer/2;
+        // font-weight: $font-weight-bold;
+        padding: $spacer/4 $spacer/2 0;
         margin: 0;
+
+        &:last-child{
+            padding-bottom: $spacer/2;
+        }
+    }
+    &__intro{
+        color: $grey;
+        padding: 0 $spacer/2 $spacer/2;
+        line-height: 1.4;
     }
 
     &__col{
         background-color: darken($color: $black, $amount: 4);
 
         &:hover, &:focus{ text-decoration: none; }
+    }
+
+    // Modification
+    &_navbar{
+        grid-template-columns: repeat(5, minmax(0, 1fr));
     }
 }

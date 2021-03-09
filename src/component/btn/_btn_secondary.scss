@@ -1,12 +1,10 @@
 .btn_secondary{
-    font-weight: $font-weight-bold;
-    border: 3px solid $green;
     color: $white;
+    background: $dark-grey;
     text-align: center;
-    padding: 14px 24px;
 
     &:hover, &:focus{
-        border-color: darken($color: $green, $amount: 20);
         color: $white;
+        background: darken($color: $black, $amount: 4);
     }
 }

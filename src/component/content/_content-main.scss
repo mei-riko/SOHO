@@ -21,6 +21,7 @@
         top: map-get($map: $spacers, $key: 3);
         left: map-get($map: $spacers, $key: 3);
 
+        font-size: map-get($map: $font-size, $key: 'xs');
         text-align: right;
         padding: 4px 6px;
         border: 4px solid $green;
