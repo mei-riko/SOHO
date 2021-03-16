@@ -73,22 +73,29 @@
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .content-main{
         &__title{
-            margin-top: 2*$spacer;
+            margin-top: $spacer/2;
+            font-size: 32px;
         }
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .content-main{
         &__title{
-            margin-top: $spacer;
-            font-size: 32px;
+            margin-top: map-get($map: $spacers, $key: 4);
+            text-indent: 0px;
         }
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .content-main{
+        padding: $spacer/2;
         &__title{
-            margin-top: $spacer/2;
+            font-size: 20px;
+        }
+        &__subtitle{
+            font-size: 10px;
+            top: $spacer/2;
+            left: $spacer/2;
         }
     }
 }

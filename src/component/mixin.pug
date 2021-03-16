@@ -12,24 +12,24 @@ mixin no-advantage(name)
             .item_advantage__title.item_advantage__title--inverse!= name
 mixin portfolio-link(href, src, image, title, intro)
     if href == "javascript:;"
-        a.portfolio__col(href=href data-fancybox="portfolio" data-src=src)
+        a.portfolio__col.mt-xs-2(href=href data-fancybox="portfolio" data-src=src)
             img.img-fluid(src=image)
             p.portfolio__title.text-small.text-bold.text-uppercase= title
             p.portfolio__intro.text-small!= intro
     else 
-        a.portfolio__col(href=href)
+        a.portfolio__col.mt-xs-2(href=href)
             img.img-fluid(src=image)
             p.portfolio__title.text-small.text-bold.text-uppercase= title
             p.portfolio__intro.text-small!= intro
 mixin service(title, intro, image)
     if image != ""
-        .col-3.mt-2
+        .col-3.col-lg-4.col-md-6.col-xs-12.mt-2.mt-xs-1
             a.item.item_link(href="#" title=title)
                 p.item__title.item__title_has-icon.mb-0= title
                     img.item__icon.item__icon_inside-title(src=image alt=title title=title)
                 p.item__intro.text-small!= intro
     else
-        .col-3.mt-2
+        .col-3.col-lg-4.col-md-6.col-xs-12.mt-2.mt-xs-1
             a.item.item_link(href="#" title=title)
                 p.item__title.mb-0= title
                 p.item__intro.text-small!= intro

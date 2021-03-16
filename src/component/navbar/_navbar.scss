@@ -31,3 +31,24 @@
         background-color: $black;
     }
 }
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .navbar{
+        &__grid{
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .navbar{
+        &__grid{
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .navbar{
+        &__grid{
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+}

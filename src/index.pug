@@ -21,8 +21,8 @@ html(lang="ru")
                 .content-main
                     h1.content-main__title Маркетинговое агентство полного цикла
                     span.content-main__subtitle для малого бизнеса
-                    .row.justify-content-end.mt-3
-                        .col-5
+                    .row.justify-content-end.mt-3.mt-sm-2
+                        .col-5.col-lg-7.col-md-9.col-sm-12
                             p.content-main__intro Разрабатываем лендинги и&nbsp;сайты. Создаём логотипы и&nbsp;фирменные стили.
                                 |  SEO-продвижение и&nbsp;настройка рекламы ведутся на&nbsp;основе тщательного анализа 
                                 |  ниши и&nbsp;конкурентов.
@@ -47,18 +47,21 @@ html(lang="ru")
                     +service("Анализ сайта","Срок: от 2 дней","../icon/suspicious.svg")
                     +service("Управление репутацией","Срок: от 15 дней","../icon/suspicious.svg")
                 //- Portfolio Link
-                .row.align-items-end.mt-5
-                    .col-6
+                .row.align-items-end.mt-5.mt-sm-3
+                    .col-6.col-xs-12.text-xs-center
                         h4.text-uppercase Новое в&nbsp;нашем портфолио
-                    .col-6.text-right
+                    .col-6.col-xs-12.text-right.text-xs-left.mt-xs-2
                         a.btn.btn_action.btn--small(href="portfolio.html") Все проекты
-                .portfolio.mt-3
-                    +portfolio-link("text.html", "", "/demo/demo-preview.jpg", "EuroComm", "Сайт-визитка на MODx Revo")
-                    +portfolio-link("text.html", "", "/demo/demo-preview.jpg", "KAM fish", "Логотип и иконки для хайлайтс")
-                    +portfolio-link("text.html", "", "/demo/demo-preview.jpg", "Pelibox", "Открытки для доставки еды")
-                //- Promo Price
-                .row.mt-5
-                    .col-5.col-lg-8.col-md-7.col-xs-12
+                .portfolio.portfolio_large.mt-3.mt-xs-1
+                    +portfolio-link("text.html", "", "/demo/corp-page.jpg", "EuroComm", "Сайт-визитка на MODx Revo")
+                    +portfolio-link("text.html", "", "/demo/promo-page.jpg", "KAM fish", "Логотип и иконки для хайлайтс")
+                    +portfolio-link("text.html", "", "/demo/store-page.jpg", "Pelibox", "Открытки для доставки еды")
+                    +portfolio-link("text.html", "", "/demo/corp-page.jpg", "Pelibox", "Открытки для доставки еды")
+                    +portfolio-link("text.html", "", "/demo/promo-page.jpg", "KAM fish", "Логотип и иконки для хайлайтс")
+                    +portfolio-link("text.html", "", "/demo/corp-page.jpg", "EuroComm", "Сайт-визитка на MODx Revo")
+                //- Promo Page
+                .row.mt-5.mt-sm-3
+                    .col-5.col-lg-10.col-sm-12
                         h2.mb-0 Мы знаем, как&nbsp;это 
                             span.text-green работает
                 .row.mt-2.align-items-end
@@ -68,83 +71,40 @@ html(lang="ru")
                             | и&nbsp;уже получили крутые результаты. Никаких штампов. Не&nbsp;пишем «сочные» тексты 
                             | и&nbsp;не&nbsp;делаем «вкусные картинки», 
                             | а&nbsp;помогаем привлечь клиентов на&nbsp;сайт.
-                    .col-4.col-lg-10.col-sm-12.text-right.text-lg-left
-                        a.btn.btn_action.btn--small(href="price.html") Наш прайс-лист
-                .price.mt-3
-                    .price__col
-                        .item.item_price
-                            .item_price__content
-                                p.item_price__title Логотип 1.0
-                                p.item_price__intro Для тех, кто знает, что хочет: логотип и руководство по его применению. 
-                                .item_price__group
-                                    .item_price__label 1 концепция
-                                    .item_price__label логобук
-                            .item_price__info
-                                p.item_price__title 10000
-                                .item_price__add +4000
-                                .item_price__add-intro гайдлайн вместо логобука
-                                .item_price__add +4000
-                                .item_price__add-intro подготовка макетов для&nbsp;печати
-                    .price__col
-                        .item.item_price
-                            .item_price__content
-                                p.item_price__title mini.Лендинг
-                                p.item_price__intro Презентуйте свои услуги или товары на одной небольшой странице. 
-                                .item_price__group
-                                    .item_price__label Tilda
-                                    .item_price__label CRM
-                                    .item_price__label Я.Директ бесплатно
-                            .item_price__info
-                                p.item_price__title 20000
-                                .item_price__add +4500
-                                .item_price__add-intro онлайн-оплата
-                                .item_price__add +5000
-                                .item_price__add-intro настройка Google Ads
-                    .price__col
-                        .item.item_price
-                            .item_price__content
-                                p.item_price__title SEO-аудит
-                                p.item_price__intro Корректность работы, оптимизация под продвижение, мета-информация, тексты и пр.
-                                .item_price__group
-                                    .item_price__label Google
-                                    .item_price__label Яндекс
-                            .item_price__info
-                                p.item_price__title 15000
-                                .item_price__add +5000
-                                .item_price__add-intro контент-план
-                                .item_price__add +300
-                                .item_price__add-intro подбор семантики на одну страницу
-                    .price__col
-                        .item.item_price
-                            .item_price__content
-                                p.item_price__title Реклама 1+1
-                                p.item_price__intro Подбор ключевых фраз (до 300 шт), настройка объявлений и заголовков, 
-                                    | подключение до 3 целей.
-                                .item_price__group
-                                    .item_price__label Google
-                                    .item_price__label Яндекс
-                            .item_price__info
-                                p.item_price__title 21000
-                                .item_price__add +2000
-                                .item_price__add-intro оптимизация посадочной страницы
-                                .item_price__add +7500
-                                .item_price__add-intro настройка ретаргетинга
+                    .col-4.col-lg-10.col-sm-12.text-right.text-lg-left.mt-lg-2
+                        a.btn.btn_action.btn--small(href="price.html") Наши услуги
+                .service.mt-3
+                    .item.item_service.service__col.service__col--first
+                        .item__title fullstack development
+                        .item_service__image.item_service__image--first(style="background-image:url('/demo/fullstack.png')")
+                    .item.item_service.service__col.mt-xs-1
+                        .item__title google ads & yandex direct
+                        .item_service__image(style="background-image:url('/demo/small.png')")
+                    .item.item_service.service__col.mt-xs-1
+                        .item__title create content
+                        .item_service__image(style="background-image:url('/demo/small.png')")
+                    .item.item_service.service__col.mt-xs-1
+                        .item__title graphic design
+                        .item_service__image(style="background-image:url('/demo/small.png')")
+                    .item.item_service.service__col.mt-xs-1
+                        .item__title support
+                        .item_service__image(style="background-image:url('/demo/small.png')")
                 //- Motivation
-                .content-main.mt-5
+                .content-main.mt-5.mt-sm-3
                     h4.content-main__title.content-main__title_secondary Акулы пера? Тигры веб-дизайна? 
                         | Алигаторы маркетинга? У нас 
                         span.text-green не зоопарк
                         | , а сильная команда.
                     span.content-main__subtitle dream team
                     .row.justify-content-end.mt-3
-                        .col-4
+                        .col-4.col-lg-6.col-sm-12
                             p.lead.text-bolder При работе над проектами:
                             p.content-main__list заключаем договор
                             p.content-main__list погружаемся в тему
                             p.content-main__list избегаем клише
                             p.content-main__list ориентируемся на результат
                             p.content-main__list постоянно взаимодействуем с клиентом
-                        .col-4
+                        .col-4.col-lg-6.col-sm-12.mt-sm-2
                             p.lead.text-bolder Что мы умеем простыми словами:
                             p.content-main__list писать интересные тексты
                             p.content-main__list рисовать стильные сайты

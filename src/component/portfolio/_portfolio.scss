@@ -28,4 +28,20 @@
     &_navbar{
         grid-template-columns: repeat(5, minmax(0, 1fr));
     }
+    &_large {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .portfolio{
+        &_navbar{
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .portfolio{
+        display: block;
+    }
 }

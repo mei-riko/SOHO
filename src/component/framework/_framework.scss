@@ -157,7 +157,10 @@ table{
     border: 1px solid $border-color;
 }
 
-.blockquote, blockquote{}
+.border-block{
+    padding: map-get($map: $spacers, $key: 3);
+    border: 1px solid $border-color;
+}
 
 
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){
@@ -221,6 +224,22 @@ table{
     }
 
     .text-sm{
+        &-left{text-align: left;}
+        &-center{text-align: center;}
+        &-right{text-align: right;}
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .border-block{
+        padding: $spacer/2;
+    }
+    .d-xs{
+        &-flex{display: flex;}
+        &-none{display: none;}
+        &-block{display: block;}
+    }
+
+    .text-xs{
         &-left{text-align: left;}
         &-center{text-align: center;}
         &-right{text-align: right;}

@@ -32,3 +32,9 @@
         margin-bottom: $spacer/6;
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .footer{
+        padding: map-get($map: $spacers, $key: 3) 0;
+    }
+}

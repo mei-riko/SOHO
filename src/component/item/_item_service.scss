@@ -1,0 +1,31 @@
+.item_service{
+    border: 1px solid $border-color;
+    padding: $spacer/2;
+
+    &__image{
+        border: 1px solid $border-color;
+        background: no-repeat center / contain;
+        height: 150px;
+
+        &--first{
+            height: 400px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .item_service{
+        &__image{
+            height: 100px;
+            &--first{
+                height: 285px;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .item_service{
+        &__image{
+            height: 120px;
+        }
+    }
+}

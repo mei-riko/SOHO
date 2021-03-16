@@ -1,5 +1,5 @@
 .content-form{
-    padding: map-get($map: $spacers, $key: 4) 0;
+    // padding: map-get($map: $spacers, $key: 4) 0;
 
     &__intro{
         max-width: calc(100% - 40px);
@@ -25,9 +25,22 @@
             }
         }
     }
+
+    // Modificatio
+    &_callback{
+        border: 1px solid $border-color;
+        padding: $spacer;
+    }
 }
 
-
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .content-form{
+        // Modificatio
+        &_callback{
+            padding: $spacer/2;
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .content-form{
         padding-top: map-get($map: $spacers, $key: 3);

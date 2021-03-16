@@ -16,7 +16,7 @@ nav.navbar.navbar_header
     .navbar_header__close#close-nav
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6Z" fill="currentColor"></path></svg>
     .row
-        .col-8.mb-md-3
+        .col-8.col-lg-7.col-md-12
             .navbar__title Основные услуги
             .navbar__grid.mb-3
                 a.navbar__item.navbar__service(href="") Сайт на Тильда
@@ -34,7 +34,7 @@ nav.navbar.navbar_header
                 a.navbar__item.navbar__service(href="") Тех.поддержка сайта
                 a.navbar__item.navbar__service(href="") Анализ сайта
                 a.navbar__item.navbar__service(href="") Управление репутацией
-        .col-4
+        .col-4.col-lg-5.col-md-12
             .navbar__title Дополнительно
             a.navbar__item.mb-1(href="") Реализованные проекты
             a.navbar__item(href="") Контакты
@@ -45,14 +45,14 @@ nav.navbar.navbar_header
                     span.text-green .
             form.form
                 input.input.input--has-validation.input--full.phone(type="tel" placeholder="Телефон *")
-                .mt-1.mb-3.form__agree.checkbox
+                .mt-1.mb-3.mb-sm-2.form__agree.checkbox
                     input.checkbox__input#agreeInline(type="checkbox" name="agreeInline" checked="checked" required="required")
                     label.checkbox__label(for="agreeInline") согласен с обработкой 
                         a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных
                 button.btn.btn_action.btn--full(type="submit") Обсудить проект
     .portfolio.portfolio_navbar.mt-2
-        +portfolio-link("text.html", "", "/demo/demo-preview.jpg", "EuroComm", "Сайт-визитка на MODx Revo")
-        +portfolio-link("text.html", "", "/demo/demo-preview.jpg", "KAM fish", "Логотип и иконки для&nbsp;хайлайтс")
-        +portfolio-link("text.html", "", "/demo/demo-preview.jpg", "Pelibox", "Открытки для доставки еды")
-        +portfolio-link("text.html", "", "/demo/demo-preview.jpg", "Magenta", "SEO-продвижение школы")
-        +portfolio-link("text.html", "", "/demo/demo-preview.jpg", "Pelibox", "Открытки для доставки еды")
+        +portfolio-link("text.html", "", "/demo/portfolio-1.jpg", "EuroComm", "Сайт-визитка на MODx Revo")
+        +portfolio-link("text.html", "", "/demo/portfolio-2.jpg", "KAM fish", "Логотип и иконки для&nbsp;хайлайтс")
+        +portfolio-link("text.html", "", "/demo/portfolio-3.jpg", "Pelibox", "Открытки для доставки еды")
+        +portfolio-link("text.html", "", "/demo/portfolio-1.jpg", "EuroComm", "Сайт-визитка на MODx Revo")
+        +portfolio-link("text.html", "", "/demo/portfolio-2.jpg", "KAM fish", "Логотип и иконки для&nbsp;хайлайтс")
