@@ -356,12 +356,9 @@
       </div>
     </footer>
     <div class="overlay overlay--disable"></div>
-    <div class="modal modal_form" id="hidden-info">
-      <p class="h4 modal_form__title">Топ-10 интеграций с  <span class="text-green">Tilda </span></p>
-    </div>
     <div class="modal modal_form" id="hidden-form">
-      <p class="h4 modal_form__title"> <span class="text-green">Brief </span>на разработку сайта</p>
-      <p>Заполните бриф сейчас и стоимость сохраниться за вами даже после окончания акционного предложения.</p>
+      <p class="h4 modal_form__title"> <span class="text-green">Brief </span>для начала обсуждения проекта</p>
+      <p>Заполните бриф сейчас и мы свяжемся с вами уже имея представление о вашем бизнесе.</p>
       <form class="form">
         <p class="text-small text-bold">Контактные данные</p>
         <div class="form__group row">
@@ -369,7 +366,7 @@
             <input class="input input--full" type="Email" placeholder="E-mail * "/>
           </div>
           <div class="col-6">
-            <input class="input input--full phone" type="tel" placeholder="Телефон"/>
+            <input class="input input--full phone" type="tel" placeholder="Телефон *"/>
           </div>
         </div>
         <p class="text-small text-bold mt-2">О вашем проекте</p>
@@ -381,7 +378,38 @@
             <input class="input input--full" type="text" placeholder="Сфера деятельности"/>
           </div>
         </div>
-        <p class="text-small text-bold mt-2">Как с вами лучше связаться?</p>
+        <p class="text-small text-bold mt-2">С чем мы можем помочь?</p>
+        <div class="form__group row">
+          <div class="col-6">
+            <div class="checkbox mb-1">
+              <input class="checkbox__input" id="siteBrief" type="checkbox" name="siteBrief"/>
+              <label class="checkbox__label" for="siteBrief">Разработать сайт с нуля</label>
+            </div>
+            <div class="checkbox mb-1">
+              <input class="checkbox__input" id="styleBrief" type="checkbox" name="styleBrief"/>
+              <label class="checkbox__label" for="styleBrief">Создать логотип / фирменный стиль</label>
+            </div>
+            <div class="checkbox">
+              <input class="checkbox__input" id="seoBrief" type="checkbox" name="seoBrief"/>
+              <label class="checkbox__label" for="seoBrief">Нужен уникальный контент / SEO</label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="checkbox mb-1">
+              <input class="checkbox__input" id="techBrief" type="checkbox" name="techBrief"/>
+              <label class="checkbox__label" for="techBrief">Анализ или тех. поддержка</label>
+            </div>
+            <div class="checkbox mb-1">
+              <input class="checkbox__input" id="adsBrief" type="checkbox" name="adsBrief"/>
+              <label class="checkbox__label" for="adsBrief">Настроить рекламу</label>
+            </div>
+            <div class="checkbox">
+              <input class="checkbox__input" id="etcBrief" type="checkbox" name="etcBrief"/>
+              <label class="checkbox__label" for="etcBrief">Другое</label>
+            </div>
+          </div>
+        </div>
+        <p class="text-small text-bold mt-3">Как с вами лучше связаться?</p>
         <div class="form__group row">
           <div class="col-6">
             <div class="checkbox mb-1">
@@ -412,6 +440,9 @@
           </div>
         </div>
       </form>
+    </div>
+    <div class="modal modal_form" id="hidden-info">
+      <p class="h4 modal_form__title">Топ-10 интеграций с  <span class="text-green">Tilda </span></p>
     </div>
     <div class="modal modal_form" id="promo">
       <p class="h4 modal_form__title">Тариф <span class="text-green">PROMO </span></p>

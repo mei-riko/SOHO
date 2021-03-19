@@ -1,0 +1,62 @@
+.modal.modal_form#hidden-form
+    p.h4.modal_form__title 
+        span.text-green Brief 
+        | для начала обсуждения проекта
+    p Заполните бриф сейчас и мы свяжемся с вами уже имея представление о вашем бизнесе.
+    form.form
+        p.text-small.text-bold Контактные данные
+        .form__group.row
+            .col-6
+                input.input.input--full(type="Email" placeholder="E-mail * ")
+            .col-6
+                input.input.input--full.phone(type="tel" placeholder="Телефон *")
+        p.text-small.text-bold.mt-2 О вашем проекте
+        .form__group.row
+            .col-6
+                input.input.input--full(type="text" placeholder="Название компании / проекта")
+            .col-6
+                input.input.input--full(type="text" placeholder="Сфера деятельности")
+        p.text-small.text-bold.mt-2 С чем мы можем помочь?
+        .form__group.row
+            .col-6
+                .checkbox.mb-1
+                    input.checkbox__input#siteBrief(type="checkbox" name="siteBrief")
+                    label.checkbox__label(for="siteBrief") Разработать сайт с нуля
+                .checkbox.mb-1
+                    input.checkbox__input#styleBrief(type="checkbox" name="styleBrief")
+                    label.checkbox__label(for="styleBrief") Создать логотип / фирменный стиль
+                .checkbox
+                    input.checkbox__input#seoBrief(type="checkbox" name="seoBrief")
+                    label.checkbox__label(for="seoBrief") Нужен уникальный контент / SEO
+            .col-6
+                .checkbox.mb-1
+                    input.checkbox__input#techBrief(type="checkbox" name="techBrief")
+                    label.checkbox__label(for="techBrief") Анализ или тех. поддержка
+                .checkbox.mb-1
+                    input.checkbox__input#adsBrief(type="checkbox" name="adsBrief")
+                    label.checkbox__label(for="adsBrief") Настроить рекламу
+                .checkbox
+                    input.checkbox__input#etcBrief(type="checkbox" name="etcBrief")
+                    label.checkbox__label(for="etcBrief") Другое
+        p.text-small.text-bold.mt-3 Как с вами лучше связаться?
+        .form__group.row
+            .col-6
+                .checkbox.mb-1
+                    input.checkbox__input#emailTypeBrief(type="checkbox" name="emailType")
+                    label.checkbox__label(for="emailTypeBrief") Написать на e-mail
+                .checkbox
+                    input.checkbox__input#phoneTypeBrief(type="checkbox" name="phoneType")
+                    label.checkbox__label(for="phoneTypeBrief") Перезвонить
+            .col-6
+                .checkbox.mb-1
+                    input.checkbox__input#messTypeBrief1(type="checkbox" name="messType1")
+                    label.checkbox__label(for="messType1Brief") Telegram
+                .checkbox
+                    input.checkbox__input#messType2Brief(type="checkbox" name="messType2")
+                    label.checkbox__label(for="messType2Brief") WhatsApp
+        .form__group.mt-3
+            button.btn.btn_action(type="submit") Обсудить проект
+            .mt-2.form__agree.checkbox
+                input.checkbox__input#agreeInlineBrief(type="checkbox" name="agreeInline" checked="checked" required="required")
+                label.checkbox__label(for="agreeInlineBrief") согласен с обработкой 
+                    a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных

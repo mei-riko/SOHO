@@ -26,9 +26,7 @@ html(lang="ru")
                             p.content-main__intro Разрабатываем лендинги и&nbsp;сайты. Создаём логотипы и&nbsp;фирменные стили.
                                 |  SEO-продвижение и&nbsp;настройка рекламы ведутся на&nbsp;основе тщательного анализа 
                                 |  ниши и&nbsp;конкурентов.
-                            button.btn.btn--has-icon(data-fancybox data-src="#hidden-form" href="javascript:;") Обсудить проект
-                                svg.btn__icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 -31 512 512" width="16px" height="16px")
-                                    path(fill="#c1ea1d" d="m123.195312 260.738281 63.679688 159.1875 82.902344-82.902343 142.140625 112.976562 100.082031-450-512 213.265625zm242.5-131.628906-156.714843 142.941406-19.519531 73.566407-36.058594-90.164063zm0 0")
+                            +btnIconModal('Обсудить проект')
                 //- Services
                 .row.mt-1
                     +service("Сайт под ключ", "Срок: от 35 дней","../icon/suspicious.svg")
@@ -51,7 +49,7 @@ html(lang="ru")
                     .col-6.col-xs-12.text-xs-center
                         h4.text-uppercase Новое в&nbsp;нашем портфолио
                     .col-6.col-xs-12.text-right.text-xs-left.mt-xs-2
-                        a.btn.btn_action.btn--small(href="portfolio.html") Все проекты
+                        +btnAction('Все проекты', 'portfolio.html')
                 .portfolio.portfolio_large.mt-3.mt-xs-1
                     +portfolio-link("text.html", "", "/demo/corp-page.jpg", "EuroComm", "Сайт-визитка на MODx Revo")
                     +portfolio-link("text.html", "", "/demo/promo-page.jpg", "KAM fish", "Логотип и иконки для хайлайтс")
@@ -72,7 +70,7 @@ html(lang="ru")
                             | и&nbsp;не&nbsp;делаем «вкусные картинки», 
                             | а&nbsp;помогаем привлечь клиентов на&nbsp;сайт.
                     .col-4.col-lg-10.col-sm-12.text-right.text-lg-left.mt-lg-2
-                        a.btn.btn_action.btn--small(href="price.html") Наши услуги
+                        +btnAction('Наши услуги', 'service.html')
                 .service.mt-3
                     .item.item_service.service__col.service__col--first
                         .item__title fullstack development
@@ -148,68 +146,8 @@ html(lang="ru")
                             </animateMotion>
                         </svg>
         include component/footer/footer.pug
-        .modal.modal_form#hidden-form
-            p.h4.modal_form__title 
-                span.text-green Brief 
-                | для начала обсуждения проекта
-            p Заполните бриф сейчас и мы свяжемся с вами уже имея представление о вашем бизнесе.
-            form.form
-                p.text-small.text-bold Контактные данные
-                .form__group.row
-                    .col-6
-                        input.input.input--full(type="Email" placeholder="E-mail * ")
-                    .col-6
-                        input.input.input--full.phone(type="tel" placeholder="Телефон *")
-                p.text-small.text-bold.mt-2 О вашем проекте
-                .form__group.row
-                    .col-6
-                        input.input.input--full(type="text" placeholder="Название компании / проекта")
-                    .col-6
-                        input.input.input--full(type="text" placeholder="Сфера деятельности")
-                p.text-small.text-bold.mt-2 С чем мы можем помочь?
-                .form__group.row
-                    .col-6
-                        .checkbox.mb-1
-                            input.checkbox__input#siteBrief(type="checkbox" name="siteBrief")
-                            label.checkbox__label(for="siteBrief") Разработать сайт с нуля
-                        .checkbox.mb-1
-                            input.checkbox__input#styleBrief(type="checkbox" name="styleBrief")
-                            label.checkbox__label(for="styleBrief") Создать логотип / фирменный стиль
-                        .checkbox
-                            input.checkbox__input#seoBrief(type="checkbox" name="seoBrief")
-                            label.checkbox__label(for="seoBrief") Нужен уникальный контент / SEO
-                    .col-6
-                        .checkbox.mb-1
-                            input.checkbox__input#techBrief(type="checkbox" name="techBrief")
-                            label.checkbox__label(for="techBrief") Анализ или тех. поддержка
-                        .checkbox.mb-1
-                            input.checkbox__input#adsBrief(type="checkbox" name="adsBrief")
-                            label.checkbox__label(for="adsBrief") Настроить рекламу
-                        .checkbox
-                            input.checkbox__input#etcBrief(type="checkbox" name="etcBrief")
-                            label.checkbox__label(for="etcBrief") Другое
-                p.text-small.text-bold.mt-3 Как с вами лучше связаться?
-                .form__group.row
-                    .col-6
-                        .checkbox.mb-1
-                            input.checkbox__input#emailTypeBrief(type="checkbox" name="emailType")
-                            label.checkbox__label(for="emailTypeBrief") Написать на e-mail
-                        .checkbox
-                            input.checkbox__input#phoneTypeBrief(type="checkbox" name="phoneType")
-                            label.checkbox__label(for="phoneTypeBrief") Перезвонить
-                    .col-6
-                        .checkbox.mb-1
-                            input.checkbox__input#messTypeBrief1(type="checkbox" name="messType1")
-                            label.checkbox__label(for="messType1Brief") Telegram
-                        .checkbox
-                            input.checkbox__input#messType2Brief(type="checkbox" name="messType2")
-                            label.checkbox__label(for="messType2Brief") WhatsApp
-                .form__group.mt-3
-                    button.btn.btn_action(type="submit") Обсудить проект
-                    .mt-2.form__agree.checkbox
-                        input.checkbox__input#agreeInlineBrief(type="checkbox" name="agreeInline" checked="checked" required="required")
-                        label.checkbox__label(for="agreeInlineBrief") согласен с обработкой 
-                            a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных
+        include component/form/formHidden.pug
+        
         script(src="./js/jquery.inputmask.min.js")
 
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
