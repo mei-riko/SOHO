@@ -3,6 +3,7 @@
     padding: $spacer/2;
 
     &__image{
+        margin-top: $spacer/2;
         border: 1px solid $border-color;
         background: no-repeat center / contain;
         height: 150px;

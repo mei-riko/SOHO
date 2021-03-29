@@ -1,0 +1,35 @@
+aside.container__inner.content-form
+    .row
+        .col-8.col-md-12
+            h4.h3
+                span.text-green Pro
+                | консультируем бесплатно. 
+                span.d-block И честно
+                    span.text-green .
+            p.content-form__intro Многие компании, предлагая свои услуги, говорят о том, какие они классные. Мы в первую очередь думаем о вас и вашем комфорте от сотрудничества с SOHO. Поэтому мы расскажем о том, что вы получите, обратившись к нам.
+            form.form.content-form__form
+                .form__group.row
+                    .col-6.col-xs-12
+                        input.input.input--full(type="Email" placeholder="E-mail")
+                    .col-6.col-xs-12
+                        input.input.input--has-validation.input--full.phone(type="tel" placeholder="Телефон *")
+                        .form__validation.error_phone.error Укажите корректный номер
+                .form__group.row
+                    .col-6.col-xs-12
+                        input.input.input--full(type="text" placeholder="Ваш бюджет?")
+                    .col-6.col-xs-12
+                        input.input.input--full(type="text" placeholder="Какая услуга интересует?")
+                .form__group
+                    .mt-1.mb-3.form__agree.checkbox
+                        input.checkbox__input#agreeInline(type="checkbox" name="agreeInline" checked="checked" required="required")
+                        label.checkbox__label(for="agreeInline") согласен с обработкой 
+                            a.form__link-inverse(href="/policy.pdf" target="_blank") персональных данных
+                    button.btn.btn_action(type="submit") Обсудить проект
+        .col-4.d-md-none
+            <svg class="content-form__animation" id="parent" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+                <path id="path" fill="none" stroke="#3e3e3e" stroke-width="2" stroke-dasharray="10" d="M 25, 250 a 225,225 0 1,0 450,0 a 225,225 0 1,0 -450,0"/>
+                <circle id="elem" cx="0" cy="0" r="14" fill="#3e3e3e"/>
+                <animateMotion xlink:href="#elem" dur="6s" begin="0s" fill="freeze" restart="whenNotActive" repeatCount="indefinite">
+                    <mpath xlink:href="#path" />
+                </animateMotion>
+            </svg>

@@ -17,5 +17,169 @@ html(lang="ru")
         .container
             section.container__inner.mb-5
                 //- Main Screen
+                .content-main
+                    h1.content-main__title 
+                        span.text-green Got
+                        | овы создать для вас потрясающий 
+                        | логотип
+                    span.content-main__subtitle graphic design
+                    .row.justify-content-end.mt-3
+                        .col-5
+                            p.content-main__intro В результате вы получите подробное руководство по использованию 
+                                | вашего нового стиля: фирменные цвета, шрифты и стилеобразующие элементы.
+                            button.btn.btn--has-icon(data-fancybox data-src="#hidden-form" href="javascript:;") Обсудить проект
+                                svg.btn__icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 -31 512 512" width="16px" height="16px")
+                                    path(fill="#c1ea1d" d="m123.195312 260.738281 63.679688 159.1875 82.902344-82.902343 142.140625 112.976562 100.082031-450-512 213.265625zm242.5-131.628906-156.714843 142.941406-19.519531 73.566407-36.058594-90.164063zm0 0")
+                //- Step & Item
+                .row.pt-5.pt-sm-3.pb-3.pb-lg-2
+                    .col-4.col-lg-8.col-md-7.col-xs-12
+                        h2.h3.mb-0 Как проходит 
+                            span.text-green процесс 
+                            | разработки?
+                .row
+                    .col-4.col-lg-10.col-sm-12.mb-lg-3
+                        p.content-main__intro Для начала вы оставите заявку и&nbsp;мы свяжемся с&nbsp;вами, чтобы 
+                            | вы&nbsp;рассказали о&nbsp;своём проекте. Мы вместе заполним бриф, обменяемся мнениями  
+                            | о&nbsp;возможных направлениях в&nbsp;дизайне.
+                    .col-8.col-lg-12
+                        .row
+                            .col-6.col-xs-12.item
+                                .item__title.item__title_has-icon 
+                                    img.item__icon.item__icon_inside-title(src="../icon/suspicious.svg" alt="" title="")
+                                    | Дизайн-исследование
+                                .item__intro Проводим обзор дизайна и контента конкурентов. Анализируем используемые цветовые схемы, 
+                                    | графические образы и доминирующие мотивы.
+                            .col-6.col-xs-12.item.mt-sm-2
+                                .item__title.item__title_has-icon 
+                                    img.item__icon.item__icon_inside-title(src="../icon/suspicious.svg" alt="" title="")
+                                    | Moodboard
+                                .item__intro Подберем релевантные графические референсы и сделаем минипрезентацию 
+                                    | с демонстрацией возможных направлений в развитии образа бренда.
+                            .col-6.col-xs-12.item.mt-3.mt-sm-2
+                                .item__title.item__title_has-icon
+                                    img.item__icon.item__icon_inside-title(src="../icon/suspicious.svg" alt="" title="")
+                                    | Презентация логотипа
+                                .item__intro Пришлет видеопрезентацию, в которой дизайнер проекта расскажет о возможных  
+                                    | вариантах логотипа. Нужно будет выбрать самый лучший и мы его доработаем.
+                            .col-6.col-xs-12.item.mt-3.mt-sm-2
+                                .item__title.item__title_has-icon 
+                                    img.item__icon.item__icon_inside-title(src="../icon/suspicious.svg" alt="" title="")
+                                    | Полный гайдлайн
+                                .item__intro Всю работу мы соберём в единое руководство. Это гарантирует, 
+                                    | что сотрудники и подрядчики будут понимать, как правильно работать 
+                                    | с вашим логотипом.
+                //- Portfolio
+                .portfolio.mt-5
+                    +portfolio-link("javascript:;", "#portfolio-start", "/demo/demo-preview.jpg", "Коучинг IFC стандарта", "Логотип «Старт»")
+                    +portfolio-link("javascript:;", "#portfolio-guideline", "/demo/demo-preview.jpg", "Школа флористики", "Логотип «Гайдлайн»")
+                    +portfolio-link("javascript:;", "#portfolio-full", "/demo/demo-preview.jpg", "Эстетическая медицина", "Логотип «Full»")
+                //- Price
+                .row.pt-2.pb-2.mt-5
+                    .col-4.col-lg-8.col-md-10.col-sm-12.mb-lg-3.text-grey
+                        h3.text-white.mb-3.mb-lg-2 Решения на&nbsp;любой 
+                            span.text-green бюджет 
+                        .content-intro
+                            p Мы хотим помочь вашему проекту обрести своё уникальное лицо 
+                                | При этом понимаем, что иногда нужна возможность начать с небольших вложений. 
+                                | А кто-то напротив хочется получить больше и готов за это платить.
+                            p Поэтому помимо основного тарифа «Гайдлайн» есть ещё два: подороже и подешевле.
+                    .col-8.col-lg-12
+                        .item.item_price.item_price-promo.mb-2(data-fancybox="guideline" data-src="#guideline")
+                            .item_price__content
+                                p.item_price__title Гайдлайн
+                                p.item_price__intro Работаем так: заполняем бриф, проводим анализ конкурентов
+                                    |  и рисуем несколько вариантов логотипа. Создаём гайдлайн.
+                                .item_price__group
+                                    .item_price__label до 3 эскизов
+                                    .item_price__label видеопрезентация
+                                    .item_price__label гайдлайн
+                            .item_price__info
+                                p.item_price__title 15000
+                                .item_price__add +2000
+                                .item_price__add-intro за подготовку 1 макета полиграфии в печать
+                        .item.item_price.mb-2(data-fancybox="start" data-src="#start")
+                            .item_price__content
+                                p.item_price__title Старт
+                                p.item_price__intro Эконом-вариант разработки: вы получите 1 вариант логотипа 
+                                    | и логобук вместо гайдлайна. Меньше выбор, но так же красиво.
+                                .item_price__group
+                                    .item_price__label 1 эскиз
+                                    .item_price__label логобук
+                            .item_price__info
+                                p.item_price__title 6000
+                                .item_price__add +3000
+                                .item_price__add-intro за дополнительный эскиз
+                                .item_price__add +4000
+                                .item_price__add-intro за разработку гайдлайна
+                        .item.item_price(data-fancybox="full" data-src="#full")
+                            .item_price__content
+                                p.item_price__title Гайдлайн+
+                                p.item_price__intro В дополнение к основному тарифу подготовим до 4-ёх 
+                                    | файлов полиграфии в печати по тех. требованием типографии.
+                                .item_price__group
+                                    .item_price__label до 3 эскизов
+                                    .item_price__label видеопрезентация
+                                    .item_price__label гайдлайн
+                            .item_price__info
+                                p.item_price__title 21000
+                                .item_price__add +3000
+                                .item_price__add-intro за дополнительный эскиз
+                //- Motivation
+                .content-main.mt-5
+                    h4.content-main__title.content-main__title_secondary Сейчас мы простыми словами расскажем, в&nbsp;чём 
+                        | разница между логобуком и&nbsp;гайдлайном.
+                    span.content-main__subtitle difference
+                    .row.justify-content-end.mt-3
+                        .col-4
+                            p.lead.text-bolder Логобук содержит:
+                            p.content-main__list описание логотипа
+                            p.content-main__list альтернативные версии лого
+                            p.content-main__list правила использования
+                            p.content-main__list рекомендации по размещению
+                        .col-4
+                            p.lead.text-bolder Гайдлайн содержит:
+                            p.content-main__list описание логотипа
+                            p.content-main__list альтернативные версии лого
+                            p.content-main__list правила использования
+                            p.content-main__list рекомендации по размещению
+                            p.content-main__list элементы фирменного стиля (шрифты, цветовая гамма, паттерны и т.д.)
+                            p.content-main__list примеры использования логотипа на носителях
+                            p.content-main__list рекомендации по использованию общего стиля
+                //- Steps
+                .row.mt-5.mt-sm-3
+                    .col-5.col-lg-10.col-sm-12
+                        P.h3.mb-0 Посмотрите как будет выглядеть готовый 
+                            span.text-green гайдлайн
+                .row.mt-2.align-items-end
+                    .col-8.col-lg-10.col-sm-12
+                        p Продемонстрируем допустимые и&nbsp;недопустимые варианты использования логотипа 
+                            | Для фирменных цветоы подберем цветовые значения RGB и #HEX для использования в web 
+                            | и значения CMYK и Pantone для печати. Пропишем, какую гарнитуру и размеры использовать 
+                            | для заголовков, слоганов, основных текстовых блоков и подписей поменьше.
+                            | Оформим до 6 фирменных предметов, которые важны для вашего бренда.
+                .service.mt-3
+                    .item.item_service.service__col.service__col--first
+                        .item__title фирменные носители
+                        .item_service__image.item_service__image--first(style="background-image:url('/demo/fullstack.png')")
+                    .item.item_service.service__col.mt-xs-1
+                        .item__title правила использования
+                        .item_service__image(style="background-image:url('/demo/small.png')")
+                    .item.item_service.service__col.mt-xs-1
+                        .item__title фирменные шрифты
+                        .item_service__image(style="background-image:url('/demo/small.png')")
+                    .item.item_service.service__col.mt-xs-1
+                        .item__title цветовая палитра
+                        .item_service__image(style="background-image:url('/demo/small.png')")
+                    .item.item_service.service__col.mt-xs-1
+                        .item__title элементы фирменного стиля
+                        .item_service__image(style="background-image:url('/demo/small.png')")                
+            //- Contact Form
+            include component/form/formAside.pug
         include component/footer/footer.pug
         include component/form/formHidden.pug
+        script(src="./js/jquery.inputmask.min.js")
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+        
+        script(src="./js/app.min.js")
