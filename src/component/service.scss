@@ -4,6 +4,7 @@
 @import "item/item_advantage";
 @import "item/item_price";
 @import "item/item_service";
+@import "item/item_link";
 
 @import "content/content-main";
 @import "content/content-compare";
@@ -13,4 +14,6 @@
 @import "portfolio/portfolio";
 @import "service/service";
 
+@import "faq/faq";
+@import "table/table";
 @import "modal/modal_portfolio";

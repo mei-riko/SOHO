@@ -44,6 +44,25 @@ $(document).ready(() =>{
   $('a[data-trigger="click"]').click(function(e){
     e.preventDefault();
   })
+
+  // Toggle
+  const toggle = (elem) => { 
+    let classElem = elem.attr("class");
+    // первым классом должен идти title
+    let classArr = classElem.split(' ');
+    // запишем имя для активного класс
+    let classActive = classArr[0] + '--active';
+    // удалим title и узнаем имя родителя
+    let parent = classArr[0].split('__')[0];
+
+    elem.toggleClass( classActive );
+    elem.parent().find('.' + parent + '__content' ).slideToggle();
+  };
+
+  $('[data-toggle="true"]').on("click", function(){
+    toggle( $(this) );
+  });
+
 	// Navbar
   $(".header .header__nav#open-nav").on("click", function(){
     $(".navbar.navbar_header").addClass("navbar_header--active");

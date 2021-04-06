@@ -10,3 +10,17 @@
     padding: $spacer;
     background: $dark-grey;
 }
+
+.modal-info {
+    display: inline-block;
+    font-size: 11px;
+    background-color: $green;
+    color: $black;
+    padding: 0px 6px;
+    margin: 2px;
+
+    &:hover, &:focus{
+        text-decoration:none;
+        color: $black;
+    }
+}

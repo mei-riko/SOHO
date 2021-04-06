@@ -3121,6 +3121,20 @@ table td {
   background: #2b2b2b;
 }
 
+.modal-info {
+  display: inline-block;
+  font-size: 11px;
+  background-color: #c1ea1d;
+  color: #242424;
+  padding: 0px 6px;
+  margin: 2px;
+}
+
+.modal-info:hover, .modal-info:focus {
+  text-decoration: none;
+  color: #242424;
+}
+
 .modal_form__title {
   padding-bottom: 20px;
   border-bottom: 1px solid #3e3e3e;

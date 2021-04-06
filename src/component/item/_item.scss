@@ -27,6 +27,15 @@
     &__intro{
         color: $grey;
     }
+    &__label {
+        display: inline-block;
+        font-size: 13px;
+        background-color: $white;
+        color: $black;
+        padding: 4px 8px;
+        margin: 2px;
+    }
+
     &__preview{
         transition: .4s;
         filter: grayscale(1);

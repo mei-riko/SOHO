@@ -1,0 +1,47 @@
+.table{
+    border: 1px solid $border-color;
+    padding: 10px;
+
+    &__head{
+        display: flex;
+        border-bottom: 1px solid $border-color;
+
+        &-item{
+            flex: 1 0 100px;
+            padding: 10px;
+
+            font-family: map-get($map: $font-size, $key: "sm");
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+            text-align: center;
+            color: $grey;
+        }
+        &-main{
+            flex: 2 0 50%;
+            padding: 10px;
+        }
+    }
+    &__line{
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $border-color;
+
+        &-item{
+            flex: 1 0 100px;
+            padding: 10px;
+            text-align: center;
+        }
+        &-main{
+            flex: 2 0 50%;
+            padding: 10px;
+        }
+
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+
+    &__icon{
+        width: 24px;
+    }
+}

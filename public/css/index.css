@@ -33,6 +33,15 @@
   color: #d5d5d5;
 }
 
+.item__label {
+  display: inline-block;
+  font-size: 13px;
+  background-color: #ffffff;
+  color: #242424;
+  padding: 4px 8px;
+  margin: 2px;
+}
+
 .item__preview {
   -webkit-transition: .4s;
   -o-transition: .4s;

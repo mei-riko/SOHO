@@ -1,0 +1,49 @@
+.faq{
+    &__title{
+        position: relative;
+
+        background-color: $dark-grey;
+        padding: map-get($map: $spacers, $key: 2) map-get($map: $spacers, $key: 3);
+        border: 1px solid $border-color;
+
+        transition: .3s;
+        cursor: pointer;
+
+        &:after{
+            content: '+';
+            position: absolute;
+            right:  map-get($map: $spacers, $key: 3) ;
+            top: 50%;
+            transform: translateY(-50%);
+
+            font-size: 30px;
+            line-height: 24px;
+            transition: .3s;
+        }
+        
+        &:hover{
+            &:after{
+                color: $green;
+            }
+        }
+
+        &--active{
+            background-color: $black;
+            border-color: $green;
+            &:after{
+                content: '−';
+            }
+        }
+    }
+
+    &__content{
+        display: none;
+        padding: map-get($map: $spacers, $key: 2) map-get($map: $spacers, $key: 3);
+        border: 1px solid $border-color;
+
+        &--active{
+            display: block;
+            border-color: $green;
+        }
+    }
+}
