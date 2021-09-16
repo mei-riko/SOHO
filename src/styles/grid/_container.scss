@@ -1,14 +1,14 @@
 .container {
   width: 100%;
   max-width: map-get($container-max-widths, 'hd');
-  padding-left: 2*$grid-gutter-width;
-  padding-right: $grid-gutter-width/2;
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
   margin-right: auto;
   margin-left: auto;
 
-  &__inner{
-    margin-right: 120px;
-  }
+  // &__inner{
+  //   margin-right: 120px;
+  // }
 }
 .row{
   display: flex;

@@ -1,6 +1,13 @@
 - var tel = {'item':"8 800 600 44 22",'link':"tel:88006004422"}
 - var email = {'item':"demo@demo.ru",'link':"mailto:demo@demo.ru"}
 
+//- Button
+mixin btnIconModal(name)
+    button.btn.btn_callback(data-fancybox data-src="#hidden-form" href="javascript:;")= name
+        svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 -31 512 512" width="16px" height="16px")
+            path(d="m123.195312 260.738281 63.679688 159.1875 82.902344-82.902343 142.140625 112.976562 100.082031-450-512 213.265625zm242.5-131.628906-156.714843 142.941406-19.519531 73.566407-36.058594-90.164063zm0 0")
+mixin btnAction(name, href)
+    a.btn.btn_action.btn--small(href=href)= name
 
 block variables
 html(lang="ru")

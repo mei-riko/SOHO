@@ -1,0 +1,19 @@
+.btn_callback{
+    display: inline-flex;
+    align-items: center;
+    color: $green;
+
+    svg{
+        fill: $green;
+        margin-left: map-get($map: $spacers, $key: 1);
+    }
+
+    &:hover, &:focus{
+        color: $white;
+
+        svg{
+            fill: $white;
+            margin-left: 1.5 * map-get($map: $spacers, $key: 1);
+        }
+    }
+}

@@ -6,7 +6,7 @@ $purple               : #7f3bd6;
 
 
 $light-grey           : #e7e7e7;
-$grey                 : #d5d5d5;
+$grey                 : #b8b8b8;
 $dark-grey            : #2b2b2b;
 
 $border-color         : #3e3e3e;
@@ -43,16 +43,16 @@ $container-max-widths: (
   lg: 980px,
   // 1140 + 40      // от 1280 до 1600
   xl: 1180px,
-  // start 1320+40  // от 1600
-  hd: 1360px
+  // от 1600
+  hd: 1560px
 ) !default;
 
 $font-size-base       : 1rem;
 $font-weight-base     : 400;
 $line-height-base     : 1.4;
 
-$font-family-heading  : "Open Sans", "Helvetica Neue", Arial,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-base     : "Open Sans", "Helvetica Neue", Arial,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-heading  : "Kharkiv Tone", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-base     : "Montserrat", "Helvetica Neue", Arial,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-serif    : "Playfair Display",   "Times New Roman",  serif !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,   "Liberation Mono",   "Courier New",    monospace !default;
 

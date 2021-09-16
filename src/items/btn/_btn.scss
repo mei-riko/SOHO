@@ -3,23 +3,14 @@
     outline: none;
     box-shadow: none;
 
-    font-family: $font-family-serif;
-    font-size: map-get($map: $font-size, $key: "xs");
+    font-family: $font-family-heading;
+    font-size: map-get($map: $font-size, $key: "md");
     font-weight: $font-weight-bold;
+    
     letter-spacing: 1px;
-    text-transform: uppercase;
-
-    color: $body-color;
     background-color: inherit;
-    // padding: 0;
-    padding: 14px 24px;
 
-    transition: all .4s;
-
-    &__icon{
-        margin-left: 10px;
-        transition: all .4s;
-    }
+    // transition: all .4s;
 
     &:hover, &:focus{
         text-decoration: none;
@@ -28,17 +19,6 @@
 
     &--full{
         width: 100%;
-    }
-    &--has-icon{
-        display: inline-flex;
-        align-items: center;
-        padding: 0;
-
-        &:hover, &:focus{
-            .btn__icon{
-                margin-left: 15px;
-            }
-        }
     }
     &--small{
         padding: 8px 12px;

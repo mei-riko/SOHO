@@ -2,6 +2,38 @@ extends ../blocks/main.pug
 
 block variables
     - var pageTitle     = "Index Page"
-    
+//- Service Preview
+mixin service(title, intro, image)
+    .service__col
+        a.item.item_link(href="#" title=title)            
+            if image != ""
+                p.item__title.item__title_has-icon.mb-0
+                    img.item__icon.item__icon_inside-title(src=image alt=title title=title)
+                    span= title
+            else 
+                p.item__title.mb-0= title
+            p.item__intro.text-small!= intro
 block content
-    section test
+    .container
+        section.mb-5
+            //- Main Screen
+            .content-main
+                h1.content-main__title Web-агентство полного цикла для сферы услуг
+                span.content-main__subtitle для малого бизнеса
+                .row.justify-content-end.mt-3.mt-sm-2
+                    .col-5.col-lg-7.col-md-9.col-sm-12
+                        p.content-main__intro Разрабатываем лендинги и&nbsp;сайты. Создаём логотипы и&nbsp;фирменные стили.
+                            |  SEO-продвижение и&nbsp;настройка рекламы ведутся на&nbsp;основе тщательного анализа 
+                            |  ниши и&nbsp;конкурентов.
+                        +btnIconModal('Обсудить проект')
+            //- Services
+            .service.service_index-page.mt-4
+                +service("Сайт под ключ", "Срок: от 35 дней","../icon/suspicious.svg")
+                +service("Сайт на Tilda", "Срок: от 4 дней","../icon/service/tilda.png")
+                +service("Разработка лого", "Срок: от 8 дней","")
+                +service("Контекстная реклама","Срок: от 6 дней","../icon/suspicious.svg")
+                +service("E-mail рассылки","Срок: от 2 дней","../icon/suspicious.svg")
+                +service("Презентации","Срок: от 5 дней","../icon/suspicious.svg")
+                +service("SEO","Срок: от 14 дней","../icon/suspicious.svg")
+                +service("Контент","Срок: от 3 дней","../icon/suspicious.svg")
+                +service("Упаковка продукта","Срок: от 24 дней","../icon/suspicious.svg")

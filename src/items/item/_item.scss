@@ -1,13 +1,18 @@
 .item{
     &__title{
-        font-size: 1.1rem;
+        font-family: $font-family-heading;
+        font-size: map-get($map: $font-size, $key: md);
         font-weight: $font-weight-bold;
         line-height: $line-height-heading;
+        
         margin-bottom: $spacer/4;
 
         &_has-icon{
-            position: relative;
-            padding-left: 34px;
+            display: grid;
+            grid-gap: map-get($map: $spacers, $key: 1);
+            grid-template-columns: 34px 1fr;
+            
+            align-items: center;
         }
     }
     &__subtitle{
@@ -15,16 +20,10 @@
         font-weight: $font-weight-bold;
     }
     &__icon{
-        width: 24px;
-        
-        &_inside-title{
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-        }
+        width: 34px;
     }
     &__intro{
+        font-size: map-get($map: $font-size, $key: xs);
         color: $grey;
     }
     &__label {
