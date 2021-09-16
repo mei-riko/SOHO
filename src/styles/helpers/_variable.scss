@@ -22,18 +22,29 @@ $grid-columns         : 12 !default;
 $grid-gutter-width    : 30px !default;
 
 $grid-breakpoints: (
+ xxs: 375px,
   xs: 576px,
   sm: 768px,
-  md: 992px,
-  lg: 1360px,
+  md: 1024px,
+  lg: 1280px,
   xl: 1600px
 ) !default;
 
 $container-max-widths: (
-  sm: 540px,
-  md: 740px,
-  lg: 960px,
-  xl: 1680px,
+  // 100%           // до 375
+ xxs: 100%,
+  // 440 + 40       // от 375 до 576 
+  xs: 480px,
+  // 440 + 40       // от 576 до 768
+  sm: 480px,
+  // 680 + 40       // от 768 до 1024
+  md: 720px,
+  // 940 + 40       // от 1024 до 1280
+  lg: 980px,
+  // 1140 + 40      // от 1280 до 1600
+  xl: 1180px,
+  // start 1320+40  // от 1600
+  hd: 1360px
 ) !default;
 
 $font-size-base       : 1rem;
@@ -46,18 +57,32 @@ $font-family-serif    : "Playfair Display",   "Times New Roman",  serif !default
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,   "Liberation Mono",   "Courier New",    monospace !default;
 
 $font-size: (
+  // small
   xs: 12px,
-  sm: 13px,
-  xl: 14px,
-  hd: 15px
+  // smaller
+  sm: 14px,
+  // main
+  md: 16px,
+  // lead
+  lg: 18px
 ) !default;
 
-$font-weight-heading: 700;
+$heading: (
+  h6: 18px,
+  h5: 20px,
+  h4: 24px,
+  h3: 32px,
+  h2: 40px,
+  h1: 50px
+) !default;
+
 
 $font-weight-light  : 300;
 $font-weight        : 400;
 $font-weight-bolder : 500;
 $font-weight-bold   : 800;
+
+$font-weight-heading: $font-weight-bold !default;
 
 $line-height        : 1.7;
 $line-height-heading: 1.1;
