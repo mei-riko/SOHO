@@ -2,11 +2,17 @@
     background-color: inherit;
     color: $white;
     border: 1px solid $border-color;
-    padding: $spacer/3 $spacer/2;
-    margin-bottom: $spacer/3;
+
+    font-size: map-get($map: $font-size, $key: "md");
+    line-height: 1;
+
+    padding: 15px 24px;    
     transition: .4s;
 
     &::placeholder{
+        font-size: map-get($map: $font-size, $key: "md");
+        line-height: 1;
+    
         transition: .4s;
         color: $grey;
     }
@@ -21,7 +27,5 @@
     &--full{
         width: 100%;
     }
-    &--has-validation{
-        margin-bottom: $spacer/6;
-    } 
 }
+

@@ -15,7 +15,7 @@
         flex-wrap: nowrap;
         align-items: center;
         padding: $spacer 0;
-        font-size: map-get($map: $font-size, $key: xs);
+        font-size: map-get($map: $font-size, $key: sm);
     }
 
     &__email{

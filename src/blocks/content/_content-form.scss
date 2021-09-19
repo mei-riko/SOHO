@@ -7,6 +7,10 @@
     }
     &__form{
         margin-top: $spacer;
+
+        display: grid;
+        grid-gap: $spacer/2;
+        grid-template-columns: repeat(2, 1fr);
     }
     &__animation{
         max-width: 90%;

@@ -29,7 +29,9 @@
     &__link{
         display: block;
         color: $grey;
-        margin-bottom: $spacer/6;
+
+        line-height: $line-height-heading;
+        margin-bottom: map-get($map: $spacers, $key: 1);
     }
 }
 
