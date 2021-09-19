@@ -5,13 +5,11 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
 
     &__col{
-        display: flex;
-        align-items: stretch;
+        &_first{
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
     }
-}
-
-.service_index-page{
-    grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 // @media all and (max-width: map-get($grid-breakpoints, 'md')){

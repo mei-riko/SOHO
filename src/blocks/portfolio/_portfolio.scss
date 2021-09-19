@@ -1,11 +1,15 @@
 .portfolio{
     display: grid;
-    grid-gap: $spacer/4;
+    grid-gap: map-get($map: $spacers, $key: 2);
     grid-template-columns: repeat(3, minmax(0, 1fr));
 
     &__title{
         // font-weight: $font-weight-bold;
-        padding: $spacer/4 $spacer/2 0;
+        font-size: map-get($map: $heading, $key: h6);
+        line-height: $line-height-heading;
+        letter-spacing: $letter-spacing;
+        
+        padding: map-get($map: $spacers, $key: 2) map-get($map: $spacers, $key: 3) map-get($map: $spacers, $key: 1);
         margin: 0;
 
         &:last-child{
@@ -13,9 +17,9 @@
         }
     }
     &__intro{
+        line-height: $line-height-base;
         color: $grey;
-        padding: 0 $spacer/2 $spacer/2;
-        line-height: 1.4;
+        padding: 0 map-get($map: $spacers, $key: 3) map-get($map: $spacers, $key: 2);
     }
 
     &__col{

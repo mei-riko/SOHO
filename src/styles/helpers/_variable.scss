@@ -52,8 +52,8 @@ $font-weight-base     : 400;
 $line-height-base     : 1.4;
 
 $font-family-heading  : "Kharkiv Tone", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-base     : "Montserrat", "Helvetica Neue", Arial,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-serif    : "Playfair Display",   "Times New Roman",  serif !default;
+$font-family-base     : "Source Code Pro", "Helvetica Neue", Arial,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+// $font-family-serif    : "Playfair Display",   "Times New Roman",  serif !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,   "Liberation Mono",   "Courier New",    monospace !default;
 
 $font-size: (
@@ -80,9 +80,11 @@ $heading: (
 $font-weight-light  : 300;
 $font-weight        : 400;
 $font-weight-bolder : 500;
-$font-weight-bold   : 800;
+$font-weight-bold   : 700;
 
 $font-weight-heading: $font-weight-bold !default;
+
+$letter-spacing     : 0.05em;
 
 $line-height        : 1.7;
 $line-height-heading: 1.1;

@@ -6,7 +6,7 @@
   box-shadow: none;
   font-family: "Kharkiv Tone", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 1px;
   background-color: inherit;
 }
@@ -255,7 +255,7 @@
 }
 
 .tags__item--active {
-  font-weight: 800;
+  font-weight: 700;
   border-color: #c1ea1d;
   color: #ffffff;
 }
@@ -357,7 +357,7 @@
 .item__title {
   font-family: "Kharkiv Tone", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.1;
   margin-bottom: 10px;
 }
@@ -373,7 +373,7 @@
 
 .item__subtitle {
   line-height: 1.3;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .item__icon {
@@ -381,7 +381,7 @@
 }
 
 .item__intro {
-  font-size: 12px;
+  font-size: 14px;
   color: #b8b8b8;
 }
 
@@ -424,7 +424,7 @@
 
 .item_advantage__title {
   line-height: 1.3;
-  font-weight: 800;
+  font-weight: 700;
   margin-top: 20px;
 }
 
@@ -529,7 +529,7 @@
 .item_price__title {
   font-size: 2rem;
   line-height: 1.1;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -542,7 +542,7 @@
 .item_price__add {
   font-size: 1.35rem;
   line-height: 1.1;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
   opacity: .5;
@@ -631,17 +631,22 @@
 .item_service {
   border: 1px solid #3e3e3e;
   padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-gap: 20px;
 }
 
 .item_service__image {
-  margin-top: 20px;
   border: 1px solid #3e3e3e;
   background: no-repeat center / contain;
-  height: 150px;
+  width: 100%;
+  min-height: 150px;
+  height: 100%;
 }
 
-.item_service__image--first {
-  height: 400px;
+.item_service__title {
+  margin-bottom: 0;
 }
 
 @media all and (max-width: 768px) {
@@ -677,7 +682,7 @@
   flex: 1 0 100px;
   padding: 10px;
   font-family: 14px;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   text-align: center;
   color: #b8b8b8;
@@ -970,11 +975,11 @@
   -ms-flex-align: center;
   align-items: center;
   padding: 40px 0;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .header__email {
-  font-weight: 800;
+  font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: underline;
@@ -982,7 +987,7 @@
 }
 
 .header__link {
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
 }
@@ -1047,7 +1052,7 @@
 }
 
 .footer__email {
-  font-weight: 800;
+  font-weight: 700;
   color: #c1ea1d;
   margin: 20px 0;
 }
@@ -1058,7 +1063,7 @@
 
 .footer__title {
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
@@ -1219,27 +1224,22 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.service__col {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.service_index-page {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+.service__col_first {
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 
 .portfolio {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 20px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .portfolio__title {
-  padding: 10px 20px 0;
+  font-size: 18px;
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+  padding: 20px 40px 10px;
   margin: 0;
 }
 
@@ -1248,9 +1248,9 @@
 }
 
 .portfolio__intro {
-  color: #b8b8b8;
-  padding: 0 20px 20px;
   line-height: 1.4;
+  color: #b8b8b8;
+  padding: 0 40px 20px;
 }
 
 .portfolio__col {

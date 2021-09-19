@@ -2,15 +2,21 @@
     border: 1px solid $border-color;
     padding: $spacer/2;
 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-gap: map-get($map: $spacers, $key: 2);
+
     &__image{
-        margin-top: $spacer/2;
         border: 1px solid $border-color;
         background: no-repeat center / contain;
-        height: 150px;
 
-        &--first{
-            height: 400px;
-        }
+        width: 100%;
+        min-height: 150px;
+        height: 100%;
+    }
+    &__title{
+        margin-bottom: 0;
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
