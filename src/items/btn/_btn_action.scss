@@ -3,7 +3,7 @@
     color: $green;
     text-align: center;
 
-    padding: 14px 28px;
+    padding: 18px 28px 16px;
 
     &:hover, &:focus{
         background-color: darken($color: $black, $amount: 4);

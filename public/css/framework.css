@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
 *,
 *::before,
 *::after {
@@ -19,7 +19,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Source Code Pro", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4;
@@ -334,7 +334,7 @@ template {
 }
 
 .container {
-  width: 100%;
+  width: calc( 100% - 140px);
   max-width: 1560px;
   padding-left: 30px;
   padding-right: 30px;
@@ -360,6 +360,27 @@ template {
 .no-gutters > .col, .no-gutters > [class*=col-] {
   padding-right: 0;
   padding-left: 0;
+}
+
+@media all and (max-width: 1600px) {
+  .container {
+    width: 100%;
+  }
+  .container__inner {
+    padding-right: 80px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .container__inner {
+    padding-right: 60px;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .container__inner {
+    padding-right: 30px;
+  }
 }
 
 .col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
@@ -1848,6 +1869,7 @@ template {
 }
 
 html, body {
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.7;
   -webkit-box-sizing: border-box;
@@ -1998,11 +2020,12 @@ table td {
 }
 
 .text-small, small, .small {
-  font-size: 0.9rem;
+  font-size: 12px;
 }
 
 .text-lead, .lead {
-  font-size: 1.2rem;
+  font-size: 18px;
+  line-height: 1.4;
 }
 
 .text-right {
@@ -2070,6 +2093,12 @@ table td {
 }
 
 @media all and (max-width: 1024px) {
+  html, body {
+    font-size: 14px;
+  }
+  .text-lead, .lead {
+    font-size: 16px;
+  }
   .text-md-left {
     text-align: left;
   }
@@ -2273,7 +2302,13 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
   }
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 576px) {
+  .h1, h1 {
+    font-size: 24px;
+  }
+  .h2, h2 {
+    font-size: 20px;
+  }
   .h3, h3 {
     font-size: 18px;
   }
@@ -2285,15 +2320,6 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
   }
   .h6, h6 {
     font-size: 14px;
-  }
-}
-
-@media all and (max-width: 375px) {
-  .h1, h1 {
-    font-size: 24px;
-  }
-  .h2, h2 {
-    font-size: 20px;
   }
 }
 

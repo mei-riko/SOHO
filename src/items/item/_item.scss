@@ -1,6 +1,6 @@
 .item{
     &__title{
-        font-family: $font-family-heading;
+        // font-family: $font-family-heading;
         font-size: map-get($map: $font-size, $key: md);
         font-weight: $font-weight-bold;
         line-height: $line-height-heading;
@@ -10,7 +10,7 @@
         &_has-icon{
             display: grid;
             grid-gap: map-get($map: $spacers, $key: 1);
-            grid-template-columns: 34px 1fr;
+            grid-template-columns: 54px 1fr;
             
             align-items: center;
         }
@@ -20,7 +20,7 @@
         font-weight: $font-weight-bold;
     }
     &__icon{
-        width: 34px;
+        width: 54px;
     }
     &__intro{
         font-size: map-get($map: $font-size, $key: sm);

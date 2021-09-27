@@ -14,7 +14,7 @@ mixin service(title, intro, image)
                 p.item__title.mb-0= title
             p.item__intro!= intro
 //- Portfolio
-mixin portfolio-link(href, src, image, title, intro)
+mixin portfolioPrev(href, src, image, title, intro)
     if href == "javascript:;"
         a.portfolio__col(href=href data-fancybox="portfolio" data-src=src)
             img.img-fluid(src=image)
@@ -27,93 +27,94 @@ mixin portfolio-link(href, src, image, title, intro)
             p.portfolio__intro.text-small!= intro
 block content
     .container
-        //- Main Screen
-        section.content-main
-            h1.content-main__title Web-агентство полного цикла для сферы услуг
-            span.content-main__subtitle для малого бизнеса
-            .row.justify-content-end.mt-3.mt-sm-2
-                .col-5.col-lg-7.col-md-9.col-sm-12
-                    p.content-main__intro Разрабатываем лендинги и&nbsp;сайты. Создаём логотипы и&nbsp;фирменные стили.
-                        |  SEO-продвижение и&nbsp;настройка рекламы ведутся на&nbsp;основе тщательного анализа 
-                        |  ниши и&nbsp;конкурентов.
-                    +btnIconModal('Обсудить проект')
-        //- Services
-        aside.service.service_index-page.mt-4
-            +service("Сайт под ключ", "Срок: от 35 дней","../icon/service/web.png")
-            +service("Сайт на Tilda", "Срок: от 4 дней","../icon/service/tilda.png")
-            +service("Разработка лого", "Срок: от 8 дней","../icon/service/design.png")
-            +service("Контекстная реклама","Срок: от 6 дней","../icon/service/context.png")
-            +service("E-mail рассылки","Срок: от 2 дней","../icon/service/email.png")
-            +service("Презентации","Срок: от 5 дней","../icon/service/presentation.png")
-            +service("SEO","Срок: от 14 дней","../icon/service/seo.png")
-            +service("Контент","Срок: от 3 дней","../icon/service/content.png")
-            +service("Упаковка продукта","Срок: от 24 дней","../icon/service/product.png")
-        //- Portfolio
-        section.pt-5.pb-5
-            .row.align-items-end
-                .col-6.col-xs-12.text-xs-center
-                    h4.text-uppercase Новое в&nbsp;нашем портфолио
-                .col-6.col-xs-12.text-right.text-xs-left.mt-sm-2
-                    +btnAction('Все проекты', 'portfolio.html')
-            .portfolio.portfolio_large.mt-3.mt-sm-2
-                +portfolio-link("text.html", "", "/demo/corp-page.jpg", "EuroComm", "Сайт-визитка на MODx Revo")
-                +portfolio-link("text.html", "", "/demo/promo-page.jpg", "KAM fish", "Логотип и иконки для хайлайтс")
-                +portfolio-link("text.html", "", "/demo/store-page.jpg", "Pelibox", "Открытки для доставки еды")
-                +portfolio-link("text.html", "", "/demo/corp-page.jpg", "Pelibox", "Открытки для доставки еды")
-                +portfolio-link("text.html", "", "/demo/promo-page.jpg", "KAM fish", "Логотип и иконки для хайлайтс")
-                +portfolio-link("text.html", "", "/demo/corp-page.jpg", "EuroComm", "Сайт-визитка на MODx Revo")
-        //- Promo Page
-        section.pt-5.pb-5
-            .row
-                .col-5.col-lg-10.col-sm-12
-                    p.h1 Мы знаем, как&nbsp;это 
-                        span.text-green работает
-            .row.mt-2.align-items-end
-                .col-8.col-lg-10.col-sm-12
-                    p Все рецепты SEO-бабушек и&nbsp;Digital-дедушек остались в&nbsp;прошлом. 
-                        | Мы не боимся брать ответственность за&nbsp;решения: нам доверились 100+ компаний 
-                        | и&nbsp;уже получили крутые результаты. Никаких штампов. Не&nbsp;пишем «сочные» тексты 
-                        | и&nbsp;не&nbsp;делаем «вкусные картинки», 
-                        | а&nbsp;помогаем привлечь клиентов на&nbsp;сайт.
-                .col-4.col-lg-10.col-sm-12.text-right.text-lg-left.mt-lg-2
-                    +btnAction('Наши услуги', 'service.html')
-            .service.mt-3
-                .service__col.service__col_first.item.item_service
-                    .item__title.item_service__title fullstack development
-                    .item_service__image.item_service__image_large(style="background-image:url('/demo/fullstack.png')")
-                .service__col.item.item_service
-                    .item__title.item_service__title google ads & yandex direct
-                    .item_service__image(style="background-image:url('/demo/small.png')")
-                .service__col.item.item_service
-                    .item__title.item_service__title create content
-                    .item_service__image(style="background-image:url('/demo/small.png')")
-                .service__col.item.item_service
-                    .item__title.item_service__title graphic design
-                    .item_service__image(style="background-image:url('/demo/small.png')")
-                .service__col.item.item_service
-                    .item__title.item_service__title support
-                    .item_service__image(style="background-image:url('/demo/small.png')")
-            //- Motivation
-            .content-main.mt-5.mt-sm-3
-                h4.content-main__title.content-main__title_secondary Акулы пера? Тигры веб-дизайна? 
-                    | Алигаторы маркетинга? У нас 
-                    span.text-green не зоопарк
-                    | , а сильная команда.
-                span.content-main__subtitle dream team
-                .row.justify-content-end.mt-3
-                    .col-4.col-lg-6.col-sm-12
-                        p.lead.text-bolder При работе над проектами:
-                        p.content-main__list заключаем договор
-                        p.content-main__list погружаемся в тему
-                        p.content-main__list избегаем клише
-                        p.content-main__list ориентируемся на результат
-                        p.content-main__list постоянно взаимодействуем с клиентом
-                    .col-4.col-lg-6.col-sm-12.mt-sm-2
-                        p.lead.text-bolder Что мы умеем простыми словами:
-                        p.content-main__list писать интересные тексты
-                        p.content-main__list рисовать стильные сайты
-                        p.content-main__list делать рекламу и она работает
-                        p.content-main__list настраивать удобную админку
-                        p.content-main__list создавать лого, которые нравятся
+        .container__inner
+            //- Main Screen
+            section.content-main
+                h1.content-main__title Web-агентство полного цикла для&nbsp;сферы услуг
+                span.content-main__subtitle для малого бизнеса
+                .row.justify-content-end.mt-3.mt-md-2
+                    .col-5.col-xl-6.col-lg-7.col-md-9.col-sm-12
+                        p.content-main__intro Разрабатываем лендинги и&nbsp;сайты. Создаём логотипы и&nbsp;фирменные стили.
+                            |  SEO-продвижение и&nbsp;настройка рекламы ведутся на&nbsp;основе тщательного анализа 
+                            |  ниши и&nbsp;конкурентов.
+                        +btnIconModal('Обсудить проект')
+            //- Services
+            aside.service.service_index-page.mt-4.mt-xs-3
+                +service("Сайт под ключ", "Срок: от 35 дней","../icon/service/web.svg")
+                +service("Сайт на Tilda", "Срок: от 4 дней","../icon/service/tilda.svg")
+                +service("Разработка лого", "Срок: от 8 дней","../icon/service/design.svg")
+                +service("Контекстная реклама","Срок: от 6 дней","../icon/service/context.svg")
+                +service("E-mail рассылки","Срок: от 2 дней","../icon/service/email.svg")
+                +service("Презентации","Срок: от 5 дней","../icon/service/presentation.svg")
+                +service("SEO","Срок: от 14 дней","../icon/service/seo.svg")
+                +service("Контент","Срок: от 3 дней","../icon/service/content.svg")
+                +service("Упаковка продукта","Срок: от 24 дней","../icon/service/product.svg")
+            //- Portfolio
+            section.pt-5.pb-5.pb-lg-0.pt-xs-4
+                .row.align-items-end
+                    .col-6.col-xs-12
+                        h4.text-uppercase Новое в&nbsp;нашем портфолио
+                    .col-6.col-xs-12.text-right.text-xs-left.mt-sm-2
+                        +btnAction('Все проекты', 'portfolio.html')
+                .portfolio.portfolio_large.mt-3.mt-sm-2
+                    +portfolioPrev("text.html", "", "/demo/corp-page.jpg", "EuroComm", "Сайт-визитка на MODx Revo")
+                    +portfolioPrev("text.html", "", "/demo/promo-page.jpg", "KAM fish", "Логотип и иконки для хайлайтс")
+                    +portfolioPrev("text.html", "", "/demo/store-page.jpg", "Pelibox", "Открытки для доставки еды")
+                    +portfolioPrev("text.html", "", "/demo/corp-page.jpg", "Pelibox", "Открытки для доставки еды")
+                    +portfolioPrev("text.html", "", "/demo/promo-page.jpg", "KAM fish", "Логотип и иконки для хайлайтс")
+                    +portfolioPrev("text.html", "", "/demo/corp-page.jpg", "EuroComm", "Сайт-визитка на MODx Revo")
+            //- Promo Page
+            section.pt-5.pb-5.pb-xs-4
+                .row
+                    .col-5.col-xl-7.col-lg-10.col-sm-12
+                        p.h1 Мы знаем, как&nbsp;это 
+                            span.text-green работает
+                .row.mt-2.align-items-end
+                    .col-8.col-xl-9.col-lg-10.col-sm-12
+                        p Все рецепты SEO-бабушек и&nbsp;Digital-дедушек остались в&nbsp;прошлом. 
+                            | Мы не боимся брать ответственность за&nbsp;решения: нам доверились 100+ компаний 
+                            | и&nbsp;уже получили крутые результаты. Никаких штампов. Не&nbsp;пишем «сочные» тексты 
+                            | и&nbsp;не&nbsp;делаем «вкусные картинки», 
+                            | а&nbsp;помогаем привлечь клиентов на&nbsp;сайт.
+                    .col-4.col-xl-3.col-lg-10.col-sm-12.text-right.text-lg-left.mt-lg-2
+                        +btnAction('Наши услуги', 'service.html')
+                .service.service_category.mt-3
+                    .service__col.service__col_first.item.item_service
+                        .item__title.item_service__title fullstack development
+                        .item_service__image.item_service__image_large(style="background-image:url('/demo/fullstack.png')")
+                    .service__col.item.item_service
+                        .item__title.item_service__title google ads & yandex direct
+                        .item_service__image(style="background-image:url('/demo/small.png')")
+                    .service__col.item.item_service
+                        .item__title.item_service__title create content
+                        .item_service__image(style="background-image:url('/demo/small.png')")
+                    .service__col.item.item_service
+                        .item__title.item_service__title graphic design
+                        .item_service__image(style="background-image:url('/demo/small.png')")
+                    .service__col.item.item_service
+                        .item__title.item_service__title support
+                        .item_service__image(style="background-image:url('/demo/small.png')")
+                //- Motivation
+                .content-main.mt-5.mt-sm-3
+                    h4.content-main__title.content-main__title_secondary Акулы пера? Тигры веб-дизайна? 
+                        | Алигаторы маркетинга? У&nbsp;нас 
+                        span.text-green не&nbsp;зоопарк
+                        | , а&nbsp;сильная команда.
+                    span.content-main__subtitle dream team
+                    .row.justify-content-end.mt-3.mt-sm-2
+                        .col-4.col-lg-6.col-sm-12
+                            p.lead.text-bolder При работе над проектами:
+                            p.content-main__list заключаем договор
+                            p.content-main__list погружаемся в тему
+                            p.content-main__list избегаем клише
+                            p.content-main__list ориентируемся на результат
+                            p.content-main__list постоянно взаимодействуем с клиентом
+                        .col-4.col-lg-6.col-sm-12.mt-sm-2
+                            p.lead.text-bolder Что мы умеем простыми словами:
+                            p.content-main__list писать интересные тексты
+                            p.content-main__list рисовать стильные сайты
+                            p.content-main__list делать рекламу и она работает
+                            p.content-main__list настраивать удобную админку
+                            p.content-main__list создавать лого, которые нравятся
         //- Contact Form
         include ../blocks/content/content-form.pug

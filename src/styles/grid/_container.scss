@@ -1,14 +1,11 @@
 .container {
-  width: 100%;
+  width: calc( 100% - 140px );
   max-width: map-get($container-max-widths, 'hd');
   padding-left: $grid-gutter-width;
   padding-right: $grid-gutter-width;
   margin-right: auto;
   margin-left: auto;
 
-  // &__inner{
-  //   margin-right: 120px;
-  // }
 }
 .row{
   display: flex;
@@ -25,4 +22,33 @@
   padding-left: 0
 }
 
-@media all and (max-width: map-get($grid-breakpoints, 'xl')){}
+// < 1600px
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+  .container {
+    // max-width: map-get($container-max-widths, 'xl');
+    width: 100%;
+    
+    &__inner{
+      padding-right: map-get($map: $spacers, $key: 5);
+    }
+  }
+}
+
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+  .container {
+    &__inner{
+      padding-right: map-get($map: $spacers, $key: 4);
+    }
+  }
+}
+
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+  .container {
+    &__inner{
+      // padding-right: 44px;
+      padding-right: $grid-gutter-width;
+    }
+  }
+}

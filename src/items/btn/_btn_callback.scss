@@ -3,6 +3,8 @@
     align-items: center;
     color: $green;
 
+    padding: 0;
+
     svg{
         fill: $green;
         margin-left: map-get($map: $spacers, $key: 1);

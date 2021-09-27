@@ -36,16 +36,25 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+// < 1024px
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .portfolio{
+        &__title{
+            font-size: map-get($map: $font-size, $key: md);
+            padding: map-get($map: $spacers, $key: 2) map-get($map: $spacers, $key: 2) map-get($map: $spacers, $key: 1);
+        }
+        &__intro{
+            padding: map-get($map: $spacers, $key: 0) map-get($map: $spacers, $key: 2) map-get($map: $spacers, $key: 2);
+        }
+
         &_navbar{
             grid-template-columns: repeat(3, minmax(0, 1fr));
         }
     }
-
 }
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .portfolio{
-        display: block;
+        grid-template-columns: 1fr;
     }
 }

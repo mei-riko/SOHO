@@ -37,16 +37,58 @@
     }
 }
 
+// < 1024px
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .content-form{
+        padding-right: map-get($map: $spacers, $key: 5);
+    }
+}
+// < 768px
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .content-form{
-        // Modificatio
+        padding-right: map-get($map: $spacers, $key: 4);
+
+        &__form{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &__col{
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            &_name{
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+            &_phone{
+                grid-column-start: 2;
+                grid-column-end: 3;
+            }
+        }
+
+        // Modification
         &_callback{
             padding: $spacer/2;
         }
     }
 }
+// < 576px
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .content-form{
         padding-top: map-get($map: $spacers, $key: 3);
+        padding-right: map-get($map: $spacers, $key: 3);
+
+        &__form{
+            grid-template-columns: 1fr;
+        }
+        &__col{
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        &__intro{
+            max-width: 100%;
+        }
+        &__btn{
+            width: 100%;
+        }
     }
 }

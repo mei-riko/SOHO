@@ -1,45 +1,45 @@
-//- Button
-mixin btnIconModal(name)
-    button.btn.btn--has-icon(data-fancybox data-src="#hidden-form" href="javascript:;")= name
-        svg.btn__icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 -31 512 512" width="16px" height="16px")
-            path(fill="#c1ea1d" d="m123.195312 260.738281 63.679688 159.1875 82.902344-82.902343 142.140625 112.976562 100.082031-450-512 213.265625zm242.5-131.628906-156.714843 142.941406-19.519531 73.566407-36.058594-90.164063zm0 0")
-mixin btnAction(name, href)
-    a.btn.btn_action.btn--small(href=href)= name
-//- Positive & Negative Advantage
-mixin advantage(name)
-    .col-6.mb-2
-        .item.item_advantage
-            svg.item__icon.item_advantage__positive(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve")
-                path(d="M87.6,16c-4.7-5-11.2-7.9-18-7.9c-6.8,0-13.4,2.9-18,7.9L50,17.7L48.4,16c-9.3-10-24.8-10.5-34.8-1.3    c-0.4,0.4-0.9,0.8-1.3,1.3c-9.8,10.6-9.8,26.9,0,37.5l35.3,37.2c1.2,1.3,3.3,1.3,4.5,0.1c0,0,0.1-0.1,0.1-0.1l35.3-37.2    C97.5,43,97.5,26.6,87.6,16z")
-            .item_advantage__title!= name
-mixin no-advantage(name)
-    .col-12.col-sm-6.mb-2
-        .item.item_advantage.item_advantage--inverse
-            svg.item__icon.item_advantage__negative(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve")
-                path(d="M15.5,65.7C9.3,60.1,4.7,52.8,2.8,44.5C1.3,38.5,2,35.1,2,35.1c1.2-13.6,10.8-24.9,24.1-24.9c8.3,0,15.2,4.4,19.4,11l0,0L31.8,41.2l26.7,3.6L37.5,64L53,73.7l-6.7,20L15.5,65.7z M97.1,44.5c-1.9,8.3-6.5,15.6-12.7,21.2L54.9,92l6.6-19.9l-13.9-8.7l23.2-21.3l-28.6-3.8c0,0,6.3-11.2,8.7-14.7c5.1-7.8,12.5-13.4,21.8-13.4c13.3,0,23.9,11.4,25.1,24.9C97.9,35.1,98.5,38.5,97.1,44.5z")
-            .item_advantage__title.item_advantage__title--inverse!= name
-//- Portfolio
-mixin portfolio-link(href, src, image, title, intro)
-    if href == "javascript:;"
-        a.portfolio__col.mt-xs-2(href=href data-fancybox="portfolio" data-src=src)
-            img.img-fluid(src=image)
-            p.portfolio__title.text-small.text-bold.text-uppercase= title
-            p.portfolio__intro.text-small!= intro
-    else 
-        a.portfolio__col.mt-xs-2(href=href)
-            img.img-fluid(src=image)
-            p.portfolio__title.text-small.text-bold.text-uppercase= title
-            p.portfolio__intro.text-small!= intro
-//- Service Preview
-mixin service(title, intro, image)
-    if image != ""
-        .col-3.col-lg-4.col-md-6.col-xs-12.mt-2.mt-xs-1
-            a.item.item_link(href="#" title=title)
-                p.item__title.item__title_has-icon.mb-0= title
-                    img.item__icon.item__icon_inside-title(src=image alt=title title=title)
-                p.item__intro.text-small!= intro
-    else
-        .col-3.col-lg-4.col-md-6.col-xs-12.mt-2.mt-xs-1
-            a.item.item_link(href="#" title=title)
-                p.item__title.mb-0= title
-                p.item__intro.text-small!= intro
+//- //- Button
+//- mixin btnIconModal(name)
+//-     button.btn.btn--has-icon(data-fancybox data-src="#hidden-form" href="javascript:;")= name
+//-         svg.btn__icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 -31 512 512" width="16px" height="16px")
+//-             path(fill="#c1ea1d" d="m123.195312 260.738281 63.679688 159.1875 82.902344-82.902343 142.140625 112.976562 100.082031-450-512 213.265625zm242.5-131.628906-156.714843 142.941406-19.519531 73.566407-36.058594-90.164063zm0 0")
+//- mixin btnAction(name, href)
+//-     a.btn.btn_action.btn--small(href=href)= name
+//- //- Positive & Negative Advantage
+//- mixin advantage(name)
+//-     .col-6.mb-2
+//-         .item.item_advantage
+//-             svg.item__icon.item_advantage__positive(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve")
+//-                 path(d="M87.6,16c-4.7-5-11.2-7.9-18-7.9c-6.8,0-13.4,2.9-18,7.9L50,17.7L48.4,16c-9.3-10-24.8-10.5-34.8-1.3    c-0.4,0.4-0.9,0.8-1.3,1.3c-9.8,10.6-9.8,26.9,0,37.5l35.3,37.2c1.2,1.3,3.3,1.3,4.5,0.1c0,0,0.1-0.1,0.1-0.1l35.3-37.2    C97.5,43,97.5,26.6,87.6,16z")
+//-             .item_advantage__title!= name
+//- mixin no-advantage(name)
+//-     .col-12.col-sm-6.mb-2
+//-         .item.item_advantage.item_advantage--inverse
+//-             svg.item__icon.item_advantage__negative(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve")
+//-                 path(d="M15.5,65.7C9.3,60.1,4.7,52.8,2.8,44.5C1.3,38.5,2,35.1,2,35.1c1.2-13.6,10.8-24.9,24.1-24.9c8.3,0,15.2,4.4,19.4,11l0,0L31.8,41.2l26.7,3.6L37.5,64L53,73.7l-6.7,20L15.5,65.7z M97.1,44.5c-1.9,8.3-6.5,15.6-12.7,21.2L54.9,92l6.6-19.9l-13.9-8.7l23.2-21.3l-28.6-3.8c0,0,6.3-11.2,8.7-14.7c5.1-7.8,12.5-13.4,21.8-13.4c13.3,0,23.9,11.4,25.1,24.9C97.9,35.1,98.5,38.5,97.1,44.5z")
+//-             .item_advantage__title.item_advantage__title--inverse!= name
+//- //- Portfolio
+//- mixin portfolio-link(href, src, image, title, intro)
+//-     if href == "javascript:;"
+//-         a.portfolio__col.mt-xs-2(href=href data-fancybox="portfolio" data-src=src)
+//-             img.img-fluid(src=image)
+//-             p.portfolio__title.text-small.text-bold.text-uppercase= title
+//-             p.portfolio__intro.text-small!= intro
+//-     else 
+//-         a.portfolio__col.mt-xs-2(href=href)
+//-             img.img-fluid(src=image)
+//-             p.portfolio__title.text-small.text-bold.text-uppercase= title
+//-             p.portfolio__intro.text-small!= intro
+//- //- Service Preview
+//- mixin service(title, intro, image)
+//-     if image != ""
+//-         .col-3.col-lg-4.col-md-6.col-xs-12.mt-2.mt-xs-1
+//-             a.item.item_link(href="#" title=title)
+//-                 p.item__title.item__title_has-icon.mb-0= title
+//-                     img.item__icon.item__icon_inside-title(src=image alt=title title=title)
+//-                 p.item__intro.text-small!= intro
+//-     else
+//-         .col-3.col-lg-4.col-md-6.col-xs-12.mt-2.mt-xs-1
+//-             a.item.item_link(href="#" title=title)
+//-                 p.item__title.mb-0= title
+//-                 p.item__intro.text-small!= intro

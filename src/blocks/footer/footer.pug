@@ -1,7 +1,7 @@
 footer.container
     .footer.container__inner
         .row
-            .col-4.col-lg-6.col-xs-12.mb-lg-2
+            .col-3.col-lg-4.col-xs-12.footer__info
                 //- Logo
                 a(href="https://novatti.ru/" title="Novatti - разработка сайтов, реклама и продвижение.")
                     svg.footer__logo(preserveAspectRatio="xMinYMin meet" viewBox="0 0 390 85" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink")
@@ -11,30 +11,28 @@ footer.container
                 //- Copyright
                 .footer__copyright 2021 © novatti.ru. Все права защищены. 
                     a.text-underline(href="#") Оферта.
-            .col-6.col-lg-12.col-xs-12.mb-lg-2
+            .col-6.col-lg-12.col-xs-12.footer__service
                 p.footer__title Основные услуги
-                .row
-                    .col-4.col-xs-12
-                        a.footer__link(href="") Сайт на Тильда
-                        a.footer__link(href="") Сайт под ключ
-                        a.footer__link(href="") Разработка логотипа
-                        a.footer__link(href="") Создание фирменного стиля
-                        a.footer__link(href="") Презентации
-                    .col-4.col-xs-12
-                        a.footer__link(href="") Рассылки: дизайн и верстка
-                        a.footer__link(href="") Полиграфия
-                        a.footer__link(href="") Реклама в Яндекс и Гугл
-                        a.footer__link(href="") Таргетированная реклама
-                        a.footer__link(href="") Упаковка продукта
-                    .col-4.col-xs-12
-                        a.footer__link(href="") Контент
-                        a.footer__link(href="") SEO
-                        a.footer__link(href="") Тех.поддержка сайта
-                        a.footer__link(href="") Анализ сайта
-                        a.footer__link(href="") Управление репутацией
-            .col-2.col-lg-12.col-xs-12
+                .footer__nav
+                    a.footer__link(href="") Сайт на Тильда
+                    a.footer__link(href="") Сайт под ключ
+                    a.footer__link(href="") Разработка логотипа
+                    a.footer__link(href="") Создание фирменного стиля
+                    a.footer__link(href="") Презентации
+                    a.footer__link(href="") Рассылки: дизайн и верстка
+                    a.footer__link(href="") Полиграфия
+                    a.footer__link(href="") Реклама в Яндекс и Гугл
+                    a.footer__link(href="") Таргетированная реклама
+                    a.footer__link(href="") Упаковка продукта
+                    a.footer__link(href="") Контент
+                    a.footer__link(href="") SEO
+                    a.footer__link(href="") Тех.поддержка сайта
+                    a.footer__link(href="") Анализ сайта
+                    a.footer__link(href="") Управление репутацией
+            .col-3.col-lg-8.col-xs-12.footer__portfolio
                 p.footer__title Портфолио
-                a.footer__link(href="#") Сайт для «ДИФ Строй-Инжиниринг»
-                a.footer__link(href="#") Вывод сайта в ТОП-10 по высокочастотным запросам
-                a.footer__link(href="#") Сайт для TopStone
+                .footer__nav.footer__nav_portfolio
+                    a.footer__link(href="#") Сайт для «ДИФ Строй-Инжиниринг»
+                    a.footer__link(href="#") Вывод сайта в ТОП-10 по высокочастотным запросам
+                    a.footer__link(href="#") Сайт для TopStone
 .overlay.overlay--disable

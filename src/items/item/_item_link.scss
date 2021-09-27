@@ -4,10 +4,10 @@
 
     padding: $grid-gutter-width;
     border: 4px solid $white;
-    background-color: darken($color: $black, $amount: 4);
+    background-color: $black;
 
     &:hover, &:focus{
-        background-color: $black;
+        background-color: darken($color: $black, $amount: 4);
         text-decoration: none;
     }
 }

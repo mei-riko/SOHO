@@ -41,6 +41,7 @@
     &__intro{
         width: 420px;
         max-width: 90%;
+        
         margin-bottom: map-get($map: $spacers, $key: 2);
     }
     &__list{
@@ -57,42 +58,93 @@
         }
     }
 }
-// @media all and (max-width: map-get($grid-breakpoints, 'lg')){
-//     .content-main{
-//         &__title{
-//             font-size: 40px;
-//         }
-//         &__intro{
-//             width: 440px;
-//         }
-//     }
-// }
-// @media all and (max-width: map-get($grid-breakpoints, 'md')){
-//     .content-main{
-//         &__title{
-//             margin-top: $spacer/2;
-//             font-size: 32px;
-//         }
-//     }
-// }
-// @media all and (max-width: map-get($grid-breakpoints, 'sm')){
-//     .content-main{
-//         &__title{
-//             margin-top: map-get($map: $spacers, $key: 4);
-//             text-indent: 0px;
-//         }
-//     }
-// }
-// @media all and (max-width: map-get($grid-breakpoints, 'xs')){
-//     .content-main{
-//         padding: $spacer/2;
-//         &__title{
-//             font-size: 20px;
-//         }
-//         &__subtitle{
-//             font-size: 10px;
-//             top: $spacer/2;
-//             left: $spacer/2;
-//         }
-//     }
-// }
+// < 1600px
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .content-main{
+        &__title{
+            font-size: 60px;
+
+            &_secondary{
+                font-size: map-get($map: $heading, $key: h2);
+            }
+        }
+        &__intro{
+            width: 100%;
+        }
+    }
+}
+// < 1280px
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .content-main{
+        &__title{
+            font-size: map-get($map: $heading, $key: h2);
+
+            &_secondary{
+                font-size: map-get($map: $heading, $key: h3);
+            }
+        }
+        &__subtitle{
+            top: map-get($map: $spacers, $key: 2);
+        }
+    }
+}
+// < 1024px
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .content-main{
+        padding: map-get($map: $spacers, $key: 3) map-get($map: $spacers, $key: 2);
+
+        &__title{
+            font-size: map-get($map: $heading, $key: h3);
+
+            &_secondary{
+                font-size: map-get($map: $heading, $key: h4);
+            }
+        }
+        &__subtitle{
+            left: map-get($map: $spacers, $key: 2);
+        }
+    }
+}
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .content-main{
+        padding-top: map-get($map: $spacers, $key: 5);
+        
+        &__title{
+            text-indent: 0px;
+        }
+        &__intro{
+            max-width: 100%;
+        }
+    }
+}
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .content-main{
+        &__title{
+            font-size: map-get($map: $heading, $key: h4);
+
+            &_secondary{
+                font-size: map-get($map: $heading, $key: h6);
+            }
+        }
+        &__subtitle{
+            font-size: map-get($map: $spacers, $key: xs);
+        }
+    }
+}
+// < 375px
+@media all and (max-width: map-get($grid-breakpoints, 'xxs')){
+    .content-main{
+        &__title{
+            font-size: map-get($map: $heading, $key: h5);
+
+            &_secondary{
+                font-size: map-get($map: $font-size, $key: lg);
+            }
+        }
+        &__list{
+            margin-bottom: map-get($map: $spacers, $key: 1)/2;
+        }
+    }
+}

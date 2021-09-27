@@ -28,12 +28,44 @@
 
     &__close{
         position: absolute;
-        top: 10px;
-        right: 10px;
-        padding: 6px;
-        background: $black;
-        border-radius: 50%;
+        top: 30px;
+        right: 15px;
+        
 
+        height: 50px;
+        width: 50px;
+        padding: 10px;
+        
+        background: $black;
+        border: 1px solid $green;
+        fill: $green;
+
+        transition: .4s;
         cursor: pointer;
+        z-index: 99;
+
+        &:hover{
+            background: darken($color: $black, $amount: 4);
+        }
+    }
+}
+
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .navbar_header{
+        &__close{
+            height: 34px;
+            width: 34px;
+            padding: 6px;
+        }
+    }
+}
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .navbar_header{
+        &__close{
+            top: 9px;
+            right: 12px;
+        }
     }
 }
