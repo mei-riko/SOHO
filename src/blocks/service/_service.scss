@@ -5,6 +5,9 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
 
     &__col{
+        display: flex;
+        align-items: stretch;
+
         &_first{
             grid-row-start: 1;
             grid-row-end: 3;

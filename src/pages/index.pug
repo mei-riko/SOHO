@@ -25,6 +25,7 @@ mixin portfolioPrev(href, src, image, title, intro)
             img.img-fluid(src=image)
             p.portfolio__title.text-small.text-bold.text-uppercase= title
             p.portfolio__intro.text-small!= intro
+//- Content
 block content
     .container
         .container__inner
@@ -79,21 +80,26 @@ block content
                     .col-4.col-xl-3.col-lg-10.col-sm-12.text-right.text-lg-left.mt-lg-2
                         +btnAction('Наши услуги', 'service.html')
                 .service.service_category.mt-3
-                    .service__col.service__col_first.item.item_service
-                        .item__title.item_service__title fullstack development
-                        .item_service__image.item_service__image_large(style="background-image:url('/demo/fullstack.png')")
-                    .service__col.item.item_service
-                        .item__title.item_service__title google ads & yandex direct
-                        .item_service__image(style="background-image:url('/demo/small.png')")
-                    .service__col.item.item_service
-                        .item__title.item_service__title create content
-                        .item_service__image(style="background-image:url('/demo/small.png')")
-                    .service__col.item.item_service
-                        .item__title.item_service__title graphic design
-                        .item_service__image(style="background-image:url('/demo/small.png')")
-                    .service__col.item.item_service
-                        .item__title.item_service__title support
-                        .item_service__image(style="background-image:url('/demo/small.png')")
+                    .service__col.service__col_first
+                        .item.item_service
+                            .item__title.item_service__title fullstack development
+                            .item_service__image.item_service__image_large(style="background-image:url('/demo/fullstack.png')")
+                    .service__col.item
+                        .item.item_service
+                            .item__title.item_service__title google ads & yandex direct
+                            .item_service__image(style="background-image:url('/demo/small.png')")
+                    .service__col
+                        .item.item_service
+                            .item__title.item_service__title create content
+                            .item_service__image(style="background-image:url('/demo/small.png')")
+                    .service__col
+                        .item.item_service
+                            .item__title.item_service__title graphic design
+                            .item_service__image(style="background-image:url('/demo/small.png')")
+                    .service__col
+                        .item.item_service
+                            .item__title.item_service__title support
+                            .item_service__image(style="background-image:url('/demo/small.png')")
                 //- Motivation
                 .content-main.mt-5.mt-sm-3
                     h4.content-main__title.content-main__title_secondary Акулы пера? Тигры веб-дизайна? 

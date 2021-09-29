@@ -72,6 +72,11 @@
         color: $white;
         padding: 4px 8px;
         margin: 2px;
+
+        &_action{
+            background-color: $green;
+            color: $black;
+        }
     }
 
     // Selected Item

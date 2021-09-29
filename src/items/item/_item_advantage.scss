@@ -16,12 +16,16 @@
         stroke: $green;
         stroke-width: 5;
         transition: .4s;
+
+        width: 26px;
     }
     &__negative{
         fill: lighten($color: $body-bg, $amount: 2);
         stroke: $red;
         stroke-width: 3;
         transition: .4s;
+        
+        width: 26px;
     }
 
     &--inverse{

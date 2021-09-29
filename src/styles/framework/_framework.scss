@@ -26,9 +26,36 @@ p {
     }
 }
 // List
-ol, ul{
+ul{
     padding: 0;
     margin-bottom: map-get($spacers, 2);
+
+    li{
+        position: relative;
+
+        display: grid;
+        grid-template-columns: 6px 1fr;
+        grid-gap: 10px;
+        align-items: baseline;
+
+        list-style: none;
+        margin-bottom: map-get($spacers, 1);
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+
+        &:before{
+            content: '';
+
+            display: block;
+            width: 6px;
+            height: 6px;
+            transform: translateY(-50%);
+
+            background: $green;
+        }
+    }
     &:last-child{
         margin-bottom: 0;
     }

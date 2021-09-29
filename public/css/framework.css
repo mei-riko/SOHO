@@ -1898,12 +1898,39 @@ p:last-child {
   margin-bottom: 0;
 }
 
-ol, ul {
+ul {
   padding: 0;
   margin-bottom: 20px;
 }
 
-ol:last-child, ul:last-child {
+ul li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 6px 1fr;
+  grid-gap: 10px;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+ul li:last-child {
+  margin-bottom: 0;
+}
+
+ul li:before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: #c1ea1d;
+}
+
+ul:last-child {
   margin-bottom: 0;
 }
 

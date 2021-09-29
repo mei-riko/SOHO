@@ -1,6 +1,4 @@
 .content-compare{
-    padding: map-get($map: $spacers, $key: 5) 0;
-
     &__image{
         width: 100%;
         height: 514px;
@@ -14,7 +12,6 @@
 
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .content-compare{
-        padding: map-get($map: $spacers, $key: 4) 0;
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
@@ -26,7 +23,6 @@
 }
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .content-compare{
-        padding: map-get($map: $spacers, $key: 3) 0;
         &__image{
             height: 240px;
         }

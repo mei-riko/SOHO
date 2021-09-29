@@ -1,0 +1,216 @@
+extends ../blocks/main.pug
+
+block variables
+    - var pageTitle     = "Tilda"
+//- Step Item
+mixin item(title, intro)
+    .item.item_service
+        .item__title.item_service__title=title
+        p.item__intro!= intro
+//- Portfolio
+mixin portfolioPrev(src, image, title, intro)
+    a.portfolio__col(href="javascript:;" data-fancybox="portfolio" data-src=src)
+        .item.item_link
+            p.item__title= title
+            p.item__intro!= intro
+            img.img-fluid(src=image)
+//- Positive & Negative Advantage
+mixin advantage(name)
+    .item.item_advantage
+        svg.item__icon.item_advantage__positive(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve")
+            path(d="M87.6,16c-4.7-5-11.2-7.9-18-7.9c-6.8,0-13.4,2.9-18,7.9L50,17.7L48.4,16c-9.3-10-24.8-10.5-34.8-1.3    c-0.4,0.4-0.9,0.8-1.3,1.3c-9.8,10.6-9.8,26.9,0,37.5l35.3,37.2c1.2,1.3,3.3,1.3,4.5,0.1c0,0,0.1-0.1,0.1-0.1l35.3-37.2    C97.5,43,97.5,26.6,87.6,16z")
+        .item_advantage__title!= name
+mixin no-advantage(name)
+    .item.item_advantage.item_advantage--inverse
+        svg.item__icon.item_advantage__negative(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve")
+            path(d="M15.5,65.7C9.3,60.1,4.7,52.8,2.8,44.5C1.3,38.5,2,35.1,2,35.1c1.2-13.6,10.8-24.9,24.1-24.9c8.3,0,15.2,4.4,19.4,11l0,0L31.8,41.2l26.7,3.6L37.5,64L53,73.7l-6.7,20L15.5,65.7z M97.1,44.5c-1.9,8.3-6.5,15.6-12.7,21.2L54.9,92l6.6-19.9l-13.9-8.7l23.2-21.3l-28.6-3.8c0,0,6.3-11.2,8.7-14.7c5.1-7.8,12.5-13.4,21.8-13.4c13.3,0,23.9,11.4,25.1,24.9C97.9,35.1,98.5,38.5,97.1,44.5z")
+        .item_advantage__title.item_advantage__title--inverse!= name
+
+block content
+    .container
+        .container__inner
+            //- Main Screen
+            section.content-main
+                h1.content-main__title 
+                    | Оперативная <span class="text-green">promo</span>-разработка c&nbsp;отличным дизайном
+                span.content-main__subtitle no-code разработка
+                .row.justify-content-end.mt-3
+                    .col-5
+                        .content-main__intro
+                            p Tilda позволяет реализовать проект без&nbsp;привлечения дорогостоящих front-end и&nbsp;back-end 
+                                |  разработчиков. И настроить 
+                                a.text-underline(data-fancybox data-src="#hidden-info" href="javascript:;") интеграций
+                                |  с&nbsp;различными инструментами.
+                        +btnIconModal('Обсудить проект')
+            //- Step & Item
+            section.pt-5.pb-5.pt-sm-3.pb-sm-3
+                .row.mb-3
+                    .col-4.col-lg-8.col-md-7.col-xs-12
+                        h2.h3 Всё, что нужно для&nbsp;
+                            span.text-green online 
+                            | продаж
+                .row
+                    .col-4.col-lg-10.col-sm-12.mb-lg-3
+                        p.content-main__intro Tilda — многофункциональная платформа, позволяющая создать гибкий 
+                            |  и&nbsp;адаптивный сайт с&nbsp;нуля. За&nbsp;2-3 дня вы&nbsp;получаете 
+                            |  полный набор инструментов для&nbsp;продаж.
+                    .col-8.col-lg-12
+                        .service.service_inside
+                            .service__col
+                                +item("Гибкий функционал", "Сайт легко адаптировать под любые потребности ресурса. Платформа Tilda имеет большой выбор решений под бизнес-задачи любой сложности.")
+                            .service__col
+                                +item("Запоминающийся дизайн","Создадим уникальный дизайн, который отражает деятельность компании и на 100% отличает вас от серой массы конкурентов.")
+                            .service__col
+                                +item("Мощный маркетинг","На сайте будут все инструменты для привлечения новых клиентов: цепляющие заголовки, настроенная воронка продаж, привлекательные формы захвата лидов.")
+                            .service__col
+                                +item("Реклама и аналитика","Качественно настроим рекламу в Яндекс для получения клиентов. Подключим к сайту системы аналитики для оценки эффективности трафика")
+            //- Portfolio
+            section
+                h4.text-uppercase.mb-3 Кейсы в&nbsp;нашем портфолио
+                .portfolio 
+                    +portfolioPrev("#portfolio-promo", "/img/promo-page-3.jpg", "«Волшебный нырок»", "Лендинг для марафона от Логомашины")
+                    +portfolioPrev("#portfolio-guest", "/img/promo-page-2.jpg", "«Свидетель»", "Круглосуточная юридическая помощь на дорогах")
+                    +portfolioPrev("#portfolio-promo", "/img/promo-page-1.jpg", "Личный стилист", "Презентация основных услуг и портфолио работ")
+            //- Compare
+            section.content-compare.pt-5.pb-5.pt-sm-3.pb-sm-3
+                .row.justify-content-between
+                    .col-3.col-md-12.col-xs-12.mb-md-3
+                        .content-compare__image(style="background-image: url('../demo/prototype-line.png');")
+                    .col-8.col-lg-9.col-md-12
+                        .row.mb-3
+                            .col-6.col-sm-5.col-xs-12.mb-xs-2
+                                h3 Tilda — идеальное решение?
+                            .col-6.col-sm-7.col-xs-12
+                                p Честно обо всех 
+                                    span.text-bold.text-green «за» и&nbsp;«против» 
+                                    | разработки сайта на Тильда. Нам важно, чтобы вы имели представление обо всех нюансах работы.
+                        .row
+                            .col-8.col-sm-12.mb-sm-2
+                                .advantage
+                                    .advantage__col
+                                        +advantage("Быстрый<br/>старт проекта")
+                                    .advantage__col
+                                        +advantage("Быстрый<br/>старт проекта")
+                                    .advantage__col
+                                        +advantage("Быстрый<br/>старт проекта")
+                                    .advantage__col
+                                        +advantage("Быстрый<br/>старт проекта")
+                                    .advantage__col
+                                        +advantage("Быстрый<br/>старт проекта")
+                                    .advantage__col
+                                        +advantage("Быстрый<br/>старт проекта")
+                            .col-4.col-sm-12
+                                .advantage.advantage_disadvantages
+                                    .advantage__col
+                                        +no-advantage("Стоимость<br/>и объем хостинга")
+                                    .advantage__col
+                                        +no-advantage("Стоимость<br/>и объем хостинга")
+                                    .advantage__col
+                                        +no-advantage("Стоимость<br/>и объем хостинга")
+            //- Motivation
+            section.content-main
+                    h4.content-main__title.content-main__title_secondary Когда вам больше подходит 
+                        span.text-green Tilda
+                        | , чем классическая разработка сайта без конструкторов?
+                    span.content-main__subtitle конструктор
+                    .row.justify-content-end.mt-3.mt-sm-2
+                        .col-4.col-lg-6.col-sm-12
+                            p.lead.text-bolder Для вашего бизнеса нужен:
+                            p.content-main__list промо-сайт (лендинг)
+                            p.content-main__list cайт-визитка
+                            p.content-main__list корпоративный сайт
+                            p.content-main__list небольшой интернет-магазин
+                            p.content-main__list каталог услуг
+                        .col-4.col-lg-6.col-sm-12.mt-sm-2
+                            p.lead.text-bolder Вы ожидаете от сайта:
+                            p.content-main__list быстрый старт
+                            p.content-main__list невысокая стоимость разработки
+                            p.content-main__list простота редактирования
+                            p.content-main__list полная адаптивность
+                            p.content-main__list современный дизайн
+            //- Price
+            section.pt-5.pb-5.pt-sm-3.pb-sm-3
+                .row
+                    .col-4.col-lg-8.col-md-10.col-sm-12.mb-lg-3
+                        h4.text-white.mb-3.mb-lg-2 Сделаем всё  
+                            span.d-block качественно и&nbsp;в&nbsp;срок
+                                span.text-green .
+                        .content-intro.text-grey
+                            ul 
+                                li Заключаем официальный договор. 
+                                li Указываем сроки, перечень услуг и стоимость. 
+                                li Подписываем договор в двух экземплярах.
+                                li Оплата в два этапа оплата сайта только после сдачи.
+                    .col-8.col-lg-12
+                        .item.item_price.item_price-promo.mb-2(data-fancybox="promo" data-src="#promo1")
+                            .item_price__content
+                                p.item_price__title Promo
+                                p.item_price__intro Небольшая посадочная страница для одного продукта. 
+                                    | Прототипирование и реализация с использованием возможностей Tilda, настройка нужного функционала и интеграций. 
+                                .item_price__group
+                                    .item_price__label 5-6 экранов
+                                    .item_price__label текст до 5000 зн.
+                                    .item_price__label анализ конкурентов
+                                    .item_price__label помощь с УТП
+                                    .item_price__label подбор доменного имени
+                                    .item_price__label анимации
+                                    .item_price__label настройка форм
+                                    .item_price__label система аналитики
+                                    .item_price__label размещение информации
+                                    .item_price__label SSL сертификат
+                                    .item_price__label видео-инструкция
+                            .item_price__info
+                                p.item_price__title 30.000
+                                .item_price__add +7.500
+                                .item_price__add-intro Google Ads
+                                //- .item_price__add +5000
+                                //- .item_price__add-intro Google Ads
+                        .item.item_price.mb-2(data-fancybox="promo" data-src="#promo2")
+                            .item_price__content
+                                p.item_price__title Optimal
+                                p.item_price__intro Расширенная посадочная страница для одного продукта с интерактивом для посетителей сайта.
+                                    |  Прототипирование и реализация на Tilda, настройка нужного функционала и бизнес-интеграций. 
+                                .item_price__group
+                                    .item_price__label до 10 экранов
+                                    .item_price__label текст до 10 000 зн.
+                                    .item_price__label анализ конкурентов
+                                    .item_price__label помощь с УТП
+                                    .item_price__label подбор доменного имени
+                                    .item_price__label анимации
+                                    .item_price__label настройка форм
+                                    .item_price__label система аналитики
+                                    .item_price__label размещение информации
+                                    .item_price__label SSL сертификат
+                                    .item_price__label видео-инструкция
+                            .item_price__info
+                                p.item_price__title 60.000
+                                .item_price__add +7.500
+                                .item_price__add-intro Google Ads
+                        .item.item_price.mb-2(data-fancybox="promo" data-src="#promo3")
+                            .item_price__content
+                                p.item_price__title Business
+                                p.item_price__intro Расширение тарифа Optimal: подключение автоматической e-mail рассылки, интеграция с рассылкой SendPulse, настройка рекламы, подключение функционала магазина и интеграция со СДЭК.
+                                .item_price__group
+                                    .item_price__label до 10 экранов
+                                    .item_price__label текст до 10 000 зн.
+                                    .item_price__label.item_price__label_action подключение online-оплаты
+                                    .item_price__label.item_price__label_action настройка e-mail рассылки
+                                    .item_price__label.item_price__label_action SendPulse
+                                    .item_price__label.item_price__label_action СДЭК
+                                    .item_price__label анализ конкурентов
+                                    .item_price__label помощь с УТП
+                                    .item_price__label подбор доменного имени
+                                    .item_price__label анимации
+                                    .item_price__label настройка форм
+                                    .item_price__label система аналитики
+                                    .item_price__label размещение информации
+                                    .item_price__label SSL сертификат
+                                    .item_price__label видео-инструкция
+                            .item_price__info
+                                p.item_price__title 100.000
+                                .item_price__add +4500
+                                .item_price__add-intro добавить корзину
+                                .item_price__add +4500
+                                .item_price__add-intro добавить «Избранное»
+        //- Contact Form
+        include ../blocks/content/content-form.pug

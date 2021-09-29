@@ -1,0 +1,22 @@
+.advantage{
+    display: grid;
+    grid-gap: map-get($map: $spacers, $key: 2);
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    &__col{
+        display: flex;
+        align-items: stretch;
+    }
+}
+
+.advantage_disadvantages{
+    grid-template-columns: 1fr;
+}
+
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .advantage_disadvantages{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
