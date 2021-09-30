@@ -14,6 +14,24 @@ $(function() {
     });
     return false;
   });
+  // Go Top
+  $(document).on('click', '.go-top', function(e){
+    e.preventDefault();
+    $("html, body").animate({
+      scrollTop: 0
+    }, {
+      duration: 500,
+      easing: "swing"
+    });
+    return false;
+  });
+  let newPosTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+  if( Math.ceil(newPosTop) > 200 ){
+    $('.go-top').addClass('go-top--active');
+  }else{
+    $('.go-top').removeClass('go-top--active');
+  }
+
 
   // Link Disable
   $(document).on('click', '[data-trigger="click"]', function(e){
@@ -62,6 +80,14 @@ $(function() {
       $("body").removeClass("open-navbar");
       $("body").removeClass("compensate-for-scrollbar");
   });
+});
+$(window).on('scroll', function(event){
+  let newPosTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+  if( Math.ceil(newPosTop) > 200 ){
+    $('.go-top').addClass('go-top--active');
+  }else{
+    $('.go-top').removeClass('go-top--active');
+  }
 });
 
 $(document).mouseup(function (e){ // событие клика по веб-документу

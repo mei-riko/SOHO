@@ -80,6 +80,31 @@ a{
         color: $link-color;
     }
 }
+.go-top{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    background: $black;
+    border: 1px solid $green;
+    fill: $green;
+
+    transform: translateY(100px);
+
+    transition: .6s;
+    cursor: pointer;
+    z-index: 999;
+
+    &:hover{
+        background: darken($color: $black, $amount: 4);
+    }
+
+    &--active{
+        transform: translateY(0px);
+    }
+}
 // Table
 table{
     td{
@@ -208,6 +233,11 @@ table{
         &-center{text-align: center;}
         &-right{text-align: right;}
     }
+    .go-top{
+        height: 34px;
+        width: 34px;
+        padding: 6px;
+    }
 }
 // < 576px
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
@@ -215,5 +245,9 @@ table{
         &-left{text-align: left;}
         &-center{text-align: center;}
         &-right{text-align: right;}
+    }
+    .go-top{
+        bottom: 9px;
+        right: 12px;
     }
 }

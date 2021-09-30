@@ -68,14 +68,18 @@
         display: inline-block;
         font-size: map-get($map: $font-size, $key: "sm");
 
-        background-color: $black;
-        color: $white;
+        // background-color: $black;
+        // color: $white;
+        background: $white;
+        border: 1px solid $black;
+
         padding: 4px 8px;
         margin: 2px;
 
         &_action{
-            background-color: $green;
-            color: $black;
+            background-color: $black;
+            border-color: $black;
+            color: $white;
         }
     }
 
@@ -85,9 +89,10 @@
         // color: $black;
     }
 
+
     // Forse state
     &:hover, &:focus{
-        transform: scale(.95);
+        transform: scale(1.04);
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'md')){

@@ -585,15 +585,16 @@
 .item_price__label {
   display: inline-block;
   font-size: 14px;
-  background-color: #242424;
-  color: #ffffff;
+  background: #ffffff;
+  border: 1px solid #242424;
   padding: 4px 8px;
   margin: 2px;
 }
 
 .item_price__label_action {
-  background-color: #c1ea1d;
-  color: #242424;
+  background-color: #242424;
+  border-color: #242424;
+  color: #ffffff;
 }
 
 .item_price-promo {
@@ -601,9 +602,9 @@
 }
 
 .item_price:hover, .item_price:focus {
-  -webkit-transform: scale(0.95);
-  -ms-transform: scale(0.95);
-  transform: scale(0.95);
+  -webkit-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+  transform: scale(1.04);
 }
 
 @media all and (max-width: 1024px) {
