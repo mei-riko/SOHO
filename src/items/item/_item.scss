@@ -1,6 +1,20 @@
 .item{
     flex-grow: 1;
     
+    &__number{
+        border-radius: 8px;
+        background: $green;
+        color: $black;
+
+        font-family: $font-family-heading;
+        font-size: 20px;
+        line-height: 44px;
+        text-align: center;
+
+        width: 40px;
+        height: 40px;
+        margin-bottom: map-get($map: $spacers, $key: 2);
+    }
     &__title{
         // font-family: $font-family-heading;
         font-size: map-get($map: $font-size, $key: md);
@@ -15,6 +29,9 @@
             grid-template-columns: 54px 1fr;
             
             align-items: center;
+        }
+        &_link{
+            text-decoration: underline;
         }
     }
     &__subtitle{

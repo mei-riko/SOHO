@@ -1,0 +1,180 @@
+extends ../blocks/main.pug
+
+block variables
+    - var pageTitle     = "Logo & Branding"
+//- Positive & Negative Advantage
+mixin advantage(name, intro)
+    .item.item_advantage
+        svg.item__icon.item_advantage__positive(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve")
+            path(d="M87.6,16c-4.7-5-11.2-7.9-18-7.9c-6.8,0-13.4,2.9-18,7.9L50,17.7L48.4,16c-9.3-10-24.8-10.5-34.8-1.3    c-0.4,0.4-0.9,0.8-1.3,1.3c-9.8,10.6-9.8,26.9,0,37.5l35.3,37.2c1.2,1.3,3.3,1.3,4.5,0.1c0,0,0.1-0.1,0.1-0.1l35.3-37.2    C97.5,43,97.5,26.6,87.6,16z")
+        .item_advantage__title!= name
+        .item__intro!= intro
+        if block
+            block
+//- Portfolio
+mixin portfolioPrev(src, image, title, intro)
+    a.portfolio__col(href="javascript:;" data-fancybox="portfolio" data-src=src)
+        .item.item_link
+            p.item__title= title
+            p.item__intro!= intro
+            img.img-fluid(src=image)
+block content
+    .container
+        .container__inner
+            //- Main Screen
+            section.content-main
+                h1.content-main__title 
+                    | Полностью оформим ваш <span class="text-green">проект</span> в&nbsp;единый гайдлайн
+                span.content-main__subtitle graphic design
+                .row.justify-content-end.mt-3
+                    .col-5
+                        .content-main__intro
+                            p Создадим для вас неповторимый стиль и&nbsp;составим подробное руководство по&nbsp;его использованию:
+                                |  цвета, шрифты и&nbsp;примеры фирменных носителей
+                        +btnIconModal('Заполнить бриф')
+            //- How It Work
+            section.pt-5.pb-5.pt-sm-3.pb-sm-3
+                .row.mb-3
+                    .col-8.col-xl-7.col-lg-10.col-sm-12.mb-2
+                        p.h1 Логотип — не&nbsp;просто красивая картинка, а&nbsp;
+                            span.text-green сценарий
+                            |  развития&nbsp;бренда
+                    .col-8.col-xl-9.col-lg-10.col-sm-12
+                        p Изучим бриф, погрузимся в&nbsp;детали вашего бизнеса и&nbsp;проведем дизайн-исследование.   
+                            | И&nbsp;только после этого приступим к&nbsp;созданию визуальных сценариев 
+                            | для&nbsp;будущего фирменного стиля.
+                .service
+                    .service__col
+                        .item.item_steps
+                            .item__number 1
+                            a.item__title.item__title_link(href="https://forms.gle/F4WAzuwCtWmK22qRA" target="_blank") Заполните бриф
+                            .item__intro Расскажите о своих задачах в Google-форме, чтобы  мы могли узнали немного  
+                                | о&nbsp;вашем проекте и&nbsp;связались с вами уже имея представление о будущих задачах
+
+                    .service__col
+                        .item.item_steps
+                            .item__number 2
+                            .item__title Заключаем договор
+                            .item__intro Прописываем все&nbsp;сроки, пожелания к&nbsp;дизайну и&nbsp;условия совместной работы.  
+                                | Согласовываем и&nbsp;совместно дозаполняем бриф, который прикрепим к&nbsp;договору
+                    .service__col
+                        .item.item_steps
+                            .item__number 3
+                            .item__title Готовим презентацию
+                            .item__intro Проводим дизайн-исследование, подбираем графические референсы, изучаем конкурентов. 
+                                | И&nbsp;предлагаем несколько направлений развития в&nbsp;формате видеопрезентации
+                    .service__col
+                        .item.item_steps
+                            .item__number 4
+                            .item__title Разрабатываем логотип
+                            .item__intro Результат соберём в единое руководство — чтобы сотрудники и подрядчики 
+                                | понимали, как работать с фирменным стилем
+                    .service__col
+                        .item.item_steps
+                            .item__number 5
+                            .item__title Оформляем гайдлайн
+                            .item__intro Результат соберём в единое руководство — чтобы сотрудники и подрядчики 
+                                | понимали, как работать с фирменным стилем
+            //- Portfolio
+            section
+                h4.text-uppercase.mb-3 Логотипы созданные для&nbsp;любимых клиентов
+                .portfolio 
+                    +portfolioPrev("#portfolio-promo", "/img/elisenvaara.jpg", "Косметика для волос из Карелии", "натуральные, но технологичные")
+                    +portfolioPrev("#portfolio-guest", "/img/match-point.jpg", "Коучинг ICF стандарта", "профессиональное сообщество")
+                    +portfolioPrev("#portfolio-promo", "/img/dsign.jpg", "Дизайн-проекты интерьеров", "ремонт и меблировка квартир-студий")
+            //- About Work
+            section.pt-5.pb-5.pt-sm-3.pb-sm-3
+                //- Motivation
+                .content-main
+                    h4.content-main__title.content-main__title_secondary Создание логотипа — это взаимопонимание и&nbsp;доверие. И мы 
+                        span.text-green делаем всё 
+                        | для комфортного сотрудничества
+                    span.content-main__subtitle совместная работа
+                    .row.justify-content-end.mt-3.mt-sm-2
+                        .col-4.col-lg-6.col-sm-12
+                            p.content-main__list рисуем логотипа, а не картинку
+                            p.content-main__list передаём исходные файлы
+                            p.content-main__list 2 этапа бесплатных правок
+                        .col-4.col-lg-6.col-sm-12.mt-sm-2
+                            p.content-main__list всегда на связи в рабочее время
+                            p.content-main__list оплата 50 на 50
+                            p.content-main__list официальный договор
+                            //- .mt-3
+                            //-     +btnIconModal('Заполнить бриф')
+                //- Result
+                .row.mt-5.mt-sm-3
+                    .col-9.col-lg-10.col-sm-12
+                        p.h1 Разработает подробный 
+                            span.text-green гайдлайн: 
+                            | руководство по&nbsp;использованию фирменного стиля
+                        p Покажем, как логотип выглядит в&nbsp;разных ситуациях и&nbsp;на&nbsp;разных носителях. 
+                            | Подберем фирменные цвета, которые помогут увеличению узнаваемости бренда 
+                            | (RGB&nbsp;/&nbsp;HEX для&nbsp;web и&nbsp;CMYK&nbsp;/&nbsp;Pantone для&nbsp;печати). 
+                            | Пропишем шрифт(ы) для&nbsp;заголовков, слоганов и&nbsp;основного текста. 
+                            | Оформим несколько фирменных носителей исходя их ваших потребностей.
+                .service.service_category.mt-3
+                    .service__col.service__col_first
+                        .item.item_service
+                            .item__title.item_service__title фирменные носители 
+                            .item_service__image.item_service__image_large(style="background-size:cover; background-image:url('/img/logo-example-0.jpg')")
+                    .service__col.item
+                        .item.item_service
+                            .item__title.item_service__title фирменные шрифты
+                            .item_service__image(style="background-image:url('/img/logo-example-2.png')")
+                    .service__col
+                        .item.item_service
+                            .item__title.item_service__title фирменные цвета
+                            .item_service__image(style="background-image:url('/img/logo-example-3.png')")
+                    .service__col
+                        .item.item_service
+                            .item__title.item_service__title правила использования логотипа
+                            .item_service__image(style="background-image:url('/img/logo-example-1.png')")
+                    .service__col
+                        .item.item_service
+                            .item__title.item_service__title стилеобразующие элементы
+                            .item_service__image(style="background-image:url('/img/logo-example-4.png')")
+                //- Price
+                .row.mt-5.mt-sm-3.mb-3
+                    .col-4.col-lg-8.col-md-7.col-xs-12
+                        h2.h3 Как найти идеальное решение?
+                .row
+                    .col-4.col-lg-10.col-sm-12.mb-lg-3
+                        p.content-main__intro Собрали основные пункты наших тарифов: кратко о&nbsp;том, 
+                            | какие возможности даст каждый из&nbsp;вариантов. Уже знаете что вам нужно? 
+                        a.btn.btn_action(href="https://forms.gle/F4WAzuwCtWmK22qRA" target="_blank") Заполнить бриф
+                    .col-8.col-lg-12
+                        .service
+                            .service__col 
+                                +advantage("«Light»","Упрощённый тариф: проработаем только один сценарий развития бренда согласно брифу и&nbsp;создадим лого на&nbsp;его основе")
+                                    .mt-2
+                                        span.text-bold.text-green 9900.-
+                                        span  / 7 дней
+                                    .item_advantage__labels
+                                        .item__label 1 эскиз
+                                        .item__label moodboard
+                                        .item__label гайдлайн
+                                        .item__label видеопрезентация
+                            .service__col 
+                                +advantage("«Optimal»","Получите 3&nbsp;варианта для будущего фирменного стиля с&nbsp;эскизами и&nbsp;сможете выбрать максимально подходящее решение")
+                                    .mt-2
+                                        span.text-bold.text-green 14900.-
+                                        span  / 14 дней
+                                    .item_advantage__labels
+                                        .item__label до 3-ёх эскизов
+                                        .item__label moodboard
+                                        .item__label гайдлайн
+                                        .item__label видеопрезентация
+                            .service__col 
+                                +advantage("«Full»","Расширение тарифа «Optimal» — подготовим до&nbsp;5 макетов фирменной полиграфии для&nbsp;печати в&nbsp;типографии на&nbsp;ваш выбор")
+                                    .mt-2
+                                        span.text-bold.text-green 20900.-
+                                        span  / 21 день
+                                    .item_advantage__labels
+                                        .item__label до 3-ёх эскизов
+                                        .item__label moodboard
+                                        .item__label гайдлайн
+                                        .item__label видеопрезентация
+                                        .item__label файлы в печать
+                
+        //- Contact Form
+        include ../blocks/content/content-form.pug

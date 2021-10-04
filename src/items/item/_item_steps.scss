@@ -1,0 +1,14 @@
+.item_steps{
+    display: block;
+    width: 100%;
+
+    padding: $grid-gutter-width;
+    // border: 4px solid $white;
+    border: 1px solid $border-color;
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .item_steps{
+        padding: $grid-gutter-width/2;
+    }
+}
