@@ -17,14 +17,14 @@
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .content-compare{
         &__image{
-            height: 290px;
+            height: 380px;
         }
     }
 }
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
-    .content-compare{
-        &__image{
-            height: 240px;
-        }
-    }
-}
+// @media all and (max-width: map-get($grid-breakpoints, 'xs')){
+//     .content-compare{
+//         &__image{
+//             height: 240px;
+//         }
+//     }
+// }

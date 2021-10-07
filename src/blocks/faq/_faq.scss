@@ -14,7 +14,7 @@
             position: absolute;
             right:  map-get($map: $spacers, $key: 3) ;
             top: 50%;
-            transform: translateY(-50%);
+            transform: translateX(100%) translateY(-50%);
 
             font-size: 30px;
             line-height: 24px;
@@ -44,6 +44,16 @@
         &--active{
             display: block;
             border-color: $green;
+        }
+    }
+}
+
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .faq{
+        &__title{
+            padding: map-get($map: $spacers, $key: 2);
+            padding-right: map-get($map: $spacers, $key: 3);
         }
     }
 }

@@ -1,0 +1,7 @@
+.dialog_answer{
+    grid-template-columns: 1fr 60px;
+    grid-template: "message avatar";
+
+    margin-top: map-get($map: $spacers, $key: 2);
+
+}

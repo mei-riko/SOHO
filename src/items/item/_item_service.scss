@@ -12,38 +12,38 @@
         background: no-repeat center / contain;
 
         width: 100%;
-        min-height: 150px;
-        height: 100%;
+        // min-height: 150px;
+        // height: 100%;
     }
     &__title{
         font-family: $font-family-heading;
         margin-bottom: 0;
     }
 }
-@media all and (max-width: map-get($grid-breakpoints, 'sm')){
-    .item_service{
-        &__image{
-            height: 100px;
-            &--first{
-                height: 285px;
-            }
-        }
-    }
-}
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
-    .item_service{
-        &__image{
-            height: 120px;
-            min-height: 1px;
-        }
-    }
-}
+// @media all and (max-width: map-get($grid-breakpoints, 'sm')){
+//     .item_service{
+//         &__image{
+//             height: 100px;
+//             &--first{
+//                 height: 285px;
+//             }
+//         }
+//     }
+// }
+// @media all and (max-width: map-get($grid-breakpoints, 'xs')){
+//     .item_service{
+//         &__image{
+//             height: 120px;
+//             min-height: 1px;
+//         }
+//     }
+// }
 
-@media all and (max-width: map-get($grid-breakpoints, 'xxs')){
-    .item_service{
-        &__image{
-            height: 90px;
-            min-height: 1px;
-        }
-    }
-}
+// @media all and (max-width: map-get($grid-breakpoints, 'xxs')){
+//     .item_service{
+//         &__image{
+//             height: 90px;
+//             min-height: 1px;
+//         }
+//     }
+// }

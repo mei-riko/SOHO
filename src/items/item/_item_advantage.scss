@@ -45,3 +45,12 @@
         }
     }
 }
+
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .item_advantage{
+        &__title{
+            margin-bottom: map-get($map: $spacers, $key: 1);
+        }
+    }
+}

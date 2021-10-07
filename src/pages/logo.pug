@@ -26,8 +26,8 @@ block content
                 h1.content-main__title 
                     | Полностью оформим ваш <span class="text-green">проект</span> в&nbsp;единый гайдлайн
                 span.content-main__subtitle graphic design
-                .row.justify-content-end.mt-3
-                    .col-5
+                .row.justify-content-end.mt-3.mt-md-2
+                    .col-5.col-xl-6.col-lg-7.col-md-9.col-sm-12
                         .content-main__intro
                             p Создадим для вас неповторимый стиль и&nbsp;составим подробное руководство по&nbsp;его использованию:
                                 |  цвета, шрифты и&nbsp;примеры фирменных носителей
@@ -116,23 +116,24 @@ block content
                     .service__col.service__col_first
                         .item.item_service
                             .item__title.item_service__title фирменные носители 
-                            .item_service__image.item_service__image_large(style="background-size:cover; background-image:url('/img/logo-example-0.jpg')")
+                            img.item_service__image.d-sm-none(src="/img/logo-example-0.jpg")
+                            img.item_service__image.d-none.d-sm-block(src="/img/logo-example-0-mobile.jpg")
                     .service__col.item
                         .item.item_service
                             .item__title.item_service__title фирменные шрифты
-                            .item_service__image(style="background-image:url('/img/logo-example-2.png')")
+                            img.item_service__image(src="/img/logo-example-2.png")
                     .service__col
                         .item.item_service
                             .item__title.item_service__title фирменные цвета
-                            .item_service__image(style="background-image:url('/img/logo-example-3.png')")
+                            img.item_service__image(src="/img/logo-example-3.png")
                     .service__col
                         .item.item_service
                             .item__title.item_service__title правила использования логотипа
-                            .item_service__image(style="background-image:url('/img/logo-example-1.png')")
+                            img.item_service__image(src="/img/logo-example-1.png")
                     .service__col
                         .item.item_service
                             .item__title.item_service__title стилеобразующие элементы
-                            .item_service__image(style="background-image:url('/img/logo-example-4.png')")
+                            img.item_service__image(src="/img/logo-example-4.png")
                 //- Price
                 .row.mt-5.mt-sm-3.mb-3
                     .col-4.col-lg-8.col-md-7.col-xs-12
@@ -175,6 +176,29 @@ block content
                                         .item__label гайдлайн
                                         .item__label видеопрезентация
                                         .item__label файлы в печать
-                
+                .content-main.mt-5.mt-sm-3
+                    h4.content-main__title.content-main__title_secondary Разрушаем мифы: кратко и&nbsp;
+                        span.text-green ёмко 
+                        | о&nbsp;популярных дизайн-«суевериях»
+                    span.content-main__subtitle MythBusters
+                    .row.justify-content-end.mt-3.mt-md-2
+                        .col-5.col-xl-6.col-lg-7.col-md-9.col-sm-12
+                            p Сейчас мы расскажем всё, что вы хотели знать, но стеснялись спросить. 
+                                | Начнём с того, что логотип — это часть фирменного стиля. 
+                                | Если поставить лого в углу сайта не стоит рассчитывать на то, что бренд  
+                                | обретет узнаваемость.
+                .service.service_dialog.mt-3
+                    .service__col
+                        .item.item_steps
+                            .item_steps__subtitle.mb-1 Миф 1
+                            p «По логотипу сразу должна быть понятна сфера деятельности»
+                            .dialog
+                                .dialog__image(style="background-image:url('./icon/girl.png');")
+                                .dialog__content — Как клиенты поймут что у меня кофейня, если нет значка кофе и&nbsp;чашечки?
+                            .dialog.dialog_answer
+                                .dialog__image(style="background-image:url('./icon/girl.png');")
+                                .dialog__content Действительно, никак. Но клиенты всегда видят логотип в&nbsp;контексте: на&nbsp;сайте, на&nbsp;флаере 
+                                    | или на&nbsp;вывеске около витрины. Именно контекст раскроет сферу. Вспомните Nike, Puma или&nbsp;Starbucks. 
+                                    | Если бы&nbsp;прямая отсылка была обязательно, то&nbsp;у&nbsp;Nike на&nbsp;лого был бы&nbsp;кроссовок.
         //- Contact Form
         include ../blocks/content/content-form.pug

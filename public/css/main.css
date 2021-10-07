@@ -503,6 +503,12 @@
   fill: #c62024;
 }
 
+@media all and (max-width: 576px) {
+  .item_advantage__title {
+    margin-bottom: 10px;
+  }
+}
+
 .item_link {
   display: block;
   width: 100%;
@@ -672,6 +678,9 @@
     max-width: 100%;
     margin-bottom: 20px;
   }
+  .item_price__info {
+    margin-bottom: 20px;
+  }
 }
 
 .item_service {
@@ -687,36 +696,11 @@
   border: 1px solid #3e3e3e;
   background: no-repeat center / contain;
   width: 100%;
-  min-height: 150px;
-  height: 100%;
 }
 
 .item_service__title {
   font-family: "Kharkiv Tone", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   margin-bottom: 0;
-}
-
-@media all and (max-width: 768px) {
-  .item_service__image {
-    height: 100px;
-  }
-  .item_service__image--first {
-    height: 285px;
-  }
-}
-
-@media all and (max-width: 576px) {
-  .item_service__image {
-    height: 120px;
-    min-height: 1px;
-  }
-}
-
-@media all and (max-width: 375px) {
-  .item_service__image {
-    height: 90px;
-    min-height: 1px;
-  }
 }
 
 .item_steps {
@@ -726,15 +710,31 @@
   border: 1px solid #3e3e3e;
 }
 
+.item_steps__subtitle {
+  display: inline-block;
+  padding: 6px 12px 4px;
+  border-radius: 8px;
+  background: #c1ea1d;
+  color: #242424;
+  font-family: "Kharkiv Tone", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1;
+}
+
 @media all and (max-width: 768px) {
   .item_steps {
     padding: 15px;
   }
 }
 
+.table-responsive {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
 .table {
   border: 1px solid #3e3e3e;
   padding: 10px;
+  min-width: 460px;
 }
 
 .table__head {
@@ -760,6 +760,7 @@
   -webkit-box-flex: 2;
   -ms-flex: 2 0 50%;
   flex: 2 0 50%;
+  min-width: 260px;
   padding: 10px;
 }
 
@@ -785,6 +786,7 @@
   -webkit-box-flex: 2;
   -ms-flex: 2 0 50%;
   flex: 2 0 50%;
+  min-width: 260px;
   padding: 10px;
 }
 
@@ -818,6 +820,31 @@
 
 .pagination__link--active {
   border-color: #c1ea1d;
+}
+
+.dialog {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 60px 1fr;
+  grid-template: "avatar message";
+}
+
+.dialog__image {
+  display: block;
+  width: 57px;
+  height: 57px;
+  background: no-repeat center / contain;
+  grid-area: avatar;
+}
+
+.dialog__content {
+  grid-area: message;
+}
+
+.dialog_answer {
+  grid-template-columns: 1fr 60px;
+  grid-template: "message avatar";
+  margin-top: 20px;
 }
 
 .modal {
@@ -874,9 +901,9 @@
   position: absolute;
   right: 40px;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -webkit-transform: translateX(100%) translateY(-50%);
+  -ms-transform: translateX(100%) translateY(-50%);
+  transform: translateX(100%) translateY(-50%);
   font-size: 30px;
   line-height: 24px;
   -webkit-transition: .3s;
@@ -906,6 +933,13 @@
 .faq__content--active {
   display: block;
   border-color: #c1ea1d;
+}
+
+@media all and (max-width: 576px) {
+  .faq__title {
+    padding: 20px;
+    padding-right: 40px;
+  }
 }
 
 .navbar__title {
@@ -1039,7 +1073,7 @@
   .navbar_header__close {
     height: 34px;
     width: 34px;
-    padding: 6px;
+    padding: 4px;
   }
 }
 
@@ -1385,13 +1419,7 @@
 
 @media all and (max-width: 1024px) {
   .content-compare__image {
-    height: 290px;
-  }
-}
-
-@media all and (max-width: 576px) {
-  .content-compare__image {
-    height: 240px;
+    height: 380px;
   }
 }
 
@@ -1536,6 +1564,12 @@
   }
 }
 
+@media all and (max-width: 768px) {
+  .service_category {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
 .service_inside {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -1543,6 +1577,12 @@
 @media all and (max-width: 576px) {
   .service_inside {
     grid-template-columns: 1fr;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .service_dialog {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
 
@@ -1596,6 +1636,16 @@
 }
 
 .portfolio__col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   background-color: #1a1a1a;
 }
 
@@ -1612,8 +1662,11 @@
 }
 
 @media all and (max-width: 1024px) {
+  .portfolio {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .portfolio__title {
-    font-size: 16px;
+    font-size: 14px;
     padding: 20px 20px 10px;
   }
   .portfolio__intro {
@@ -1624,7 +1677,7 @@
   }
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 576px) {
   .portfolio {
     grid-template-columns: 1fr;
   }

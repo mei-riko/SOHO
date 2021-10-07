@@ -23,6 +23,9 @@
     }
 
     &__col{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
         background-color: darken($color: $black, $amount: 4);
 
         &:hover, &:focus{ text-decoration: none; }
@@ -39,8 +42,9 @@
 // < 1024px
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .portfolio{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         &__title{
-            font-size: map-get($map: $font-size, $key: md);
+            font-size: map-get($map: $font-size, $key: sm);
             padding: map-get($map: $spacers, $key: 2) map-get($map: $spacers, $key: 2) map-get($map: $spacers, $key: 1);
         }
         &__intro{
@@ -52,8 +56,8 @@
         }
     }
 }
-// < 768px
-@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .portfolio{
         grid-template-columns: 1fr;
     }
