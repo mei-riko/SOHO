@@ -1,0 +1,115 @@
+extends ../blocks/main.pug
+
+block variables
+    - var pageTitle     = "Presentation"
+//- Step Item
+mixin item(title, intro)
+    .item.item_service
+        .item__title.item_service__title=title
+        p.item__intro!= intro
+//- Portfolio
+mixin portfolioPrev(src, image, title, intro)
+    a.portfolio__col(href="javascript:;" data-fancybox="portfolio" data-src=src)
+        .item.item_link
+            p.item__title= title
+            p.item__intro!= intro
+            img.img-fluid(src=image)
+block content
+    .container
+        .container__inner
+            //- Main Screen
+            section.content-main
+                h1.content-main__title 
+                    |  Захватывающие <span class="text-green">презентации</span> с&nbsp;понятной структурой
+                span.content-main__subtitle graphic design
+                .row.justify-content-end.mt-3.mt-md-2
+                    .col-5.col-xl-6.col-lg-7.col-md-9.col-sm-12
+                        .content-main__intro
+                            p Вы можете заказать оформление презентации с&nbsp;нуля или&nbsp;редизайн уже&nbsp;существующей: 
+                                | структурируем и задизайним информацию. Поможем с&nbsp;написанием текстов
+                        +btnIconModal('Заполнить бриф')
+            //- Type
+            section.pt-5.pb-5.pt-sm-3.pb-sm-3
+                .row.mb-3
+                    .col-4.col-lg-8.col-md-7.col-xs-12
+                        h2.h3 Поможем 
+                            span.text-green реализовать 
+                            | подходящее решение
+                .row
+                    .col-4.col-lg-10.col-sm-12.mb-lg-3
+                        p.content-main__intro Презентация — это отличный инструмент для&nbsp;внешних и&nbsp;внутренних нужд компании. 
+                            | Граммотная структура и&nbsp;визуал помогут вовлечь людей даже в&nbsp;самый скучный отчет
+                    .col-8.col-lg-12
+                        .service.service_inside
+                            .service__col
+                                +item("Цифровая презентация", "В&nbsp;формате pdf, хорошо подойдет для&nbsp;отправки по&nbsp;e-mail, демонстрации на&nbsp;выступлениях или&nbsp;презентации идей и&nbsp;отчетов на&nbsp;встречах с&nbsp;клиентами")
+                            .service__col
+                                +item("Презентация для печати","Станет отличным раздаточным материалом на выставке или&nbsp;другом мероприятии, подойдет для передачи отчета или исследования клиентам")
+            //- Portfolio
+            section
+                h4.text-uppercase.mb-3 Недавно мы подготовили презентации
+                .portfolio.portfolio_large 
+                    +portfolioPrev("#portfolio-promo", "/img/interseal-prev.jpg", "«INTERSEAL»", "редизайн корпоративной презентации для испанской компании")
+                    +portfolioPrev("#portfolio-guest", "/img/soho-prev.jpg", "«SOHO»", "оформление шаблона презентации для рассылки клиентам")
+            section.pt-5.pb-5.pt-sm-3.pb-sm-3
+                .row.mb-3
+                    .col-8.col-xl-7.col-lg-10.col-sm-12.mb-2
+                        p.h1 Когда и&nbsp;кому пригодится граммотно  
+                            span.text-green оформленная
+                            |  презентация
+                .service
+                    .service__col
+                        .item.item_service
+                            .item__title Руковоство
+                            .item__intro Визуализация итогов года, оформленние отчетности или&nbsp;презентация стратегии развития произведут нужное впечатление при должном оформлении
+                    .service__col
+                        .item.item_service
+                            .item__title HR
+                            .item__intro Информация для&nbsp;сотрудников, образовательные материалы или&nbsp;рассказ о&nbsp;ценностях компании проще запомняться в виде лаконичного pdf-материала
+                    .service__col
+                        .item.item_service
+                            .item__title Маркетинг
+                            .item__intro Слайды для конференции, исследования и отчеты или запуск нового продукта лучше выполнят свою задачу в формате понятной презентации
+                //- Price
+                .row.mt-5.mr-sm-3
+                    .col-4.col-lg-8.col-md-10.col-sm-12.mb-lg-3
+                        h4.text-white.mb-3.mb-lg-2 Сделаем всё  
+                            span.d-block качественно и&nbsp;в&nbsp;срок
+                                span.text-green .
+                        .content-intro
+                            ul
+                                li Заключаем официальный договор
+                                li Указываем сроки, перечень услуг и стоимость
+                                li Подписываем договор в двух экземплярах
+                            p.text-grey Если фиксированные тарифы не&nbsp;подошли — напишите нам и&nbsp;обсудим индивидуальный бюджет 
+                                | на&nbsp;разработку для&nbsp;вашего проекта
+                    .col-8.col-lg-12
+                        .item.item_price.item_price-promo.mb-2(data-fancybox="promo" data-src="#promo1")
+                            .item_price__content
+                                p.item_price__title Optimal
+                                p.item_price__intro Оформление презентации с нуля, создание архитектуры презентации, коррекция подачи информации
+                                .item_price__group
+                                    .item_price__label до 10 слайдов
+                                    .item_price__label текст до 5000 зн.
+                                    .item_price__label помощь с формулировками
+                                    .item_price__label формат на выбор
+                                    .item_price__label передача исходных файлов
+                            .item_price__info
+                                p.item_price__title 14.900
+                                .item_price__add +1.500
+                                .item_price__add-intro за доп. слайд
+                        .item.item_price.mb-2(data-fancybox="promo" data-src="#promo2")
+                            .item_price__content
+                                p.item_price__title Light
+                                p.item_price__intro Переоформление существующей презентации, коррекция подачи информации и работа над структурой
+                                .item_price__group
+                                    .item_price__label до 10 слайдов
+                                    .item_price__label помощь с формулировками
+                                    .item_price__label формат на выбор
+                                    .item_price__label передача исходных файлов
+                            .item_price__info
+                                p.item_price__title 9.900
+                                .item_price__add +1.000
+                                .item_price__add-intro за доп. слайд
+        //- Contact Form
+        include ../blocks/content/content-form.pug
