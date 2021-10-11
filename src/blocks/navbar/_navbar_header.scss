@@ -63,6 +63,8 @@
 // < 576px
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .navbar_header{
+        padding: $grid-gutter-width;
+        
         &__close{
             top: 9px;
             right: 12px;

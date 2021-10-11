@@ -1,0 +1,40 @@
+.portfolio_navbar{
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    &__title{
+        font-size: map-get($map: $font-size, $key: sm);
+        font-weight: $font-weight-bold;
+    }
+    &__intro{
+        font-size: map-get($map: $font-size, $key: xs);
+    }
+}
+// < 1024px
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .portfolio_navbar{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .portfolio_navbar{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .portfolio_navbar{
+        grid-gap: map-get($map: $spacers, $key: 1);
+
+        &__title{
+            font-size: map-get($map: $font-size, $key: xs);
+            font-weight: $font-weight-base;
+            letter-spacing: 0;
+            padding: map-get($map: $spacers, $key: 1);
+        }
+        &__intro{
+            display: none;
+        }
+    }
+}

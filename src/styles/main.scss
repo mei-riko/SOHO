@@ -37,6 +37,7 @@
 @import "../blocks/modal/modal";
 @import "../blocks/modal/modal_form";
 @import "../blocks/modal/modal_portfolio";
+@import "../blocks/modal/modal_cookies";
 
 @import "../blocks/slider/slider";
 
@@ -54,6 +55,7 @@
 @import "../blocks/content/content-intro";
 
 @import "../blocks/service/service";
+@import "../blocks/service/service_index-page";
 @import "../blocks/service/service_category";
 @import "../blocks/service/service_inside";
 @import "../blocks/service/service_dialog";
@@ -61,5 +63,7 @@
 @import "../blocks/advantage/advantage";
 
 @import "../blocks/portfolio/portfolio";
+@import "../blocks/portfolio/portfolio_navbar";
+@import "../blocks/portfolio/portfolio_feed";
 
 @import "../blocks/price/price";

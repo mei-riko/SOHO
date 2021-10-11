@@ -75,13 +75,14 @@
         }
         &__logo{
             margin-right: $spacer/2;
-            transform: translateY(-2px);
+            // transform: translateY(-2px);
+
             &-svg{
                 width: 120px;
             }
         }
         &__nav{
-            top: 9px;
+            top: 14px;
             right: 12px;
         }
         &__link{

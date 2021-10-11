@@ -2,8 +2,14 @@
 .input.error,
 .ajax_form .input.error{
     border-color: $red;
+
+    &::placeholder{
+        color: $red;
+    }
 }
 .form__validation.error,
-.ajax_form .form__validation.error{
-    color: $red!important
+.ajax_form .form__validation.error,
+.ajax_form .error{
+    color: lighten($color: $red, $amount: 12)!important
 }
+

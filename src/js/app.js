@@ -1,6 +1,7 @@
 import $ from 'jquery'
 
 import '../items/input/input';
+import './cookies';
 
 $(function() {
   // Animate Scroll

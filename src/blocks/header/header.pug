@@ -1,14 +1,14 @@
 mixin portfolio-link(href, src, image, title, intro)
     if href == "javascript:;"
-        a.portfolio__col.mt-xs-2(href=href data-fancybox="portfolio" data-src=src)
+        a.portfolio__col(href=href data-fancybox="portfolio" data-src=src)
             img.img-fluid(src=image)
-            p.portfolio__title.text-small.text-bold.text-uppercase= title
-            p.portfolio__intro.text-small!= intro
+            p.portfolio__title.portfolio_navbar__title= title
+            p.portfolio__intro.portfolio_navbar__intro!= intro
     else 
-        a.portfolio__col.mt-xs-2(href=href)
+        a.portfolio__col(href=href)
             img.img-fluid(src=image)
-            p.portfolio__title.text-small.text-bold.text-uppercase= title
-            p.portfolio__intro.text-small!= intro
+            p.portfolio__title.portfolio_navbar__title= title
+            p.portfolio__intro.portfolio_navbar__intro!= intro
             
 header.header
     .container

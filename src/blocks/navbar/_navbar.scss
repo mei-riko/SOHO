@@ -1,8 +1,9 @@
 .navbar{
     &__title{
-        font-size: 1.25rem;
-        font-weight: $font-weight-bolder;
-        margin-bottom: $spacer/2;
+        font-family: $font-family-heading;
+        color: $green;
+        // font-size: 1.25rem;
+        margin-bottom: map-get($map: $spacers, $key: 2);
     }
     &__grid{
         display: grid;
@@ -20,14 +21,14 @@
         }
 
         & + .navbar__title{
-            margin-top: $spacer/2;
+            margin-top: map-get($map: $spacers, $key: 2);
         }
     }
     &__service{
         display: flex;
         align-items: center;
         border: 1px solid $border-color;
-        padding: $spacer/2;
+        padding: map-get($map: $spacers, $key: 2);
         background-color: $black;
     }
 }
@@ -39,8 +40,8 @@
         }
     }
 }
-// < 1024px
-@media all and (max-width: map-get($grid-breakpoints, 'md')){
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .navbar{
         &__grid{
             grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -52,6 +53,9 @@
     .navbar{
         &__grid{
             grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        &__service{
+            padding: map-get($map: $spacers, $key: 1);
         }
     }
 }

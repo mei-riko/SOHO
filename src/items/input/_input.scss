@@ -27,5 +27,17 @@
     &--full{
         width: 100%;
     }
+    &--error{
+        border-color: $red;
+        &::placeholder{
+            color: $red;
+        }
+    }
+    &--success{
+        border-color: $green;
+        &::placeholder{
+            color: $green;
+        }
+    }
 }
 
